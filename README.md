@@ -59,3 +59,9 @@ The augmented p=.30480 comparison retains two constructed finite-χ states with 
 ## One additional common rate: .30485
 
 The separately authorized direct warm continuation from the accepted .30480 pair passed both numerical gates at .30485. The former large-order history ended with small order diagnostics, so the arithmetic energy-ranking sign flip is **not** a pressure bracket between two retained large-/small-order families. See [the upper-rate result](research/transition-order/BRANCH128-UPPER-RESULTS.md) and actual-AL-state audit. No physical spinodal or window width is certified; no extra rate, χ192 or stability test was run. Thermodynamic transition order remains open.
+
+## Closer common point: .304825
+
+The separately authorized one-point χ128 warm continuation retained large/small constructed-state order contrast at .304825, with both external gates passed. Both trial-objective rankings remain the same as at .30480, so no crossing bracket is obtained. This does not certify a physical phase, global minimum, transition location or order. No extra rate, χ192 or stability campaign was run. See [the closer-point report](research/transition-order/BRANCH128-MID-RESULTS.md).
+
+The compact review ZIP now duplicates only control/low-χ state fixtures, code, observations and reports. All high-χ NPZ scientific states remain intact in the full repository/workspace; this packaging-only change protects durable snapshot capacity. The actual compact ZIP extraction passed its 101 paper-specific checks.

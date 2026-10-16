@@ -21,8 +21,8 @@
     },
     {
       "path": "README.md",
-      "bytes": 7343,
-      "sha256": "99d0a59ae4c5c7427ffd4d32df9fc90952b23c1b598f43f5b4a7c96047731672"
+      "bytes": 8177,
+      "sha256": "235be82f7609a335ca9008d9d8ad1eb5ada91057d1375f3bce4b70d680e5a699"
     },
     {
       "path": "adjudications/adj-01-a-manuscript_revised_v32.txt",
@@ -236,13 +236,13 @@
     },
     {
       "path": "papers/v33-review-package.zip",
-      "bytes": 3435142,
-      "sha256": "00b01dc6beb5e18e8b06710254598731e8d04e84b28f4686d2f29f48368b4961"
+      "bytes": 3439783,
+      "sha256": "d684fdbf7effce34bcdfa0cdb214d3c17ee1e810c797e41ef05fa89d7ae899a9"
     },
     {
       "path": "papers/v33-review-package.zip.sha256",
       "bytes": 89,
-      "sha256": "1a5517dd334e3cee4ad1dc34e928a6ebb51e28edc46b62eed34f2dbee7adcc9a"
+      "sha256": "d11e29df93943fdbed6e6abbae6a39c85977a84b2e6b085300f0553780795e99"
     },
     {
       "path": "papers/v34/README.md",
@@ -251,18 +251,18 @@
     },
     {
       "path": "papers/v34/REVISION-REPORT.md",
-      "bytes": 3347,
-      "sha256": "b257c949b052b8462715174e91660e8d41e58c3c9b1743586907b06bb3a7dbfa"
+      "bytes": 3923,
+      "sha256": "c3994ea9ccedc9156ca8db3496208b13a76007dd81386819cf6dcd0fae882c86"
     },
     {
       "path": "papers/v34/manuscript_revised_v34.tex",
-      "bytes": 261392,
-      "sha256": "e1b029649d483299d0747747cbb629888782abab4a6be3923d5a06d82c56c208"
+      "bytes": 261860,
+      "sha256": "d48a4eebcd51d8b2832292e457cdf890860e4703f92635842d629a556601cc9d"
     },
     {
       "path": "papers/v34/revise_manuscript.py",
-      "bytes": 21892,
-      "sha256": "cd0d76ab8b07ca2650d3b5f1ea13a281a29ab2069ec78b0c662a1c756f5fc7e1"
+      "bytes": 23239,
+      "sha256": "e8a2384e25db1820eea1a2cfc4269ec845826d491956951ffc687120953d4962"
     },
     {
       "path": "papers/v34/sections/interpretation.tex",
@@ -271,23 +271,23 @@
     },
     {
       "path": "papers/v34/source-contract-check.log",
-      "bytes": 866,
-      "sha256": "665f2d5a8f71e5a4f9e68f42b8815c121c1e4b1b3538ee8594c439b3c88f64ef"
+      "bytes": 953,
+      "sha256": "49b1ddcecefbe1bc9e5bcfaa34d5d501c1ae92edd181bc8a5dfeae5374d7f186"
     },
     {
       "path": "papers/v34/source-provenance.json",
       "bytes": 953,
-      "sha256": "0917e69b3cac460170a23f6b352a4a9a26a0c5eb43655fd419565600796fc7e0"
+      "sha256": "49b1ddcecefbe1bc9e5bcfaa34d5d501c1ae92edd181bc8a5dfeae5374d7f186"
     },
     {
       "path": "papers/v34/v33-to-v34.diff",
-      "bytes": 35146,
-      "sha256": "acc03c4c8374be62c8dad6c338d8300ffdf1e30cd843fbd7ff12488a13e81e83"
+      "bytes": 35616,
+      "sha256": "2c05d0c34a6bf8e6cd880fae6d152e22be2f3fa62bba7cd0166a53ddbdad9493"
     },
     {
       "path": "papers/v34/v34-revision-report.docx",
-      "bytes": 38522,
-      "sha256": "abbd02e6aaaa51ffed73acab06bc8b32a04dfe6672d791509dd151280ec52d1a"
+      "bytes": 38745,
+      "sha256": "27794431f5c33598ea113a0fa945a91617f4fc7a3585c938043ebe5c56d4ab4f"
     },
     {
       "path": "quran/README.md",
@@ -356,8 +356,8 @@
     },
     {
       "path": "research/transition-order/MID128-RUN-STATE.md",
-      "bytes": 2059,
-      "sha256": "19427e5f3f1d26d52053351355e5666228f6331b903e40f1d3759135bda55f19"
+      "bytes": 1915,
+      "sha256": "bb9e6d14666d1984d79d23597e0e7bc58f4addd96e14b1bb11488044de8c6f54"
     },
     {
       "path": "research/transition-order/NUMERICAL-NOTES.md",
@@ -381,8 +381,8 @@
     },
     {
       "path": "research/transition-order/RESULTS.md",
-      "bytes": 18105,
-      "sha256": "293009d7d96025c75a17aad9aa7f5ccb2de58140c5b7e67db4832a96ae03cc83"
+      "bytes": 18713,
+      "sha256": "93ef44e1c6796e92176e7a3328ee28d8f47cd676b144e26501a4a30d81007458"
     },
     {
       "path": "research/transition-order/SCAN-RUN-STATE.md",
@@ -485,14 +485,29 @@
       "sha256": "4055f3b57200a61c214df96a9cc42ecb374c6f7c5d81aaf4246e32f333dd41d3"
     },
     {
+      "path": "research/transition-order/branch128-mid-data-audit.json",
+      "bytes": 1972,
+      "sha256": "2830eff0815db4427c9ab6cca23fdbf86ac135176c010686159ba9167d3b3572"
+    },
+    {
+      "path": "research/transition-order/branch128-mid-document-qa.json",
+      "bytes": 382,
+      "sha256": "45a8b7761f1f9cd48e41b48208ee993f82dc2fd0437ed06454308575459bd52b"
+    },
+    {
       "path": "research/transition-order/branch128-mid-protocol.json",
       "bytes": 3877,
       "sha256": "1e5c6154a0aed5a59a061c0b0fe596a831bfaed1011e1d41efd2ea787d47ed24"
     },
     {
+      "path": "research/transition-order/branch128-mid-release-summary.json",
+      "bytes": 1295,
+      "sha256": "ed42a673c398a341fb3739e423f75691daf60d36deae462133c6c405aa278cce"
+    },
+    {
       "path": "research/transition-order/branch128-mid-report.docx",
       "bytes": 40282,
-      "sha256": "6a6d9d7ff5c3d8e791c8bbb80f0cd699bdaf22fce44417f9b6b362583fe79d09"
+      "sha256": "3610666bb9af6dd8fd0ecfbfa8c246f6655b0ef020a364630c29fadaa7051f60"
     },
     {
       "path": "research/transition-order/branch128-mid.csv",
@@ -512,7 +527,7 @@
     {
       "path": "research/transition-order/branch128-pilot-report.docx",
       "bytes": 40259,
-      "sha256": "1447d4b6b13b8a91bb298fbce4c4ce35826f4ad6f9f3083bfabfa48d7c1e280b"
+      "sha256": "ba0d4665222b0bca39c2707efc8e07568e1ce2eca4783bc9e00119d44d26cb60"
     },
     {
       "path": "research/transition-order/branch128-pilot.csv",
@@ -542,7 +557,7 @@
     {
       "path": "research/transition-order/branch128-refinement-report.docx",
       "bytes": 39518,
-      "sha256": "c9323371f2f2e3002da8022adac5b67e67fe7d586f3c656e099099b39122700a"
+      "sha256": "ffee66825c9807ba4c29955f1f801ebe341a481df6d8eb16c5ef6291e7ab8f9d"
     },
     {
       "path": "research/transition-order/branch128-refinement.csv",
@@ -572,7 +587,7 @@
     {
       "path": "research/transition-order/branch128-upper-report.docx",
       "bytes": 40565,
-      "sha256": "6031209210630fef6a89db626e841cb210e540a785439f1d754fdc5bdbb9e8f0"
+      "sha256": "bd4ed24ae78e3c6d5f8c8337f6cb403349441fac639bfc9e6b235d3bf3386295"
     },
     {
       "path": "research/transition-order/branch128-upper.csv",
@@ -586,8 +601,8 @@
     },
     {
       "path": "research/transition-order/branch128_mid_report.py",
-      "bytes": 10989,
-      "sha256": "90189ae99ab37e5ad5329acf09fb40ac28f6ad38701cc331068525ccdbc176c5"
+      "bytes": 10990,
+      "sha256": "08f6d39fbbd8d43314bf7a62526a5a2facf9e607e8ab9c34bf9af547e03cf39f"
     },
     {
       "path": "research/transition-order/branch128_pilot_campaign.py",
@@ -616,8 +631,8 @@
     },
     {
       "path": "research/transition-order/bundle_review.py",
-      "bytes": 4905,
-      "sha256": "89617d4a570c55242b5d9e55e596f45ce55d9894c785b1354447fb72f1372e41"
+      "bytes": 4937,
+      "sha256": "c6e907ab48de65af34d1faae878483909e546f5108c353af0b3e0ae84cd9b050"
     },
     {
       "path": "research/transition-order/cases-common96-disordered.json",
@@ -861,23 +876,23 @@
     },
     {
       "path": "research/transition-order/summarize.py",
-      "bytes": 29259,
-      "sha256": "ee7cbe012ecea91888fcabda4e8925e7fa2045de9039bdc77131cb918ec6a11c"
+      "bytes": 30535,
+      "sha256": "aebd2d03214ba9d3288c8ea1e2e0cddafb9de97fa875899b0ead2bf7448cf422"
     },
     {
       "path": "research/transition-order/task-ledger.json",
-      "bytes": 2202,
-      "sha256": "388b79e04ec5335c15f605460f8fae47c273169f3b05c63a5413c924018b680a"
+      "bytes": 2167,
+      "sha256": "1a8b882370e34b4f4264ba68765b4a4e14f3faa64c727c664c4bd93dca3e4d84"
     },
     {
       "path": "research/transition-order/transition-order-report.docx",
-      "bytes": 49405,
-      "sha256": "001073c386eedeca9fb171dc4099fed7be35a4e13b5db490e4eee0db1940284f"
+      "bytes": 49597,
+      "sha256": "4330f1562d90a2f8417e53e8c39f50cf90ba10bf10ecbfa8262a35afaaf6d7ae"
     },
     {
       "path": "research/transition-order/verification-receipt.json",
-      "bytes": 2503,
-      "sha256": "76436b4e424ad3bc607d787d15297888cb24ecb97dc7a5f7db28e438c5c359ca"
+      "bytes": 2945,
+      "sha256": "82bd4d9f4e2a89fe9623f41350a429dea4b52318385aed171c3a6244541d997e"
     },
     {
       "path": "v2.1/Lighthouse-and-Plan-v2.1.docx",

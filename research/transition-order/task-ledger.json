@@ -16,8 +16,8 @@
   },
   {
     "id": "T3",
-    "status": "upper-rate-complete-retained-branch-pressure-bracket-not-obtained",
-    "outcome": "accepted distinct numerical pair at .30480; direct unbiased warm step to .30485 yields two small-order approximants, so arithmetic pressure sign flips do not bracket retained large/small families; stability and chi/size controls remain open"
+    "status": "closer-point-retention-observed-pressure-ranking-not-reversed",
+    "outcome": "two accepted constructed families at .30480 and .304825 retain large/small diagnostics, but half-row and period-trial rankings remain the same; no pressure bracket, stability or thermodynamic order certificate"
   },
   {
     "id": "T4",

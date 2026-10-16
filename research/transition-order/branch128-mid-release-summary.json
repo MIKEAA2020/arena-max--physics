@@ -1,0 +1,30 @@
+{
+  "status": "one authorized closer common rate completed and audited",
+  "p": 0.304825,
+  "chi": 128,
+  "accepted_new_preparations": 2,
+  "source_common_p": 0.3048,
+  "source_accepted_states_reused": true,
+  "large_history_color": 0.46438614283073953,
+  "small_history_color": 0.005822616215237372,
+  "large_history_m_species": 0.4928027161172074,
+  "small_history_m_species": 0.006180026912085373,
+  "half_objective_delta_lower": -1.8661504989081479e-06,
+  "half_objective_delta_closer": -4.359392906660986e-07,
+  "period_trial_delta_lower": -1.6544809070540012e-06,
+  "period_trial_delta_closer": -2.5288369664977495e-07,
+  "half_objective_sign_change": false,
+  "period_trial_sign_change": false,
+  "numerical_large_small_contrast_retained": true,
+  "pressure_bracket_obtained": false,
+  "aligned_fidelity_per_site": 0.9979199942521476,
+  "physical_branch_stability_certified": false,
+  "global_minimum_certified": false,
+  "extra_rates_or_chi192_or_stability_runs": false,
+  "thermodynamic_order": "unresolved",
+  "per_history_seconds": {
+    "ordered": 1856.7406379069998,
+    "disordered": 582.825875464
+  },
+  "qualification": "Ranking is among these finite-chi constructed states. No energy-error bar, thermodynamic location or order follows from residuals or two endpoint samples."
+}

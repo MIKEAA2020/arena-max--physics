@@ -82,4 +82,4 @@ for table in D.tables:
    for p in cell.paragraphs:
     for r in p.runs:r.font.size=Pt(8 if len(table.columns)>=7 else 9)
 D.core_properties.title='χ128 closer-common-rate test at p=.304825';D.save(out)
-print(json.dumps(dict(status=db['status'],accepted_upper_preparations=sum(r.get('converged') is True for r in db.get('results',{}).values()))))
+print(json.dumps(dict(status=db['status'],accepted_closer_preparations=sum(r.get('converged') is True for r in db.get('results',{}).values()))))

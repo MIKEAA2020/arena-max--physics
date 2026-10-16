@@ -5,7 +5,7 @@
   "total": 246,
   "suites": 10,
   "transfer_checks": 49,
-  "log": "v2.2/verify/run_all_upper128_2026-10-16.log",
+  "log": "v2.2/verify/run_all_mid128_2026-10-16.log",
   "control_reproduction_smoke": "passed; not added to counted total",
   "scope_label_recheck": "17/17 passed, exit 0, after text-only sampled-data clarification",
   "scope_recheck_log": "v2.2/verify/replica_checks.log",
@@ -17,7 +17,7 @@
       "v33_checks.py": 35,
       "transfer_checks.py": 49
     },
-    "provenance": "Within this full upper-rate release regression; not an additional separately run total."
+    "provenance": "Included in this full 246 run; separate isolated compact-package reproduction also passed 101, not added to 246."
   },
   "chi128_launch_transfer_recheck": "49/49; same subset, not extra checks",
   "supplementary_comparison_smoke": "4/4 product/self/gauge/symmetry checks; not added to 246",
@@ -28,7 +28,7 @@
     "counted_in_246": false,
     "provenance": "Prospective gates and immutable checkpoint hashes checked separately after both workers exited."
   },
-  "regression_timing": "Fresh full regression completed while the large-order-history upper-rate solve was still active; final upper tensors and actual AL-state fields audited separately after both workers exited.",
+  "regression_timing": "Fresh full regression completed while large-order-history .304825 optimization was active; final closer-point tensors, source and actual-AL-state diagnostics were audited independently after both workers exited.",
   "stationary_state_comparison": {
     "orientations": 36,
     "status": "all 36 symmetry orientations evaluated",
@@ -48,5 +48,8 @@
   "branch_pilot_data_audit": "passed: 3/4 original pilot steps accepted; rejected step preserved",
   "branch_refinement_data_audit": "passed separately: unchanged external gates, actual AL-state contrast, old failed JSON/tensors unchanged; not added to 246",
   "upper_rate_data_audit": "passed separately: two real accepted .30485 states, source hashes, original gates, actual AL-density diagnostics; not added to 246",
-  "upper_retained_pressure_bracket": false
+  "upper_retained_pressure_bracket": false,
+  "closer_rate_data_audit": "passed separately: 2 accepted real .304825 states, unchanged source hashes and external gates, actual AL-density diagnostics; not added to 246",
+  "closer_pressure_bracket_obtained": false,
+  "compact_archive_reproduction": "101/101 actually executed from isolated compact ZIP extraction after high-chi duplication policy change; separate from full-regression count"
 }

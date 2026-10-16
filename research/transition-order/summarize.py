@@ -80,6 +80,10 @@ latest_upper=load(R/'n3_branch128_upper.json')
 if latest_upper and all(latest_upper.get('results',{}).get(x,{}).get('converged') for x in ['ordered','disordered']):
     ledger[3]['status']='upper-rate-complete-retained-branch-pressure-bracket-not-obtained'
     ledger[3]['outcome']='accepted distinct numerical pair at .30480; direct unbiased warm step to .30485 yields two small-order approximants, so arithmetic pressure sign flips do not bracket retained large/small families; stability and chi/size controls remain open'
+latest_mid=load(R/'n3_branch128_mid.json')
+if latest_mid and all(latest_mid.get('results',{}).get(x,{}).get('converged') for x in ['ordered','disordered']):
+    ledger[3]['status']='closer-point-retention-observed-pressure-ranking-not-reversed'
+    ledger[3]['outcome']='two accepted constructed families at .30480 and .304825 retain large/small diagnostics, but half-row and period-trial rankings remain the same; no pressure bracket, stability or thermodynamic order certificate'
 (HERE/'task-ledger.json').write_text(json.dumps(ledger,indent=2)+'\n')
 
 text=['# Transition-order continuation — executed work and status','',
@@ -196,6 +200,10 @@ if latest_refinement.get('converged'):
 if latest_upper and latest_upper.get('status','').startswith('complete'):
     target=HERE/'RESULTS.md'
     target.write_text(target.read_text()+'\n## One additional upper common rate — no retained pressure bracket\n\nThe separately authorized .30485 warm continuation passed both numerical gates, but the former large-order history ended with small invariant order. Both ranking differences change sign arithmetically; this is not a two-family pressure-crossing bracket because the upper O label is no longer a retained large-order state. The experiment does not locate a physical spinodal, prove branch absence, or bound a thermodynamic retention-window width. See [upper-rate report](BRANCH128-UPPER-RESULTS.md). No extra rate, chi192 or perturbation stability test was run.\n')
+
+if latest_mid and latest_mid.get('status','').startswith('complete'):
+    target=HERE/'RESULTS.md'
+    target.write_text(target.read_text()+'\n## One closer common rate — retained contrast, no pressure reversal\n\nThe separately authorized .304825 warm continuation from the two accepted .30480 states passed both external gates. Large/small invariant-order contrast is retained at this closer point, unlike the earlier direct .30485 step. Both same-objective ranking differences stay negative, so there is no pressure bracket between .30480 and .304825. Lower computed trial value among two approximants is not a global-minimum or physical-transition-location certificate. See [closer-point report](BRANCH128-MID-RESULTS.md). No additional rate, chi192 or stability production was run.\n')
 
 # Standalone offline SVG chart using only the actual finite-size data.
 W,Hh=920,510;left,right,top,bottom=76,890,58,430

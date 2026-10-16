@@ -20,6 +20,10 @@ The completed finite fourth-Clifford/d=3 pilots remain finite observations. Old 
 
 The separately authorized .30485 result is **complete: both upper-rate numerical states accepted**. The former large-order history ended with small order diagnostics in the completed test. Even though numerical ranking signs reverse, this does not produce a retained large-/small-order pressure-crossing bracket. It neither proves continuity nor locates a physical spinodal or a thermodynamic window width. No further rate, χ192 or stability production is included.
 
+## Separately authorized closer common rate
+
+The `.304825`, χ128 warm-continuation status is **complete: both closer-rate numerical states accepted**. In the completed test, large/small numerical order contrast is retained and the large-order history has lower half-row and separate period-trial estimates among the computed pair. No ranking reversal occurs against `.30480`, so there is still no pressure bracket or thermodynamic verdict. The prior `.30485` character-loss outcome remains preserved; neither experiment identifies a physical spinodal or stability boundary.
+
 ## Preservation and verification
 
 - Original v33 is not edited.

@@ -93,6 +93,10 @@ if mid:
     if mid.get('results',{}).get('ordered',{}).get('converged') and mid.get('results',{}).get('disordered',{}).get('converged'):
         ma,mb=mid['results']['ordered'],mid['results']['disordered']
         lines.append(r'At $.304825$, invariant order is '+f"{ma['color_l2_order']:.6f} / {mb['color_l2_order']:.6f}"+r', with half-row objective difference '+f"{ma['f_half']-mb['f_half']:.6e}"+r' and separately evaluated period-trial difference '+f"{ma['f_full_rayleigh']-mb['f_full_rayleigh']:.6e}"+r'. The same-objective crossing question and finite-$\chi$ systematics are kept distinct from these raw values.')
+if mid.get('results',{}).get('ordered',{}).get('converged') and mid.get('results',{}).get('disordered',{}).get('converged'):
+    ma,mb=mid['results']['ordered'],mid['results']['disordered']
+    if ma['color_l2_order']>.1 and mb['color_l2_order']<.02 and not mid.get('half_objective_sign_change'):
+        lines.append(r'The closer point retains large/small numerical order contrast, unlike the earlier direct $.30485$ step. The half-row and period-trial rankings stay the same at $.30480$ and $.304825$: no pressure bracket was obtained across these retained endpoint families. Lower estimated values among these two constructed states are not a global-minimum certificate or a thermodynamic transition-location bound. No further rate, stability campaign or $\chi=192$ run was included.')
 if accepted==12:
     left=[db['cases'][f'{p:.7f}'][side]['color_l2_order'] for p in grid if p<=.3047 for side in ['ordered','disordered']]
     right=[db['cases'][f'{p:.7f}'][side]['color_l2_order'] for p in grid if p>=.30486 for side in ['ordered','disordered']]
@@ -133,6 +137,10 @@ The completed finite fourth-Clifford/d=3 pilots remain finite observations. Old 
 ## One additional common-rate test
 
 The separately authorized .30485 result is **{upper.get('status','not launched')}**. The former large-order history ended with small order diagnostics in the completed test. Even though numerical ranking signs reverse, this does not produce a retained large-/small-order pressure-crossing bracket. It neither proves continuity nor locates a physical spinodal or a thermodynamic window width. No further rate, χ192 or stability production is included.
+
+## Separately authorized closer common rate
+
+The `.304825`, χ128 warm-continuation status is **{mid.get('status','not launched')}**. In the completed test, large/small numerical order contrast is retained and the large-order history has lower half-row and separate period-trial estimates among the computed pair. No ranking reversal occurs against `.30480`, so there is still no pressure bracket or thermodynamic verdict. The prior `.30485` character-loss outcome remains preserved; neither experiment identifies a physical spinodal or stability boundary.
 
 ## Preservation and verification
 
