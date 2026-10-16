@@ -1,0 +1,13 @@
+{
+  "research/transition-order/chi128-scan-report.docx": {
+    "crc": "passed",
+    "paragraphs": 32,
+    "tables": 2
+  },
+  "papers/v34/v34-revision-report.docx": {
+    "crc": "passed",
+    "paragraphs": 17,
+    "tables": 0
+  },
+  "scope": "Documentation-only clarification; original numerical records and physics code unchanged; native/CRC QA, not PDF layout or all-theorem certification."
+}

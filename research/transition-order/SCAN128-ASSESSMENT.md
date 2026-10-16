@@ -13,3 +13,9 @@ The old .3047 calendar window expired during the session pause. Recovery uses a 
 ## Interpretive governance
 
 The v34 author-review continuation explicitly adopts real, dependent creation distinct from the uncreated Creator, following the independently argued Qur'anic/Lighthouse framework. The creator is not an observable algebra, Hilbert space, state, clock or field. Dependence is not identity; distinction is not a second independent absolute. This is a governing interpretive reading, not an inference or theorem of circuit physics. Original v33 and the source-lineage records remain preserved.
+
+## Clarification: energies versus phase branches
+
+The scan already computed f_half and f_full_rayleigh for every accepted preparation. It must not be described as having no free-energy measurements. What is absent is two independently retained symmetry-inequivalent branch families and a controlled crossing/stability analysis. The labels O/D denote initialization history. Neither common convergence from two starts nor a local residual certifies a global minimum; the scan does not identify physical spinodals or prove a basin boundary.
+
+At an ordinary continuous transition f′ is continuous and higher derivatives can be singular; a kink in f normally signals a first-derivative jump, a first-order signature for a generic tuning direction. χ-dependent sharpening is not a binary discriminator. The next selected protocol is the separately proposed unbiased branch-following pilot in BRANCH-CONTINUATION.md; no new production is authorized by this report clarification alone.

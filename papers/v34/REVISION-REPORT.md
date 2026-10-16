@@ -12,7 +12,9 @@ This follows the independently argued Qur’anic/Lighthouse framework, including
 
 The accepted χ128 p=.30486 pair has small order diagnostics; it does not establish continuity or coexistence. The six-rate scan status is **complete: all 12 preparation results accepted**, with **12/12** accepted preparation records at generation time. Its table marks pending/failed entries explicitly. A finite bulk free-energy gap is not coexistence. The earlier latent-heat proxy and claimed physical coexistence length remain unvalidated/withdrawn.
 
-The source updates the chosen method and completed finite fourth-Clifford/d=3 pilots without promoting them to thermodynamic results. Old v33 tables remain historical observations, not relabeled χ128 data.
+The source explicitly distinguishes measured half-row/full-period trial-state functionals from unresolved phase branches. The energies were recorded; initialization labels are not phase identities, and agreement from two starts does not certify a global minimum. It corrects the claim that a continuous transition generically has a kink in f, and warns that χ-dependent sharpening is not a binary order test. Unbiased branch continuation is the selected next protocol, with a proposed bounded pilot still requiring its own runtime authorization.
+
+The completed finite fourth-Clifford/d=3 pilots remain finite observations. Old v33 tables remain historical observations, not relabeled χ128 data.
 
 ## Preservation and verification
 

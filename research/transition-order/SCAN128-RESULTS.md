@@ -52,7 +52,15 @@ All 12 preparation results passed the declared gates (10 new targets plus 2 reus
 
 The smallest best-aligned fidelity per site across the six comparisons is 0.9999994886. This supports numerical similarity, not exact state identity. The sampled large-to-small change lies between **.3047 and .30486 at this χ**. This is a finite-χ sampling interval, **not** a thermodynamic critical-point confidence interval, a measured discontinuity, or proof of continuity.
 
-A finer stationary-state rate bracket, followed by χ/size-systematic controls of any crossing and jump, is the next discriminating step. It is not automatically launched under this six-point allocation. χ192 remains gated.
+The selected next protocol is unbiased branch-following continuation from the accepted large-order and small-order anchors, not another independent-start grid. The proposed pilot in BRANCH-CONTINUATION.md is not automatically launched under the completed six-point allocation. A retained two-family pressure bracket, stability checks and χ/size-systematic controls would still be needed. χ192 remains gated.
+
+## Trial-state energies were evaluated; distinct phase branches were not resolved
+
+The scan recorded both f_half and f_full_rayleigh for every accepted preparation. It is incorrect to say that free-energy values were absent. What was not obtained is an independently retained ordered/disordered branch pair through a common interval. O/D name initialization histories, not phase identities. The complete numerical values are retained in chi128-scan.csv and the raw JSON.
+
+The scan samples optimizer outcomes and their variational functionals, not the whole basin geometry. Two starts giving similar states do not certify a global minimum. The observed change cannot be identified as a physical coexistence point, spinodal or basin boundary solely from these samples.
+
+For an ordinary continuous transition, the first derivative of the thermodynamic free energy is continuous while higher derivatives may be singular. A kink in f normally means a jump in f′ and is instead a first-order signature for a generic tuning direction. Sharpening with increasing χ can also occur at a continuous transition as finite-entanglement rounding decreases; it is not a binary discriminator. See BRANCH-CONTINUATION.md for the corrected next-step contract.
 
 ## What would count as coexistence evidence
 
