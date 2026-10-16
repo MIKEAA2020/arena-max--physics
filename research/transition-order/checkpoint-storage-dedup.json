@@ -1,0 +1,19 @@
+{
+  "reason": "Reserve snapshot space for newly authorized branch pilot; byte-identical arrays retained in immutable files and public Git history",
+  "records": [
+    {
+      "removed_local_duplicate": "v2.2/verify/replica/checkpoints/n3_ordered_chi128_bounded_latest.npz",
+      "preserved_immutable": "v2.2/verify/replica/checkpoints/n3_ordered_chi128_p0.3048600.npz",
+      "sha256": "44816bca83abc7fa8dbc8ba61d52a0d05adf860febe928c4fef2ce2a70dc602d",
+      "bytes_reclaimed": 5363893,
+      "published_history_contains_original_copy": true
+    },
+    {
+      "removed_local_duplicate": "v2.2/verify/replica/checkpoints/n3_disordered_chi128_bounded_latest.npz",
+      "preserved_immutable": "v2.2/verify/replica/checkpoints/n3_disordered_chi128_p0.3048600.npz",
+      "sha256": "594d54643bba88ce38c933281d40949a82e80eaef0266a4136cfc8d25078e36f",
+      "bytes_reclaimed": 5371590,
+      "published_history_contains_original_copy": true
+    }
+  ]
+}

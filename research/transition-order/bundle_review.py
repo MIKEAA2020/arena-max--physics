@@ -16,7 +16,7 @@ for p in (ROOT/'adjudications').glob('adj-01-*'):add(p)
 for p in (ROOT/'v2.2/verify/replica').glob('*'):
     if p.suffix in ['.py','.json','.log']:add(p)
 for p in (ROOT/'v2.2/verify/replica/checkpoints').glob('*.npz'):
-    if p.name.startswith('scan128_') or any(x in p.name for x in ['latest','partial','seed_']):continue
+    if p.name.startswith(('scan128_','branch128_')) or any(x in p.name for x in ['latest','partial','seed_']):continue
     with np.load(p,allow_pickle=False) as z:m=json.loads(str(z['metadata']))
     if p.name.startswith('control_') or m.get('eps',1)>0 and m.get('eps',1)<m.get('tol',1e-7):add(p)
 for name in ['replica_checks.py','replica_checks.log','v33_checks.py','v33_checks.log','transfer_checks.py','transfer_checks.log','run_all_transition_2026-10-16-final.log','run_all_chi128_2026-10-16.log','run_all_scan128_2026-10-16.log']:
@@ -46,7 +46,7 @@ The original v33 TeX and its historical tables are distinguished from the later
 half-row data. Different finite-chi functionals must not be mixed silently.
 
 Real MPS NPZ states are included selectively: controls and accepted immutable
-anchors from the earlier matched-point experiment. Bulk scan128 states and
+anchors from the earlier matched-point experiment. Bulk scan128/branch128 states and
 rolling/partial/warm-seed states are omitted here to avoid duplication;
 the full repository snapshot / owner-push Git bundle retains those records.
 The publication-status receipt says whether the new continuation was actually

@@ -4,5 +4,6 @@
   "new_numerical_results": false,
   "prior_full_regression": "246/246 after completed six-rate scan; not rerun for this text-only clarification",
   "source_contract": "65 unchanged statement/proof blocks; labels/references/citations pass",
-  "next_gate": "unbiased chi128 branch-retention pilot, pending separate runtime authorization"
+  "next_gate": "unbiased chi128 branch-retention pilot, pending separate runtime authorization",
+  "receipt_scope": "Historical report-only clarification before the later separate branch_pilot_3h authorization; see branch pilot execution records for subsequent work."
 }

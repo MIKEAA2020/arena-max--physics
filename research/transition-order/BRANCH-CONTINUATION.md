@@ -1,6 +1,6 @@
 # Branch continuation: corrected assessment and proposed next gate
 
-16 October 2026 · A-1 continuation · **Proposal only: no new production allocation yet.**
+16 October 2026 · A-1 continuation · **Protocol proposal preserved; a separate three-hour pilot was subsequently authorized by the user. Its execution record is `branch128-pilot-protocol.json` / `BRANCH128-PILOT-RESULTS.md`; no result is assumed here.**
 
 ## What the completed scan actually measured
 
@@ -49,3 +49,7 @@ If distinct stationary families survive, the next gate is a second common rate f
 The proposed pilot has two sequential stages with at most two single-thread CPU workers. At the earlier per-stage ceiling it can require **up to 3 hours walltime** (90 minutes per stage), and may still fail to retain two branches. It is not the full crossing/stability/chi-extrapolation campaign. No chi192 run, extra rate bracket or perturbation production is automatically authorized. Fresh authorization is needed; the completed six-rate allocation is not silently extended.
 
 The earlier scan, exact operator checks and source records remain intact. The v34 Qur'anic/Lighthouse interpretation and real creator–creation distinction are unchanged by this numerical protocol proposal.
+
+## Separate authorization
+
+The user selected `branch_pilot_3h`: the stated two-stage continuation pilot only, up to three hours overall and at most two single-thread CPU workers. Each stage must pass both histories before the next stage starts. No phase constraint, extra common rate, perturbation production or χ192 is included. The earlier six-point allocation is not reused or silently extended.
