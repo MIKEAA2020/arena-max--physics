@@ -46,6 +46,14 @@ Color L2 is a symmetry-invariant norm of the six one-point amplitudes about thei
 
 At p=.3047 the accepted histories have m_species 0.558892 / 0.558909 and parity 0.382684 / -0.382692. Their invariant order and symmetry-aligned comparison must be used together: opposite parity signs alone do not identify different thermal phases. Largest evaluated aligned fidelity/site is 0.9999999989. These large-order solutions are consistent with symmetry-related orientations, not evidence by themselves of ordered/disordered coexistence.
 
+## Completed-grid finding
+
+All 12 preparation results passed the declared gates (10 new targets plus 2 reused reference states). Both histories give large order diagnostics at .3040, .3045 and .3047, and small diagnostics at .30486, .3050 and .3055. After symmetry alignment, no persistent ordered/disordered branch separation was demonstrated at any of these six sampled rates.
+
+The smallest best-aligned fidelity per site across the six comparisons is 0.9999994886. This supports numerical similarity, not exact state identity. The sampled large-to-small change lies between **.3047 and .30486 at this χ**. This is a finite-χ sampling interval, **not** a thermodynamic critical-point confidence interval, a measured discontinuity, or proof of continuity.
+
+A finer stationary-state rate bracket, followed by χ/size-systematic controls of any crossing and jump, is the next discriminating step. It is not automatically launched under this six-point allocation. χ192 remains gated.
+
 ## What would count as coexistence evidence
 
 **A finite bulk free-energy gap is not coexistence.** At a genuine first-order coexistence point, the competing bulk free-energy densities agree. A non-vanishing observable/slope jump or positive interface cost is a different quantity. Distinct stationary branches can persist off coexistence; optimizers need not merge immediately on either side.

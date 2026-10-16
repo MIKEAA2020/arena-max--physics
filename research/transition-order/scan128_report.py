@@ -48,6 +48,15 @@ observed=db.get('cases',{}).get('0.3047000',{})
 if observed.get('ordered',{}).get('converged') and observed.get('disordered',{}).get('converged'):
     a,b=observed['ordered'],observed['disordered'];q=observed.get('comparison',{})
     text+=['',f"At p=.3047 the accepted histories have m_species {a['m_species']:.6f} / {b['m_species']:.6f} and parity {a['m_parity']:.6f} / {b['m_parity']:.6f}. Their invariant order and symmetry-aligned comparison must be used together: opposite parity signs alone do not identify different thermal phases. Largest evaluated aligned fidelity/site is {fmt(q.get('largest_evaluated_fidelity_per_site'),10)}. These large-order solutions are consistent with symmetry-related orientations, not evidence by themselves of ordered/disordered coexistence."]
+if pairs==6:
+    left=[r for r in rows if r['p']<=.3047 and r['accepted']]
+    right=[r for r in rows if r['p']>=.30486 and r['accepted']]
+    if min(r['color_l2_order'] for r in left)>.1 and max(r['color_l2_order'] for r in right)<.01:
+        minimum_fidelity=min(db['cases'][f'{p:.7f}']['comparison']['largest_evaluated_fidelity_per_site'] for p in protocol['grid'])
+        text+=['','## Completed-grid finding','',
+        'All 12 preparation results passed the declared gates (10 new targets plus 2 reused reference states). Both histories give large order diagnostics at .3040, .3045 and .3047, and small diagnostics at .30486, .3050 and .3055. After symmetry alignment, no persistent ordered/disordered branch separation was demonstrated at any of these six sampled rates.',
+        '',f'The smallest best-aligned fidelity per site across the six comparisons is {minimum_fidelity:.10f}. This supports numerical similarity, not exact state identity. The sampled large-to-small change lies between **.3047 and .30486 at this χ**. This is a finite-χ sampling interval, **not** a thermodynamic critical-point confidence interval, a measured discontinuity, or proof of continuity.',
+        '', 'A finer stationary-state rate bracket, followed by χ/size-systematic controls of any crossing and jump, is the next discriminating step. It is not automatically launched under this six-point allocation. χ192 remains gated.']
 text+=['','## What would count as coexistence evidence','',
 '**A finite bulk free-energy gap is not coexistence.** At a genuine first-order coexistence point, the competing bulk free-energy densities agree. A non-vanishing observable/slope jump or positive interface cost is a different quantity. Distinct stationary branches can persist off coexistence; optimizers need not merge immediately on either side.','',
 'Small sign changes of f_period,O−f_period,D between nearly equivalent solutions do not identify a branch crossing: O/D are initialization labels, not certified ordered/disordered branches. Symmetry-related ordered orientations also have equal bulk pressure away from a thermal transition.','',

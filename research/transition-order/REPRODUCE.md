@@ -43,7 +43,19 @@ OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 L8_SECTOR_SECONDS=120 \
 
 The L=8 command benchmarks before deciding whether to launch eigenproblems. A deferred status is a real outcome, not a cached success. `clifford4_ladder.json` stores the completed 52-case L4/L6 grid, with per-eigenpair residuals. The script's standalone finite-spectrum command can add individual rates/sizes; do not launch an unbounded larger ladder without a measured resource estimate.
 
-## 4. Current authorized chi=128 continuation
+## Completed six-rate χ128 continuation
+
+The requested fixed-source grid is recorded in `chi128-scan-protocol.json`, `SCAN128-RESULTS.md`, and `chi128-scan.csv`. All six paired rates passed their declared gates: ten new optimization targets and two actual reused .30486 reference states. `audit_scan128.py` independently rechecks the saved arrays and recorded gates without launching a new optimizer:
+
+```sh
+OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 python3 research/transition-order/audit_scan128.py
+```
+
+The full Git checkout contains all real scan MPS states; the compact review ZIP intentionally omits them. Archived campaign/point deadlines and completed output guards must not be silently reset. A fresh production replay needs an explicitly allocated, separately named campaign and isolated outputs. `chi128_scan_campaign.py` is the original orchestrator; `resume_chi128_scan.py` documents physical-checkpoint continuation after a session pause, not scalar-cache warm starts. Publication helpers target only the authorized repository and must not be treated as generic unreviewed publishing commands.
+
+The sampled change between .3047 and .30486 is finite-χ information, not a thermodynamic critical interval or order verdict. No automatic χ192 was authorized.
+
+## 4. Earlier single-point chi=128 continuation
 
 The later user authorization is one two-preparation chi=128 stage at p=.30486, with the original 1e-7 tolerance and at most 90 minutes walltime. See `chi128-90m-protocol.json` and `CHI128-STAGE.md`. Neither agreement nor disagreement at this one point is a binary transition-order verdict. No chi=192 stage is automatically authorized.
 

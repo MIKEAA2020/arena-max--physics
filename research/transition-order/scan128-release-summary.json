@@ -1,0 +1,40 @@
+{
+  "status": "completed and numerical gates audited",
+  "rates": [
+    0.304,
+    0.3045,
+    0.3047,
+    0.30486,
+    0.305,
+    0.3055
+  ],
+  "accepted_preparations": 12,
+  "new_optimizations": 10,
+  "reused_preparations": 2,
+  "accepted_paired_rates": 6,
+  "max_optimizer_residual": 9.991478996514631e-08,
+  "max_period_relative_residual": 3.748216344168066e-11,
+  "minimum_best_aligned_fidelity_per_site": 0.999999488638275,
+  "large_order_diagnostic_rates": [
+    0.304,
+    0.3045,
+    0.3047
+  ],
+  "small_order_diagnostic_rates": [
+    0.30486,
+    0.305,
+    0.3055
+  ],
+  "fixed_chi_sampled_change_interval": [
+    0.3047,
+    0.30486
+  ],
+  "interval_is_thermodynamic_confidence_interval": false,
+  "ordered_disordered_coexistence_demonstrated": false,
+  "transition_order": "unresolved",
+  "chi96_production": false,
+  "chi192_launched": false,
+  "interpretation": "v34: real dependent creation distinct from uncreated Creator; not a physics theorem",
+  "source_audit": "65 statement/proof blocks unchanged; 8 protected framework sources unchanged",
+  "regression": "246/246 across 10 suites; paper subset 101 within same run"
+}

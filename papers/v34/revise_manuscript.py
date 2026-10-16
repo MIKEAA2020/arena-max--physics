@@ -60,6 +60,11 @@ for p in grid:
    lines.append(f'{p:.5f} & {label} & {status} & --- & --- & --- & ---'+r'\\')
 lines += [r'\end{tabular}',r'\end{ruledtabular}',r'\end{table*}',
           r'At first-order coexistence, the competing bulk free-energy densities agree. A finite bulk gap at a sampled rate is not coexistence; a persistent observable/slope discontinuity or interface cost is a different diagnostic. Distinct finite-$\chi$ minima may persist away from a crossing, and a coarse grid may miss a narrow window. Neither branch separation at one $\chi$ nor its absence on these six points supplies a thermodynamic order verdict. A controlled branch crossing and $\chi$/size-systematic analysis remain necessary.']
+if accepted==12:
+    left=[db['cases'][f'{p:.7f}'][side]['color_l2_order'] for p in grid if p<=.3047 for side in ['ordered','disordered']]
+    right=[db['cases'][f'{p:.7f}'][side]['color_l2_order'] for p in grid if p>=.30486 for side in ['ordered','disordered']]
+    if min(left)>.1 and max(right)<.01:
+        lines.append(r'The completed six-rate experiment gives large order diagnostics for both histories at $.3040,.3045,.3047$ and small diagnostics for both at $.30486,.3050,.3055$. No persistent ordered/disordered branch separation was demonstrated at these sampled rates after symmetry alignment. The large-to-small change is sampled between $.3047$ and $.30486$ at this fixed $\chi$; this is not a thermodynamic critical-point confidence interval or a measured jump. A narrower stationary-branch bracket and $\chi$/size-systematic control remain necessary, so first order and continuity both remain live.')
 marker=r'\subsection{Four- and five-replica finite-size diagnostics}'
 assert s.count(marker)==1;s=s.replace(marker,'\n\n'.join(lines)+'\n\n'+marker,1)
 # Structural source checks: all numbered statements and all proof blocks remain verbatim.

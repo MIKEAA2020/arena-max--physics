@@ -152,7 +152,7 @@ The exact endpoint precedes the pilot. A low-chi optimizer solution is not a chi
 | T0 | complete | immutable inputs and credential-free method-request log preserved |
 | T1 | complete | exact half-row, direct-sum, paired-environment, checkpoint and contraction checks passed |
 | T2 | complete-with-stated-control-exceptions | Ising ladder; n=3 gapped functional controls; lower-chi requested-tolerance misses retained |
-| T3 | partial-order-unresolved | accepted new half-row observations through chi=128; 1 accepted same-rate/same-chi pair(s); inspect nonconverged and partial states |
+| T3 | coarse-chi128-grid-complete-order-unresolved | earlier campaign through chi=128; separate fixed-source chi128 grid 6/6 paired rates accepted (reference included), not a coexistence or transition-order certificate |
 | T4 | finite-and-coarse-pilots-complete-fine-order-open | 67 exact cases, 4 finite crossings, 8 MPS pilot cases |
 | T5 | complete | fourth Clifford physical twirl on rank-29 quotient |
 | T6 | L4-L6-complete-L8-runtime-deferred | 52 cases in five diagonal colour sectors; L8 benchmark 3.115 s/matvec |
@@ -166,8 +166,12 @@ The chosen method has been implemented and feasible computations executed, but u
 
 ## 6. Verification, artifacts and GitHub
 
-Fresh integrated regression: **246/246 across 10 suites**, exit 0; transfer extension 49. Log: `v2.2/verify/run_all_chi128_2026-10-16.log`. The current paper-only runner performs 17+35+49=101 checks. These totals validate specified finite identities and implementation contracts, not every paper theorem or a phase-order verdict.
+Fresh integrated regression: **246/246 across 10 suites**, exit 0; transfer extension 49. Log: `v2.2/verify/run_all_scan128_2026-10-16.log`. The current paper-only runner performs 17+35+49=101 checks. These totals validate specified finite identities and implementation contracts, not every paper theorem or a phase-order verdict.
 
-The previous verified remote commit is `3b6571dc1a96f673f8c1c6a2417b0f7b03777b09` on `MIKEAA2020/arena-max--physics`. The new chi=128 continuation is **not claimed pushed**: the earlier excluded credential metadata was not retained in the restored workspace. A credential-free Git bundle provides an owner-push handoff if authenticated publication remains unavailable. Existing history/license are preserved; credentials are excluded and nested archives are scanned before staging. This is a publication-status receipt, not a numerical qualification. See `PUBLICATION-SCOPE.md` at the project root.
+The first ordinary GitHub push was verified at commit `b121f258cabab2c28dce4d08d74a731f8a217ad4` on `MIKEAA2020/arena-max--physics`. The final delivery includes this report as a non-force follow-up snapshot; the exact verified final commit is supplied in the completion message. Existing history/license are preserved. Credentials are excluded and nested archive contents are scanned before staging. See `PUBLICATION-SCOPE.md` at the project root.
 
 The v33 manuscript remains an **author-review draft**, not a certified submission: the original figure/SM, author approval and specialist analytic-hypothesis audit are still required. This continuation does not rewrite the original v33 numerical claims silently. A-1 stays separate from the Lighthouse source lineage, and Parts I–II commitments are unchanged.
+
+## Later six-rate chi128 continuation
+
+The separate fixed-source scan is **complete: all 12 preparation results accepted**. Its per-rate/preparation statuses, actual checkpoints, symmetry alignment and coexistence criteria are in [SCAN128-RESULTS.md](SCAN128-RESULTS.md). The production table above is the earlier campaign, not an exhaustive or duplicate-counted merge of this new grid. The v34 author-review continuation also makes the governing real creator–creation distinction explicit while preserving v33.

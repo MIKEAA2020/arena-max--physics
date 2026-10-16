@@ -86,4 +86,4 @@
 [PASS] Stored fourth-moment ladder eigenpairs have small residuals max absolute residual=1.17e-10
 [PASS] Stored Haar fourth-moment L4 p=.38 anchor reproduced 
 
-49/49 checks passed [4.5s]
+49/49 checks passed [6.7s]

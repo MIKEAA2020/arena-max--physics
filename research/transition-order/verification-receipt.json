@@ -5,7 +5,7 @@
   "total": 246,
   "suites": 10,
   "transfer_checks": 49,
-  "log": "v2.2/verify/run_all_chi128_2026-10-16.log",
+  "log": "v2.2/verify/run_all_scan128_2026-10-16.log",
   "control_reproduction_smoke": "passed; not added to counted total",
   "scope_label_recheck": "17/17 passed, exit 0, after text-only sampled-data clarification",
   "scope_recheck_log": "v2.2/verify/replica_checks.log",
@@ -17,7 +17,7 @@
       "v33_checks.py": 35,
       "transfer_checks.py": 49
     },
-    "provenance": "All three executed within the freshly completed chi128 release full run."
+    "provenance": "All three ran in this fresh full regression; no separate new 101-run is claimed."
   },
   "chi128_launch_transfer_recheck": "49/49; same subset, not extra checks",
   "supplementary_comparison_smoke": "4/4 product/self/gauge/symmetry checks; not added to 246",
@@ -28,11 +28,21 @@
     "counted_in_246": false,
     "provenance": "Prospective gates and immutable checkpoint hashes checked separately after both workers exited."
   },
-  "regression_timing": "Full regression completed while the ordered chi128 optimizer was still running; completed-stage gates and the subsequent 36-orientation comparison were verified separately.",
+  "regression_timing": "Fresh full regression completed after all six \u03c7128 rates and all 12 preparation gates were complete.",
   "stationary_state_comparison": {
     "orientations": 36,
     "status": "all 36 symmetry orientations evaluated",
     "largest_evaluated_fidelity_per_site": 0.999999488638275,
     "not_a_phase_order_classifier": true
+  },
+  "scan_data_audit": "passed separately: 12 real checkpoints, source hashes, geometry and declared gates; not added to 246",
+  "scan_new_optimizations": 10,
+  "scan_reused_preparations": 2,
+  "scan_accepted_pairs": 6,
+  "v34_source_contract": {
+    "unchanged_mathematical_blocks": 65,
+    "labels_references_citations": "passed",
+    "counted_in_246": false,
+    "not_all_theorem_certification": true
   }
 }

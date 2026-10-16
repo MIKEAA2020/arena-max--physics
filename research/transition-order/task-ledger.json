@@ -16,8 +16,8 @@
   },
   {
     "id": "T3",
-    "status": "partial-order-unresolved",
-    "outcome": "accepted new half-row observations through chi=128; 1 accepted same-rate/same-chi pair(s); inspect nonconverged and partial states"
+    "status": "coarse-chi128-grid-complete-order-unresolved",
+    "outcome": "earlier campaign through chi=128; separate fixed-source chi128 grid 6/6 paired rates accepted (reference included), not a coexistence or transition-order certificate"
   },
   {
     "id": "T4",

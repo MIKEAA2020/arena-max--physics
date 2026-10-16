@@ -1,3 +1,16 @@
+COMPLETED SIX-RATE SCAN RELEASE — 16 October 2026
+
+Fresh full regression: 246/246 across 10 suites, exit 0, after all six paired rates.
+Log: v2.2/verify/run_all_scan128_2026-10-16.log
+Paper subset within that invocation: 17 + 35 + 49 = 101/101.
+Separate saved-state data audit: all 12 preparation gates/checkpoints passed.
+Separate v34 source contract: 65 mathematical blocks unchanged, references/citations pass.
+The latter audits are NOT added to the counted 246 and imply no phase-order,
+all-theorem, or submission-readiness certificate.
+
+OLDER VERIFICATION RECORDS FOLLOW
+--------------------------------
+
 CHI128 CONTINUATION RELEASE — 16 October 2026
 
 Fresh full regression: 246/246 across 10 suites, exit 0.

@@ -67,6 +67,11 @@ ledger=[
  dict(id='T9',status='gated-deferred',outcome='guided/resample-move SMC needs separate exact/mixing/population validation; pilot failure is not a no-go'),
  dict(id='T10',status='audit-partial-proof-open',outcome='conditional implication and counterexamples checked; full-Haar analytic hypotheses, contour/real-replica constructions open'),
  dict(id='T11',status='deferred-feasibility-gated',outcome='n=5 rank-119 quotient/orbit-block assembler required; naive L8 Krylov memory exceeds sandbox')]
+latest_grid=load(R/'n3_chi128_scan.json')
+if latest_grid:
+    paired=sum(c.get('ordered',{}).get('converged') is True and c.get('disordered',{}).get('converged') is True for c in latest_grid.get('cases',{}).values())
+    ledger[3]['status']='coarse-chi128-grid-complete-order-unresolved' if paired==6 else 'coarse-chi128-grid-incomplete-order-unresolved'
+    ledger[3]['outcome']=f'earlier campaign through chi={maxchi}; separate fixed-source chi128 grid {paired}/6 paired rates accepted (reference included), not a coexistence or transition-order certificate'
 (HERE/'task-ledger.json').write_text(json.dumps(ledger,indent=2)+'\n')
 
 text=['# Transition-order continuation — executed work and status','',

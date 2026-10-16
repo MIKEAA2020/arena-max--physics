@@ -1,12 +1,12 @@
 {
   "source_v33_sha256": "d27cddbaa6dee54f122d55ec16ebb7d5e2059fb3542faa72381b11e775958611",
-  "output_v34_sha256": "20a106f7a46575a8651aaed80d4b0da024a61af871c80549388ad230e5bf5672",
+  "output_v34_sha256": "1cb59966d5a3995eb4af65f2cdf473a65e8e2673a13c80ee308052fe49798d14",
   "unchanged_statement_and_proof_blocks": 65,
   "labels": 160,
   "references_resolve": true,
   "citations_resolve": true,
-  "scan_status": "running: recovered after session interruption",
-  "scan_accepted_preparations": 4,
+  "scan_status": "complete: all 12 preparation results accepted",
+  "scan_accepted_preparations": 12,
   "phase_order": "unresolved",
   "status": "author-review; not submission certified",
   "interpretation": "Quranic/Lighthouse: real dependent creation distinct from uncreated Creator; not a physics theorem"

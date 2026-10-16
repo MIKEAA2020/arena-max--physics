@@ -36,3 +36,7 @@ ordered: accepted-stationary-at-finite-chi, eps=9.991478996514631e-08, iteration
 ### New measured iteration cost
 
 The completed common-rate chi128 loops averaged 12.71 to 13.38 seconds per iteration. Holding iteration complexity fixed, a naive cubic chi192 forecast is 42.9–45.2 seconds/iteration, or roughly 3.6–3.8 hours for 300 iterations per preparation. This is not a measured chi192 benchmark or a convergence promise, and no such allocation was authorized. The present chi128 convergence bottleneck was overcome; a rate bracket and chi/size-systematic controls, not a binary one-point inference, remain necessary.
+
+## Completed six-rate chi128 scan
+
+All six paired rates passed (10 new targets plus 2 reused reference states), with unchanged 1e-7 tolerance. Lower sampled rates .3040,.3045,.3047 have large order diagnostics, higher .30486,.3050,.3055 small ones. Symmetry-aligned comparisons are close at each rate. This does not establish first order or continuity; the fixed-chi sampled change interval .3047–.30486 is not a thermodynamic confidence interval. No χ192 was launched. The session interruption and saved-segment lower-bound times remain recorded; no exact end-to-end CPU total is inferred from them.

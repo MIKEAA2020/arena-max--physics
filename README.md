@@ -43,3 +43,9 @@ No access token belongs in this repository. Authentication metadata, dependency 
 The requested χ128 fixed-source grid is recorded in [SCAN128-RESULTS.md](research/transition-order/SCAN128-RESULTS.md). Pending, interrupted, budget-stopped and accepted preparations remain distinct; no finite bulk gap or missing sampled separation is automatically called a transition-order verdict.
 
 The [v34 author-review continuation](papers/v34/manuscript_revised_v34.tex) explicitly applies the governing Qur’anic/Lighthouse reading: real, dependent creation is distinct from its uncreated Creator. It does not identify God with a state, observable algebra or physical clock, and it does not derive theology from circuit physics. Original v33 is preserved; [the v34 report](papers/v34/REVISION-REPORT.md) records unchanged mathematical blocks and remaining submission blockers.
+
+## Completed six-rate χ128 delivery
+
+All six requested rates have two criterion-passed χ128 results: ten new optimization targets plus the two reused .30486 reference states. Both histories have large order diagnostics at .3040/.3045/.3047 and small diagnostics at .30486/.3050/.3055. Their symmetry-aligned similarities are high; no persistent ordered/disordered coexistence pair was demonstrated on this grid. The sampled finite-χ change interval .3047–.30486 is not a thermodynamic confidence interval or phase-order verdict. χ192 was not launched.
+
+The post-grid full regression passed 246/246 across ten suites (including the 101-check paper subset); checkpoint/data and v34 source-contract audits are recorded separately, not added to 246. The PAT is private workspace data, not repository content.

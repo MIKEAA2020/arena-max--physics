@@ -51,3 +51,7 @@ Six frozen-trial full-period Rayleigh evaluations at matched p=.30486,.30488,.30
 ordered: accepted-stationary-at-finite-chi, eps=9.991478996514631e-08, iterations=186, total stage 2507.1s; disordered: accepted-stationary-at-finite-chi, eps=9.56534706713505e-08, iterations=79, total stage 1022.8s.
 
 2/2 preparations passed the prospective acceptance gates at p=.30486. This does not decide first order versus continuous. Chi192 was not launched; no campaign numerical production remains running. The earlier chi96 failures do not establish two stationary phases. See `CHI128-STAGE.md` for the interpretation contract and logical counterexamples.
+
+## Completed six-rate chi128 scan
+
+All six paired rates passed (10 new targets plus 2 reused reference states), with unchanged 1e-7 tolerance. Lower sampled rates .3040,.3045,.3047 have large order diagnostics, higher .30486,.3050,.3055 small ones. Symmetry-aligned comparisons are close at each rate. This does not establish first order or continuity; the fixed-chi sampled change interval .3047–.30486 is not a thermodynamic confidence interval. No χ192 was launched. The session interruption and saved-segment lower-bound times remain recorded; no exact end-to-end CPU total is inferred from them.

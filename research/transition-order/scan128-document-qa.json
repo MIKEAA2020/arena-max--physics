@@ -1,0 +1,18 @@
+{
+  "research/transition-order/chi128-scan-report.docx": {
+    "crc": "passed",
+    "paragraphs": 28,
+    "tables": 2
+  },
+  "research/transition-order/transition-order-report.docx": {
+    "crc": "passed",
+    "paragraphs": 57,
+    "tables": 10
+  },
+  "papers/v34/v34-revision-report.docx": {
+    "crc": "passed",
+    "paragraphs": 16,
+    "tables": 0
+  },
+  "scope": "Native OOXML/CRC/data consistency and SVG structure only; no PDF visual-layout or submission certification."
+}
