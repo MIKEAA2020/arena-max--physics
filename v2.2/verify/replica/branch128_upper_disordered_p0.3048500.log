@@ -1,0 +1,7 @@
+UPPER_CASE_START disordered 0.30485 internal 5e-08 external 1e-07
+    it=  0 eta=0.6086479387 lamC=1.0000021135 etaL=0.6086479145 eps=6.80e-05 [18s]
+    it= 10 eta=0.6086479431 lamC=1.0000000002 etaL=0.6086479432 eps=2.40e-06 [180s]
+    it= 20 eta=0.6086479431 lamC=1.0000000000 etaL=0.6086479431 eps=3.42e-07 [337s]
+    it= 30 eta=0.6086479431 lamC=1.0000000000 etaL=0.6086479431 eps=6.60e-08 [490s]
+    it= 32 eta=0.6086479431 lamC=1.0000000000 etaL=0.6086479431 eps=4.83e-08 [521s]
+UPPER_CASE_RESULT {"history": "disordered", "status": "accepted upper-rate numerical state", "eps": 4.8266918387783884e-08, "gauge_right_residual": 4.8334634241046775e-08, "m_species": 0.0044254916572895545, "color_l2_order": 0.004198775718847914, "f_half": 0.9930305370445042, "f_full_rayleigh": 0.9930303378153401, "total_stage_seconds": 538.2400547069992}

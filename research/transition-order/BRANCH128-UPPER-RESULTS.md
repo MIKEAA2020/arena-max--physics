@@ -2,7 +2,7 @@
 
 16 October 2026 · A-1 continuation · one paired rate only.
 
-**Status:** running: one common upper rate. The user authorized exactly one additional common rate, warm-continued from the accepted .30480 pair. No χ192, additional rate or stability production is included.
+**Status:** complete: both upper-rate numerical states accepted. The user authorized exactly one additional common rate, warm-continued from the accepted .30480 pair. No χ192, additional rate or stability production is included.
 
 ## Prospective protocol
 
@@ -14,8 +14,8 @@ A failed gate is not rounded into a pass. If the internal driving budget ends, t
 
 | History | Status | Primary residual | Right compatibility | Color L2 | m_species | xi_chi |
 |---|---|---:|---:|---:|---:|---:|
-| ordered-start history | pending | — | — | — | — | — |
-| disordered-start history | pending | — | — | — | — | — |
+| ordered-start history | accepted upper-rate numerical state | 4.931426e-08 | 4.935708e-08 | 0.00059494 | 0.00060023 | 61.8615 |
+| disordered-start history | accepted upper-rate numerical state | 4.826692e-08 | 4.833463e-08 | 0.00419878 | 0.00442549 | 63.8667 |
 
 History labels are not automatically phase identities. An observed change/merger or numerical failure is not a measured physical spinodal or a bound on a thermodynamic metastability-window width.
 
@@ -24,10 +24,15 @@ History labels are not automatically phase identities. An observed change/merger
 | p | Half-row O | Half-row D | Δf_half (O−D) | Period trial O | Period trial D | Δf_period,trial |
 |---:|---:|---:|---:|---:|---:|---:|
 | 0.30480 | 0.992869885471 | 0.992871751622 | -1.866150e-06 | 0.992869864438 | 0.992871518919 | -1.654481e-06 |
-| 0.30485 | — | — | no accepted pair | — | — | — |
+| 0.30485 | 0.993030549778 | 0.993030537045 | 1.273331e-08 | 0.993030341465 | 0.993030337815 | 3.649566e-09 |
 
 The primary stationary objective is the Hermitian half-row functional. Full-period values are separate trial evaluations, not independently converged full-period branch optima. Do not mix the two columns into one pressure bracket. Last digits are numerical contraction outputs, not global error bars.
 
+## Numerical similarity and pressure-sign diagnostics
+
+Upper-rate symmetry comparison: all 36 symmetry orientations evaluated; largest evaluated aligned fidelity/site **0.999999504453**.
+
+Half-row ranking sign change between the two endpoints: **True**. Period-trial ranking sign change: **True**. These are arithmetic diagnostics only, not coexistence certificates.
 
 ## Interpretation safeguards
 

@@ -16,4 +16,4 @@
 [PASS] 16 n=4: std crossings 0.3583/0.3790 reproduce the paper's 0.35820/0.37899; sgn crossings 0.3698/0.3939 are distinct and move away  std 0.3583 0.3790; sgn 0.3698 0.3939
 [PASS] 17 stored n=3 VUMPS scans (chi=24..72): no sampled parity-only state; both ordered and disordered samples present  rows=48 parity-only=0 both=21 neither=26
 
-17/17 checks passed  [63s]
+17/17 checks passed  [54s]
