@@ -1,0 +1,6 @@
+SCAN_CASE_START ordered 0.304
+    it=  0 eta=0.6094909962 lamC=1.0014575507 etaL=0.6094850997 eps=1.96e-04 [16s]
+    it= 10 eta=0.6094910166 lamC=1.0000000000 etaL=0.6094910166 eps=4.45e-07 [168s]
+    it= 20 eta=0.6094910166 lamC=1.0000000000 etaL=0.6094910166 eps=1.99e-07 [319s]
+    it= 26 eta=0.6094910166 lamC=1.0000000000 etaL=0.6094910166 eps=9.79e-08 [406s]
+SCAN_CASE_RESULT {"preparation": "ordered", "p": 0.304, "status": "accepted-finite-chi", "eps": 9.787898322958257e-08, "iters": 27, "total_stage_seconds": 419.00196751600015, "m_species": 0.6314558885527205, "color_l2_order": 0.5999038510634712, "f_full_rayleigh": 0.9902621371980007}

@@ -18,12 +18,14 @@
 <text x="553.4823529411904" y="418" text-anchor="middle" font-size="11">0.30486</text>
 <text x="622.8235294117663" y="418" text-anchor="middle" font-size="11">0.30500</text>
 <text x="870.4705882352989" y="418" text-anchor="middle" font-size="11">0.30550</text>
+<circle cx="125.52941176470102" cy="189.03220989373713" r="5" fill="#126b9a"/>
 <circle cx="373.17647058823366" cy="201.84275989625615" r="5" fill="#126b9a"/>
 <circle cx="472.2352941176632" cy="212.99513589655047" r="5" fill="#126b9a"/>
 <circle cx="551.4823529411904" cy="389.8498384204608" r="5" fill="#126b9a"/>
 <circle cx="620.8235294117663" cy="389.94775197358035" r="5" fill="#126b9a"/>
 <circle cx="100" cy="76" r="5" fill="#126b9a"/>
 <text x="115" y="80" font-size="13">ordered-start history</text>
+<circle cx="129.52941176470102" cy="189.03224462066353" r="5" fill="#bd5b2e"/>
 <circle cx="377.17647058823366" cy="201.8422953504568" r="5" fill="#bd5b2e"/>
 <circle cx="476.2352941176632" cy="212.9907682238922" r="5" fill="#bd5b2e"/>
 <circle cx="555.4823529411904" cy="388.7541764264573" r="5" fill="#bd5b2e"/>

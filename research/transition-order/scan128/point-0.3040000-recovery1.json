@@ -1,0 +1,8 @@
+{
+  "p": 0.304,
+  "master_protocol": "research/transition-order/chi128-scan-protocol.json",
+  "master_sha256": "6b77eaca105b7fef3ee7564df84e6e83cde5f215f32d853852d0ba956f96820b",
+  "deadline_unix": 1792165796.9255624,
+  "recovery_event": 1,
+  "original_global_deadline_unchanged": true
+}
