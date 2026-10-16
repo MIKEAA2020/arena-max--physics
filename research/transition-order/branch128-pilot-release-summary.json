@@ -1,0 +1,21 @@
+{
+  "status": "stopped: stage 2 acceptance gate not passed for both histories",
+  "requested_continuation_steps": 4,
+  "accepted_continuation_steps": 3,
+  "accepted_common_target_pair": false,
+  "unaccepted_step": {
+    "history": "disordered",
+    "p": 0.3048,
+    "primary_optimizer_residual": 9.995603786506007e-08,
+    "right_compatibility_residual": 1.0001650127505745e-07,
+    "required_ceiling": 1e-07,
+    "failure_margin_fraction": 0.00016501275057456688,
+    "primary_tolerance_passed": true,
+    "full_period_evaluation_performed": false
+  },
+  "new_crossing_bracket": false,
+  "stability_tests_performed": false,
+  "thermodynamic_order": "unresolved",
+  "fresh_regression": "246/246 across 10 suites, exit 0; run while final optimizer was active, data audited separately",
+  "no_acceptance_threshold_relaxed": true
+}

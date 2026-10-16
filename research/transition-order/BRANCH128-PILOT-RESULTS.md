@@ -36,6 +36,12 @@ Missing or rejected results are not zero and are not stationary branch observati
 
 No two accepted common-target results yet; no energy-gap or coexistence inference is made.
 
+## Exact validation failure — not rounded into acceptance
+
+The common-target small-order history passed the primary optimizer tolerance (9.995603786506e-08), but its right compatibility defect was **1.000165012751e-07**, above **1e-7** by 0.016501%. The right gate was not relaxed. No full-period value was evaluated for this rejected step, and no accepted common-target branch comparison was constructed. This is a numerical gate failure, not evidence of a physical phase or spinodal.
+
+A same-point safety refinement with a stricter internal goal and unchanged external gates is described in CONVERGENCE-REFINEMENT.md. It requires separate authorization; the original failed attempt remains preserved.
+
 ## Limits and next gates
 
 This pilot samples continuity/retention from accepted anchors. It does not compute exact continuous free-energy functions. If both histories reach a similar family, that does not prove continuity; if distinct finite-χ states survive, that does not prove first order. A nonzero trial free-energy gap at one p is not coexistence.

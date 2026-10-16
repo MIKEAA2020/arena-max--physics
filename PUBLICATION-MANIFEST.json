@@ -236,13 +236,13 @@
     },
     {
       "path": "papers/v33-review-package.zip",
-      "bytes": 16963911,
-      "sha256": "476b4635ae9dfaa595a1641c581ba30d190912e8df21999050f34f08d035f83b"
+      "bytes": 16967142,
+      "sha256": "f1d0bbb290de6f6ce6f532a833542a2076ef9d8bd35b8c663442343ffdab72c9"
     },
     {
       "path": "papers/v33-review-package.zip.sha256",
       "bytes": 89,
-      "sha256": "4d09b4bde105e1ccc59cf70bda6c5cb1190079803fae4b2c28a937e60f94e30a"
+      "sha256": "4c948eff733e5857f844211e0832f73d1c5f02b0fe4d7b57e7cb94159977962f"
     },
     {
       "path": "papers/v34/README.md",
@@ -287,7 +287,7 @@
     {
       "path": "papers/v34/v34-revision-report.docx",
       "bytes": 38308,
-      "sha256": "19c520e7595a1d2ec9e0b74bac81ec4d98e69d447d7edad71d4db3f1b01a52df"
+      "sha256": "c75c608fbb1b786c80e4b2d2debb641e65d3ab83946a3d3bb7147b0e2a01c9d3"
     },
     {
       "path": "quran/README.md",
@@ -316,18 +316,23 @@
     },
     {
       "path": "research/transition-order/BRANCH128-PILOT-RESULTS.md",
-      "bytes": 3969,
-      "sha256": "a47b0570001adcc28a9bc5cdbe07a3e9b1b3fc12832c76d3f7382736039d807f"
+      "bytes": 4675,
+      "sha256": "0c1d925443cbd93b0d28c2634869b60d959e9ebe1d30885504aa061a8d2c3506"
     },
     {
       "path": "research/transition-order/BRANCH128-RUN-STATE.md",
-      "bytes": 2251,
-      "sha256": "9c86cd39f707e4c2d075b60dfc0643836537b455e8f647e720b0074e7916cc7a"
+      "bytes": 955,
+      "sha256": "fbeb09bfebd8241e0738028ef3bbbba502991ab43a9e19f71a0bebaa35311a38"
     },
     {
       "path": "research/transition-order/CHI128-STAGE.md",
       "bytes": 7521,
       "sha256": "df0d7f3e95da92323302cac3dff3364f0ede6aa85d76965c745656336da183b4"
+    },
+    {
+      "path": "research/transition-order/CONVERGENCE-REFINEMENT.md",
+      "bytes": 2336,
+      "sha256": "6b5161c1ca622ad691fcec42e68cf0f62daba634c624715aa1560265ab901ef6"
     },
     {
       "path": "research/transition-order/FEASIBILITY.md",
@@ -430,14 +435,24 @@
       "sha256": "730554866061c8dcd7331239e37df40e7ec7025e6955843c90423ecf1e73f6c5"
     },
     {
+      "path": "research/transition-order/branch128-data-audit.json",
+      "bytes": 1477,
+      "sha256": "4055f3b57200a61c214df96a9cc42ecb374c6f7c5d81aaf4246e32f333dd41d3"
+    },
+    {
       "path": "research/transition-order/branch128-pilot-protocol.json",
       "bytes": 3409,
       "sha256": "3e8bf71d333ed9ee0d8df45117b924c58bd3176f78d665d32b30624efe06e473"
     },
     {
+      "path": "research/transition-order/branch128-pilot-release-summary.json",
+      "bytes": 829,
+      "sha256": "6b43d5afa4dbb02b996e93f13390d7622fc7ff4fe3d3e2abe50712816e454202"
+    },
+    {
       "path": "research/transition-order/branch128-pilot-report.docx",
-      "bytes": 39814,
-      "sha256": "adcfe25261bfb5351fa5670277d86fa69212cc02c854be89918c9328bfbdc678"
+      "bytes": 40146,
+      "sha256": "07e4ee1dcf438dcda515f0d5f87542e862746229b54e62bc8cb193606bcdf66b"
     },
     {
       "path": "research/transition-order/branch128-pilot.csv",
@@ -451,8 +466,8 @@
     },
     {
       "path": "research/transition-order/branch128_pilot_report.py",
-      "bytes": 7262,
-      "sha256": "d5b4d7904de4f4b040cd497c3369e9821d34ebbd643494a7023fcfcec3f91828"
+      "bytes": 8216,
+      "sha256": "9fd379d1b36bf77de9ecfba4e19b29d0565eab31c2d4e1120dac4ce4cce2fb90"
     },
     {
       "path": "research/transition-order/bundle_review.py",

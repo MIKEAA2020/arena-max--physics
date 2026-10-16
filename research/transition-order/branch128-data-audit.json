@@ -1,0 +1,52 @@
+{
+  "status": "passed",
+  "recorded_steps": 4,
+  "accepted_steps": 3,
+  "sources_are_actual_accepted_previous_states": true,
+  "actual_AL_common_diagnostics": {},
+  "checks": [
+    {
+      "stage": 1,
+      "history": "ordered",
+      "p": 0.30475,
+      "status": "accepted-finite-chi",
+      "accepted": true,
+      "left_compatibility": 8.19527226332366e-08,
+      "right_compatibility": 8.195304575404634e-08,
+      "left_canonical": 4.488286148896695e-14,
+      "right_canonical": 4.4406780663700855e-14
+    },
+    {
+      "stage": 1,
+      "history": "disordered",
+      "p": 0.30483,
+      "status": "accepted-finite-chi",
+      "accepted": true,
+      "left_compatibility": 9.915181535895384e-08,
+      "right_compatibility": 9.920886262500792e-08,
+      "left_canonical": 4.111732472379404e-14,
+      "right_canonical": 4.2889934677270686e-14
+    },
+    {
+      "stage": 2,
+      "history": "ordered",
+      "p": 0.3048,
+      "status": "accepted-finite-chi",
+      "accepted": true,
+      "left_compatibility": 9.067603609395294e-08,
+      "right_compatibility": 9.069411859400316e-08,
+      "left_canonical": 4.3004145370087434e-14,
+      "right_canonical": 4.002751624555455e-14
+    },
+    {
+      "stage": 2,
+      "history": "disordered",
+      "p": 0.3048,
+      "status": "iteration-cap-or-stationarity-check-failed",
+      "accepted": false
+    }
+  ],
+  "counted_in_246": false,
+  "physical_order_verdict": "unresolved",
+  "stability_tests_performed": false
+}
