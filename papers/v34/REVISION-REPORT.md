@@ -10,7 +10,7 @@ This follows the independently argued Qur’anic/Lighthouse framework, including
 
 ## Numerical and scientific scope
 
-The accepted χ128 p=.30486 pair has small order diagnostics; it does not establish continuity or coexistence. The six-rate scan status is **running: recovered after session interruption**, with **2/12** accepted preparation records at generation time. Its table marks pending/failed entries explicitly. A finite bulk free-energy gap is not coexistence. The earlier latent-heat proxy and claimed physical coexistence length remain unvalidated/withdrawn.
+The accepted χ128 p=.30486 pair has small order diagnostics; it does not establish continuity or coexistence. The six-rate scan status is **running: recovered after session interruption**, with **4/12** accepted preparation records at generation time. Its table marks pending/failed entries explicitly. A finite bulk free-energy gap is not coexistence. The earlier latent-heat proxy and claimed physical coexistence length remain unvalidated/withdrawn.
 
 The source updates the chosen method and completed finite fourth-Clifford/d=3 pilots without promoting them to thermodynamic results. Old v33 tables remain historical observations, not relabeled χ128 data.
 

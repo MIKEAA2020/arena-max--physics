@@ -34,6 +34,10 @@ if cred.exists():
             raw=unquote(u.password).encode();secrets.extend([raw,u.password.encode()])
 persistent_private_token=ROOT/'.private/github-repository.pat'
 if persistent_private_token.exists():
+    persistent_private_token.parent.chmod(0o700)
+    persistent_private_token.chmod(0o600)
+    private_askpass=persistent_private_token.with_name('github-askpass.py')
+    if private_askpass.exists():private_askpass.chmod(0o700)
     secrets.append(persistent_private_token.read_bytes().strip())
 patterns=[re.compile(rb'github_pat_[A-Za-z0-9_]{20,}'),re.compile(rb'gh[pousr]_[A-Za-z0-9]{20,}'),re.compile(rb'-----BEGIN (?:RSA |EC |OPENSSH )?PRIVATE KEY-----')]
 def scan(data,label,depth=0):

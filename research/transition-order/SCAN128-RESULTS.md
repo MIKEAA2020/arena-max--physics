@@ -2,7 +2,7 @@
 
 16 October 2026 · A-1 continuation, not a new Lighthouse clue.
 
-**Campaign status:** running: recovered after session interruption. **Accepted paired rates:** 1/6. **New terminal preparation records:** 0/10; the two previously accepted p=.30486 states are reused, not reoptimized.
+**Campaign status:** running: recovered after session interruption. **Accepted paired rates:** 2/6. **New terminal preparation records:** 2/10; the two previously accepted p=.30486 states are reused, not reoptimized.
 
 ## Method, allocation and scope
 
@@ -22,8 +22,8 @@ Preparation labels describe initial histories, not guaranteed physical phases. O
 | 0.3040000 | disordered | pending | — | — | — | — | — |
 | 0.3045000 | ordered | pending | — | — | — | — | — |
 | 0.3045000 | disordered | pending | — | — | — | — | — |
-| 0.3047000 | ordered | pending | — | — | — | — | — |
-| 0.3047000 | disordered | pending | — | — | — | — | — |
+| 0.3047000 | ordered | accepted-finite-chi | 9.89e-08 | 0.9925456753 | 0.558892 | 0.528373 | 48.19 |
+| 0.3047000 | disordered | accepted-finite-chi | 9.88e-08 | 0.9925456753 | 0.558909 | 0.528386 | 48.19 |
 | 0.3048600 | ordered | accepted-stationary-at-finite-chi | 9.99e-08 | 0.9930620839 | 0.000284 | 0.000448 | 59.56 |
 | 0.3048600 | disordered | accepted-stationary-at-finite-chi | 9.57e-08 | 0.9930620802 | 0.003909 | 0.003719 | 62.49 |
 | 0.3050000 | ordered | pending | — | — | — | — | — |
@@ -39,7 +39,7 @@ Color L2 is a symmetry-invariant norm of the six one-point amplitudes about thei
 |---:|---:|---:|---|
 | 0.3040000 | — | — | not applicable / pending |
 | 0.3045000 | — | — | not applicable / pending |
-| 0.3047000 | — | — | not applicable / pending |
+| 0.3047000 | -2.03e-13 | 0.9999999989 | all 36 symmetry orientations evaluated |
 | 0.3048600 | 3.76e-09 | 0.9999994886 | all 36 symmetry orientations evaluated |
 | 0.3050000 | — | — | not applicable / pending |
 | 0.3055000 | — | — | not applicable / pending |

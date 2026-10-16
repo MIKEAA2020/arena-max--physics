@@ -71,4 +71,29 @@ svg+=['<text x="490" y="447" text-anchor="middle" font-size="14">Measurement rat
 (HERE/'chi128-scan.svg').write_text('\n'.join(svg))
 spec=importlib.util.spec_from_file_location('md2docx',ROOT/'v2.2/md2docx.py');module=importlib.util.module_from_spec(spec);spec.loader.exec_module(module)
 module.convert(str(HERE/'SCAN128-RESULTS.md'),str(HERE/'chi128-scan-report.docx'))
+from docx import Document
+from docx.shared import Cm,Pt,RGBColor
+from docx.oxml import OxmlElement
+from docx.oxml.ns import qn
+output=HERE/'chi128-scan-report.docx';doc=Document(output)
+for section in doc.sections:
+    section.page_width=Cm(21);section.page_height=Cm(29.7)
+    section.left_margin=Cm(1.8);section.right_margin=Cm(1.8)
+    section.header.paragraphs[0].text='A-1 / χ128 FIXED-SOURCE RATE SCAN'
+    for run in section.header.paragraphs[0].runs:run.font.size=Pt(8)
+    footer=section.footer.paragraphs[0];footer.text='Author-review research / finite-χ observations / '
+    field=OxmlElement('w:fldSimple');field.set(qn('w:instr'),'PAGE');footer._p.append(field)
+    for run in footer.runs:run.font.size=Pt(8)
+for table in doc.tables:
+    for i,row in enumerate(table.rows):
+        props=row._tr.get_or_add_trPr();props.append(OxmlElement('w:cantSplit'))
+        if i==0:props.append(OxmlElement('w:tblHeader'))
+        for cell in row.cells:
+            if i==0:module.set_cell_shading(cell,'E6EEF5')
+            elif i%2==0:module.set_cell_shading(cell,'F5F7FA')
+            for paragraph in cell.paragraphs:
+                paragraph.paragraph_format.space_after=Pt(2)
+                for run in paragraph.runs:run.font.size=Pt(8 if len(table.columns)>=8 else 9)
+doc.core_properties.title='χ128 fixed-source six-rate scan'
+doc.core_properties.author='Arena research assistant';doc.save(output)
 print(json.dumps(dict(status=db.get('status'),accepted_paired_rates=pairs,new_terminal_records=new_runs)))
