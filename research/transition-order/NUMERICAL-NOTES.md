@@ -45,3 +45,9 @@ Legacy verification wording was narrowed without changing its tested condition: 
 The common-rate chi=96,p=.30486 attempts did not satisfy tolerance before their prospective 750-second ceilings. Saved outcomes: ordered: budget-stopped, residual 8.753e-07, 153 iterations, 752.3 seconds; disordered: budget-stopped, residual 8.302e-07, 154 iterations, 751.7 seconds. The disordered-start p=.30490 point converged; the ordered-start .30490 point was not launched after its preceding failure. **No accepted stationary matched-rate pair is claimed.**
 
 Six frozen-trial full-period Rayleigh evaluations at matched p=.30486,.30488,.30490 completed with small contraction residuals. These compare actual normalized trial MPS states, not converged stationary phases. They do not supply a global variational/truncation error bound or a latent-heat/order verdict. All campaign numerical workers have now stopped; remaining work is explicitly deferred or open.
+
+## Authorized chi128 stage — completed outcome
+
+ordered: accepted-stationary-at-finite-chi, eps=9.991478996514631e-08, iterations=186, total stage 2507.1s; disordered: accepted-stationary-at-finite-chi, eps=9.56534706713505e-08, iterations=79, total stage 1022.8s.
+
+2/2 preparations passed the prospective acceptance gates at p=.30486. This does not decide first order versus continuous. Chi192 was not launched; no campaign numerical production remains running. The earlier chi96 failures do not establish two stationary phases. See `CHI128-STAGE.md` for the interpretation contract and logical counterexamples.

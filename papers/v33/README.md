@@ -93,3 +93,7 @@ additional independent scope corrections are explained in the report.
 SHA256SUMS in the ZIP records the supplied files. `source-provenance.json` identifies the
 unaltered v32 input and generated v33 source hashes. The author must review all changes
 before publication.
+
+## Exact chi128-stage replay boundary
+
+The later accepted chi128 states, comparison, protocol and reports are included in the compact physics package. The two original unconverged chi128 warm sources and duplicate rolling states are retained in the **full Git repository/owner-push Git bundle**, not duplicated in this compact ZIP. Exact replay with `prepare_chi128_reproduction.py` therefore requires that full checkout. The compact ZIP remains sufficient for its documented 101-check paper subset and inspection of the accepted states. Its omission of warm sources is not a claim of warm-start replay from this ZIP alone.

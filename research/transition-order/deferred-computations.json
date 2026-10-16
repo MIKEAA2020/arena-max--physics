@@ -3,34 +3,20 @@
     "preparation": "ordered",
     "p": 0.3049,
     "chi": 96,
-    "status": "not-run-after-unconverged-prerequisite"
-  },
-  {
-    "preparation": "ordered",
-    "p": 0.30486,
-    "chi": 128,
-    "status": "deferred-after-chi128-convergence/runtime-ceiling",
-    "qualification": "not an impossibility theorem"
+    "status": "unrun-archived-queue; superseded-by-authorized-higher-chi-stage"
   },
   {
     "preparation": "ordered",
     "p": 0.30486,
     "chi": 192,
-    "status": "deferred-after-chi128-convergence/runtime-ceiling",
-    "qualification": "not an impossibility theorem"
-  },
-  {
-    "preparation": "disordered",
-    "p": 0.30486,
-    "chi": 128,
-    "status": "deferred-after-chi128-convergence/runtime-ceiling",
+    "status": "not-authorized-for-automatic-launch; new-convergence-and-runtime-decision-required",
     "qualification": "not an impossibility theorem"
   },
   {
     "preparation": "disordered",
     "p": 0.30486,
     "chi": 192,
-    "status": "deferred-after-chi128-convergence/runtime-ceiling",
+    "status": "not-authorized-for-automatic-launch; new-convergence-and-runtime-decision-required",
     "qualification": "not an impossibility theorem"
   }
 ]

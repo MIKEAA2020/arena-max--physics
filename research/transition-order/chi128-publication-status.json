@@ -1,0 +1,11 @@
+{
+  "repository": "https://github.com/MIKEAA2020/arena-max--physics",
+  "last_verified_remote_commit": "3b6571dc1a96f673f8c1c6a2417b0f7b03777b09",
+  "new_stage_pushed": false,
+  "status": "completed numerical stage; credential-free owner-push handoff",
+  "reason": "The earlier explicitly excluded Git credential metadata was not retained in this restored workspace. Public read access works; no usable push credential is held. The GitHub connector lookup returned unsupported.",
+  "credential_reuse": "Do not recover or republish the exposed old token.",
+  "delivery_fallback": "Prepare a credential-free Git bundle after completion if authenticated push remains unavailable.",
+  "handoff_mode": "Git bundle with a single ordinary follow-up commit; exact commit and bundle hash supplied in external handoff receipt",
+  "receipt_scope": "Publication state at assistant delivery, not a claim about a later owner push."
+}

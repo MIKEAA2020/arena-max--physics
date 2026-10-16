@@ -43,7 +43,22 @@ OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 L8_SECTOR_SECONDS=120 \
 
 The L=8 command benchmarks before deciding whether to launch eigenproblems. A deferred status is a real outcome, not a cached success. `clifford4_ladder.json` stores the completed 52-case L4/L6 grid, with per-eigenpair residuals. The script's standalone finite-spectrum command can add individual rates/sizes; do not launch an unbounded larger ladder without a measured resource estimate.
 
-## 4. Resume the central matched-rate MPS experiment
+## 4. Current authorized chi=128 continuation
+
+The later user authorization is one two-preparation chi=128 stage at p=.30486, with the original 1e-7 tolerance and at most 90 minutes walltime. See `chi128-90m-protocol.json` and `CHI128-STAGE.md`. Neither agreement nor disagreement at this one point is a binary transition-order verdict. No chi=192 stage is automatically authorized.
+
+The archived protocol has an absolute deadline and the driver refuses accidental output overwrite. **Do not extend that historical deadline in place.** Using the **full Git checkout or owner-push Git bundle** (the compact ZIP omits the two partial warm sources), prepare an isolated reproduction allocating a new runtime but not launching any MPS:
+
+```sh
+python3 research/transition-order/prepare_chi128_reproduction.py \
+  /path/to/new-reproduction-directory --seconds 5400
+```
+
+This copies only the hashed core code and immutable warm states, preserves the original archive, and prints two commands to run in separate terminals. The new shared deadline starts when preparation finishes, so launch promptly. The helper itself never launches a worker.
+
+The older chi=96 example below is **historical reproduction only**, not a recommendation or authorization for another chi=96 production batch.
+
+## 5. Historical matched-rate continuation example
 
 Actual per-branch states are under `v2.2/verify/replica/checkpoints/`. Metadata, not an old JSON pointer or filename, identifies p, chi, functional, residual and whether a state was only a seed. A `latest` file is rolling. Immutable accepted anchors and partial states have separate names.
 
@@ -61,11 +76,11 @@ Use the disordered seed/queue/argument for the other preparation. These original
 
 The default historical target list contains chi=128/192, but current feasibility policy **defers chi=192** after the recorded chi=128 budget problem. Use explicit queue files and a documented resource decision rather than blindly replaying larger targets. The current matched-rate queues hold .30486/.30490 in opposite directions. Tolerance is not relaxed when a result is inconvenient. Approximate truncated seeds are not observations; a fresh optimizer must pass before an accepted comparison.
 
-## 5. Frozen-state comparison is a different diagnostic
+## 6. Frozen-state comparison is a different diagnostic
 
 After both common-rate workers stop, `trial_rayleigh.py` evaluates the same full-period operator on the two saved trial MPS states. It is benchmark/time gated. Even if the numerical contraction is accurate, an unconverged trial comparison does not establish stationary coexistence, latent heat or p_c. Its source optimizer metadata and qualifications are stored explicitly.
 
-## 6. Refresh reports and the compact review bundle
+## 7. Refresh reports and the compact review bundle
 
 ```sh
 python3 research/transition-order/summarize.py

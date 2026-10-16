@@ -26,3 +26,13 @@ L=8 fourth-Clifford work is benchmark-gated. The actual matvec runtime, memory h
 Chi=128 did not produce an accepted phase: ordered p=.3048 stopped after its resumed 900-second segment (saved iteration 63, residual 1.15e-6); disordered p=.305 was triaged at saved iteration 15 (residual 2.34e-5). These are not converged high-chi results. Chi=192 is **deferred and was never launched**, not merely an implied next automatic queue entry.
 
 Both opposite-start chi=96 attempts at p=.30486 then hit their prospective 750-second ceilings: ordered 153 saved iterations/residual 8.75e-7, disordered 154/residual 8.30e-7, versus tolerance 1e-7. Disordered p=.30490 converged first; the ordered queue did not reach .30490. Explicit missing cases are in `deferred-computations.json`. The six cheap full-period frozen-trial contractions completed afterward, but their tiny contraction residuals do not replace optimizer, chi or thermodynamic convergence. No campaign numerical workers remain running.
+
+## Authorized chi128 stage — completed outcome
+
+ordered: accepted-stationary-at-finite-chi, eps=9.991478996514631e-08, iterations=186, total stage 2507.1s; disordered: accepted-stationary-at-finite-chi, eps=9.56534706713505e-08, iterations=79, total stage 1022.8s.
+
+2/2 preparations passed the prospective acceptance gates at p=.30486. This does not decide first order versus continuous. Chi192 was not launched; no campaign numerical production remains running. The earlier chi96 failures do not establish two stationary phases. See `CHI128-STAGE.md` for the interpretation contract and logical counterexamples.
+
+### New measured iteration cost
+
+The completed common-rate chi128 loops averaged 12.71 to 13.38 seconds per iteration. Holding iteration complexity fixed, a naive cubic chi192 forecast is 42.9–45.2 seconds/iteration, or roughly 3.6–3.8 hours for 300 iterations per preparation. This is not a measured chi192 benchmark or a convergence promise, and no such allocation was authorized. The present chi128 convergence bottleneck was overcome; a rate bracket and chi/size-systematic controls, not a binary one-point inference, remain necessary.

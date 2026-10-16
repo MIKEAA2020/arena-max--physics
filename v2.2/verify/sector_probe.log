@@ -1,24 +1,24 @@
 == d=3 iso
 d=3 S= 20 n=  231 <r>=0.203 kappa=0.2608 kappa_det=0.2603 deg=0.067 haar=0.0930 [0.0s]
 d=3 S= 30 n=  496 <r>=0.195 kappa=0.2343 kappa_det=0.2342 deg=0.135 haar=0.0635 [0.0s]
-d=3 S= 44 n= 1035 <r>=0.147 kappa=0.2285 kappa_det=0.2285 deg=0.201 haar=0.0440 [0.3s]
+d=3 S= 44 n= 1035 <r>=0.147 kappa=0.2285 kappa_det=0.2285 deg=0.201 haar=0.0440 [0.2s]
 d=3 S= 60 n= 1891 <r>=0.146 kappa=0.2332 kappa_det=0.2331 deg=0.221 haar=0.0325 [1.2s]
-d=3 S= 80 n= 3321 <r>=0.125 kappa=0.2461 kappa_det=0.2461 deg=0.261 haar=0.0245 [6.9s]
-d=3 S=100 n= 5151 <r>=0.135 kappa=0.2429 kappa_det=0.2429 deg=0.272 haar=0.0197 [27.3s]
+d=3 S= 80 n= 3321 <r>=0.125 kappa=0.2461 kappa_det=0.2461 deg=0.261 haar=0.0245 [5.9s]
+d=3 S=100 n= 5151 <r>=0.135 kappa=0.2429 kappa_det=0.2429 deg=0.272 haar=0.0197 [22.9s]
   fit kappa_det ~ n^(-0.011);  Haar -0.5;  semiclassical f=2: -(f-1)/(2f) = -0.250
 == d=3 aniso30
 d=3 S= 20 n=  231 <r>=0.350 kappa=0.2926 kappa_det=0.2919 deg=0.000 haar=0.0930 [0.0s]
 d=3 S= 30 n=  496 <r>=0.328 kappa=0.3829 kappa_det=0.3825 deg=0.012 haar=0.0635 [0.0s]
 d=3 S= 44 n= 1035 <r>=0.366 kappa=0.1327 kappa_det=0.1327 deg=0.009 haar=0.0440 [0.2s]
 d=3 S= 60 n= 1891 <r>=0.184 kappa=0.2126 kappa_det=0.2126 deg=0.135 haar=0.0325 [1.2s]
-d=3 S= 80 n= 3321 <r>=0.423 kappa=0.2825 kappa_det=0.2825 deg=0.000 haar=0.0245 [6.9s]
-d=3 S=100 n= 5151 <r>=0.306 kappa=0.2779 kappa_det=0.2778 deg=0.060 haar=0.0197 [27.4s]
+d=3 S= 80 n= 3321 <r>=0.423 kappa=0.2825 kappa_det=0.2825 deg=0.000 haar=0.0245 [6.0s]
+d=3 S=100 n= 5151 <r>=0.306 kappa=0.2779 kappa_det=0.2778 deg=0.060 haar=0.0197 [24.6s]
   fit kappa_det ~ n^(-0.049);  Haar -0.5;  semiclassical f=2: -(f-1)/(2f) = -0.250
 == d=3 strong
 d=3 S= 20 n=  231 <r>=0.373 kappa=0.1470 kappa_det=0.1466 deg=0.000 haar=0.0930 [0.0s]
 d=3 S= 30 n=  496 <r>=0.459 kappa=0.1485 kappa_det=0.1466 deg=0.000 haar=0.0635 [0.0s]
-d=3 S= 44 n= 1035 <r>=0.433 kappa=0.8519 kappa_det=0.8377 deg=0.000 haar=0.0440 [0.2s]
+d=3 S= 44 n= 1035 <r>=0.433 kappa=0.8519 kappa_det=0.8377 deg=0.000 haar=0.0440 [0.3s]
 d=3 S= 60 n= 1891 <r>=0.408 kappa=0.3457 kappa_det=0.3068 deg=0.000 haar=0.0325 [1.2s]
-d=3 S= 80 n= 3321 <r>=0.376 kappa=0.2627 kappa_det=0.2589 deg=0.003 haar=0.0245 [6.7s]
-d=3 S=100 n= 5151 <r>=0.416 kappa=0.4947 kappa_det=0.4910 deg=0.003 haar=0.0197 [26.5s]
+d=3 S= 80 n= 3321 <r>=0.376 kappa=0.2627 kappa_det=0.2589 deg=0.003 haar=0.0245 [6.2s]
+d=3 S=100 n= 5151 <r>=0.416 kappa=0.4947 kappa_det=0.4910 deg=0.003 haar=0.0197 [23.1s]
   fit kappa_det ~ n^(+0.326);  Haar -0.5;  semiclassical f=2: -(f-1)/(2f) = -0.250

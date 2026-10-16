@@ -57,5 +57,53 @@
     },
     "interruption": "feasibility triage to matched-chi96 test",
     "note": "No chi128 accepted observation. Partial state preserved; seed truncation is approximate and only initializes a fresh optimizer."
+  },
+  {
+    "campaign": "2026-10-16-chi128-authorized-90m-v1",
+    "branch": "ordered",
+    "checkpoint_metadata": {
+      "n": 3,
+      "d": 2,
+      "p": 0.30486,
+      "operator": "hermitian-halfrow",
+      "tag": "ordered-chi128-bounded",
+      "checkpoint_schema": 1,
+      "tol": 1e-07,
+      "maxiter": 10000,
+      "stage_budget_seconds": 5274.537147760391,
+      "eta": 0.6086382814680076,
+      "eps": 9.991478996514631e-08,
+      "chi": 128,
+      "iters": 186,
+      "seconds": 2488.650842666626
+    },
+    "total_stage_seconds": 2507.052783944,
+    "outcome": "accepted-stationary-at-finite-chi",
+    "source_checkpoint": "v2.2/verify/replica/checkpoints/n3_ordered_chi128_p0.3048000_partial_iter63.npz",
+    "note": "One newly authorized stage; warm-source iterations/time are separate. No chi192 automatically scheduled."
+  },
+  {
+    "campaign": "2026-10-16-chi128-authorized-90m-v1",
+    "branch": "disordered",
+    "checkpoint_metadata": {
+      "n": 3,
+      "d": 2,
+      "p": 0.30486,
+      "operator": "hermitian-halfrow",
+      "tag": "disordered-chi128-bounded",
+      "checkpoint_schema": 1,
+      "tol": 1e-07,
+      "maxiter": 10000,
+      "stage_budget_seconds": 5274.623688459396,
+      "eta": 0.6086382849844681,
+      "eps": 9.56534706713505e-08,
+      "chi": 128,
+      "iters": 79,
+      "seconds": 1004.2448251247406
+    },
+    "total_stage_seconds": 1022.7505504999999,
+    "outcome": "accepted-stationary-at-finite-chi",
+    "source_checkpoint": "v2.2/verify/replica/checkpoints/n3_disordered_chi128_p0.3050000_partial_iter15.npz",
+    "note": "One newly authorized stage; warm-source iterations/time are separate. No chi192 automatically scheduled."
   }
 ]

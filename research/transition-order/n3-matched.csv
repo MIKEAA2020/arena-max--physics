@@ -1,1 +1,2 @@
-p,chi,f_ordered_start,f_disordered_start,delta_f,m_species_O,m_species_D,m_parity_O,m_parity_D,xi_O,xi_D
+p,chi,f_ordered_start,f_disordered_start,delta_f,m_species_O,m_species_D,m_parity_O,m_parity_D,xi_O,xi_D,f_period_O,f_period_D,delta_f_period
+0.30486,128,0.9930622852597312,0.9930622737045575,1.1555173706767619e-08,0.0002838875322486894,0.00390943249061822,1.1385678931165669e-06,0.0028372904097786213,59.5577422027584,62.490784381254116,0.9930620839285511,0.9930620801716004,3.7569507504997546e-09

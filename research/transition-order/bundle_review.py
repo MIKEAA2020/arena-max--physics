@@ -18,7 +18,7 @@ for p in (ROOT/'v2.2/verify/replica/checkpoints').glob('*.npz'):
     if any(x in p.name for x in ['latest','partial','seed_']):continue
     with np.load(p,allow_pickle=False) as z:m=json.loads(str(z['metadata']))
     if p.name.startswith('control_') or m.get('eps',1)>0 and m.get('eps',1)<m.get('tol',1e-7):add(p)
-for name in ['replica_checks.py','replica_checks.log','v33_checks.py','v33_checks.log','transfer_checks.py','transfer_checks.log','run_all_transition_2026-10-16-final.log']:
+for name in ['replica_checks.py','replica_checks.log','v33_checks.py','v33_checks.log','transfer_checks.py','transfer_checks.log','run_all_transition_2026-10-16-final.log','run_all_chi128_2026-10-16.log']:
     add(ROOT/'v2.2/verify'/name)
 add(ROOT/'v2.2/md2docx.py')
 for p in (ROOT/'research/transition-order').rglob('*'):add(p)
@@ -46,7 +46,9 @@ half-row data. Different finite-chi functionals must not be mixed silently.
 
 Real MPS NPZ states are included selectively: controls and accepted immutable
 anchors. Rolling/partial/warm-seed states are omitted here to avoid duplication;
-the complete credential-scanned GitHub snapshot contains those records too.
+the full repository snapshot / owner-push Git bundle retains those records.
+The publication-status receipt says whether the new continuation was actually
+pushed; this archive by itself does not establish a new GitHub publication.
 Inspect metadata and optimizer tolerances: a checkpoint is not a phase verdict.
 
 Optional workspace/amendment/publication helpers under research/ require the full

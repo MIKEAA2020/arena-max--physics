@@ -22,6 +22,7 @@ def writecsv(path,rows,fields):
         w=csv.DictWriter(f,fieldnames=fields,extrasaction='ignore');w.writeheader();w.writerows(rows)
 
 controls=load(R/'half_controls.json',[])
+bounded={b:load(R/f'n3_chi128_bounded_{b}.json') for b in ['ordered','disordered']}
 branches={b:load(R/f'order_{b}.json') for b in ['ordered','disordered']}
 prod=[]
 for b,db in branches.items():
@@ -38,8 +39,8 @@ matched=[]
 for a in branches['ordered'].values():
     for b in branches['disordered'].values():
         if a.get('converged') and b.get('converged') and a.get('p')==b.get('p') and a.get('chi')==b.get('chi'):
-            matched.append(dict(p=a['p'],chi=a['chi'],f_ordered_start=a['f'],f_disordered_start=b['f'],delta_f=a['f']-b['f'],m_species_O=a['m_species'],m_species_D=b['m_species'],m_parity_O=abs(a['m_parity']),m_parity_D=abs(b['m_parity']),xi_O=a['xi_chi'],xi_D=b['xi_chi']))
-writecsv(HERE/'n3-matched.csv',matched,['p','chi','f_ordered_start','f_disordered_start','delta_f','m_species_O','m_species_D','m_parity_O','m_parity_D','xi_O','xi_D'])
+            matched.append(dict(p=a['p'],chi=a['chi'],f_ordered_start=a['f'],f_disordered_start=b['f'],delta_f=a['f']-b['f'],m_species_O=a['m_species'],m_species_D=b['m_species'],m_parity_O=abs(a['m_parity']),m_parity_D=abs(b['m_parity']),xi_O=a['xi_chi'],xi_D=b['xi_chi'],f_period_O=a.get('f_full_rayleigh'),f_period_D=b.get('f_full_rayleigh'),delta_f_period=(a['f_full_rayleigh']-b['f_full_rayleigh']) if 'f_full_rayleigh' in a and 'f_full_rayleigh' in b else None))
+writecsv(HERE/'n3-matched.csv',matched,['p','chi','f_ordered_start','f_disordered_start','delta_f','m_species_O','m_species_D','m_parity_O','m_parity_D','xi_O','xi_D','f_period_O','f_period_D','delta_f_period'])
 lad=load(R/'clifford4_ladder.json');cross=[]
 for ens in ['haar','clifford']:
     for s in ['std','sgn','two','stdsgn']:
@@ -51,7 +52,7 @@ for ens in ['haar','clifford']:
             if a*b<0:cross.append(dict(ensemble=ens,sector=s,L1=4,L2=6,p_linear=p+(q-p)*a/(a-b),bracket_low=p,bracket_high=q))
 writecsv(HERE/'fourth-moment-crossings.csv',cross,['ensemble','sector','L1','L2','p_linear','bracket_low','bracket_high'])
 ex=load(R/'n3_d3_exact.json');d3=load(R/'n3_d3_mps_pilot.json');n4=load(R/'n4_haar_half_pilot.json');l8=load(R/'clifford4_L8_budgeted.json');trial=load(R/'n3_trial_period_rayleigh.json')
-vr=load(HERE/'verification-receipt.json');pub=load(HERE/'publication-receipt.json')
+vr=load(HERE/'verification-receipt.json');pub=load(HERE/'publication-receipt.json');publication_hold=load(HERE/'chi128-publication-status.json');comparison=load(R/'n3_chi128_stationary_comparison.json')
 maxchi=max([r['chi'] for r in accepted],default=96)
 ledger=[
  dict(id='T0',status='complete',outcome='immutable inputs and credential-free method-request log preserved'),
@@ -72,22 +73,44 @@ text=['# Transition-order continuation — executed work and status','',
 '16 October 2026 · A-1 continuation · Reproducible observations and explicit stopping rules, not a phase-order certificate.','',
 '## 1. Decision and outcome','',
 '**Chosen primary method:** deterministic transfer-MPS/DMRG on the exact n=3 replica operator. The implemented upgrade is a validated Hermitian half-row MPO, real resumable NPZ states, higher chi and matched-rate independently prepared states. Existing VUMPS is already in this method family. Finite-cylinder gaps/interfaces are the next independent discriminant if this remains ambiguous; unvalidated large SMC is not the next production run.','',
-'**Scientific conclusion:** the previous locator **p_c approximately .3049(2)** remains the working numerical estimate; **weak first order remains a preference, not a demonstrated verdict, and continuity is unresolved**. No latent heat, interface tension or asymptotic exponent is certified by this campaign. The standard n! algebra does not depend on n=3 being first order.','',
+'**Scientific conclusion:** the previous locator **p_c approximately .3049(2)** remains the working numerical estimate; **transition order remains unresolved**. The earlier weak-first-order preference is not a verdict and is not strengthened by the chi=96 optimizer failures. No latent heat, interface tension or asymptotic exponent is certified by this campaign. The standard n! algebra does not depend on n=3 being first order.','',
 'See [PLAN.md](PLAN.md), [NUMERICAL-NOTES.md](NUMERICAL-NOTES.md), [FEASIBILITY.md](FEASIBILITY.md) and the machine-readable [task ledger](task-ledger.json).','',
 '## 2. Primary n=3,d=2 computation','',
 'All rows below retain their own requested tolerance/status. Local optimizer residuals are not global free-energy error bounds. Preparations named ordered/disordered identify the continuation history, not a guaranteed physical phase. For stopped rows, any listed f_half is an intermediate center-eigenvalue estimate, not an accepted stationary Ritz/free energy.','',
-'**Higher-chi ceiling:** the ordered chi=128 stage exhausted its resumed optimizer budget without convergence; the disordered chi=128 expansion was triaged before convergence. Both partial states are retained. Chi=192 was not launched. Compute was redirected to the more feasible matched-rate chi=96 test without relaxing its tolerance.','',
+('**Earlier resource-limited stages:** the ordered chi=128 anchor exhausted its resumed optimizer budget without convergence; the disordered chi=128 anchor was triaged before convergence. Both partial states are retained. A separately authorized 90-minute common-rate chi=128 stage is recorded below. Chi=192 was not launched and is not automatic.' if any(bounded.values()) else '**Higher-chi ceiling:** the ordered chi=128 stage exhausted its resumed optimizer budget without convergence; the disordered chi=128 expansion was triaged before convergence. Both partial states are retained. Chi=192 was not launched. Compute was redirected to the more feasible matched-rate chi=96 test without relaxing its tolerance.'),'',
 '| Preparation | p | chi | f_half | m_sp / abs(m_par) | xi_chi | residual | Status |',
 '|---|---:|---:|---:|---:|---:|---:|---|']
+if all(r.get('converged') is True for r in bounded.values()):
+    a,b=bounded['ordered'],bounded['disordered']
+    finding=f"**New accepted chi=128 comparison:** both preparations passed the prospective gates at p={a['p']:.5f}. m_species is {a['m_species']:.6f} / {b['m_species']:.6f}, with xi_chi {a['xi_chi']:.2f} / {b['xi_chi']:.2f}. "
+    if max(a['m_species'],b['m_species'],abs(a['m_parity']),abs(b['m_parity']))<.01:
+        finding+='Both solutions have small order diagnostics; a persistent large ordered/disordered branch separation was **not** demonstrated at this probed point. '
+    finding+='This does not establish continuity: the point could lie on the same side of a first-order transition. The earlier common-rate chi=96 states were unconverged and had a shorter budget, so this comparison does not isolate a pure chi effect.'
+    i=text.index('## 2. Primary n=3,d=2 computation')
+    text[i:i]=[finding,'']
 for r in prod:
     text.append(f"| {r['preparation']} | {fmt(r.get('p'),7)} | {r.get('chi','—')} | {fmt(r.get('f',r.get('f_half')),10)} | {fmt(r.get('m_species'),5)} / {fmt(abs(r['m_parity']) if 'm_parity' in r else None,5)} | {fmt(r.get('xi_chi'),2)} | {float(r['eps']):.2e} | {status(r)} |" if 'eps' in r else f"| {r['preparation']} | {fmt(r.get('p'),7)} | {r.get('chi','—')} | — | — | — | see saved metadata | {status(r)} |")
 text+=['','[Full production CSV](n3-production.csv). A row pointing to a rolling `latest.npz` describes that path at the time of recording; it may since have been superseded. Immutable high-chi anchor copies are separately named. Always read checkpoint metadata rather than inferring its state from an old JSON pointer. Partial states contain actual tensors but are not accepted stationary observations.','',
 '### Matched-rate comparisons','']
 if matched:
-    text+=['| p | chi | f_O − f_D | m_species O / D | abs(m_parity) O / D | xi O / D |','|---|---:|---:|---:|---:|---:|']
+    text+=['| p | chi | f_half,O − f_half,D | m_species O / D | abs(m_parity) O / D | xi O / D |','|---|---:|---:|---:|---:|---:|']
     for r in matched:text.append(f"| {fmt(r['p'],7)} | {r['chi']} | {r['delta_f']:.3e} | {r['m_species_O']:.5f} / {r['m_species_D']:.5f} | {r['m_parity_O']:.5f} / {r['m_parity_D']:.5f} | {r['xi_O']:.2f} / {r['xi_D']:.2f} |")
     text+=['','These are finite-chi variational comparisons. Agreement/merger at a single p does not establish continuity; different stationary states at one chi do not establish first order. Rate tuning, free-energy systematics, slope/jump convergence and correlation-length behavior remain necessary.']
 else:text+=['No pair has yet passed both optimizer tolerances at exactly the same p and chi. A partial checkpoint is not substituted into that comparison.']
+if any(bounded.values()):
+    text+=['','### Authorized 90-minute chi=128 stage','',
+    'The user authorized one bounded two-preparation chi=128 stage at p=.30486, not another chi=96 campaign. The original 1e-7 tolerance and optimizer are unchanged. Left/right compatibility, canonical identities and a same-period contraction are additionally validated. See [prospective protocol](chi128-90m-protocol.json) and [interpretation contract](CHI128-STAGE.md). No chi=192 is automatically scheduled.','',
+    '| Preparation | Status | Optimizer residual | Left / right compatibility | Iterations | Stage seconds | f_period_Rayleigh |','|---|---|---:|---:|---:|---:|---:|']
+    for side,r in bounded.items():
+        if not r:continue
+        eps=r.get('eps',r.get('last_state_metadata',{}).get('eps'))
+        eps_text=f'{eps:.2e}' if eps is not None else 'pending'
+        left=r.get('gauge_left_residual');right=r.get('gauge_right_residual')
+        compatibility=f'{left:.2e} / {right:.2e}' if left is not None and right is not None else 'not evaluated'
+        text.append(f"| {side} | {r.get('status','pending')} | {eps_text} | {compatibility} | {r.get('iters','pending')} | {fmt(r.get('total_stage_seconds'),1)} | {fmt(r.get('f_full_rayleigh'),10)} |")
+    text+=['','Neither agreement nor disagreement at one rate and chi is a binary order test. The earlier chi=96 optimizer failures do not establish two stationary phases and are not assigned additional phase-order evidence. A controlled stationary-branch rate bracket and chi/size-systematic checks remain necessary. Non-converged partial states are not substituted for an accepted pair.']
+if comparison:
+    text+=['',f"Supplementary symmetry/gauge-aware comparison: **{comparison.get('status')}**, {len(comparison.get('orientations',[]))} orientations. Largest evaluated normalized mixed-transfer fidelity per site: **{fmt(comparison.get('largest_evaluated_fidelity_per_site'),10)}**. This is a per-site similarity diagnostic, not proof of exact state identity or phase order. Raw complex eigenvalues and contraction residuals are retained in `n3_chi128_stationary_comparison.json`."]
 ritz=[r for r in accepted if 'f_full_rayleigh' in r]
 if ritz:
     text+=['','### Independent period-Rayleigh functional checks','','| Preparation | p | chi | f_half | f_period_Rayleigh | difference |','|---|---:|---:|---:|---:|---:|']
@@ -138,7 +161,10 @@ text+=['','The chosen method has been implemented and feasible computations exec
 if vr:
     text.append(f"Fresh integrated regression: **{vr.get('passed')}/{vr.get('total')} across {vr.get('suites')} suites**, exit {vr.get('exit_code')}; transfer extension {vr.get('transfer_checks')}. Log: `{vr.get('log')}`. The current paper-only runner performs 17+35+49=101 checks. These totals validate specified finite identities and implementation contracts, not every paper theorem or a phase-order verdict.")
 else:text.append('The earlier integrated run passed 241/241 with a 44-check transfer extension; after exact map optimizations the expanded transfer extension passed 49/49 freshly. The final integrated regression receipt is not yet recorded; it is not assumed from process startup.')
-text+=['',f"The first ordinary GitHub push was verified at commit `{pub.get('first_published_commit','not recorded')}` on `MIKEAA2020/arena-max--physics`. The final delivery includes this report as a non-force follow-up snapshot; the exact verified final commit is supplied in the completion message. Existing history/license are preserved. Credentials are excluded and nested archive contents are scanned before staging. See `PUBLICATION-SCOPE.md` at the project root.",'',
+publication_text=(f"The previous verified remote commit is `{publication_hold.get('last_verified_remote_commit')}` on `MIKEAA2020/arena-max--physics`. The new chi=128 continuation is **not claimed pushed**: the earlier excluded credential metadata was not retained in the restored workspace. A credential-free Git bundle provides an owner-push handoff if authenticated publication remains unavailable. Existing history/license are preserved; credentials are excluded and nested archives are scanned before staging. This is a publication-status receipt, not a numerical qualification. See `PUBLICATION-SCOPE.md` at the project root."
+    if publication_hold and publication_hold.get('new_stage_pushed') is False else
+    f"The first ordinary GitHub push was verified at commit `{pub.get('first_published_commit','not recorded')}` on `MIKEAA2020/arena-max--physics`. The final delivery includes this report as a non-force follow-up snapshot; the exact verified final commit is supplied in the completion message. Existing history/license are preserved. Credentials are excluded and nested archive contents are scanned before staging. See `PUBLICATION-SCOPE.md` at the project root.")
+text+=['',publication_text,'',
 'The v33 manuscript remains an **author-review draft**, not a certified submission: the original figure/SM, author approval and specialist analytic-hypothesis audit are still required. This continuation does not rewrite the original v33 numerical claims silently. A-1 stays separate from the Lighthouse source lineage, and Parts I–II commitments are unchanged.','']
 (HERE/'RESULTS.md').write_text('\n'.join(text))
 

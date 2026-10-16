@@ -1,0 +1,89 @@
+[PASS] Half-row exact operator n=2,d=2 error=5.55e-17
+[PASS] Momentum-zero half-row Hermiticity n=2,d=2 error=4.16e-17
+[PASS] Momentum-zero C=H^2 n=2,d=2 error=3.33e-16
+[PASS] Global Hermitian direct sum n=2,d=2 error=2.78e-17
+[PASS] Half-row exact operator n=3,d=2 error=6.11e-16
+[PASS] Momentum-zero half-row Hermiticity n=3,d=2 error=8.33e-17
+[PASS] Momentum-zero C=H^2 n=3,d=2 error=3.33e-16
+[PASS] Global Hermitian direct sum n=3,d=2 error=5.55e-17
+[PASS] Half-row exact operator n=3,d=3 error=2.60e-17
+[PASS] Momentum-zero half-row Hermiticity n=3,d=3 error=4.07e-18
+[PASS] Momentum-zero C=H^2 n=3,d=3 error=6.51e-19
+[PASS] Global Hermitian direct sum n=3,d=3 error=6.94e-18
+[PASS] Half-row exact operator n=4,d=2 error=8.33e-16
+[PASS] Momentum-zero half-row Hermiticity n=4,d=2 error=1.94e-16
+[PASS] Momentum-zero C=H^2 n=4,d=2 error=1.94e-16
+[PASS] Global Hermitian direct sum n=4,d=2 error=1.11e-15
+[PASS] Block-diagonal left environment equals dense contraction 
+[PASS] Block-diagonal right environment equals dense contraction 
+[PASS] Block-diagonal center action equals dense contraction 
+[PASS] Paired left environment reduction is an exact invariant subspace 
+[PASS] Paired right environment reduction is an exact invariant subspace 
+[PASS] Memory-safe two-site periodic MPO contraction 
+[PASS] O(d chi^3) transfer action equals the former contraction 
+[PASS] Transfer subleading spectrum agrees with dense reference 
+[PASS] NPZ checkpoint preserves all six MPS/environment tensors 
+[PASS] NPZ checkpoint preserves operator and scalar metadata 
+[PASS] Incompatible operator invalidates cached environments only 
+[PASS] Wall-budget stop persists a resumable partial state 
+[PASS] Loaded checkpoint genuinely resumes the same numerical state 
+[PASS] Fresh Ising half-row MPS converges at chi=8 
+[PASS] Fresh Ising period-Rayleigh normalization cross-check 
+[PASS] Stored Ising chi ladder has expected finite-entanglement growth kappa(16,32)=2.0382
+[PASS] Stored n=3 p=0.3 functional discrepancy decreases with chi delta24=2.09e-07,delta48=5.79e-09; lower-chi failures not promoted
+[PASS] Stored n=3 p=0.31 functional discrepancy decreases with chi delta24=3.97e-06,delta48=4.12e-07; lower-chi failures not promoted
+{
+  "labels": 30,
+  "physical_bond_rank": 29,
+  "pair_support_counts": [
+    48,
+    288,
+    384
+  ],
+  "pair_moments_n234": [
+    "2/5",
+    "1/5",
+    "1/8"
+  ],
+  "gate_commutator_errors": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0
+  ],
+  "haar_weight_error": 9.43689570931383e-16,
+  "fully_monitored": [
+    {
+      "ensemble": "haar",
+      "p": 1,
+      "L": 4,
+      "eigenvalue": 0.0001705955851728436,
+      "exact": 0.00017059558517284462
+    },
+    {
+      "ensemble": "clifford",
+      "p": 1,
+      "L": 4,
+      "eigenvalue": 0.00024414062500000087,
+      "exact": 0.000244140625
+    }
+  ]
+}
+[PASS] Fourth Clifford has 30 closed labels but physical rank 29 
+[PASS] Fourth Clifford Gram pseudoinverse is a quotient projector 
+[PASS] Uniform Clifford support ranks are exactly 48,288,384 
+[PASS] Independent pair moments are 2/5,1/5,1/8 
+[PASS] Fourth Clifford generators commute with all tested physical gate generators 
+[PASS] Fourth Haar control recovers permutation bond weights 
+[PASS] Fourth Haar and Clifford fully monitored endpoints 
+[PASS] Fourth Clifford left/right triv projector is idempotent 
+[PASS] Fourth Clifford left/right std projector is idempotent 
+[PASS] Fourth Clifford left/right sgn projector is idempotent 
+[PASS] Fourth Clifford left/right two projector is idempotent 
+[PASS] Fourth Clifford left/right stdsgn projector is idempotent 
+[PASS] Stored fourth-moment ladder completed all 52 requested cases 
+[PASS] Stored fourth-moment ladder eigenpairs have small residuals max absolute residual=1.17e-10
+[PASS] Stored Haar fourth-moment L4 p=.38 anchor reproduced 
+
+49/49 checks passed [4.5s]

@@ -17,7 +17,7 @@
   {
     "id": "T3",
     "status": "partial-order-unresolved",
-    "outcome": "accepted new half-row observations through chi=96; 0 accepted same-rate/same-chi pair(s); inspect nonconverged and partial states"
+    "outcome": "accepted new half-row observations through chi=128; 1 accepted same-rate/same-chi pair(s); inspect nonconverged and partial states"
   },
   {
     "id": "T4",

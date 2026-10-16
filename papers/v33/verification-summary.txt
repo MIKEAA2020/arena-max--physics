@@ -1,3 +1,16 @@
+CHI128 CONTINUATION RELEASE — 16 October 2026
+
+Fresh full regression: 246/246 across 10 suites, exit 0.
+Log: v2.2/verify/run_all_chi128_2026-10-16.log
+Paper subset within that run: 17 + 35 + 49 = 101/101.
+Launch transfer recheck: the same 49 identities, not added to 246.
+Supplementary fidelity-helper smoke: 4/4, separately recorded, not added to 246.
+See the transition-order receipt and chi128 stage summary. Optimizer acceptance
+and repository publication are separate from these counted regression checks.
+
+OLDER CONTINUATION AND ORIGINAL DELIVERY RECORDS FOLLOW
+------------------------------------------------------
+
 CURRENT CONTINUATION VERIFICATION — 16 October 2026
 
 Fresh full invocation: bash v2.2/verify/run_all.sh

@@ -11,6 +11,12 @@ Generated research, verification code, data and review drafts. The supplied repo
 - **[v2.2 framework](v2.2/Lighthouse-and-Plan-v2.2.md)** — a separate, evidence-governed lineage. The replica-paper adjudication is A-1, not clue 13; none of its physics decides the commitments in Parts I–II.
 - [Previous v2.1](v2.1/Lighthouse-and-Plan-v2.1.md), [source-lineage records and visualizers](clues/), and [assessments](v2.2/assessments/).
 
+## Accepted chi128 continuation
+
+The later bounded stage produced **two accepted chi=128 optimizer results at p=.30486**, not a certified pair of coexisting phases. Both have small order diagnostics; the large ordered/disordered separation in the earlier unconverged chi=96 trials did not persist in this specific experiment. The same-period values are very close. This does not establish continuity or rule out first order elsewhere in the rate bracket. Chi=192 was not automatically launched.
+
+See [the stage result and interpretation contract](research/transition-order/CHI128-STAGE.md), [reproduction instructions](research/transition-order/REPRODUCE.md), and [publication status at assistant delivery](research/transition-order/chi128-publication-status.json). That receipt distinguishes the previous verified remote commit from a new local owner-push handoff.
+
 ## Reproduce the checks
 
 Python 3.11+ recommended. Numerical work uses NumPy/SciPy/SymPy; full framework checks also use Z3. Limit BLAS threads on small machines.

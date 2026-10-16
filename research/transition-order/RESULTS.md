@@ -6,19 +6,22 @@
 
 **Chosen primary method:** deterministic transfer-MPS/DMRG on the exact n=3 replica operator. The implemented upgrade is a validated Hermitian half-row MPO, real resumable NPZ states, higher chi and matched-rate independently prepared states. Existing VUMPS is already in this method family. Finite-cylinder gaps/interfaces are the next independent discriminant if this remains ambiguous; unvalidated large SMC is not the next production run.
 
-**Scientific conclusion:** the previous locator **p_c approximately .3049(2)** remains the working numerical estimate; **weak first order remains a preference, not a demonstrated verdict, and continuity is unresolved**. No latent heat, interface tension or asymptotic exponent is certified by this campaign. The standard n! algebra does not depend on n=3 being first order.
+**Scientific conclusion:** the previous locator **p_c approximately .3049(2)** remains the working numerical estimate; **transition order remains unresolved**. The earlier weak-first-order preference is not a verdict and is not strengthened by the chi=96 optimizer failures. No latent heat, interface tension or asymptotic exponent is certified by this campaign. The standard n! algebra does not depend on n=3 being first order.
 
 See [PLAN.md](PLAN.md), [NUMERICAL-NOTES.md](NUMERICAL-NOTES.md), [FEASIBILITY.md](FEASIBILITY.md) and the machine-readable [task ledger](task-ledger.json).
+
+**New accepted chi=128 comparison:** both preparations passed the prospective gates at p=0.30486. m_species is 0.000284 / 0.003909, with xi_chi 59.56 / 62.49. Both solutions have small order diagnostics; a persistent large ordered/disordered branch separation was **not** demonstrated at this probed point. This does not establish continuity: the point could lie on the same side of a first-order transition. The earlier common-rate chi=96 states were unconverged and had a shorter budget, so this comparison does not isolate a pure chi effect.
 
 ## 2. Primary n=3,d=2 computation
 
 All rows below retain their own requested tolerance/status. Local optimizer residuals are not global free-energy error bounds. Preparations named ordered/disordered identify the continuation history, not a guaranteed physical phase. For stopped rows, any listed f_half is an intermediate center-eigenvalue estimate, not an accepted stationary Ritz/free energy.
 
-**Higher-chi ceiling:** the ordered chi=128 stage exhausted its resumed optimizer budget without convergence; the disordered chi=128 expansion was triaged before convergence. Both partial states are retained. Chi=192 was not launched. Compute was redirected to the more feasible matched-rate chi=96 test without relaxing its tolerance.
+**Earlier resource-limited stages:** the ordered chi=128 anchor exhausted its resumed optimizer budget without convergence; the disordered chi=128 anchor was triaged before convergence. Both partial states are retained. A separately authorized 90-minute common-rate chi=128 stage is recorded below. Chi=192 was not launched and is not automatic.
 
 | Preparation | p | chi | f_half | m_sp / abs(m_par) | xi_chi | residual | Status |
 |---|---:|---:|---:|---:|---:|---:|---|
 | disordered | 0.3048600 | 96 | 0.9930634553 | — / — | — | 8.30e-07 | budget-stopped |
+| disordered | 0.3048600 | 128 | 0.9930622737 | 0.00391 / 0.00284 | 62.49 | 9.57e-08 | optimizer converged |
 | disordered | 0.3049000 | 96 | 0.9931902376 | 0.00093 / 0.00343 | 47.80 | 9.51e-08 | optimizer converged |
 | disordered | 0.3050000 | 96 | 0.9935068764 | 0.00158 / 0.00110 | 43.78 | 9.90e-08 | optimizer converged |
 | disordered | 0.3050000 | 128 | 0.9935060214 | — / — | — | 2.34e-05 | triage-stopped-unconverged |
@@ -30,12 +33,37 @@ All rows below retain their own requested tolerance/status. Local optimizer resi
 | ordered | 0.3048000 | 96 | 0.9928700670 | 0.52769 / 0.35536 | 53.20 | 9.81e-08 | optimizer converged |
 | ordered | 0.3048000 | 128 | 0.9928698856 | — / — | — | 1.15e-06 | budget-stopped |
 | ordered | 0.3048600 | 96 | 0.9930640344 | — / — | — | 8.75e-07 | budget-stopped |
+| ordered | 0.3048600 | 128 | 0.9930622853 | 0.00028 / 0.00000 | 59.56 | 9.99e-08 | optimizer converged |
 
 [Full production CSV](n3-production.csv). A row pointing to a rolling `latest.npz` describes that path at the time of recording; it may since have been superseded. Immutable high-chi anchor copies are separately named. Always read checkpoint metadata rather than inferring its state from an old JSON pointer. Partial states contain actual tensors but are not accepted stationary observations.
 
 ### Matched-rate comparisons
 
-No pair has yet passed both optimizer tolerances at exactly the same p and chi. A partial checkpoint is not substituted into that comparison.
+| p | chi | f_half,O − f_half,D | m_species O / D | abs(m_parity) O / D | xi O / D |
+|---|---:|---:|---:|---:|---:|
+| 0.3048600 | 128 | 1.156e-08 | 0.00028 / 0.00391 | 0.00000 / 0.00284 | 59.56 / 62.49 |
+
+These are finite-chi variational comparisons. Agreement/merger at a single p does not establish continuity; different stationary states at one chi do not establish first order. Rate tuning, free-energy systematics, slope/jump convergence and correlation-length behavior remain necessary.
+
+### Authorized 90-minute chi=128 stage
+
+The user authorized one bounded two-preparation chi=128 stage at p=.30486, not another chi=96 campaign. The original 1e-7 tolerance and optimizer are unchanged. Left/right compatibility, canonical identities and a same-period contraction are additionally validated. See [prospective protocol](chi128-90m-protocol.json) and [interpretation contract](CHI128-STAGE.md). No chi=192 is automatically scheduled.
+
+| Preparation | Status | Optimizer residual | Left / right compatibility | Iterations | Stage seconds | f_period_Rayleigh |
+|---|---|---:|---:|---:|---:|---:|
+| ordered | accepted-stationary-at-finite-chi | 9.99e-08 | 9.99e-08 / 9.99e-08 | 186 | 2507.1 | 0.9930620839 |
+| disordered | accepted-stationary-at-finite-chi | 9.57e-08 | 9.57e-08 / 9.57e-08 | 79 | 1022.8 | 0.9930620802 |
+
+Neither agreement nor disagreement at one rate and chi is a binary order test. The earlier chi=96 optimizer failures do not establish two stationary phases and are not assigned additional phase-order evidence. A controlled stationary-branch rate bracket and chi/size-systematic checks remain necessary. Non-converged partial states are not substituted for an accepted pair.
+
+Supplementary symmetry/gauge-aware comparison: **all 36 symmetry orientations evaluated**, 36 orientations. Largest evaluated normalized mixed-transfer fidelity per site: **0.9999994886**. This is a per-site similarity diagnostic, not proof of exact state identity or phase order. Raw complex eigenvalues and contraction residuals are retained in `n3_chi128_stationary_comparison.json`.
+
+### Independent period-Rayleigh functional checks
+
+| Preparation | p | chi | f_half | f_period_Rayleigh | difference |
+|---|---:|---:|---:|---:|---:|
+| disordered | 0.3048600 | 128 | 0.9930622737 | 0.9930620802 | 1.935e-07 |
+| ordered | 0.3048600 | 128 | 0.9930622853 | 0.9930620839 | 2.013e-07 |
 
 ### Frozen-trial period-Rayleigh comparison — not coexistence
 
@@ -124,7 +152,7 @@ The exact endpoint precedes the pilot. A low-chi optimizer solution is not a chi
 | T0 | complete | immutable inputs and credential-free method-request log preserved |
 | T1 | complete | exact half-row, direct-sum, paired-environment, checkpoint and contraction checks passed |
 | T2 | complete-with-stated-control-exceptions | Ising ladder; n=3 gapped functional controls; lower-chi requested-tolerance misses retained |
-| T3 | partial-order-unresolved | accepted new half-row observations through chi=96; 0 accepted same-rate/same-chi pair(s); inspect nonconverged and partial states |
+| T3 | partial-order-unresolved | accepted new half-row observations through chi=128; 1 accepted same-rate/same-chi pair(s); inspect nonconverged and partial states |
 | T4 | finite-and-coarse-pilots-complete-fine-order-open | 67 exact cases, 4 finite crossings, 8 MPS pilot cases |
 | T5 | complete | fourth Clifford physical twirl on rank-29 quotient |
 | T6 | L4-L6-complete-L8-runtime-deferred | 52 cases in five diagonal colour sectors; L8 benchmark 3.115 s/matvec |
@@ -138,8 +166,8 @@ The chosen method has been implemented and feasible computations executed, but u
 
 ## 6. Verification, artifacts and GitHub
 
-Fresh integrated regression: **246/246 across 10 suites**, exit 0; transfer extension 49. Log: `v2.2/verify/run_all_transition_2026-10-16-final.log`. The current paper-only runner performs 17+35+49=101 checks. These totals validate specified finite identities and implementation contracts, not every paper theorem or a phase-order verdict.
+Fresh integrated regression: **246/246 across 10 suites**, exit 0; transfer extension 49. Log: `v2.2/verify/run_all_chi128_2026-10-16.log`. The current paper-only runner performs 17+35+49=101 checks. These totals validate specified finite identities and implementation contracts, not every paper theorem or a phase-order verdict.
 
-The first ordinary GitHub push was verified at commit `b121f258cabab2c28dce4d08d74a731f8a217ad4` on `MIKEAA2020/arena-max--physics`. The final delivery includes this report as a non-force follow-up snapshot; the exact verified final commit is supplied in the completion message. Existing history/license are preserved. Credentials are excluded and nested archive contents are scanned before staging. See `PUBLICATION-SCOPE.md` at the project root.
+The previous verified remote commit is `3b6571dc1a96f673f8c1c6a2417b0f7b03777b09` on `MIKEAA2020/arena-max--physics`. The new chi=128 continuation is **not claimed pushed**: the earlier excluded credential metadata was not retained in the restored workspace. A credential-free Git bundle provides an owner-push handoff if authenticated publication remains unavailable. Existing history/license are preserved; credentials are excluded and nested archives are scanned before staging. This is a publication-status receipt, not a numerical qualification. See `PUBLICATION-SCOPE.md` at the project root.
 
 The v33 manuscript remains an **author-review draft**, not a certified submission: the original figure/SM, author approval and specialist analytic-hypothesis audit are still required. This continuation does not rewrite the original v33 numerical claims silently. A-1 stays separate from the Lighthouse source lineage, and Parts I–II commitments are unchanged.
