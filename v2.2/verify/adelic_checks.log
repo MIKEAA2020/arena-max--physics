@@ -1,0 +1,36 @@
+
+== 1. Product formula ==
+[PASS] prod_v |x|_v = 1 for 360/7, -22/91, 1024/243, 1/2
+[INFO] content  -- unique factorisation restated; the 'glue' is a theorem about Q, not about physics
+
+== 2. Functional equation as a statement over all places ==
+[PASS] xi(s) = pi^{-s/2} Gamma(s/2) zeta(s) = xi(1-s) (Archimedean factor supplied by the real place)
+
+== 3. Freund-Witten adelic product formula ==
+[PASS] real place: int_R |x|^{a-1}|1-x|^{b-1}dx = B(a,b)+B(b,c)+B(c,a) = rho_oo(a)rho_oo(b)rho_oo(c)  -- 16.521982893556332374 vs 16.521982893556332374
+[PASS] global: A_oo(a,b) * prod_p A_p(a,b) = 1 (a+b+c=1; Freund-Witten 1987, via xi(s)=xi(1-s))  -- product = 1.0
+[PASS] local p-adic gamma satisfies rho_p(s) rho_p(1-s) = 1
+[INFO] meaning  -- the real string amplitude is the inverse of the product of all p-adic ones: a formal identity that holds by analytic continuation (the Euler products converge nowhere jointly) -- an identity, not a dynamics
+
+== 4. Explicit formula: zeros as the frequencies of the primes ==
+[INFO] psi(1000.5)  -- direct 996.6809; explicit-formula error with N zeros: N=100: 2.371, N=1000: 0.033, N=10000: 0.042, N=100000: 0.001
+[PASS] explicit formula reproduces psi(x) once enough zeros are summed (error < 0.01 with 1e5 zeros, > 1 with 100; the truncated sum is conditionally convergent, so the approach is oscillatory, not monotone)
+[INFO] reading  -- 'the zeros are resonance frequencies' is literally true of the prime-counting function in log x -- and of nothing physical
+
+== 5. Montgomery-Odlyzko statistics ==
+[PASS] spacing-ratio <r> of zeros #10^4..10^5 is GUE-like (0.60 +- 0.02), far from GOE (0.531) and Poisson (0.386)  -- <r> = 0.6105 (GUE large-N 0.5996)
+[PASS] finite-height excess rigidity decreases with height (zeros 1-10^4 vs 8e4-1e5): approach to GUE from above  -- <r>_low = 0.6147, <r>_high = 0.6101 (arithmetic corrections, Bogomolny-Keating 1996)
+[PASS] unfolded spacing variance near GUE 0.178 (Poisson 1.0)  -- var = 0.161, mean = 1.000
+[INFO] contrast  -- the Laplace spectrum of the modular billiard itself (Maass cusp forms of PSL(2,Z)) is POISSONIAN (Bogomolny-Georgeot-Giannoni-Schmit 1992; Bolte-Steil-Steiner 1992): 'arithmetic quantum chaos'. In Hartnoll-Yang the GUE-distributed objects are zeros of the wavefunction's L-function, not energy levels.
+
+== 6. Prime-count 'entropy' ==
+[PASS] log pi(e^y) = y - log y + o(1): the prime-count version of 'S = A/4' carries a -1*log(A/4) correction  -- y=50: residual +0.0206; y=100: residual +0.0102; y=400: residual +0.0025; y=1600: residual +0.0006
+[INFO] contrast  -- integer counting (clue 6b) gives no log term; prime counting gives coefficient -1; one-loop gravity gives ensemble- and matter-dependent coefficients (Sen 2013): a number the slogan would have to match
+
+== 7. Order lives only at the real place ==
+[PASS] Q_5: sqrt(-1) exists (Hensel lift to 5^12)  -- x = 123327057, x^2+1 = 0 mod 5^12
+[PASS] Q_3: -1 = 1^2 + (sqrt(-2))^2 (Hensel lift to 3^12)  -- x = 356989
+[INFO] theorem  -- -1 is a sum of squares in every Q_p (so no Q_p admits a field ordering; Artin-Schreier), while R is ordered and, by Ostrowski, the only Archimedean completion: 'before/after' -- hence a time orientation and a Lorentzian signature -- can only be hosted at the real place. The p-adic sectors are intrinsically orderless.
+
+== SUMMARY ==
+12/12 checks passed

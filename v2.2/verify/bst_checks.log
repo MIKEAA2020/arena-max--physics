@@ -1,0 +1,37 @@
+/home/user/v2.2/verify/bst_checks.py:64: RuntimeWarning: invalid value encountered in divide
+  idx = [s for s in range(S) if phi[s] == 0]; w = pi[idx]; Pbar = (w[:, None]*P[idx]).sum(0)/w.sum()
+
+== 1. Information-bottleneck identity ==
+[PASS] RetKL(phi) = I(S;Z) - I(K;Z) on a random 7-state family  -- 0.1724937440 vs 0.1724937440
+[PASS] ... = I(S;Z|K)
+
+== 2. Mixture centroid optimal ==
+[PASS] sum_s pi_s KL(P_s||Q) minimised at the weighted mixture Q = Pbar (200 perturbations)
+
+== 3. Zero threshold ==
+[PASS] RetKL(M)=0 iff M >= 5 = #distinct rows (unconstrained lumping, S=7)  -- M=3: 1.8168e-02, M=4: 6.6527e-03, M=5: -2.5526e-17, M=6: -2.5526e-17
+
+== 4. Constant-1 probability-coordinate chain ==
+[PASS] KL(p||q) >= ||p-q||_2^2 on 20,000 random pairs (Pinsker 1/2 ||d||_1^2 and centring ||d||_2^2 <= 1/2 ||d||_1^2)  -- min ratio KL/||d||^2 = 1.0001
+[PASS] sharpness: KL = 2 eps^2 + (4/3) eps^4 + O(eps^6) for the two-point perturbation (constant 1 attained)
+[PASS] RetKL(phi) >= sum_{i>=M} lambda_i(Sigma_pi) for every partition into <= M blocks (M=1..4, exhaustive)  -- min slack 9.127e-03
+
+== 5. Grounding gaps ==
+[PASS] unrestricted gap = sigma_{M+1} (Eckart-Young-Mirsky, operator norm)  -- sigma_4 = 10.8824
+[PASS] generic 12x12 Hankel: best rank-2 Hankel approximant found has error >= sigma_3 (lower bound respected)  -- found 4.8317 vs sigma_3 4.8239 (ratio 1.002; the optimiser gives an upper bound only)
+[PASS] one-letter rank-4 rational (H^oo) symbol: explicit AAK approximant has rank 2 and error exactly sigma_3  -- |u| = 0.163584044 on the circle; approximant sigma_3/sigma_2 = 8.9e-07; error 0.163584044470 = sigma_3 0.163584044470
+[INFO] AAK  -- equality is the one-letter Hankel theory (Adamjan-Arov-Krein 1971; Peller 2003 Thm 4.1.1); the multiletter version is left open by the manuscript
+
+== 6. Temporal axis arithmetic ==
+[PASS] log2|H_M| / (M log2 M) stays bounded (halving bound Theta(M log M) for fixed alphabets)  -- [(4, 3.25), (16, 2.562), (64, 2.349), (256, 2.254), (1024, 2.201)]
+[PASS] Ambainis exponent k loglog k / log k is o(k): sub-exponential, as the manuscript says  -- [(64, 0.431), (1024, 0.332), (1048576, 0.216)]
+
+== 7. Controlled zero threshold (Remark controlled-zero-not-kernels example) ==
+[PASS] stationary distribution strictly positive  -- pi = [0.6    0.0667 0.3333]
+[PASS] no two-block partition is unifilar-lumpable (so RetKLc(2) > 0 although only 2 distinct kernels)
+[PASS] the discrete partition is lumpable and has zero cost: N* = 3
+[PASS] coarsest lumpable refinement of the kernel partition has index 3 (partition refinement)
+[PASS] A and B have equal one-step kernels but different two-step futures (distinct causal states in the Crutchfield sense)  -- P(00|A)=0.250, P(00|B)=0.450
+
+== SUMMARY ==
+17/17 checks passed

@@ -1,0 +1,12 @@
+suite                      result       note
+opfibration_checks.py      20/20        ok
+q_kernel.py                34/34        ok
+primon_checks.py           35/35        ok
+adelic_checks.py           12/12        ok
+bst_checks.py              17/17        ok
+clock_checks.py            12/12        ok
+replica_checks.py          17/17        ok
+r7_check.py                15/15        ok
+sector_probe.py            probe        numerical probe, no pass/fail count; output in sector_probe.log
+quran corpus               present      6 files; q.py lookups used by §4.1 and §5 (no pass/fail count)
+TOTAL 162/162 checks passed across 8 suites

@@ -1,0 +1,6 @@
+L=128 p=0.3050 beta=2 M=600 T=128 seed=0: Lambda=-0.246992 ESS 211/600 rho_meas=0.1249 x_rand=0.1066 S_half(bulk,mid)=11.103 lineages(mid)=2 [303s]
+L=128 p=0.3000 beta=2 M=600 T=128 seed=0: Lambda=-0.242912 ESS 221/600 rho_meas=0.1196 x_rand=0.1020 S_half(bulk,mid)=15.144 lineages(mid)=1 [306s]
+L=128 p=0.3100 beta=2 M=600 T=128 seed=0: Lambda=-0.251342 ESS 206/600 rho_meas=0.1292 x_rand=0.1093 S_half(bulk,mid)=11.002 lineages(mid)=2 [301s]
+L=128 p=0.2950 beta=2 M=600 T=128 seed=0: Lambda=-0.238628 ESS 233/600 rho_meas=0.1166 x_rand=0.1006 S_half(bulk,mid)=14.892 lineages(mid)=3 [252s]
+L=128 p=0.3150 beta=2 M=600 T=128 seed=0: Lambda=-0.255255 ESS 195/600 rho_meas=0.1357 x_rand=0.1140 S_half(bulk,mid)=9.401 lineages(mid)=1 [295s]
+L=128 p=0.3050 beta=2 M=600 T=128 seed=1: Lambda=-0.246802 ESS 205/600 rho_meas=0.1240 x_rand=0.1076 S_half(bulk,mid)=11.892 lineages(mid)=1 [300s]

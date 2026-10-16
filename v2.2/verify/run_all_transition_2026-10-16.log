@@ -1,0 +1,8 @@
+suite                      result       note
+opfibration_checks.py      20/20        ok
+q_kernel.py                34/34        ok
+primon_checks.py           35/35        ok
+adelic_checks.py           12/12        ok
+bst_checks.py              17/17        ok
+clock_checks.py            12/12        ok
+replica_checks.py          17/17        ok

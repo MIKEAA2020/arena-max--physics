@@ -1,0 +1,150 @@
+\subsection{The annealed record-moment free energy}
+\label{sec:phase-spine}
+
+For a finite circuit of $T$ full periods, with the measurement schedule included in disorder $\omega$ rather than in the Born record $R$, define
+\begin{align}
+ Z_{q,\omega}(T)&=\sum_{R:P_\omega(R)>0}P_\omega(R)^q,\\
+ \mathfrak f_{L,T}(q,p)&=-\frac{1}{2LT}\log\E_\omega Z_{q,\omega}(T),\qquad q>0.
+ \label{eq:phase-spine}
+\end{align}
+There are $2LT$ measurement opportunities, including unmeasured sites. This normalization is used throughout the new computations. The spatial and temporal limit $\mathfrak f(q,p)$ is used only when it exists. Integer $q=n$ is computed by the exact replica channel; it is not the disorder-replica power $m$ in Proposition~\ref{prop:replica-int}. If the period eigenvalue per compressed bond site is $\eta$, write $f_{\rm b}=-\log\eta$. There are $L/2$ such sites, so $\mathfrak f(n,p)=f_{\rm b}/4$. For Clifford gates, Eq.~\eqref{eq:dyadicmoments} gives $\mathfrak f^{\rm Cl}(q,p)=-\Lambda(q-1;p)$ at arbitrary real $q$; equality to the Haar object is guaranteed at $n=2,3$, not beyond.
+
+Normalization implies $Z_{1,\omega}=1$ exactly and $\mathfrak f_{L,T}(1,p)=0$. At finite volume,
+\begin{equation}
+ \left.\partial_q\mathfrak f_{L,T}(q,p)\right|_{q=1}
+ =\frac{\E_\omega H(P_\omega)}{2LT}.
+ \label{eq:phase-derivative}
+\end{equation}
+This is record entropy, not the normalized spatial entanglement of a trajectory. Differentiation after a thermodynamic limit requires separate control. In particular, neither $Z_1=1$ nor the integer ladder proves a continuation of the entanglement transition to $q=1$. A singular amplitude proportional to $q-1$, or a record-entropy singularity $|p-p_c|^{2\nu}$, is a possible scaling scenario only with additional regularity, a nonzero linear amplitude and hyperscaling assumptions; it is not a consequence of normalization alone or of the no-freezing theorem.
+
+\subsection{The three-replica transition and the finite-size inference it replaces}
+\label{sec:n3annealed}
+
+The finite-size operator remains Eq.~\eqref{eq:Wpn}, with $D=d^2=4$, and is solved in its Gram-symmetric form. The standard and sign excitations belong to $\mathrm{std}\otimes\mathrm{std}$ (four components) and $\mathrm{sgn}\otimes\mathrm{sgn}$ (one component). Retaining only the former loses a genuine critical diagnostic. Independent dense and iterative contractions reproduce the v32 small-system spectra; extension through $L=18$ and uniform-MPS calculations then change their interpretation.
+
+\begin{table}[t]
+\caption{Three-replica standard-sector crossings reproduced and extended independently. $R$ is the larger-size value of $\log(\lambda_1/\lambda_\sigma)/\log(\lambda_1/\lambda_\varepsilon)$. No limiting exponent ratio is assigned. These are floating-point eigenvalue computations of the exact operator, not exact arithmetic certificates of criticality.}
+\label{tab:n3annealed}
+\begin{ruledtabular}
+\begin{tabular}{lcc}
+pair $(L,L+2)$ & $p^*$ & $R$\\
+\colrule
+$(4,6)$ & 0.271217 & 0.10695\\
+$(6,8)$ & 0.296964 & 0.14424\\
+$(8,10)$ & 0.302628 & 0.16143\\
+$(10,12)$ & 0.304334 & 0.17137\\
+$(12,14)$ & 0.304946 & 0.17806\\
+$(14,16)$ & 0.305180 & 0.18302\\
+\end{tabular}
+\end{ruledtabular}
+\end{table}
+
+\emph{Uniform-MPS method and calibration.} We construct the one-period MPO on six bond labels, conjugated by the local Gram square root to a symmetric operator, and optimize its dominant uniform MPS by a VUMPS-type fixed-point method~\cite{ZaunerStauber2018,Fishman2018}. Its periodic $L=6$ contraction agrees with the independent dense operator to below $10^{-14}$. The $n=2$ control at the exact Ising point has $\xi_\chi\simeq42,175,722,2700$ at $\chi=8,16,32,64$, recovering the expected Ising finite-entanglement scaling. This validates the operator and method, not a universality inference at $n=3$. Increasing-$\chi$ chains use warm starts; local optima and direction-of-scan dependence are checked. The observable JSON files do not store the MPS tensors, so skipping a cached stage is not a warm restart.
+
+\begin{table*}[t]
+\caption{Completed three-replica warm-start chains $48\to72\to96$. $f_{\rm b}$ is the free energy per compressed bond site per full period; $m_{\rm sp}$ and $m_{\rm par}$ are species and parity diagnostics; $S_{\rm MPS}$ is the MPS bond entropy in nats, not trajectory entanglement. $\xi_\chi$ is measured in compressed bond sites. Last digits describe individual optimizer results, not certified errors.}
+\label{tab:n3vumps}
+\begin{ruledtabular}
+\begin{tabular}{ccccccc}
+$p$ & $\chi$ & $f_{\rm b}$ & $m_{\rm sp}$ & $|m_{\rm par}|$ & $\xi_\chi$ & $S_{\rm MPS}$\\
+\colrule
+0.3047 & 48 & 0.99254674 & 0.5747 & 0.3965 & 22.8 & 0.5425\\
+       & 72 & 0.99254592 & 0.5644 & 0.3874 & 33.6 & 0.5785\\
+       & 96 & 0.99254575 & 0.5607 & 0.3842 & 41.2 & 0.5927\\
+0.3048 & 48 & 0.99287146 & 0.5569 & 0.3800 & 25.6 & 0.5852\\
+       & 72 & 0.99287032 & 0.5364 & 0.3626 & 41.6 & 0.6518\\
+       & 96 & 0.99287002 & 0.5250 & 0.3533 & 56.8 & 0.6915\\
+0.3050 & 48 & 0.99351843 & 0.4711 & 0.3062 & 38.2 & 0.7821\\
+       & 72 & 0.99350864 & 0.0046 & 0.0063 & 39.1 & 1.3106\\
+       & 96 & 0.99350654 & 0.00065 & 0.00006 & 45.4 & 1.3454\\
+\end{tabular}
+\end{ruledtabular}
+\end{table*}
+
+\emph{Reading the thermodynamic-limit approximation.} The $p=0.3050$, $\chi=48$ state is an ordered local optimum; it melts into a disordered state at $\chi=72$ and remains disordered at $96$. No parity-only ordered state was found in the sampled scans, and both diagnostics lose order together within their resolution. Approximate branch crossings at $\chi=24,48,72$ give $p^*\simeq0.30538,0.30498,0.30489$. Linear continuation of the completed $\chi=96$ branches gives $p^*\simeq0.30487$; this is a branch-model estimate, not direct measurement of a coexistence window or a certified bracket. We retain $p_c^{(3)}=0.3049(2)$ as a numerical location with optimizer and finite-$\chi$ systematics.
+
+The persistence of sizable order near the edge and the difference of branch slopes favor weak first order. They do not establish it: $\xi_\chi$ has not demonstrably saturated, resolved hysteresis disappears with increasing $\chi$, and the possible latent heat is extracted from approximate branches. At $p=0.3048$, $\xi_\chi$ grows nearly as $\chi^{1.1}$ from $72$ to $96$. Effective $-\Delta\log m/\Delta\log\xi_\chi$ values of about $0.03$--$0.08$ at fixed nearby rates are off-critical diagnostics, not estimates or upper bounds on an asymptotic $\beta/\nu$. Thus no $\nu$ bound is claimed. Nor is $\xi_{\rm coex}\simeq40$--$60$ quoted as a converged physical length: these are finite-$\chi$ lengths. The three-state-Potts assignment is withdrawn; a continuous non-Potts transition remains a serious alternative to weak first order.
+
+\emph{Retrospective: what $L\le18$ showed.} The ratio passes $1/6$ between the third and fourth crossing and keeps rising. The earlier statement that $0.107,0.144,0.161,0.171$ converges to $1/6$ was not supported, and a proposed $1/L^2$ extrapolation to $0.194$ is not an established asymptote either. Sign-sector crossings are offset from the standard-sector crossings at accessible sizes even though the uniform-MPS scans find no resolved intermediate phase. A gap approximately proportional to $1/L$ over small rings does not exclude a weak first-order transition: a tunnelling gap can be exponential only beyond its crossover scale. Exact evaluation of a finite operator does not remove finite-size systematics. The finite-size sequence is retained as a result about inference and method, not rebranded as a measured CFT dimension ratio.
+
+\subsection{Four- and five-replica finite-size diagnostics}
+\label{sec:n4n5}
+
+At $n=4$, the two-qubit bond permutation Gram matrix is nonsingular and the label count is $24^{L/2}$. The author's iterative $L=10$ result is retained as author-reported; the independent audit reproduces the $L=4,6,8$ standard-sector crossings and resolves other sectors:
+
+\begin{table}[t]
+\caption{Four-replica sector crossings from the independent $L\le8$ scan (linear interpolation on the recorded rate grid). The final standard-sector column is reported in v32 and was not independently rerun. This table establishes neither convergence nor a universality class.}
+\label{tab:n4annealed}
+\begin{ruledtabular}
+\begin{tabular}{lccc}
+sector & $(4,6)$ & $(6,8)$ & $(8,10)$\\
+\colrule
+$\mathrm{std}\otimes\mathrm{std}$ & .3583 & .3790 & .3823\\
+$(2,2)\otimes(2,2)$ & .3502 & .3797 & ---\\
+$\mathrm{std}'\otimes\mathrm{std}'$ & .3688 & .3882 & ---\\
+$\mathrm{sgn}\otimes\mathrm{sgn}$ & .3698 & .3939 & ---\\
+\end{tabular}
+\end{ruledtabular}
+\end{table}
+
+Here $\mathrm{std}'=\mathrm{std}\otimes\mathrm{sgn}$ is a three-dimensional irrep; the corresponding bimodule sector is $\mathrm{std}'\otimes\mathrm{std}'$ of dimension nine, not $\mathrm{std}\otimes\mathrm{sgn}$ of dimension three. The quoted location around $0.38$--$0.39$ is tentative, not a confidence interval: these short sequences do not constrain all later drift. The $q=4$ Potts and marginal-log assignment is withdrawn unconditionally. A four-point log fit to one sector does not repair this inference, and $L\le10$ cannot be assumed to exceed the crossover scale just because the $n=3$ scale is long.
+
+At $n=5$, the formal bond count is $120^{L/2}$; for qubits the local Gram rank is $119$ because $n=5>d^2=4$, so a physical calculation uses a quotient or pseudoinverse. The v32 orbit assembler accesses a $3865$-dimensional invariant block at $L=8$. Its source-reported gap values, float64 spot-checks and local-dimension extension are retained; that block has not been independently recomputed in this workspace.
+
+\begin{table*}[t]
+\caption{Retained v32 small-size gap ladder, at the reported locators. The numbers and their ordering survive withdrawal of the class assignments. The $n=3$ column is not a certified continuous control, and the $n=4$ column is not a marginal control. $n=5$ values are author-reported rather than independently reproduced here.}
+\label{tab:n5twosize}
+\begin{ruledtabular}
+\begin{tabular}{lccc}
+ & $n=3$ & $n=4$ & $n=5$\\
+\colrule
+$\mathrm{gap}_{12}(4)$ & 2.147 & 1.919 & 1.711\\
+$\mathrm{gap}_{12}(6)$ & 1.185 & 0.990 & 0.806\\
+$\mathrm{gap}_{12}(8)$ & 0.816 & 0.645 & 0.480\\
+closing factor $4\to6$ & 1.81 & 1.94 & 2.12\\
+closing factor $6\to8$ & 1.45 & 1.54 & 1.68\\
+$4\,\mathrm{gap}_{12}\to6\,\mathrm{gap}_{12}$ & $8.59\to7.11$ & $7.67\to5.94$ & $6.85\to4.84$\\
+$8\,\mathrm{gap}_{12}$ & 6.53 & 5.16 & 3.84\\
+\end{tabular}
+\end{ruledtabular}
+\end{table*}
+
+\begin{table*}[t]
+\caption{Effective closing rates computed from the retained gap ladder. $\sigma_{\rm eff}=\log[g(L)/g(L+2)]/2$ and $\alpha_{\rm eff}=\log[g(L)/g(L+2)]/\log[(L+2)/L]$. They are descriptive short-size rates, not measured interface tensions or asymptotic exponents.}
+\label{tab:closingrates}
+\begin{ruledtabular}
+\begin{tabular}{lccc}
+ & $n=3$ & $n=4$ & $n=5$\\
+\colrule
+$\sigma_{\rm eff}$, $4\to6$ & .297 & .331 & .376\\
+$\sigma_{\rm eff}$, $6\to8$ & .187 & .214 & .259\\
+$\sigma_{\rm eff}$, $8\to10$ & .137 & --- & ---\\
+$\alpha_{\rm eff}$, $4\to6$ & 1.466 & 1.632 & 1.857\\
+$\alpha_{\rm eff}$, $6\to8$ & 1.297 & 1.489 & 1.802\\
+$\alpha_{\rm eff}$, $8\to10$ & 1.224 & --- & ---\\
+\end{tabular}
+\end{ruledtabular}
+\end{table*}
+
+The first-order interpretation at $n=5$ remains plausible, and stronger closing across replica number is a durable observed trend. But three small rings do not separate exponential from power-law closing; neither $\xi(5)<\xi(4)<\xi(3)$ nor a thermodynamic latent heat is established by that ordering. The $n=5$ gap-minimum locators are approximately $0.48,0.47,0.465$ for $L=4,6,8$: quoting $p_c^{(5)}\sim0.47$ is descriptive, not an extrapolated interval or a proved inequality. The reported $d=3$ gaps $1.482,0.621,0.453$ have the same limitation. An additional $L=10$ point would help, but no particular fourth size is guaranteed to reach the asymptotic regime.
+
+\begin{remark}[Permutation labels, sectors, and the limits of the Potts comparison]
+\label{rem:whyqn}
+The $q=n$ argument of v32 is withdrawn: the dimension $n-1$ of the standard irrep is not a count of Potts colors. On the formal bond-label space,
+\begin{equation}
+ \mathbb C[S_n]\cong\bigoplus_{\lambda\vdash n}V_\lambda\otimes V_\lambda^*,
+ \qquad \sum_\lambda(\dim V_\lambda)^2=n!.
+ \label{eq:regular-bimodule}
+\end{equation}
+This is the regular left--right bimodule, a standard representation-theoretic fact already implicit in Theorem~\ref{thm:general-n}; it is not claimed as a new duality. Subtracting the uniform component leaves, at $n=3$, dimensions $1+4=5$, and at $n=4$, $1+9+9+4=23$. Local physical bond operators realize the full space only when $d^2\ge n$; otherwise they realize its Schur--Weyl quotient. The globally aligned $p=0$ manifold can still have all $n!$ independent vectors when $d^L\ge n$.
+
+If a fully permutation-ordered phase breaks $S_n\times S_n$ to the diagonal subgroup, its orbit contains $(n!)^2/n!=n!$ symmetry-related states. This is an orbit count conditional on that symmetry breaking, not a proof of finite-$p$ coexistence. The relation to the permutation-Potts limit of Ref.~\cite{Vasseur2019} is valuable, but finite-$d$ reduced symmetry and signed Weingarten coordinates prevent importing the ordinary Potts $q>4$ theorem. Thus $q_{\rm eff}=n!$ is the better structural comparison; first order at $n=3$ is its testable prediction here, not its algebraic consequence.
+
+Increasing the annealed moment favors atypically large record moments. Proposition~\ref{prop:replica-int} makes the distinction between quenched and annealed disorder averages exact, but its monotonicity in the disorder-replica power is not a theorem that transition locations increase with the moment order $n$. The increasing sequence reported here is numerical. Likewise a first-order tunnelling gap, if demonstrated, measures interface effects; its interface tension is not fixed by the latent heat alone.
+\end{remark}
+
+\emph{Conditional changeover and continuation.} If $n=3$ is first-order, and if a suitably regular real-$q$ phase boundary connects a stable continuous neighborhood of $q=2$ to a stable first-order neighborhood of $q=3$, an order-change point lies between them. The notation $n_*\in(2,3)$ is used only for this conditional scenario. If $n=3$ is continuous, that particular bracket fails; the existing $n=4,5$ short-size data do not by themselves establish a new bracket. Neither a unique changeover nor a continuous CFT family has been proved.
+
+For illustration, a line through $p_c(2)=.233810$ and $p_c(3)=.3049$ gives $.16272$ at $q=1$; a quadratic adding $.380$ or $.383$ at $n=4$ gives $.16673$ or $.16973$; a cubic adding $.470$ at $n=5$ gives $.15584$ or $.16784$ for those same choices. This is fit-form and input sensitivity, not an error bar or a quantitative consistency test. Allowing a wider drift of the $n=4,5$ locators broadens it further. The exact finite-circuit moment function exists for real $q$, but those few integer critical points do not determine its singular set or the normalized Born entanglement transition.
+
+Finally, the exact $n=2$ formula has $p_c^{(2)}(d)\to1$ as $d\to\infty$. Extending that endpoint to all fixed $n$ or to $n\to\infty$ at $d=2$ is a research question. Contrasting one integer rung with a quenched large-$d$ percolation value does not by itself prove noncommuting $(q\to1,d\to\infty)$ limits. These statements remain in the outlook, not among the delivered results.

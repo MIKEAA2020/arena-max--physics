@@ -1,0 +1,77 @@
+
+== 1. Fock structure and Z = zeta ==
+[PASS] Euler product over primes<=2000 ~ zeta(2.5)  -- 1.341486 vs 1.341487
+[PASS] Dirichlet sum n<=2e5 ~ zeta(2.5)  -- 1.341487250
+[PASS] <log n>_sigma = -zeta'/zeta (sigma=2.5)  -- 0.288739 vs 0.288741
+[PASS] (sigma-1)*zeta(sigma) -> 1 (simple pole = Hagedorn divergence)  -- [(1.1, 1.058444846495081), (1.01, 1.0057794333849688), (1.001, 1.0005772884759014)]
+[PASS] E(360) = sum k_p log p (unique factorization)
+
+== 2. Log-count identity ==
+[PASS] log(1-e^-x) <= log N(E) - x <= 0 for x in [log2,12]
+[PASS] |defect| <= 2 e^{-x}  -- max(|r|-2e^-x)=0.00e+00
+[PASS] smoothed log N = x + log int e^t w + O(e^-x)  -- deviations [1.18728649e-03 1.60768367e-04 2.19928365e-05]
+
+== 3. Erdos-Kac under zeta vs uniform measure ==
+[INFO] uniform n<=1e6  -- mean omega=2.838, var=0.991, loglog X=2.626 (Hardy-Ramanujan/Erdos-Kac normal ordering)
+[PASS] uniform: mean omega within 25% of log log X
+[PASS] zeta measure: omega(n) has FINITE mean sum_p p^-sigma (not log log)  -- sample mean 1.205 vs sum_p p^-1.3 (5000 primes) 1.196
+[INFO] reading  -- Erdos-Kac (normal, mean log log x) is a statement about the UNIFORM measure on n<=x; under the canonical zeta measure at sigma>1 the prime occupations are independent geometrics with finite total mean -- the manuscript's Erdos-Kac theorem is correctly stated for the uniform (microcanonical-shell) ensemble; the two ensembles differ, as its ensemble-bridge remark says.
+
+== 4. Aperiodicity criterion ==
+[PASS] powers-of-common-integer criterion on test supports  -- {(4, 8): True, (2, 3): False, (6, 10): False, (2, 6): False, (9, 27, 81): True, (6, 36): True}
+[PASS] numerical: {4,8} periodic, {2,3} not (deviation search to t=2000)
+
+== 5. Dirichlet return-time bound ==
+[PASS] an eps-return time exists below the bound (F={2,3,5}, eps=0.3)  -- first q=1550, bound=1148381
+
+== 6. Zeta clock ==
+[PASS] two-time kernel = zeta(2nu +- i w0 (tau-tau'))/zeta(2nu) (truncated sum)  -- |K|=0.33528 vs 0.33530
+[PASS] kernel Gram matrix PSD (Bochner)
+[PASS] |K| does not decay: max|K| on [1500,3000] >= 0.85 and >= 0.9*max on [1,1500] (Bohr a.p.; eps-almost-periods for small eps lie beyond this horizon)  -- max first half 0.863, second half 0.894
+[PASS] |K|^2 at t=(2nu-1) equals 1/2 up to o(1) (nu=0.52)  -- 0.5001
+[PASS] <H> * half-width -> hbar  (nu=0.52)  -- 0.9772
+[PASS] |K|^2 at t=(2nu-1) equals 1/2 up to o(1) (nu=0.505)  -- 0.5000
+[PASS] <H> * half-width -> hbar  (nu=0.505)  -- 0.9942
+
+== 7. Two-mode sector closed form; Hermiticity ==
+[PASS] d=2: picket-fence spectrum E_j = S/2 log(p1p2) + sqrt(D^2+4C^2)(S/2-j)  -- max dev 9.1e-13
+[PASS] d=2: Jacobi off-diagonal b_k = (2h12+VS) sqrt((k+1)(S-k)) [ordered-pair hop => 2h12]
+[PASS] d=2: <k1>_j exactly linear in E_j
+[PASS] d=3 sector block Hermitian (U,V,h all on)
+[PASS] d=4 sector block Hermitian (U,V,h all on)
+[PASS] kinetic term commutes with mode transposition (1<->2) at h=0
+[PASS] prime-log diagonal breaks the covariance
+
+== 8. Sector ladders: GOE premise, doublets, benchmarks ==
+   d=3 S= 20 n= 231 <r>=0.203 kappa=0.260 doublets=0.07 Haar=0.093
+   d=3 S= 30 n= 496 <r>=0.195 kappa=0.234 doublets=0.13 Haar=0.064
+   d=3 S= 44 n=1035 <r>=0.147 kappa=0.228 doublets=0.20 Haar=0.044
+   d=3 S= 60 n=1891 <r>=0.146 kappa=0.233 doublets=0.22 Haar=0.033
+   d=3 S= 80 n=3321 <r>=0.125 kappa=0.246 doublets=0.26 Haar=0.025
+[INFO] d=3 fit  -- kappa ~ n^-0.020; Haar -0.5; few-body semiclassical -(f-1)/(2f) = -0.250 (f=d-1=2)
+[PASS] d=3 fixed-V isotropic: window NOT in GOE class (<r> < 0.45 at every rung) -> ETH premise absent  -- <r> = [np.float64(0.203), np.float64(0.195), np.float64(0.147), np.float64(0.146), np.float64(0.125)] (GOE 0.531, Poisson 0.386)
+[PASS] d=3 fixed-V isotropic: >10% (near-)exact doublets in window (S_3 multiplet skeleton)  -- doublet fractions [0.07, 0.13, 0.2, 0.22, 0.26]
+[PASS] d=3 kappa flat (|slope|<0.1): reproduces manuscript's plateau  -- slope -0.020
+   d=3 aniso S= 20 n= 231 <r>=0.350 kappa=0.292 doublets=0.00
+   d=3 aniso S= 30 n= 496 <r>=0.308 kappa=0.331 doublets=0.01
+   d=3 aniso S= 44 n=1035 <r>=0.297 kappa=0.341 doublets=0.02
+   d=3 aniso S= 60 n=1891 <r>=0.315 kappa=0.345 doublets=0.05
+   d=3 aniso S= 80 n=3321 <r>=0.320 kappa=0.348 doublets=0.03
+[PASS] d=3 +-30% anisotropic control: doublets largely removed but <r> still < GOE band (mixed/regular, not chaotic)  -- <r> = [np.float64(0.35), np.float64(0.308), np.float64(0.297), np.float64(0.315), np.float64(0.32)]
+   d=4 S=  8 n= 165 <r>=0.413 kappa=0.333 doublets=0.00 Haar=0.110
+   d=4 S= 11 n= 364 <r>=0.413 kappa=0.310 doublets=0.00 Haar=0.074
+   d=4 S= 14 n= 680 <r>=0.394 kappa=0.312 doublets=0.00 Haar=0.054
+   d=4 S= 17 n=1140 <r>=0.423 kappa=0.298 doublets=0.00 Haar=0.042
+   d=4 S= 20 n=1771 <r>=0.410 kappa=0.276 doublets=0.00 Haar=0.034
+[INFO] d=4 fit  -- kappa ~ n^-0.069; Haar -0.5; few-body semiclassical -(f-1)/(2f) = -0.333 (f=d-1=3)
+[PASS] d=4 fixed-V isotropic: <r> at Poisson level (0.36-0.45), reproducing manuscript's 0.40-0.42 -> no ETH prediction  -- <r> = [np.float64(0.413), np.float64(0.413), np.float64(0.394), np.float64(0.423), np.float64(0.41)]
+[INFO] benchmark table  -- few-body semiclassical exponent (Feingold-Peres 1986; Eckhardt et al. 1995; var ~ hbar^{f-1}, n ~ hbar^{-f}): d=2 -> 0 (no decay, the manuscript's 'analytic floor'); d=3 -> 1/4; d=4 -> 1/3; d=5 -> 3/8; many-body strong-ETH 1/2 only as f->inf. Manuscript d=5 (GOE band) measured 0.195+-0.082 / 0.26 [0.158,0.367] against 3/8.
+[INFO] timing  -- 17.7s
+
+== 9. Holographic / hierarchy arithmetic ==
+[PASS] Schwarzschild normalisation: hbar*omega0 = 2 k_B T_H^BH  -- ratio 2.000000
+[PASS] ...hence omega0 ~ 1/M: a universal omega0 is incompatible with E_max = Mc^2 (manuscript's own remark)  -- S_primon = E/T_H is linear in E; S_BH ~ E^2; C_primon = +inf at T_H, C_BH < 0
+[PASS] hierarchy: 2 ln(1e16) = 73.7 ~ 74
+
+== SUMMARY ==
+35/35 checks passed

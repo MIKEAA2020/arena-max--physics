@@ -1,0 +1,22 @@
+PASS Thm 4.3: q(2)-2q(1) = 1 on representing side  -- got 1
+PASS Thm 4.3: q(2)-2q(1) = e on process side  -- got e
+PASS Thm 5.2: same two-grade mismatch classically (1 vs |E|)  -- identical algebra with r=|R|, e=|E|, b=|B|
+PASS Thm 4.5: (d_E^2-1)^2 < d_E^4-d_E^2+1  -- difference = d_E^2 > 0
+PASS Thm 4.5: d_E^4-d_E^2+1 < d_E^4  -- difference = d_E^2-1 > 0 for d_E>=2
+PASS Thm 4.5: finite check d_E in [2,1e5): never a perfect square
+PASS Thm 4.6: g < e^2  -- (e-1)/n > 0
+PASS Thm 4.6: g > (e-1)^2  iff  (e-1)/n < 2e-1  -- holds since (e-1)/n <= e-1 < 2e-1
+PASS Prop 3.1: normalisation map has rank d_A^2; dim_aff = d_A^2(n d_B^2 - 1) for d_A,d_B,n <= 3
+PASS Prop 5.1: Chan(A⊗E,B)=128, Chan(A,E*⊗B)=140, difference d_A^2(d_E^2-1)=12  -- 128, 140, 12
+PASS Thm C.2: rank-d_E TP stratum dimension = 2 d_E^2 (d_B - 1) (numerical Jacobian ranks)  -- (dE,dB)=(2,2): stratum 12=12, Tr_B rank 4=4, TP dim 8=8; (dE,dB)=(2,3): stratum 20=20, Tr_B rank 4=4, TP dim 16=16; (dE,dB)=(3,2): stratum 27=27, Tr_B rank 9=9, TP dim 18=18; (dE,dB)=(3,3): stratum 45=45, Tr_B rank 9=9, TP dim 36=36
+PASS Thm C.2: 2Nr - r^2 - d_E^2 at r=d_E equals 2 d_E^2 (d_B-1) (symbolic)
+PASS Thm C.2 step (4): R^2-1 - d_E^2(d_B^2-1) factors as d_E^2 (d_B-1) (d_E^2 (d_B-1) + 2 - d_B - 1)  -- factor: d_E**2*(d_B - 1)**2*(d_E - 1)*(d_E + 1)
+PASS Thm C.2 step (4): second factor = (d_E^2-1)(d_B-1)
+PASS Prop C.35: 2(d_R-1) >= dim Ext Chan(E,B) = 2 d_E^2 (d_B-1)  <=>  d_R >= d_E^2(d_B-1)+1 (qubit->qubit: 5)
+PASS Prop 6.1: Knill-Laflamme condition holds for the two-isometry channel
+PASS Prop 6.1: R∘N = id on a random state; N(pure) has rank 2 (not an isometry channel)
+PASS Prop 6.2: N^#_σ(τ) = σ and trace preservation
+PASS Prop 6.2: (M∘N)^#_σ = N^#_σ ∘ M^#_τ (contravariant composition)
+PASS Thm 4.12 / Prop 5.5: Chan(X,ℂ) = {trace} (unique), Chan(E,E) ⊇ {id, depolarising} (two morphisms)  -- trace preservation fixes the unique effect; identity and X -> tr(X) I/d_E are distinct for d_E>=2
+
+20/20 checks passed

@@ -1,0 +1,65 @@
+# Assessment: Batch 3, normal arm
+
+The analyst+engine system produced data that contradicts the paper's own claim. Specifically:
+
+- The paper claims x_σ/x_ε = 1/6 (three-state Potts).
+- The analyst computed the ratio at L = 14 and got 0.18016.
+- The reviewer independently reproduced this at L = 14 with residuals ~1e-15.
+- The data is monotone rising past the paper's tabulated window: 0.167 (L = 10) → 0.173 (L = 12) → 0.180 (L = 14).
+- Fitting R∞ + a/L^b gives R∞ ≈ 0.194 with b ≈ 1.95; forcing R∞ = 1/6 fits 26× worse.
+
+The reviewer's conclusion: the sealed key is faithful to the paper, but the paper does not survive its own data extended two sizes further.
+
+## What the reviewer actually did
+
+Three things, in order:
+
+1. Scored P2 as PASS (proof-equivalent, replay content-identical). The `2^n−n+1` falsification happened in-draft for the second time.
+2. Scored P1 as keyed-FAIL (0.1927 vs keyed 1/6; 1/ν 1.15 vs 6/5).
+3. Independently recomputed P1's ratio at L = 12 and L = 14 to verify the analyst's claim. Confirmed.
+
+Step 3 is the important one. The reviewer did not accept the analyst's finding on testimony. It reproduced the numbers. That is what makes the finding credible.
+
+## The decision in front of you
+
+The reviewer's advisory: "If you re-key, anchor P1 acceptance on R∞ ≈ 0.19 ± 0.005 rather than 1/6. Your call, owner-side."
+
+Three options, each with costs:
+
+## What this means for the engine-yield question
+
+The agent's framing is right: this is the strongest positive engine-yield result yet. But it is a different kind of result from batch 2b.
+
+- **Batch 2b:** engine falsified an analyst's wrong formula. The analyst recovered and derived the correct formula. Engine value = redirection.
+- **Batch 3:** analyst+engine produced data that contradicts the paper's claim. The reviewer independently verified. Engine value = production of contested data.
+
+The second is stronger if the finding holds. But "necessity" is still not established. A strong analyst could, in principle, have computed the L = 14 ratio by hand or via other tools. The engine made it feasible; whether it was necessary is a separate question. The paired comparison (permuted arm) is the test.
+
+## What the permuted arm will tell you
+
+If the permuted arm also produces R(L = 14) ≈ 0.180 and refuses 1/6, then the finding is robust to presentation. That is the key robustness check.
+
+If the permuted arm produces 1/6 (i.e., matches the paper), then something is presentation-dependent, and the finding is less secure.
+
+If the permuted arm fails to compute L = 14 at all, the finding remains single-arm.
+
+The agent's note about the worklog's attribution — the analyst needs to clarify "who produced the Σ-identification inside the migration lemma" and "the decision path of any class-refusal" — is the right follow-up question for the permuted arm. If the engine produced the data that drove the refusal, the attribution is engine-positive. If the analyst decided to refuse based on hand-analysis and the engine merely confirmed, attribution is different.
+
+## What the paper's author needs to see
+
+If the finding holds, the author needs:
+
+1. The specific ratio values at L = 12 and L = 14 (0.173, 0.180).
+2. The fit result (R∞ ≈ 0.194, b ≈ 1.95, 26× better than forcing 1/6).
+3. The comparison to the paper's own L = 10 control row (0.167, "on target").
+4. The question: does the paper's analytic derivation of 1/6 (if any) survive the extended numerical data, or is the analytic claim itself in need of revision?
+
+This is a specific, checkable question with a specific answer. It is the same kind of question as R7 — an external finding, sent to the source, awaiting adjudication.
+
+## The ledger line
+
+The honest ledger line for this round is:
+
+> **Batch 3 normal arm: P2 PASS, P1 keyed-FAIL / model-contested.** The analyst+engine system produced data (R(L = 14) = 0.18016) that contradicts the paper's keyed claim (1/6). The reviewer independently reproduced the finding. Key-integrity advisory issued: the sealed key is paper-faithful but the paper does not survive extended data. Re-keying deferred pending author consultation. Engine-yield: strongest positive yet, but necessity still open; paired comparison pending.
+
+This preserves both the failure and the finding. It does not pre-empt the author. It does not suppress the result.

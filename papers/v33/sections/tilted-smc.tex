@@ -1,0 +1,42 @@
+\subsection{An independent three-replica route: tilted stabilizer SMC}
+\label{sec:coexistence-smc}
+
+The three-design identity is most useful near $p_c^{(3)}$, where direct moment averaging has an exponentially small effective sample fraction. Let $V=2LT$, and tilt the Clifford disorder law by $2^{-\beta N_{\rm rand}}$; $\beta=2$ gives the Haar three-replica annealed partition function exactly. A sign-free tableau sampler avoids both signed Weingarten coordinates and MPS truncation. It does not avoid finite-population bias or difficult rare-event sampling~\cite{Giardina2006,DelMoral2004}.
+
+We use phase-free stabilizer rows: $N_{\rm rand}$ and bipartite stabilizer entropies do not depend on outcome signs. Independent uniform two-qubit Clifford actions are sampled from the 720 binary symplectic matrices. At a site where a $Z$ outcome would be random, absorb its tilt into the measurement proposal:
+\begin{equation}
+ c=1-p+p2^{-\beta},\qquad
+ p_{\rm prop}=\frac{p2^{-\beta}}{c}.
+ \label{eq:adapted-tilt}
+\end{equation}
+Measuring and not measuring then have original target weights $p2^{-\beta}$ and $1-p$; both have residual importance weight $c$. At a deterministic site the unsigned tableau is unchanged either way, the residual weight is one, and the measurement coin retains probability $p$. The product of residual weights is resampled systematically at period ends and adaptively at the half-period boundary when ESS falls below half the population. The product normalizer estimates $\E 2^{-\beta N_{\rm rand}}$; its logarithm has finite-population bias even when the normalizer is unbiased.
+
+Final-particle genealogies estimate interior-time observables, but identical descendants do not count as independent paths. We record both incremental ESS and the number of distinct ancestors at every time, and distinguish filtering from smoothed histograms. Stabilizer half-chain entropy is evaluated by binary rank, with the gate-layer strobe specified: at $p=1$ a cut crossed by the last gate layer gives mean $0.8$ bits for two boundary-crossing gates, whereas a cut not crossed gives zero. It is not the MPS entropy of Table~\ref{tab:n3vumps}.
+
+\begin{table}[t]
+\caption{Pilot validation, using independent runs of the adapted proposal. Parenthetic errors here are between-run standard-error estimates from small seed sets, not systematic bounds. Errors use the sample standard deviation with $n_{\rm seeds}-1$ degrees of freedom. Exact moment values are independently reproduced by finite-time replica contraction (the $L=16$ last row is the v32 anchor).}
+\label{tab:smc-validation}
+\begin{ruledtabular}
+\begin{tabular}{lcc}
+quantity & SMC & exact\\
+\colrule
+$\E 2^{-N_{\rm rand}}$, $L=16,p=.16,T=2$ & .032957(15) & .032962\\
+$\Lambda_8(2)$, $p=.16,T=32$ & $-.121920(19)$ & $-.121924$\\
+$\Lambda_8(2)$, $p=.22,T=32$ & $-.169636(18)$ & $-.169613$\\
+$\Lambda_{12}(2)$, $p=.16,T=48$ & $-.123863(5)$ & $-.123857$\\
+$\Lambda_{16}(2)$, $p=.22,T=64$ & $-.173889(10)$ & $-.173901$\\
+\end{tabular}
+\end{ruledtabular}
+\end{table}
+
+The near-transition pilot covers $L=32,64,128$ with respectively $2000,1200,600$ particles and $T=128,192,128$ periods. At $p=.305$, the two independent runs at each size have approximately $22$--$28$, $4$--$5$, and $1$--$2$ distinct mid-time ancestors. Although incremental ESS remains appreciable, those genealogies are inadequate for reliable coexistence histograms, particularly at $L=64,128$. Temporal boundaries, aspect ratio and population size have not been extrapolated. The pilot validates the numerical route, not the order of the transition. No first-order verdict is inferred from an apparent pair of peaks in correlated descendants, and absence of bimodality would not exclude a missed phase.
+
+A useful exact response identity controls the proposed production calculation. If $M$ is the number of measured sites, differentiating the schedule probability gives
+\begin{equation}
+ \rho_\beta:=\frac{\langle M\rangle_\beta}{V}
+ =p+p(1-p)\partial_p\Lambda_L(\beta;p).
+ \label{eq:tilted-density}
+\end{equation}
+At $\beta=2$ in the thermodynamic limit, $\rho_2=p-p(1-p)f_{\rm b}'/4$. The approximate MPS branch slopes suggest a possible density separation only of order $0.005$--$0.006$, if a nonzero latent heat survives. This is a precision requirement, not a measured density jump. Random-outcome density is instead $-(\log2)^{-1}\partial_\beta\Lambda$; the two observables must not be conflated. Blocked density histograms, controlled phase mixing, size-dependent barriers and independent populations are the principal coexistence diagnostics; trajectory entropy is complementary and its relationship to thermodynamic order must be calibrated.
+
+\emph{Fourth moment, future work.} The first replica order at which Clifford and Haar gate averages can differ is four. The Gross--Nezami--Walter construction has 30 stochastic-Lagrangian labels in its stable regime, which at replica order four requires at least three qubits per twirled block~\cite{GrossNezamiWalter2021}. The two-qubit fourth Clifford commutant relevant here instead has dimension 29, versus Haar dimension 24; an independent exact Gram-rank computation of its permutation-plus-stabilizer-projector span confirms 29. A 30-label construction on two qubits is therefore redundant and needs a Gram pseudoinverse or a 29-dimensional basis; see also the all-size theory of Ref.~\cite{Bittel2026}. Constructing and solving that transfer operator is not done in this revision. A nonzero fourth-moment difference does not guarantee a split of critical points, and neither difference alone is an operational measure of state magic. Those are further questions, not results of the present closure identity.

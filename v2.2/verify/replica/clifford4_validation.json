@@ -1,0 +1,38 @@
+{
+  "labels": 30,
+  "physical_bond_rank": 29,
+  "pair_support_counts": [
+    48,
+    288,
+    384
+  ],
+  "pair_moments_n234": [
+    "2/5",
+    "1/5",
+    "1/8"
+  ],
+  "gate_commutator_errors": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0
+  ],
+  "haar_weight_error": 9.43689570931383e-16,
+  "fully_monitored": [
+    {
+      "ensemble": "haar",
+      "p": 1,
+      "L": 4,
+      "eigenvalue": 0.0001705955851728436,
+      "exact": 0.00017059558517284462
+    },
+    {
+      "ensemble": "clifford",
+      "p": 1,
+      "L": 4,
+      "eigenvalue": 0.00024414062500000087,
+      "exact": 0.000244140625
+    }
+  ]
+}

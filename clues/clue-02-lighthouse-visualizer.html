@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background: #ffffff;
+    color: #0d0d0d;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+  }
+  .v-card {
+    background: #ffffff;
+    border: 1px solid #e5e5e5;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+    padding: 24px;
+    max-width: 820px;
+    width: 100%;
+  }
+  .v-title {
+    font-size: 16px;
+    font-weight: 500;
+    border-bottom: 1px solid #e5e5e5;
+    padding-bottom: 12px;
+    margin-bottom: 6px;
+  }
+  .v-sub {
+    font-size: 12px;
+    color: #6b7280;
+    margin-bottom: 16px;
+    line-height: 1.5;
+  }
+  .section {
+    margin-bottom: 10px;
+    border: 1px solid #e5e5e5;
+    border-radius: 8px;
+    overflow: hidden;
+  }
+  .section-header {
+    padding: 11px 14px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    user-select: none;
+    background: #fafafa;
+  }
+  .section-header:hover { background: #f5f5f5; }
+  .section-num {
+    font-family: 'SF Mono', Monaco, monospace;
+    font-size: 10.5px;
+    color: #4d6bfe;
+    background: rgba(77,107,254,0.08);
+    padding: 2px 7px;
+    border-radius: 4px;
+    flex-shrink: 0;
+  }
+  .section-title {
+    font-size: 13px;
+    font-weight: 500;
+    flex: 1;
+  }
+  .section-count {
+    font-size: 10.5px;
+    color: #9ca3af;
+    font-family: 'SF Mono', Monaco, monospace;
+  }
+  .arrow {
+    font-size: 10px;
+    color: #9ca3af;
+    transition: transform 0.15s;
+  }
+  .arrow.open { transform: rotate(90deg); }
+  .section-body {
+    display: none;
+    padding: 4px 14px 14px 14px;
+  }
+  .section-body.open { display: block; }
+  .entry {
+    border-left: 2px solid #4d6bfe;
+    padding: 8px 12px;
+    margin: 8px 0;
+    background: rgba(77,107,254,0.02);
+    border-radius: 0 6px 6px 0;
+  }
+  .entry-title {
+    font-size: 12.5px;
+    font-weight: 500;
+    color: #0d0d0d;
+    margin-bottom: 4px;
+  }
+  .entry-body {
+    font-size: 11.5px;
+    color: #4b5563;
+    line-height: 1.55;
+  }
+  .entry-body .q {
+    color: #4d6bfe;
+    font-style: italic;
+  }
+  .entry-body .tag {
+    font-family: 'SF Mono', Monaco, monospace;
+    font-size: 9.5px;
+    padding: 1px 5px;
+    border-radius: 3px;
+    background: rgba(77,107,254,0.08);
+    color: #4d6bfe;
+    margin-right: 4px;
+  }
+  .entry-body .tag.spec { background: rgba(156,163,175,0.15); color: #6b7280; }
+  .entry-body .tag.est { background: rgba(77,107,254,0.12); color: #4d6bfe; }
+  .v-note {
+    font-size: 12px;
+    color: #6b7280;
+    line-height: 1.6;
+    margin-top: 16px;
+    padding-top: 14px;
+    border-top: 1px solid #e5e5e5;
+  }
+  .v-note strong { color: #0d0d0d; font-weight: 500; }
+</style>
+</head>
+<body>
+<div class="v-card">
+  <div class="v-title">The Lighthouse for Physics — Full Consolidation</div>
+  <div class="v-sub">Every surviving point from the entire dialogue that bears on physics. Derived from Quran + logic + physics convergence. Click any section to expand.</div>
+
+  <div id="sections"></div>
+
+  <div class="v-note">
+    <strong>How to read this.</strong> Section 0 is the engine — the method that generates everything else. Sections 1–3 are the structural insights and commitments. Sections 4–5 are the research orientations and adjudications. Section 6 is the dissolutions. Section 7 is what remains open. Nothing here is proven. Everything here is a <em>structural bet</em> — answerable to experiment, to the text, and to logic. The lighthouse does not sail the ship. It shows where the deep water is.
+  </div>
+</div>
+<script>
+const sections = [
+  {
+    num: "0",
+    title: "The Engine — Polarity Analysis",
+    entries: [
+      {title: "Every apparent contradiction is a polarity misread as a competition.",
+       body: "The resolution is not to pick a pole. It is to see the axis. This is the general method. It generated every dissolution below."},
+      {title: "Constituting vs. competing polarity.",
+       body: "Competing: zero-sum, more of one = less of the other. Constituting: non-zero-sum, each pole requires the other. The synthesis uses constituting polarity throughout."},
+      {title: "The asymmetry.",
+       body: "Point prior in <em>being</em>. Circle prior in <em>manifestation</em>. The point grounds the circle; the circle makes the point visible. This asymmetry is the structure of every axis."},
+      {title: "The normative gap.",
+       body: "Co-constitution explains presence, not validity. The gap is real and is not closed by the polarity. It is closed only by the ground — the point."}
+    ]
+  },
+  {
+    num: "1",
+    title: "Structural Insights — What Physics Should Expect",
+    entries: [
+      {title: "Time is emergent.", tag: "est",
+       body: "Wheeler–DeWitt has no time variable. Page–Wootters recovers evolution from correlations. Causal sets begin with a timeless partial order. LQG quantizes geometry without background time. Four independent programs. <span class='q'>Qadar</span> before duration."},
+      {title: "Space is emergent.", tag: "est",
+       body: "Holography (AdS/CFT), entanglement-based geometry (Van Raamsdonk), tensor networks (MERA, HaPPY). Space is a coarse-graining of quantum correlations. <span class='q'>Ẓāhir</span> before extension."},
+      {title: "Causation is not fundamental.", tag: "est",
+       body: "The fundamental equations are time-symmetric. The arrow of causation comes from boundary conditions, not the equations (Russell 1913). Causal sets: causal structure emerges from a more basic order."},
+      {title: "Locality is emergent.", tag: "est",
+       body: "Bell violations rule out local hidden variables. Holography: a local bulk is encoded in a nonlocal boundary theory. The world looks local at low energy; the substrate is not."},
+      {title: "Gravity is thermodynamic / entanglement.", tag: "spec",
+       body: "Jacobson (1995): Einstein equations from thermodynamics. Verlinde: entropic forces. Ryu–Takayanagi: entanglement entropy and geometry. All point to gravity as emergent from statistical or quantum-informational structure."},
+      {title: "Symmetry precedes substance.", tag: "est",
+       body: "Noether's theorem links every continuous symmetry to a conservation law. Wigner: particles are representations of symmetry groups. The Standard Model is a gauge theory. Every attempt beyond it is a search for deeper symmetry."},
+      {title: "Information is physical.", tag: "est",
+       body: "Landauer (1961): erasing one bit costs kT ln 2. Bekenstein (1973): black hole entropy is proportional to area. The information paradox. Quantum computing. <span class='q'>ʿIlm</span> as structure."},
+      {title: "Scale is real — the renormalization group is fundamental.", tag: "est",
+       body: "Wilson (1971). Physics is scale-dependent. Every theory is effective with a domain. Universality — same critical exponents across different systems — explained by RG flow. The deepest framework after QM and GR."},
+      {title: "The arrow of time is statistical — and structurally oriented.", tag: "est",
+       body: "Boltzmann: the arrow is in the boundary conditions, not the laws. The Past Hypothesis. <span class='q'>Maʿād</span> suggests it is also structurally oriented — a research orientation, not a proved result."},
+      {title: "Quantum theory is universal.", tag: "est",
+       body: "Quantum theory applies to everything. Decoherence explains classical appearance. The measurement problem is unresolved, but the universality of the formalism is not in doubt."}
+    ]
+  },
+  {
+    num: "2",
+    title: "Derived Commitments — What the Informational Layer Requires",
+    entries: [
+      {title: "Measure precedes duration.", tag: "mod",
+       body: "If time is emergent, what does it emerge from? <span class='q'>Qadar</span> — measure. This predicts discrete/quantized structure beneath temporal ordering. Causal sets, LQG, spectral geometry independently suggest this."},
+      {title: "No brute facts.", tag: "est",
+       body: "If everything is grounded, no fundamental constant is a brute fact. Fine-tuning must have an explanation. This rules out the 'just accept the multiverse and stop asking' move. A methodological constraint, not a derivation."},
+      {title: "Information is never lost.", tag: "est",
+       body: "<span class='q'>Ḥifẓ</span> (15:9). Unitarity in quantum mechanics. The black hole information paradox and its resolution confirmed that information is not destroyed. A deep structural principle."},
+      {title: "The vacuum is not 'nothing.'", tag: "mod",
+       body: "<span class='q'>Al-Qayyūm</span> (2:255). QFT: the vacuum is the ground state of fields, not nothing. Zero-point energy, vacuum fluctuations, the Higgs field. What we call 'empty' is a state of being."},
+      {title: "Constants are ordained, not arbitrary.", tag: "mod",
+       body: "<span class='q'>Qadar</span> (54:49). The constants appear 'chosen.' Physics has no mechanism. A research orientation: derive them, do not assume them."},
+      {title: "The world is intelligible because it is spoken.", tag: "mod",
+       body: "<span class='q'>Kun</span> (36:82). The world has the structure of language. Wigner's 'unreasonable effectiveness of mathematics' is answered: it is effective because it is the grammar of a spoken order."},
+      {title: "No orphan levels.", tag: "mod",
+       body: "Every level is grounded through L1–L4. No level is autonomous. Any physics that treats a level as final (classical spacetime, the Standard Model, QM) is incomplete by construction."},
+      {title: "Two-stage emergence.", tag: "est",
+       body: "Grounding (God → information) and emergence (information → geometry) are different relations with different warrants. Physics addresses the second. It cannot address the first. This prevents a class of category errors."},
+      {title: "Unified interface limits.", tag: "mod",
+       body: "The Bekenstein bound, holographic bound, quantum measurement limits, and Landauer bound are currently separate. The synthesis predicts they are manifestations of one interface structure. Research orientation."},
+      {title: "Error correction is universal, not AdS-specific.", tag: "mod",
+       body: "Holographic error correction (HaPPY codes, Almheiri–Dong–Harlow) is currently a feature of AdS/CFT. <span class='q'>Ḥifẓ</span> predicts it is general. Research orientation: look for it in de Sitter, cosmology, QG generally."},
+      {title: "Dynamics and information are one.", tag: "spec",
+       body: "<span class='q'>Qadar</span> and <span class='q'>ʿilm</span> are two aspects of one structure. To be measured is to be known. Quantum information theory already does this in practice. The synthesis gives a reason to expect the unity."}
+    ]
+  },
+  {
+    num: "3",
+    title: "The Informational Layer — The Bridge",
+    entries: [
+      {title: "Substrate-independence.", tag: "mod",
+       body: "Reality's structure is not tied to one substance. Grounded in <span class='q'>God creates</span> (39:62) — the substance is not ultimate."},
+      {title: "Informational primitive.", tag: "mod",
+       body: "Information is more basic than matter. Grounded in <span class='q'>qadar</span> (54:49), <span class='q'>kitāb</span> (36:12), <span class='q'>ʿilm</span> (6:59)."},
+      {title: "Finite information density.", tag: "mod",
+       body: "A bound on information per region. Grounded in <span class='q'>mīzān</span> (55:7), <span class='q'>qadar</span> (54:49). Bekenstein bound, holographic bound."},
+      {title: "Level-relative rendering.", tag: "mod",
+       body: "What appears at one level is generated from another. Grounded in <span class='q'>ẓāhir/bāṭin</span> (57:3), levels of creation (17:44). Renormalization group."},
+      {title: "Error correction / redundancy.", tag: "mod",
+       body: "Stability through redundant encoding. Grounded in <span class='q'>ḥifẓ</span> (15:9). Quantum error correction."},
+      {title: "Interface structure.", tag: "mod",
+       body: "Perception is an interface to a deeper structure, not the structure. Grounded in <span class='q'>ẓāhir/bāṭin</span> (57:3), <span class='q'>āyāt</span> (41:53). Structural realism."},
+      {title: "The simulation hypothesis is discarded; its structure is kept.", tag: "est",
+       body: "Rejected: the simulator (a regress, not a ground), the regress, the theatrical moral order, representation as ultimate. Kept: the six structural aspects above. The Quran's information vocabulary — <span class='q'>qadar</span>, <span class='q'>kitāb</span>, <span class='q'>lawḥ maḥfūẓ</span>, <span class='q'>ḥifẓ</span>, <span class='q'>ʿilm</span>, <span class='q'>kun</span> — is the personal version of the same structure. Borrow the structure; re-ground it in divine knowledge."}
+    ]
+  },
+  {
+    num: "4",
+    title: "Research Orientations — What to Look For",
+    entries: [
+      {title: "Look for discrete structure beneath time.", tag: "mod",
+       body: "Measure precedes duration. Causal sets, LQG, spectral geometry. The prediction: the deep structure is measure-theoretic before it is temporal."},
+      {title: "Look for unified interface limits.", tag: "mod",
+       body: "Bekenstein, holographic, Landauer, quantum measurement. The prediction: they are one structure at different levels."},
+      {title: "Look for error correction everywhere.", tag: "mod",
+       body: "Not just AdS/CFT. De Sitter, cosmology, QG generally. <span class='q'>Ḥifẓ</span> predicts it is universal."},
+      {title: "Look for the Born rule from the measure structure.", tag: "spec",
+       body: "If <span class='q'>qadar</span> is a measure on possibility space, the Born rule is its expression at the quantum level. Connects to Gleason, envariance, decision theory."},
+      {title: "Look for derivations of parameters, not assumptions.", tag: "mod",
+       body: "No brute facts. The cosmological constant, the hierarchy problem, the SM parameters — all must have an explanation."},
+      {title: "Look for structural irreversibility.", tag: "spec",
+       body: "If <span class='q'>maʿād</span> is real, the arrow is not merely statistical. Look for structural orientation, not just entropy gradient."},
+      {title: "Look for the informational structure that generates all QG programs.", tag: "spec",
+       body: "The programs are not rivals. They are radii. The final theory is the structure that generates them all as limits."}
+    ]
+  },
+  {
+    num: "5",
+    title: "Adjudications — What Ranks",
+    entries: [
+      {title: "QG programs are complementary, not rivals.", tag: "spec",
+       body: "Causal sets describe the deep measure structure. Holography describes how geometry emerges from entanglement. LQG describes quantized geometry. Entropic gravity describes how gravity emerges from information. String theory describes perturbative excitations around a fixed background."},
+      {title: "Top tier: holography and causal sets.", tag: "mod",
+       body: "Score highest on structural fit. Holography on space emergence, information, error correction, duality. Causal sets on measure-first, time emergence, space emergence, no brute facts."},
+      {title: "Middle tier: LQG, entropic gravity, group field theory, CDT, twistors.", tag: "mod",
+       body: "Strong on some criteria, weak on others. Candidates, not finalists."},
+      {title: "Bottom tier: perturbative string theory, asymptotic safety.", tag: "mod",
+       body: "String theory treats time as a background; its landscape requires brute facts. Asymptotic safety assumes smooth background spacetime. If the synthesis is right, they are likely incomplete."},
+      {title: "The final theory is the informational structure that generates them all.", tag: "spec",
+       body: "Not one program. The structure that generates all programs as limits. That is the research orientation."}
+    ]
+  },
+  {
+    num: "6",
+    title: "The Dissolutions — One Move, Four Problems",
+    entries: [
+      {title: "The hard problem of consciousness.", tag: "est",
+       body: "Two aspects of the informational structure. The relational aspect is what physics describes. The intrinsic aspect is what it is like to be that structure. Experience is not produced by structure; it is the intrinsic nature of the informational structure, grounded in divine knowledge. <span class='q'>Participationist dual-aspect monism</span> — not Russellian, because the intrinsic is grounded, not immanent."},
+      {title: "The measurement problem.", tag: "est",
+       body: "Two aspects of the quantum state. The superposition is the relational aspect — what the creature can know. The definite outcome is the intrinsic aspect — what is, in divine knowledge. No collapse. No branching. No observer-creation. The transition is a change in description, not in being."},
+      {title: "The problem of time.", tag: "est",
+       body: "Two aspects of the cosmos. The intrinsic aspect is timeless — <span class='q'>totum simul</span>. The relational aspect is sequential — becoming. Time is the form of the creature's participation in the ground. Wheeler–DeWitt is the view from the point. Experience is the view from the radius. No frozen universe vs. flowing time."},
+      {title: "Quantum gravity programs.", tag: "spec",
+       body: "Radii of one informational structure. The programs are complementary descriptions at different levels. The final theory is the structure that generates them all."},
+      {title: "The general principle.", tag: "est",
+       body: "Every apparent contradiction in physics and metaphysics is a polarity misread as a competition. The resolution is not to pick a pole. It is to see the axis. This is the engine."}
+    ]
+  },
+  {
+    num: "7",
+    title: "What Remains Open",
+    entries: [
+      {title: "The rūḥ.", tag: "spec",
+       body: "<span class='q'>\"You have not been given knowledge of it but a little\"</span> (17:85). The Quran marks it as beyond. The synthesis locates consciousness at L1–L2 — from the command, not from the material order — but does not explain it. That is fidelity, not failure."},
+      {title: "The mechanism of divine action.", tag: "spec",
+       body: "How the timeless grounds the temporal. Point-circle is a heuristic, not a derivation. The synthesis holds concurrence without specifying how. The Quran marks it as mystery."},
+      {title: "The specific derivation of geometry from measure.", tag: "spec",
+       body: "The synthesis gives the orientation. The equations are not derived. A research program."},
+      {title: "The mechanism of the arrow.", tag: "spec",
+       body: "The Past Hypothesis remains a boundary condition to be explained. The synthesis says the arrow is structurally oriented, but does not derive the orientation."},
+      {title: "The specific values of parameters.", tag: "spec",
+       body: "No brute facts is a commitment. The actual derivations are not supplied. A research program."},
+      {title: "The love trilemma.", tag: "spec",
+       body: "Resolved by plenitude under the classical concept of freedom (self-determination, not indifference). But the entailments — evil as privation, responsibility at the radius, distinction manifestational — are demanding. The Akbarians held them. The mainstream refused the third."}
+    ]
+  }
+];
+
+const container = document.getElementById('sections');
+sections.forEach((sec, i) => {
+  const div = document.createElement('div');
+  div.className = 'section';
+  div.innerHTML = `
+    <div class="section-header" onclick="toggle(${i})">
+      <span class="section-num">${sec.num}</span>
+      <span class="section-title">${sec.title}</span>
+      <span class="section-count">${sec.entries.length}</span>
+      <span class="arrow" id="arrow-${i}">▶</span>
+    </div>
+    <div class="section-body" id="body-${i}">
+      ${sec.entries.map(e => `
+        <div class="entry">
+          <div class="entry-title">${e.title} ${e.tag ? `<span class="tag ${e.tag}">${e.tag === 'est' ? 'established' : e.tag === 'mod' ? 'moderate' : 'speculative'}</span>` : ''}</div>
+          <div class="entry-body">${e.body}</div>
+        </div>
+      `).join('')}
+    </div>
+  `;
+  container.appendChild(div);
+});
+
+function toggle(i) {
+  const body = document.getElementById('body-' + i);
+  const arrow = document.getElementById('arrow-' + i);
+  body.classList.toggle('open');
+  arrow.classList.toggle('open');
+}
+
+// Open the first section by default
+toggle(0);
+</script>
+</body>
+</html>

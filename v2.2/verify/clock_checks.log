@@ -1,0 +1,20 @@
+== (a) exact state complexity of the L-tick clock ==
+[PASS] L=2: Myhill-Nerode index of (1 0^1)^oo is 2
+[PASS] L=3: Myhill-Nerode index of (1 0^2)^oo is 3
+[PASS] L=4: Myhill-Nerode index of (1 0^3)^oo is 4
+[PASS] L=5: Myhill-Nerode index of (1 0^4)^oo is 5
+[PASS] L=6: Myhill-Nerode index of (1 0^5)^oo is 6
+
+== (b),(c) commitment gap Com(M) of the clock, exhaustive over autonomous Mealy machines ==
+[PASS] L=3: Com(M) = 0 iff M >= L (M = 1..L)  -- M=1: 1/3  M=2: 1/3  M=3: 0
+[PASS] L=4: Com(M) = 0 iff M >= L (M = 1..L)  -- M=1: 1/4  M=2: 1/4  M=3: 1/4  M=4: 0
+[PASS] L=5: Com(M) = 0 iff M >= L (M = 1..L)  -- M=1: 1/5  M=2: 1/5  M=3: 1/5  M=4: 1/5  M=5: 0
+[PASS] L=6: Com(M) = 0 iff M >= L (M = 1..L)  -- M=1: 1/6  M=2: 1/6  M=3: 1/6  M=4: 1/6  M=5: 1/6  M=6: 0
+[PASS] M=1 floor is 1/L (best constant output is 0)
+[PASS] Com(M) nonincreasing in M
+
+== (d) the generated order is relative to the step index ==
+[PASS] every output of a 3-state autonomous machine is eventually periodic in its step index (period <= 3, preperiod <= 3)
+
+== SUMMARY ==
+12/12 checks passed

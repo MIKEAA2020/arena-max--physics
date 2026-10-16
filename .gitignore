@@ -1,0 +1,25 @@
+# Authentication and private metadata
+.arena/
+.git/
+.env
+.env.*
+*.pem
+*.key
+*credentials*
+.netrc
+.git-credentials
+# Downloaded inputs are separated from generated work
+uploads/
+search/
+quran/*.json
+# Reproducible dependencies and caches
+__pycache__/
+*.pyc
+.venv/
+.pytest_cache/
+.cache/
+node_modules/
+build/
+dist/
+target/
+*.tmp

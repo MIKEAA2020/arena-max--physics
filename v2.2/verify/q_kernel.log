@@ -1,0 +1,49 @@
+WARNING: optimization with quantified constraints is not supported
+PASS 1. kernel Q1-Q11 + sovereignty set + agency set: SATISFIABLE (a layered-concurrence model exists)  -- sat
+    model (1 = true; soft-minimised over the named constants, quantified parts solved exactly), agents G p s j q m g; events: e_throw e_kill e_belief e_kufr e_wrong e_bird e_change e_idol e_shirk e_calamity
+    Created:     G=0 p=1 s=1 j=1 q=1 m=1 g=1
+    Grounds      G:1111111111 p:0000000000 s:0000000000 j:0000000000 q:0000000000 m:0000000000 g:0000000000
+    Causes       G:0000000000 p:1000000000 s:0010100011 j:0000010000 q:0000001000 m:0000000000 g:0000000000
+    Wills        G:0000000000 p:0000000000 s:0010100010 j:0000000000 q:0000000000 m:0000000000 g:0000000000
+    Able         G:0000000000 p:0000000000 s:0011100010 j:0000000000 q:0000000000 m:0000000000 g:0000000000
+    Responsible  G:0000000000 p:0000000000 s:0010100010 j:0000000000 q:0000000000 m:0000000000 g:0000000000
+    Act:         1011111010
+    WillsC:      1111111111
+    Approves:    0010000000
+    Guided/Misguided/Transgressor/Warned/Turns: G=00000 p=00000 s=00000 j=00000 q=00000 m=01110 g=10001
+    acts attributed wholly to God (Grounds) AND wholly to a creature (Causes): e_throw, e_belief, e_wrong, e_bird, e_change, e_shirk
+PASS 2a. C + 8:17 + 37:96: UNSAT ('when you threw' is agent-level causation; 'God created you' makes the thrower a creature)  -- unsat
+PASS 2b. both verse-sets + C (no kernel axiom): UNSAT; minimal core  -- 37:96 'God created you and what you make/do' | 8:17 'you did not kill them but God killed them; you did not throw WHEN YOU THREW, but God threw' | C  occasionalism: a creature is never a cause (God's creating excludes creaturely causing)
+PASS 2c. that core consists of C and literal verses only
+PASS 2c'. C + 13:11 alone ('until they change what is in themselves'): UNSAT  -- unsat
+PASS 2d. C + agency set + 37:96 ('God created you'): UNSAT  -- unsat
+PASS 2e. C is consistent with the sovereignty verses that do NOT themselves name a creaturely act (8:17, 16:93, 42:30 removed)  -- sat
+PASS 3a. I + 37:96 ('God created you') + 112:3/57:3 (God not created): UNSAT  -- unsat
+PASS 3b. both verse-sets + I (no kernel axiom): UNSAT; minimal core  -- I  identity: there is only one agent (every agent is God) | 112:3 / 57:3 'He begets not, nor is He begotten' / 'the First' -- God is not created | 3:49 'I create for you from clay the form of a bird ... by God's permission'
+PASS 3b'. that core consists of I and literal verses only
+PASS 3c. I + 8:17 + Q3 (agent-level attribution is creaturely) + 112:3: UNSAT (under identity 8:17 would have God throwing at God)  -- unsat
+PASS 4a. T + 8:17 + 37:96: UNSAT (the same verse gives 'you threw' and 'God threw'; 37:96 makes 'you' a creature)  -- unsat
+PASS 4b. T + 39:62 + 13:11: UNSAT  -- unsat
+PASS 4c. J + 16:93 alone: UNSAT ('He misleads whom He wills ... and you will be questioned about what you did')  -- unsat
+PASS 4d. J + 81:29 + 7:23 + 2:286 + 37:96: UNSAT  -- unsat
+PASS 5a. kernel + both verse-sets + not-C: SAT  -- sat
+PASS 5b. both verse-sets WITHOUT any kernel axiom: SAT (the verses do not contradict each other by themselves)  -- sat
+PASS 5c. both verse-sets + C: UNSAT (the contradiction appears exactly when C is added)  -- unsat
+PASS 6. thesis alone is consistent: C  -- sat
+PASS 6. thesis alone is consistent: T  -- sat
+PASS 6. thesis alone is consistent: J  -- sat
+PASS 6. thesis alone is consistent: I  -- sat
+PASS 7a. kernel + both verse-sets + Q12 + named evil acts: SAT (grounding of the act's being and creaturely ownership of its defect are jointly consistent)  -- sat
+PASS 7b. 'God is answerable for a defect' + kernel: UNSAT (21:23 via Q5; the defect is owned at the agent level)  -- unsat
+PASS 7c. 'God approves a defective act' + Q12: UNSAT (39:7)  -- unsat
+PASS 8a. kernel + both verse-sets + Q12 + evil acts + MECH-M: SAT (the Maturidi mechanism instantiates the kernel; privation does not exclude it)  -- sat
+PASS 8b. kernel + both verse-sets + Q12 + evil acts + MECH-I: SAT (the Imami mechanism instantiates the kernel)  -- sat
+PASS 8c. MECH-M + MECH-I + Q2: UNSAT (they are genuine rivals, not two names for one view)  -- unsat
+PASS 8d. 37:96 (either reading) + kernel + verses + MECH-I: SAT (37:96 asserts creation of the act, Q1; it does not fix the mechanism)  -- sat
+PASS 9a. P* + NATURE: UNSAT (generalised point-circle = occasionalism about all creaturely production, nature included)  -- unsat
+PASS 9b. MECH-M (acts only) + NATURE: SAT (Maturidism about acts does not need P*; the argument proves more than its conclusion)  -- sat
+PASS 9c. kernel + verses + Q12 + evil + NATURE + MECH-I: SAT (text + kernel admit creaturely production of being)  -- sat
+PASS 9d. kernel + verses + Q12 + evil + P*: SAT (text + kernel also admit occasionalism about being: the mechanism is open)  -- sat
+PASS 9e. kernel + verses + not-P*: SAT (hence kernel + verses do NOT entail P*: no entailment of the Maturidi mechanism)  -- sat
+
+34/34 checks passed; SMT-LIB of problem 1 written to q_kernel.smt2

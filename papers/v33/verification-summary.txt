@@ -1,0 +1,58 @@
+Verification, 16 October 2026 (Asia/Tehran)
+
+Legacy full invocation:
+suite                      result       note
+opfibration_checks.py      20/20        ok
+q_kernel.py                34/34        ok
+primon_checks.py           35/35        ok
+adelic_checks.py           12/12        ok
+bst_checks.py              17/17        ok
+clock_checks.py            12/12        ok
+replica_checks.py          17/17        ok
+r7_check.py                15/15        ok
+sector_probe.py            probe        numerical probe, no pass/fail count; output in sector_probe.log
+quran corpus               present      6 files; q.py lookups used by §4.1 and §5 (no pass/fail count)
+TOTAL 162/162 checks passed across 8 suites
+
+Separate v33 extension invocation:
+[PASS] Sp(4,2) contains 720 distinct matrices 
+[PASS] All sampled actions preserve the symplectic form 
+[PASS] Product-state entropy is zero 
+[PASS] Tableau rows stay commuting 
+[PASS] Tableau rows stay independent 
+[PASS] Bell-pair entropy is one bit 
+[PASS] Uniform two-qubit Clifford gives 0.4 bits per crossed cut 
+[PASS] Adapted measurement proposal has exact residual weights 
+[PASS] p=0 has zero random count and Z=1 
+[PASS] beta=0 has Z=1 and no resampling ancestry loss 
+[PASS] Within-period ancestry is reconstructed in the correct index space 
+[PASS] Finite-time n=2 product-boundary anchor Z=0.032961721
+[PASS] Finite-time n=3 benchmark independently contracted Lambda=-0.121924372
+[PASS] SMC exact-anchor regression L=16, p=0.16, beta=1 0.032957345 +/- 0.000015283; exact=0.032961721
+[PASS] SMC exact-anchor regression L=8, p=0.16, beta=2 -0.121920260 +/- 0.000019444; exact=-0.121924372
+[PASS] SMC exact-anchor regression L=8, p=0.22, beta=2 -0.169636443 +/- 0.000017709; exact=-0.169612662
+[PASS] SMC exact-anchor regression L=12, p=0.16, beta=2 -0.123862789 +/- 0.000004770; exact=-0.123856677
+[PASS] SMC exact-anchor regression L=16, p=0.22, beta=2 -0.173888665 +/- 0.000010031; exact=-0.173901000
+[PASS] SMC exact-anchor regression L=8, p=0.305, beta=2 -0.237179973 +/- 0.000058435; exact=-0.237048017
+[PASS] SMC exact-anchor regression L=12, p=0.305, beta=2 -0.241684496 +/- 0.000062325; exact=-0.241720161
+[PASS] Tilted measured-density response identity has correct sign and normalization 
+[PASS] Two-qubit fourth Clifford commutant span has exact Gram rank 29 
+[PASS] Regular-bimodule sector dimensions are 1+4+1 and 1+9+9+4+1 
+[PASS] n=3 wire and bond permutation spans differ (ranks 5 vs 6) 
+[PASS] n=5 two-qubit bond Gram has rank 119 of 120 
+[PASS] Bounded intensive variance does not justify replica/volume interchange 
+[PASS] Finite-state reducible process can expose an affine branch 
+[PASS] Exact interpolation identity retained 
+[PASS] Disordered chi=96 result is complete and stored 
+[PASS] v33 references resolve and labels are unique 
+[PASS] v33 citations have bibliography entries 
+[PASS] v33 abstract retains CTD/CPD and explicit withdrawal 
+[PASS] Complexity appendix unchanged except explicit non-overlap domain of optional thresholds 
+[PASS] Optional CPD amplified threshold gap is positive precisely for integers n>=3 
+[PASS] Core operator, LDP, interpolation and dyadic statements preserved verbatim 
+
+35/35 checks passed [65.8s]
+
+COMBINED: 197/197 counted checks across 9 suites, run in two commands.
+Paper-only reproduction subset: 17 + 35 = 52 checks.
+No phase-order or publication-readiness certificate is implied.

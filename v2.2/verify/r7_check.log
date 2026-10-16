@@ -1,0 +1,68 @@
+locus cells d_E,d_B<=60: 108 total; degenerate (d_B=1,n=1): 59; non-degenerate: 49  (d_B>=2: 34, d_B=1: 15)
+PASS 1. degenerate cells are exactly (d_B=1, n=1, j=d_E-1, d_G=1), one per d_E
+PASS 4a. X_lower > Y on every non-degenerate locus cell (d_E,d_B<=60)  -- 49 cells; minimum gap 16 at (d_E,d_B,n,j,d_G)=(7, 1, 2, 2, 5)
+    cells: (d_E,d_B,n,j,d_G | Y, X_lower, X_sharper_lower, gap)
+      (4, 2, 1, 1, 7) | (12, 32, 32, 20)
+      (6, 3, 1, 1, 17) | (32, 144, 144, 112)
+      (7, 1, 2, 2, 5) | (8, 24, 24, 16)
+      (8, 4, 1, 1, 31) | (60, 384, 384, 324)
+      (10, 5, 1, 1, 49) | (96, 800, 800, 704)
+      (11, 1, 3, 2, 9) | (16, 60, 145, 44)
+      (12, 6, 1, 1, 71) | (140, 1440, 1440, 1300)
+      (14, 7, 1, 1, 97) | (192, 2352, 2352, 2160)
+      (15, 2, 1, 4, 26) | (50, 450, 450, 400)
+      (15, 1, 4, 2, 13) | (24, 112, 434, 88)
+      (16, 8, 1, 1, 127) | (252, 3584, 3584, 3332)
+      (18, 9, 1, 1, 161) | (320, 5184, 5184, 4864)
+      (19, 1, 5, 2, 17) | (32, 180, 180, 148)
+      (20, 10, 1, 1, 199) | (396, 7200, 7200, 6804)
+      (22, 11, 1, 1, 241) | (480, 9680, 9680, 9200)
+      (23, 1, 6, 2, 21) | (40, 264, 264, 224)
+      (24, 12, 1, 1, 287) | (572, 12672, 12672, 12100)
+      (26, 13, 1, 1, 337) | (672, 16224, 16224, 15552)
+      (27, 1, 7, 2, 25) | (48, 364, 364, 316)
+      (28, 14, 1, 1, 391) | (780, 20384, 20384, 19604)
+      (30, 15, 1, 1, 449) | (896, 25200, 25200, 24304)
+      (31, 2, 2, 4, 58) | (114, 1922, 1922, 1808)
+      (31, 1, 8, 2, 29) | (56, 480, 480, 424)
+      (32, 16, 1, 1, 511) | (1020, 30720, 30720, 29700)
+      (34, 17, 1, 1, 577) | (1152, 36992, 36992, 35840)
+      (35, 3, 1, 6, 99) | (196, 4900, 4900, 4704)
+      (35, 1, 9, 2, 33) | (64, 612, 612, 548)
+      (36, 18, 1, 1, 647) | (1292, 44064, 44064, 42772)
+      (38, 19, 1, 1, 721) | (1440, 51984, 51984, 50544)
+      (39, 1, 10, 2, 37) | (72, 760, 760, 688)
+      (40, 20, 1, 1, 799) | (1596, 60800, 60800, 59204)
+      (41, 1, 2, 12, 29) | (56, 840, 840, 784)
+      (42, 21, 1, 1, 881) | (1760, 70560, 70560, 68800)
+      (43, 1, 11, 2, 41) | (80, 924, 924, 844)
+      (44, 22, 1, 1, 967) | (1932, 81312, 81312, 79380)
+      (46, 23, 1, 1, 1057) | (2112, 93104, 93104, 90992)
+      (47, 2, 3, 4, 90) | (178, 4418, 4418, 4240)
+      (47, 1, 12, 2, 45) | (88, 1104, 1104, 1016)
+      (48, 24, 1, 1, 1151) | (2300, 105984, 105984, 103684)
+      (50, 25, 1, 1, 1249) | (2496, 120000, 120000, 117504)
+      (51, 1, 13, 2, 49) | (96, 1300, 1300, 1204)
+      (52, 26, 1, 1, 1351) | (2700, 135200, 135200, 132500)
+      (54, 27, 1, 1, 1457) | (2912, 151632, 151632, 148720)
+      (55, 1, 14, 2, 53) | (104, 1512, 1512, 1408)
+      (56, 2, 1, 15, 97) | (192, 6272, 6272, 6080)
+      (56, 28, 1, 1, 1567) | (3132, 169344, 169344, 166212)
+      (58, 29, 1, 1, 1681) | (3360, 188384, 188384, 185024)
+      (59, 1, 15, 2, 57) | (112, 1740, 1740, 1628)
+      (60, 30, 1, 1, 1799) | (3596, 208800, 208800, 205204)
+PASS 4b. d_B>=2: 2d_E^2(d_B-1) - 2(d_E d_B - 2) == 2d_E(d_B-2)(d_E-1) + 2d_E(d_E-2) + 4  (symbolic)
+PASS 4c. d_B>=2: that expression >= 4 for d_E,d_B>=2  -- each of the three terms is >= 0, 0, 4
+PASS 4d. d_B=1 non-degenerate: j=1 never occurs (so d_G <= d_E-2); proof: (2d_E-1) | 3 would be needed  -- gcd(2d_E-1, d_E^2-1) divides 3
+PASS 4e. d_B=1: 2*floor(d_E^2/4) > 2(d_E-3) for all d_E>=3 (checked to 10^4; floor(d_E^2/4) >= d_E-2 algebraically)
+PASS 4f. families (4k+3, d_B=1, j=2, n=k+1) and (16k-1, d_B=2, j=4, n=k) lie on the locus (k<200)
+PASS 5a. d=11, three rank-4 effects: extreme POVM; normalised stratum dim = 3(2*11*4-16)-121 = 95  -- extreme=True, product-stratum rank 216, normalisation rank 121, dim 95
+PASS 5b. d=11, ranks (6,6,7): NOT extreme (6+6>11 forces overlapping supports) -- sum r_i^2 <= d^2 alone is not sufficient  -- extreme=False; the fixed-rank stratum (dim 176) is not inside the extreme set
+PASS 5b'. d=11, ranks (5,5,6): certified extreme stratum of dim 2(110-25)+(132-36)-121 = 145 (> 95 > 80)  -- extreme=True, dim 145
+PASS 5c. qubit, three rank-1 effects (trine-type): extreme; stratum dim 3(4-1)-4 = 5 (> probe's 2)  -- extreme=True, dim 5
+PASS 5d. zero-padding preserves extremality (proof: CP components averaging to 0 vanish; then use extremality of the unpadded body)
+PASS 6a. cell (7,1,2,2,5): X_probe=24, Y=8, gap 16; the probe's certificate value (d_E-2)(d_E-3)+2 = 22 > 16  => stated bound false as written
+PASS 6b. corrected bound ((d_E-2)(d_E-3)+2)/2 = 11 <= 16 holds; sign unaffected
+PASS 6c. family (4k+3,1,2,k+1): the full-magnitude certificate fails for every member; the halved one holds for all (k<300)  -- fails(full)=299/299, fails(half)=0/299
+
+15/15 checks passed
