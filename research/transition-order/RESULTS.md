@@ -152,7 +152,7 @@ The exact endpoint precedes the pilot. A low-chi optimizer solution is not a chi
 | T0 | complete | immutable inputs and credential-free method-request log preserved |
 | T1 | complete | exact half-row, direct-sum, paired-environment, checkpoint and contraction checks passed |
 | T2 | complete-with-stated-control-exceptions | Ising ladder; n=3 gapped functional controls; lower-chi requested-tolerance misses retained |
-| T3 | finite-chi-retention-pair-observed-crossing-stability-open | six-rate grid complete; original branch pilot 3/4 plus separately accepted same-point refinement yields an augmented numerical pair at .30480; no crossing, physical stability or thermodynamic order certificate |
+| T3 | upper-rate-complete-retained-branch-pressure-bracket-not-obtained | accepted distinct numerical pair at .30480; direct unbiased warm step to .30485 yields two small-order approximants, so arithmetic pressure sign flips do not bracket retained large/small families; stability and chi/size controls remain open |
 | T4 | finite-and-coarse-pilots-complete-fine-order-open | 67 exact cases, 4 finite crossings, 8 MPS pilot cases |
 | T5 | complete | fourth Clifford physical twirl on rank-29 quotient |
 | T6 | L4-L6-complete-L8-runtime-deferred | 52 cases in five diagonal colour sectors; L8 benchmark 3.115 s/matvec |
@@ -166,7 +166,7 @@ The chosen method has been implemented and feasible computations executed, but u
 
 ## 6. Verification, artifacts and GitHub
 
-Fresh integrated regression: **246/246 across 10 suites**, exit 0; transfer extension 49. Log: `v2.2/verify/run_all_branch128_2026-10-16.log`. The current paper-only runner performs 17+35+49=101 checks. These totals validate specified finite identities and implementation contracts, not every paper theorem or a phase-order verdict.
+Fresh integrated regression: **246/246 across 10 suites**, exit 0; transfer extension 49. Log: `v2.2/verify/run_all_upper128_2026-10-16.log`. The current paper-only runner performs 17+35+49=101 checks. These totals validate specified finite identities and implementation contracts, not every paper theorem or a phase-order verdict.
 
 The first ordinary GitHub push was verified at commit `b121f258cabab2c28dce4d08d74a731f8a217ad4` on `MIKEAA2020/arena-max--physics`. The final delivery includes this report as a non-force follow-up snapshot; the exact verified final commit is supplied in the completion message. Existing history/license are preserved. Credentials are excluded and nested archive contents are scanned before staging. See `PUBLICATION-SCOPE.md` at the project root.
 
@@ -179,3 +179,7 @@ The separate fixed-source scan is **complete: all 12 preparation results accepte
 ## Later unbiased branch-retention pilot and safety amendment
 
 The original two-stage pilot stopped with 3/4 steps accepted at a narrowly failed right-compatibility gate. A separately authorized same-point refinement with a stricter internal goal and unchanged external gates then produced an augmented pair of accepted chi128 approximants at p=.30480, with substantially different invariant order and unequal trial pressures. This is not a coexistence point, a stability certificate or a thermodynamic order verdict. The original rejection remains unchanged. See [refinement result](BRANCH128-REFINEMENT-RESULTS.md) and its read-only AL-state audit. No extra common rate or chi192 was launched.
+
+## One additional upper common rate — no retained pressure bracket
+
+The separately authorized .30485 warm continuation passed both numerical gates, but the former large-order history ended with small invariant order. Both ranking differences change sign arithmetically; this is not a two-family pressure-crossing bracket because the upper O label is no longer a retained large-order state. The experiment does not locate a physical spinodal, prove branch absence, or bound a thermodynamic retention-window width. See [upper-rate report](BRANCH128-UPPER-RESULTS.md). No extra rate, chi192 or perturbation stability test was run.

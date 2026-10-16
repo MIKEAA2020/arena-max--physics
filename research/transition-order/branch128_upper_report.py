@@ -30,6 +30,17 @@ if c:
  text += ['## Numerical similarity and pressure-sign diagnostics','',
  f"Upper-rate symmetry comparison: {c.get('status')}; largest evaluated aligned fidelity/site **{fmt(c.get('largest_evaluated_fidelity_per_site'))}**.",'',
  f"Half-row ranking sign change between the two endpoints: **{db.get('half_objective_sign_change')}**. Period-trial ranking sign change: **{db.get('period_trial_sign_change')}**. These are arithmetic diagnostics only, not coexistence certificates."]
+if all(db.get('results',{}).get(s,{}).get('converged') for s in ['ordered','disordered']):
+    a,b=db['results']['ordered'],db['results']['disordered'];lo=db['previous_common']['ordered']
+    if lo['color_l2_order']>.1 and max(a['color_l2_order'],b['color_l2_order'])<.01:
+        text+=['','## Completed outcome: no retained two-family bracket','',
+        f"Both upper-rate numerical states passed every original gate. However, the large-order history changed from invariant order {lo['color_l2_order']:.8f} at .30480 to **{a['color_l2_order']:.8f}** at .30485; the other upper-rate history has **{b['color_l2_order']:.8f}**. The upper endpoint therefore does not supply a retained large-order/small-order pair. The high aligned fidelity is a similarity diagnostic, not certified exact identity.",
+        '', 'Although both tabulated ranking differences change sign, the upper O-history value now belongs to a small-order approximant. It cannot be relabeled as the ordered-phase branch pressure. Consequently **no retained large-/small-order pressure-crossing bracket was obtained** by this single-step test.',
+        '', 'This does not invalidate the distinct constructed states previously retained at .30480. It says only that the selected unbiased warm step did not retain the large-order character at .30485. The test does not prove that such a branch is absent there, identify a physical spinodal, or give a thermodynamic retention-window width. A finer continuation step or different validated branch-following control would require separate authorization; none was run.']
+        audit_path=HERE/'branch128-upper-data-audit.json'
+        if audit_path.exists():
+            audit=json.loads(audit_path.read_text());q=audit.get('actual_AL_state_diagnostics',{})
+            if len(q)==2:text+=['',f"Read-only actual-AL-density audit gives upper invariant order {q['ordered']['actual_AL_color_l2']:.10f} / {q['disordered']['actual_AL_color_l2']:.10f}, confirming the small-order endpoint diagnostics independently of the center-tensor estimate. This is not a perturbation or stability test."]
 text+=['','## Interpretation safeguards','',
 'A candidate finite-χ pressure bracket requires two distinguishable, symmetry-inequivalent numerical families retained at BOTH endpoints and compared using the SAME objective. A sign change between nearly equivalent outputs after a history has merged is not such a branch crossing. A direct warm step that loses character does not locate a physical spinodal or prove how wide the retention window is.','',
 'Even if endpoint data support a candidate finite-χ bracket, this allocation does not supply local perturbation stability, global optimality, a physical coexistence point, a thermodynamic order-parameter jump, or χ/size-extrapolated transition order. Those are separately gated. If ordering does not flip, only the ranking of these computed trial states at these rates is known; no theorem places the thermodynamic transition further up.','',

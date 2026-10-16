@@ -16,8 +16,8 @@
   },
   {
     "id": "T3",
-    "status": "finite-chi-retention-pair-observed-crossing-stability-open",
-    "outcome": "six-rate grid complete; original branch pilot 3/4 plus separately accepted same-point refinement yields an augmented numerical pair at .30480; no crossing, physical stability or thermodynamic order certificate"
+    "status": "upper-rate-complete-retained-branch-pressure-bracket-not-obtained",
+    "outcome": "accepted distinct numerical pair at .30480; direct unbiased warm step to .30485 yields two small-order approximants, so arithmetic pressure sign flips do not bracket retained large/small families; stability and chi/size controls remain open"
   },
   {
     "id": "T4",

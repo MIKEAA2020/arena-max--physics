@@ -55,3 +55,7 @@ ordered: accepted-stationary-at-finite-chi, eps=9.991478996514631e-08, iteration
 ## Completed six-rate chi128 scan
 
 All six paired rates passed (10 new targets plus 2 reused reference states), with unchanged 1e-7 tolerance. Lower sampled rates .3040,.3045,.3047 have large order diagnostics, higher .30486,.3050,.3055 small ones. Symmetry-aligned comparisons are close at each rate. This does not establish first order or continuity; the fixed-chi sampled change interval .3047–.30486 is not a thermodynamic confidence interval. No χ192 was launched. The session interruption and saved-segment lower-bound times remain recorded; no exact end-to-end CPU total is inferred from them.
+
+## One upper common rate — completed outcome
+
+At .30485, chi128, both warm continuations passed unchanged external gates and the internal 5e-8 goal. The former large-order history took 205 iterations/3206.8 seconds; the other history took 33/538.2 seconds. Both final order diagnostics are small. Arithmetic pressure-sign reversals do not identify a retained ordered/disordered crossing because upper family character changed. This result does not prove a physical spinodal, missing branch, exact window width or transition order. No extra rate, chi192 or stability test was launched.

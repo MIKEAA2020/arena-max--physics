@@ -34,6 +34,16 @@ Upper-rate symmetry comparison: all 36 symmetry orientations evaluated; largest 
 
 Half-row ranking sign change between the two endpoints: **True**. Period-trial ranking sign change: **True**. These are arithmetic diagnostics only, not coexistence certificates.
 
+## Completed outcome: no retained two-family bracket
+
+Both upper-rate numerical states passed every original gate. However, the large-order history changed from invariant order 0.48823244 at .30480 to **0.00059494** at .30485; the other upper-rate history has **0.00419878**. The upper endpoint therefore does not supply a retained large-order/small-order pair. The high aligned fidelity is a similarity diagnostic, not certified exact identity.
+
+Although both tabulated ranking differences change sign, the upper O-history value now belongs to a small-order approximant. It cannot be relabeled as the ordered-phase branch pressure. Consequently **no retained large-/small-order pressure-crossing bracket was obtained** by this single-step test.
+
+This does not invalidate the distinct constructed states previously retained at .30480. It says only that the selected unbiased warm step did not retain the large-order character at .30485. The test does not prove that such a branch is absent there, identify a physical spinodal, or give a thermodynamic retention-window width. A finer continuation step or different validated branch-following control would require separate authorization; none was run.
+
+Read-only actual-AL-density audit gives upper invariant order 0.0005949339 / 0.0041987751, confirming the small-order endpoint diagnostics independently of the center-tensor estimate. This is not a perturbation or stability test.
+
 ## Interpretation safeguards
 
 A candidate finite-χ pressure bracket requires two distinguishable, symmetry-inequivalent numerical families retained at BOTH endpoints and compared using the SAME objective. A sign change between nearly equivalent outputs after a history has merged is not such a branch crossing. A direct warm step that loses character does not locate a physical spinodal or prove how wide the retention window is.

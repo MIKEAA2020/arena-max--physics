@@ -76,6 +76,10 @@ latest_refinement=load(R/'n3_branch128_refinement.json')
 if latest_refinement.get('converged'):
     ledger[3]['status']='finite-chi-retention-pair-observed-crossing-stability-open'
     ledger[3]['outcome']='six-rate grid complete; original branch pilot 3/4 plus separately accepted same-point refinement yields an augmented numerical pair at .30480; no crossing, physical stability or thermodynamic order certificate'
+latest_upper=load(R/'n3_branch128_upper.json')
+if latest_upper and all(latest_upper.get('results',{}).get(x,{}).get('converged') for x in ['ordered','disordered']):
+    ledger[3]['status']='upper-rate-complete-retained-branch-pressure-bracket-not-obtained'
+    ledger[3]['outcome']='accepted distinct numerical pair at .30480; direct unbiased warm step to .30485 yields two small-order approximants, so arithmetic pressure sign flips do not bracket retained large/small families; stability and chi/size controls remain open'
 (HERE/'task-ledger.json').write_text(json.dumps(ledger,indent=2)+'\n')
 
 text=['# Transition-order continuation — executed work and status','',
@@ -188,6 +192,10 @@ if scan:
 if latest_refinement.get('converged'):
     target=HERE/'RESULTS.md'
     target.write_text(target.read_text()+'\n## Later unbiased branch-retention pilot and safety amendment\n\nThe original two-stage pilot stopped with 3/4 steps accepted at a narrowly failed right-compatibility gate. A separately authorized same-point refinement with a stricter internal goal and unchanged external gates then produced an augmented pair of accepted chi128 approximants at p=.30480, with substantially different invariant order and unequal trial pressures. This is not a coexistence point, a stability certificate or a thermodynamic order verdict. The original rejection remains unchanged. See [refinement result](BRANCH128-REFINEMENT-RESULTS.md) and its read-only AL-state audit. No extra common rate or chi192 was launched.\n')
+
+if latest_upper and latest_upper.get('status','').startswith('complete'):
+    target=HERE/'RESULTS.md'
+    target.write_text(target.read_text()+'\n## One additional upper common rate — no retained pressure bracket\n\nThe separately authorized .30485 warm continuation passed both numerical gates, but the former large-order history ended with small invariant order. Both ranking differences change sign arithmetically; this is not a two-family pressure-crossing bracket because the upper O label is no longer a retained large-order state. The experiment does not locate a physical spinodal, prove branch absence, or bound a thermodynamic retention-window width. See [upper-rate report](BRANCH128-UPPER-RESULTS.md). No extra rate, chi192 or perturbation stability test was run.\n')
 
 # Standalone offline SVG chart using only the actual finite-size data.
 W,Hh=920,510;left,right,top,bottom=76,890,58,430

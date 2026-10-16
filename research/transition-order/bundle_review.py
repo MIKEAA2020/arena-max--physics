@@ -19,7 +19,7 @@ for p in (ROOT/'v2.2/verify/replica/checkpoints').glob('*.npz'):
     if p.name.startswith(('scan128_','branch128_')) or any(x in p.name for x in ['latest','partial','seed_']):continue
     with np.load(p,allow_pickle=False) as z:m=json.loads(str(z['metadata']))
     if p.name.startswith('control_') or m.get('eps',1)>0 and m.get('eps',1)<m.get('tol',1e-7):add(p)
-for name in ['replica_checks.py','replica_checks.log','v33_checks.py','v33_checks.log','transfer_checks.py','transfer_checks.log','run_all_transition_2026-10-16-final.log','run_all_chi128_2026-10-16.log','run_all_scan128_2026-10-16.log','run_all_branch128_2026-10-16.log']:
+for name in ['replica_checks.py','replica_checks.log','v33_checks.py','v33_checks.log','transfer_checks.py','transfer_checks.log','run_all_transition_2026-10-16-final.log','run_all_chi128_2026-10-16.log','run_all_scan128_2026-10-16.log','run_all_branch128_2026-10-16.log','run_all_upper128_2026-10-16.log']:
     add(ROOT/'v2.2/verify'/name)
 add(ROOT/'v2.2/md2docx.py')
 for p in (ROOT/'research/transition-order').rglob('*'):add(p)

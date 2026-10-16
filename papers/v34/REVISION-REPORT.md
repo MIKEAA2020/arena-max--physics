@@ -16,6 +16,10 @@ The source explicitly distinguishes measured half-row/full-period trial-state fu
 
 The completed finite fourth-Clifford/d=3 pilots remain finite observations. Old v33 tables remain historical observations, not relabeled χ128 data.
 
+## One additional common-rate test
+
+The separately authorized .30485 result is **complete: both upper-rate numerical states accepted**. The former large-order history ended with small order diagnostics in the completed test. Even though numerical ranking signs reverse, this does not produce a retained large-/small-order pressure-crossing bracket. It neither proves continuity nor locates a physical spinodal or a thermodynamic window width. No further rate, χ192 or stability production is included.
+
 ## Preservation and verification
 
 - Original v33 is not edited.

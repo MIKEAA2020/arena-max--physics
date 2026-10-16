@@ -82,6 +82,10 @@ if upper:
     if upper.get('results',{}).get('ordered',{}).get('converged') and upper.get('results',{}).get('disordered',{}).get('converged'):
         ua,ub=upper['results']['ordered'],upper['results']['disordered']
         lines.append(r'At the upper common rate, invariant order is '+f"{ua['color_l2_order']:.6f} / {ub['color_l2_order']:.6f}"+r'; half-row objective difference is '+f"{ua['f_half']-ub['f_half']:.6e}"+r' and separately evaluated period-trial difference is '+f"{ua['f_full_rayleigh']-ub['f_full_rayleigh']:.6e}"+r'. These signs are not by themselves coexistence or thermodynamic order certificates.')
+if upper.get('results',{}).get('ordered',{}).get('converged') and upper.get('results',{}).get('disordered',{}).get('converged'):
+    ua,ub=upper['results']['ordered'],upper['results']['disordered']
+    if max(ua['color_l2_order'],ub['color_l2_order'])<.01:
+        lines.append(r'The upper-rate large-order history did not remain large-order: both accepted $.30485$ approximants have small invariant one-point order. The numerical ranking signs reverse relative to $.30480$, but the upper O-history value is not a retained ordered-branch pressure. Thus this test supplies no retained two-family pressure-crossing bracket. It does not prove continuity, branch absence or a physical spinodal, nor bound a thermodynamic metastability-window width. No smaller step or stability/large-$\chi$ campaign was automatically run.')
 if accepted==12:
     left=[db['cases'][f'{p:.7f}'][side]['color_l2_order'] for p in grid if p<=.3047 for side in ['ordered','disordered']]
     right=[db['cases'][f'{p:.7f}'][side]['color_l2_order'] for p in grid if p>=.30486 for side in ['ordered','disordered']]
@@ -118,6 +122,10 @@ The accepted χ128 p=.30486 pair has small order diagnostics; it does not establ
 The source explicitly distinguishes measured half-row/full-period trial-state functionals from unresolved phase branches. The energies were recorded; initialization labels are not phase identities, and agreement from two starts does not certify a global minimum. It corrects the claim that a continuous transition generically has a kink in f, and warns that χ-dependent sharpening is not a binary order test. Unbiased branch continuation is the selected next protocol, with its separately allocated bounded pilot tracked independently from the completed grid.
 
 The completed finite fourth-Clifford/d=3 pilots remain finite observations. Old v33 tables remain historical observations, not relabeled χ128 data.
+
+## One additional common-rate test
+
+The separately authorized .30485 result is **{upper.get('status','not launched')}**. The former large-order history ended with small order diagnostics in the completed test. Even though numerical ranking signs reverse, this does not produce a retained large-/small-order pressure-crossing bracket. It neither proves continuity nor locates a physical spinodal or a thermodynamic window width. No further rate, χ192 or stability production is included.
 
 ## Preservation and verification
 

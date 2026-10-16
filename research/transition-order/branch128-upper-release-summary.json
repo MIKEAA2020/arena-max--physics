@@ -1,0 +1,32 @@
+{
+  "status": "one authorized upper common rate completed and audited",
+  "p": 0.30485,
+  "chi": 128,
+  "accepted_upper_states": 2,
+  "large_history_color_lower": 0.4882324354334573,
+  "large_history_color_upper": 0.0005949375817170854,
+  "small_history_color_upper": 0.004198775718847914,
+  "large_history_m_species_upper": 0.0006002293844044723,
+  "small_history_m_species_upper": 0.0044254916572895545,
+  "half_objective_delta_lower": -1.8661504989081479e-06,
+  "half_objective_delta_upper": 1.2733307963586071e-08,
+  "period_trial_delta_lower": -1.6544809070540012e-06,
+  "period_trial_delta_upper": 3.6495662047997257e-09,
+  "arithmetic_sign_changes": {
+    "half": true,
+    "period_trial": true
+  },
+  "upper_aligned_fidelity_per_site": 0.9999995044533835,
+  "large_order_character_retained_at_upper": false,
+  "retained_two_family_pressure_bracket_obtained": false,
+  "physical_spinodal_or_window_width_certified": false,
+  "stability_tests_performed": false,
+  "extra_rates_run": false,
+  "chi192_launched": false,
+  "thermodynamic_order": "unresolved",
+  "interpretation": "Both upper endpoints have small order diagnostics. O is a history label, not an ordered-branch pressure at the upper rate. A ranking sign change between these outputs is not a retained-branch crossing.",
+  "per_history_upper_seconds": {
+    "ordered": 3206.799036555998,
+    "disordered": 538.2400547069992
+  }
+}
