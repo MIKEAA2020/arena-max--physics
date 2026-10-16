@@ -1,0 +1,23 @@
+{
+  "status": "passed",
+  "exit_code": 0,
+  "paper_checks": 101,
+  "suites": [
+    [
+      17,
+      17
+    ],
+    [
+      35,
+      35
+    ],
+    [
+      49,
+      49
+    ]
+  ],
+  "provenance": "Actually executed from the isolated newly compacted ZIP extraction, not the full source checkout",
+  "high_chi_states_in_compact_archive": false,
+  "scientific_NPZ_files_modified_or_deleted": false,
+  "full_repository_required_for_high_chi_replay": true
+}

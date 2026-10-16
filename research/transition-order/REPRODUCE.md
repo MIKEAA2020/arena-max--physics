@@ -100,4 +100,4 @@ python3 research/transition-order/render_report.py
 python3 research/transition-order/bundle_review.py
 ```
 
-The compact physics ZIP omits duplicate rolling/partial/warm-seed states; the full repository retains them. Framework amendment and Git publication helpers are workspace operations, not additional physics proofs. They require a verified completed full-run receipt or an existing authorized Git clone respectively. No helper embeds an access token or automatically force-pushes.
+The compact physics ZIP omits all high-chi (chi>=96) states, bulk scan/branch states and rolling/partial/warm sources; the full repository retains every real state. Use a full checkout for high-chi inspection/replay or data audits. Framework amendment and Git publication helpers are workspace operations, not additional physics proofs. They require a verified completed full-run receipt or an existing authorized Git clone respectively. No helper embeds an access token or automatically force-pushes.

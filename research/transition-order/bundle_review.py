@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Refresh the physics-only review archive; the full Git repo is the complete record.
-Keep accepted/control state anchors; omit duplicate rolling, seed and partial
-states from this compact ZIP (all are available in the repository).
+Keep control/low-chi state anchors; all high-chi and rolling/partial/warm
+states stay in the full repository, not duplicated in this compact ZIP.
 """
 from pathlib import Path
 import hashlib,zipfile,json,io
@@ -18,7 +18,7 @@ for p in (ROOT/'v2.2/verify/replica').glob('*'):
 for p in (ROOT/'v2.2/verify/replica/checkpoints').glob('*.npz'):
     if p.name.startswith(('scan128_','branch128_')) or any(x in p.name for x in ['latest','partial','seed_']):continue
     with np.load(p,allow_pickle=False) as z:m=json.loads(str(z['metadata']))
-    if p.name.startswith('control_') or m.get('eps',1)>0 and m.get('eps',1)<m.get('tol',1e-7):add(p)
+    if p.name.startswith('control_') or (m.get('chi',0)<96 and m.get('eps',1)>0 and m.get('eps',1)<m.get('tol',1e-7)):add(p)
 for name in ['replica_checks.py','replica_checks.log','v33_checks.py','v33_checks.log','transfer_checks.py','transfer_checks.log','run_all_transition_2026-10-16-final.log','run_all_chi128_2026-10-16.log','run_all_scan128_2026-10-16.log','run_all_branch128_2026-10-16.log','run_all_upper128_2026-10-16.log']:
     add(ROOT/'v2.2/verify'/name)
 add(ROOT/'v2.2/md2docx.py')
@@ -45,9 +45,10 @@ inputs for source/hash reproduction; these are not claimed as agent creations.
 The original v33 TeX and its historical tables are distinguished from the later
 half-row data. Different finite-chi functionals must not be mixed silently.
 
-Real MPS NPZ states are included selectively: controls and accepted immutable
-anchors from the earlier matched-point experiment. Bulk scan128/branch128 states and
-rolling/partial/warm-seed states are omitted here to avoid duplication;
+Real MPS NPZ states are included selectively: controls and low-chi anchors.
+ALL high-chi (chi>=96), scan128/branch128, rolling/partial/warm-seed states are
+omitted here to avoid duplicating the full repository and exhausting durable
+workspace capacity. This does not remove or modify any scientific state file;
 the full repository snapshot / owner-push Git bundle retains those records.
 The publication-status receipt says whether the new continuation was actually
 pushed; this archive by itself does not establish a new GitHub publication.

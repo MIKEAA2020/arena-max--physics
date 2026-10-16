@@ -18,6 +18,6 @@ OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 python3 research/transition-order/audit
 
 The first command rebuilds the source/report from preserved v33, the interpretation fragment and saved scan data; it does not launch an MPS computation. It checks that all 65 mathematical statement/proof blocks remain verbatim, that labels are unique, and that references/citation keys resolve. These are source contracts, not proofs of every retained theorem.
 
-The full Git checkout preserves real scan checkpoints. The compact review ZIP intentionally omits bulk scan states, rolling/partial states and warm sources; use the full checkout for checkpoint inspection and exact initialization provenance.
+The full Git checkout preserves real scan checkpoints. The compact review ZIP intentionally omits ALL high-chi (chi>=96) anchors, bulk scan states, rolling/partial states and warm sources; use the full checkout for checkpoint inspection and exact initialization provenance.
 
 Still **author-review, not submission certified**. Compiling requires the original REVTeX/package environment and the missing original `fig_final_fss_v16.pdf`. Original Supplemental Material/numerical deposits, author approval and specialist analytic-hypothesis audit remain outstanding. No submission PDF or visual-layout certificate has been produced.

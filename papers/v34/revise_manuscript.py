@@ -86,6 +86,13 @@ if upper.get('results',{}).get('ordered',{}).get('converged') and upper.get('res
     ua,ub=upper['results']['ordered'],upper['results']['disordered']
     if max(ua['color_l2_order'],ub['color_l2_order'])<.01:
         lines.append(r'The upper-rate large-order history did not remain large-order: both accepted $.30485$ approximants have small invariant one-point order. The numerical ranking signs reverse relative to $.30480$, but the upper O-history value is not a retained ordered-branch pressure. Thus this test supplies no retained two-family pressure-crossing bracket. It does not prove continuity, branch absence or a physical spinodal, nor bound a thermodynamic metastability-window width. No smaller step or stability/large-$\chi$ campaign was automatically run.')
+mid_path=ROOT/'v2.2/verify/replica/n3_branch128_mid.json'
+mid=json.loads(mid_path.read_text()) if mid_path.exists() else {}
+if mid:
+    lines.append(r'\paragraph{Separately authorized closer common rate.} The closer test at $.304825$, $\chi=128$, warm-starts both accepted $.30480$ states, not the small-order $.30485$ outputs. It uses unchanged external gates, zero phase bias and a one-hour cap. Its status is '+mid.get('status','unknown').replace('_',r'\_')+r'. No further rate, $\chi=192$ or stability production is automatic. A same-objective ranking sign change is relevant only if distinguishable numerical families are retained; it is not a global-minimum, spinodal or thermodynamic-order certificate.')
+    if mid.get('results',{}).get('ordered',{}).get('converged') and mid.get('results',{}).get('disordered',{}).get('converged'):
+        ma,mb=mid['results']['ordered'],mid['results']['disordered']
+        lines.append(r'At $.304825$, invariant order is '+f"{ma['color_l2_order']:.6f} / {mb['color_l2_order']:.6f}"+r', with half-row objective difference '+f"{ma['f_half']-mb['f_half']:.6e}"+r' and separately evaluated period-trial difference '+f"{ma['f_full_rayleigh']-mb['f_full_rayleigh']:.6e}"+r'. The same-objective crossing question and finite-$\chi$ systematics are kept distinct from these raw values.')
 if accepted==12:
     left=[db['cases'][f'{p:.7f}'][side]['color_l2_order'] for p in grid if p<=.3047 for side in ['ordered','disordered']]
     right=[db['cases'][f'{p:.7f}'][side]['color_l2_order'] for p in grid if p>=.30486 for side in ['ordered','disordered']]
@@ -103,7 +110,7 @@ keys=set(re.findall(r'\\bibitem(?:\[[^]]*\])?\{([^}]+)\}',s))
 cites={k.strip() for v in re.findall(r'\\cite\{([^}]+)\}',s) for k in v.split(',')};assert cites<=keys
 out=HERE/'manuscript_revised_v34.tex';atomic(out,s)
 atomic(HERE/'v33-to-v34.diff',''.join(difflib.unified_diff(original.splitlines(True),s.splitlines(True),fromfile='manuscript_revised_v33.tex',tofile='manuscript_revised_v34.tex')))
-provenance=dict(source_v33_sha256=hashlib.sha256(source.read_bytes()).hexdigest(),output_v34_sha256=hashlib.sha256(out.read_bytes()).hexdigest(),unchanged_statement_and_proof_blocks=len(a),labels=len(labels),references_resolve=True,citations_resolve=True,scan_status=db.get('status'),scan_accepted_preparations=accepted,branch_pilot_status=pilot.get('status','not launched'),branch_refinement_status=refine.get('status','not launched'),upper_common_rate_status=upper.get('status','not launched'),phase_order='unresolved',status='author-review; not submission certified',interpretation='Quranic/Lighthouse: real dependent creation distinct from uncreated Creator; not a physics theorem')
+provenance=dict(source_v33_sha256=hashlib.sha256(source.read_bytes()).hexdigest(),output_v34_sha256=hashlib.sha256(out.read_bytes()).hexdigest(),unchanged_statement_and_proof_blocks=len(a),labels=len(labels),references_resolve=True,citations_resolve=True,scan_status=db.get('status'),scan_accepted_preparations=accepted,branch_pilot_status=pilot.get('status','not launched'),branch_refinement_status=refine.get('status','not launched'),upper_common_rate_status=upper.get('status','not launched'),closer_common_rate_status=mid.get('status','not launched'),phase_order='unresolved',status='author-review; not submission certified',interpretation='Quranic/Lighthouse: real dependent creation distinct from uncreated Creator; not a physics theorem')
 atomic(HERE/'source-provenance.json',json.dumps(provenance,indent=2)+'\n')
 report=f'''# v34 author-review continuation
 

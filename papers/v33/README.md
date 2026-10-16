@@ -94,6 +94,8 @@ SHA256SUMS in the ZIP records the supplied files. `source-provenance.json` ident
 unaltered v32 input and generated v33 source hashes. The author must review all changes
 before publication.
 
-## Exact chi128-stage replay boundary
+## Exact high-chi replay and inspection boundary
 
-The later accepted chi128 states, comparison, protocol and reports are included in the compact physics package. The two original unconverged chi128 warm sources and duplicate rolling states are retained in the **full Git repository/owner-push Git bundle**, not duplicated in this compact ZIP. Exact replay with `prepare_chi128_reproduction.py` therefore requires that full checkout. The compact ZIP remains sufficient for its documented 101-check paper subset and inspection of the accepted states. Its omission of warm sources is not a claim of warm-start replay from this ZIP alone.
+The compact physics package contains code, observations, comparisons, protocols, reports, and control/low-chi NPZ fixtures. It does **not duplicate any high-chi (chi>=96) state**, including the earlier accepted matched-point states; all real high-chi, scan/branch, rolling and partial/warm sources remain in the full Git repository. This packaging-only policy keeps the durable workspace below its snapshot capacity without deleting or changing scientific states. Older package bytes remain in Git history.
+
+Exact high-chi replay with `prepare_chi128_reproduction.py` and actual high-chi state audits therefore require a **full checkout**, not the compact ZIP alone. The ZIP still supplies its documented 101-check paper subset and the numerical observation records; it is not a full-checkpoint deposit.

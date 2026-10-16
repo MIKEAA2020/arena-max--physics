@@ -116,8 +116,8 @@
     },
     {
       "path": "papers/v33/README.md",
-      "bytes": 6206,
-      "sha256": "4ab3a5aa607133073eb9170742ad83236b22305799131b7f1e07cb95794928b4"
+      "bytes": 6436,
+      "sha256": "33dea3caab2e84c054d43ac0d5493408468f2363ac02e421602cb7e3737f5944"
     },
     {
       "path": "papers/v33/REVISION-REPORT.base.md",
@@ -236,18 +236,18 @@
     },
     {
       "path": "papers/v33-review-package.zip",
-      "bytes": 17106968,
-      "sha256": "e869afeb54a3a8acba66c76d3039e6b87bc1b184a940de0106eaee2e40669898"
+      "bytes": 3423547,
+      "sha256": "27bfb0cf7b783ad9979d5b8832a267b947dc47e6e155a496870098076549bd7b"
     },
     {
       "path": "papers/v33-review-package.zip.sha256",
       "bytes": 89,
-      "sha256": "01115cfd60a466b2ad1620fd27c73e88a4e5e31a400325b7e746b9407a9e453e"
+      "sha256": "e564153e8766ebb456b5384f8919b8377c7dc5c82f903e98aa6605d50492de2c"
     },
     {
       "path": "papers/v34/README.md",
-      "bytes": 1950,
-      "sha256": "c4fc177b4481fcb810ce16873a2193aaeed2f4a4d438b2a41da865a62f30553f"
+      "bytes": 1982,
+      "sha256": "cb0f043e06a516f575b2c6f352a0b48fa56ef77c5ea2fed417a8e33452ff6b8e"
     },
     {
       "path": "papers/v34/REVISION-REPORT.md",
@@ -256,13 +256,13 @@
     },
     {
       "path": "papers/v34/manuscript_revised_v34.tex",
-      "bytes": 260555,
-      "sha256": "9c67a384dc5f28a6b90df1a17a3ff7843fbb36346e60ba27d0ae74831fc052fa"
+      "bytes": 261095,
+      "sha256": "f1d66c7991c582dba8127cb38d87ff4c909dfede170fa37b5983d3a21f9c078b"
     },
     {
       "path": "papers/v34/revise_manuscript.py",
-      "bytes": 20509,
-      "sha256": "e27b9351ef893071ae97db1a65e509c5660b775b85fbe925988e5b15f04570ae"
+      "bytes": 21892,
+      "sha256": "cd0d76ab8b07ca2650d3b5f1ea13a281a29ab2069ec78b0c662a1c756f5fc7e1"
     },
     {
       "path": "papers/v34/sections/interpretation.tex",
@@ -276,18 +276,18 @@
     },
     {
       "path": "papers/v34/source-provenance.json",
-      "bytes": 866,
-      "sha256": "665f2d5a8f71e5a4f9e68f42b8815c121c1e4b1b3538ee8594c439b3c88f64ef"
+      "bytes": 932,
+      "sha256": "a37d6286fc363a000d3b8e13996532645a5f7297dedf4c70525a360de3710c6b"
     },
     {
       "path": "papers/v34/v33-to-v34.diff",
-      "bytes": 34305,
-      "sha256": "8698a0c9755d4e4fdb7637b694a6e26d3990b781fe580e8e40ff48a003f113fe"
+      "bytes": 34847,
+      "sha256": "163c544fa0421d4541aba5058f62dd02f13798fc03b543566251cb47f4a3a58f"
     },
     {
       "path": "papers/v34/v34-revision-report.docx",
       "bytes": 38522,
-      "sha256": "fbc7b27dd989d6f2280511a1373083c4d5c498b5a134e9afbc75055c8b736043"
+      "sha256": "ebe22db4b15b6267e158c8e5603305291a2d6cacd495cbe9adb12d0ccb8f075c"
     },
     {
       "path": "quran/README.md",
@@ -313,6 +313,11 @@
       "path": "research/transition-order/BRANCH-CONTINUATION.md",
       "bytes": 5991,
       "sha256": "9fbacf915d1969e2d6e70b33bb1324ade44d612fab9a5526363425eb9d415360"
+    },
+    {
+      "path": "research/transition-order/BRANCH128-MID-RESULTS.md",
+      "bytes": 3800,
+      "sha256": "efb1d4c2b9cbc3aa21dfdbc14bd2d297a2326d3f149f6bf6c1793f18bf4897e6"
     },
     {
       "path": "research/transition-order/BRANCH128-PILOT-RESULTS.md",
@@ -366,8 +371,8 @@
     },
     {
       "path": "research/transition-order/REPRODUCE.md",
-      "bytes": 7764,
-      "sha256": "e4032f8c660d3ac1c09ea7ecaa2e16f64f6c1d808d8f2181f09fe631638adab2"
+      "bytes": 7888,
+      "sha256": "1e9a40c65d7979563ad6e7a0be1612af560aa9ddc3ec07f2612917724bcb5a47"
     },
     {
       "path": "research/transition-order/RESULTS.md",
@@ -398,6 +403,16 @@
       "path": "research/transition-order/amend_framework.py",
       "bytes": 8573,
       "sha256": "debc398c809fa6a1a99e69c7da5ac22b9b8535de8909e653b8e4756a3cba79bb"
+    },
+    {
+      "path": "research/transition-order/archive-storage-policy.json",
+      "bytes": 545,
+      "sha256": "6b3d015c59a2ac3631d4ff4f70536aa08fe0dc176cbc6a11b78fccb2e2dedce5"
+    },
+    {
+      "path": "research/transition-order/audit_branch128_mid.py",
+      "bytes": 4583,
+      "sha256": "b5522c924005e72092b5840421e76b5b233b407e98338b4a7f2480ad65e33e95"
     },
     {
       "path": "research/transition-order/audit_branch128_pilot.py",
@@ -465,6 +480,21 @@
       "sha256": "4055f3b57200a61c214df96a9cc42ecb374c6f7c5d81aaf4246e32f333dd41d3"
     },
     {
+      "path": "research/transition-order/branch128-mid-protocol.json",
+      "bytes": 3877,
+      "sha256": "1e5c6154a0aed5a59a061c0b0fe596a831bfaed1011e1d41efd2ea787d47ed24"
+    },
+    {
+      "path": "research/transition-order/branch128-mid-report.docx",
+      "bytes": 39701,
+      "sha256": "ddfb99e6988ca72bb00b0952e3cd08cf6e75c97fbc222e5ca7eeef277bdf178c"
+    },
+    {
+      "path": "research/transition-order/branch128-mid.csv",
+      "bytes": 873,
+      "sha256": "1a4e7cb2e907b606733aba6e9ddcf50364221627dba9a061b4275db863d055bf"
+    },
+    {
       "path": "research/transition-order/branch128-pilot-protocol.json",
       "bytes": 3409,
       "sha256": "3e8bf71d333ed9ee0d8df45117b924c58bd3176f78d665d32b30624efe06e473"
@@ -477,7 +507,7 @@
     {
       "path": "research/transition-order/branch128-pilot-report.docx",
       "bytes": 40259,
-      "sha256": "4922c5e558b64189381883f9c430c004aff8a0ac1898685a577e55bec806b315"
+      "sha256": "99e6f36dc67c485bcb45c273c0fab7bd416dc2db551654f4006cc4a377486746"
     },
     {
       "path": "research/transition-order/branch128-pilot.csv",
@@ -507,7 +537,7 @@
     {
       "path": "research/transition-order/branch128-refinement-report.docx",
       "bytes": 39518,
-      "sha256": "726e91634eb2180e6cf5406f468bf8fe4c40c356ca50ef25da2cdb7b9a2e0f76"
+      "sha256": "afab72a20292b567fc25f077a03b82059e8d5c9ea48cdfc009100f156ad22898"
     },
     {
       "path": "research/transition-order/branch128-refinement.csv",
@@ -537,12 +567,22 @@
     {
       "path": "research/transition-order/branch128-upper-report.docx",
       "bytes": 40565,
-      "sha256": "a540dda1b088571ef99c565bf9bc8de908d0b9ca95df749953dfb6dd1dbeace9"
+      "sha256": "86cb0c3f93e2537e989f4d7524ba18c6051b507ac00fbb130c3dd5dfbd573dbb"
     },
     {
       "path": "research/transition-order/branch128-upper.csv",
       "bytes": 1606,
       "sha256": "9be0a80ff3b78694b1b538f4857c902e8755c4d10348379889f01304c6480c02"
+    },
+    {
+      "path": "research/transition-order/branch128_mid_campaign.py",
+      "bytes": 4939,
+      "sha256": "f053cbcb120b85b6c01872cd306822eb66cba740cae9c115fa6f4985c8cc6707"
+    },
+    {
+      "path": "research/transition-order/branch128_mid_report.py",
+      "bytes": 10989,
+      "sha256": "90189ae99ab37e5ad5329acf09fb40ac28f6ad38701cc331068525ccdbc176c5"
     },
     {
       "path": "research/transition-order/branch128_pilot_campaign.py",
@@ -571,8 +611,8 @@
     },
     {
       "path": "research/transition-order/bundle_review.py",
-      "bytes": 4805,
-      "sha256": "ab45f347d92713a146a9ed4af2db49fb0d50df30e3b77b2dec6af8be5f517f0b"
+      "bytes": 4905,
+      "sha256": "89617d4a570c55242b5d9e55e596f45ce55d9894c785b1354447fb72f1372e41"
     },
     {
       "path": "research/transition-order/cases-common96-disordered.json",
@@ -650,6 +690,16 @@
       "sha256": "5af40878d58b6ec81db7b8b28b9ef3c1fd13811bdd333609f9813fe4aab88706"
     },
     {
+      "path": "research/transition-order/compact-package-101.log",
+      "bytes": 8444,
+      "sha256": "86f8f05e4a0267b9c34b0bf3299b6965f4b39b5877ef46e614b0c66b48e94e31"
+    },
+    {
+      "path": "research/transition-order/compact-package-verification.json",
+      "bytes": 452,
+      "sha256": "289fad15ff5f030565cacda416ba7094df9def9f8e6250fe6c2567b6085fa01d"
+    },
+    {
       "path": "research/transition-order/deferred-computations.json",
       "bytes": 607,
       "sha256": "3320527c3bad36d248068b30a66bc01cb0b7322ca92c0ac5f32717d5b7d78edc"
@@ -711,8 +761,8 @@
     },
     {
       "path": "research/transition-order/publish_branch128.py",
-      "bytes": 3149,
-      "sha256": "2bf2c4ad9930c2dbab43aaa2c07500257ee4a037aa2e933420f67d3a326aceee"
+      "bytes": 3479,
+      "sha256": "fdac232ed06503f65e52de0472c6a46fa843073a8d0644e540ad9b5889304022"
     },
     {
       "path": "research/transition-order/render_report.py",
@@ -1115,6 +1165,11 @@
       "sha256": "da54c1a1932217c59693df2a7f940cb94cfd5063e05adebf34d41e6b75cc85dd"
     },
     {
+      "path": "v2.2/verify/replica/branch128_mid_worker.py",
+      "bytes": 5917,
+      "sha256": "5c129e9c9318a4504f0615803367d473413674f4bcdc7e1c70e9eb600ddb9da3"
+    },
+    {
       "path": "v2.2/verify/replica/branch128_pilot_disordered_p0.3048000.json",
       "bytes": 3180,
       "sha256": "3e26ba280d87d6c8da75155c666a2efadd44e52e8031a47e9727f8fe58ed3556"
@@ -1493,6 +1548,11 @@
       "path": "v2.2/verify/replica/half_validation.log",
       "bytes": 1469,
       "sha256": "3e249e7ba2630745115209d9c1fafc356360a477a60604b7d21e5953ad94cb8f"
+    },
+    {
+      "path": "v2.2/verify/replica/n3_branch128_mid.json",
+      "bytes": 20610,
+      "sha256": "6445e41e5d2d498605d73bfa5e3ca105e30861f406093ac9b96cc28d8e3d1f24"
     },
     {
       "path": "v2.2/verify/replica/n3_branch128_pilot.json",

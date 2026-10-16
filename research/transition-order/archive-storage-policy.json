@@ -1,0 +1,8 @@
+{
+  "scope": "packaging-only duplicate removal; scientific NPZ files unchanged",
+  "reason": "Keep persisted workspace under approximately 128 MiB for requested continuation and durable private credential storage",
+  "compact_zip": "code, observations, protocols, reports and control/low-chi fixtures",
+  "high_chi_states": "All chi>=96 NPZ states are retained in full Git repository and workspace, not duplicated in compact review ZIP",
+  "originals_deleted": false,
+  "historical_zip_bytes": "prior published packages remain in Git history"
+}

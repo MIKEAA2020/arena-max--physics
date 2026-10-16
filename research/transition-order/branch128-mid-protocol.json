@@ -1,0 +1,63 @@
+{
+  "campaign": "2026-10-16-chi128-one-closer-common-rate-v1",
+  "authorization": "User selected closer_point: only p=.304825 chi128, two accepted .30480 initial states, 60-minute cap, unchanged external gates; no chi192 or stability campaign.",
+  "n": 3,
+  "d": 2,
+  "p": 0.304825,
+  "chi": 128,
+  "external_tol": 1e-07,
+  "internal_goal": 5e-08,
+  "maxiter": 10000,
+  "optimizer_seconds": 3300,
+  "total_seconds": 3600,
+  "deadline_unix": 1792181758.2205143,
+  "canonical_ceiling": 1e-09,
+  "period_contraction_ceiling": 1e-08,
+  "max_heavy_workers": 2,
+  "threads_per_worker": 1,
+  "sources": {
+    "ordered": {
+      "record": "v2.2/verify/replica/branch128_pilot_ordered_p0.3048000.json",
+      "record_sha256": "f568e5314a1075433e2ff824d212f123788cb1aaa1de17805b8aa6020064802b",
+      "checkpoint": "v2.2/verify/replica/checkpoints/branch128_pilot_ordered_p0.3048000.npz",
+      "sha256": "418da13e207187eacec7bf1c4cee0f12319b3cba81ba15928ea5854db73fbccc",
+      "source_p": 0.3048,
+      "accepted_source": true,
+      "qualification": "actual accepted .30480 numerical state; not an upper-rate merged output or a physical phase certificate"
+    },
+    "disordered": {
+      "record": "v2.2/verify/replica/n3_branch128_refinement.json",
+      "record_sha256": "e6a8531299ecd301d17d3b3dd3d9e10ab0cfd05c9d122e256af4b6010a99944a",
+      "checkpoint": "v2.2/verify/replica/checkpoints/branch128_refinement_disordered_p0.3048000.npz",
+      "sha256": "d7c00c75b1b0064efc97cc58587b3d31aceab6fd6892d10d99bc295e795731ea",
+      "source_p": 0.3048,
+      "accepted_source": true,
+      "qualification": "actual accepted .30480 numerical state; not an upper-rate merged output or a physical phase certificate"
+    }
+  },
+  "source_sha256": {
+    "v2.2/verify/replica/replica_vumps.py": "4830e638829e1df645e16442171a820baf7bd710c617f24c32f089f79c399247",
+    "v2.2/verify/replica/replica_halfrow.py": "b791a81675ebe697d36a82a2572753185b4b8c7d13164e12cb47feab3c85ed5d",
+    "v2.2/verify/replica/replica_tm.py": "43a5074315a61379aa70e5251111601ec41c26ff762a11dcde5b9c665e18ba20",
+    "v2.2/verify/replica/branch128_pilot_worker.py": "3dc06a84365e241a7b7c9d20b5007a4dfd7b744a35defc5e5fd88cb3c5be9aca",
+    "v2.2/verify/replica/compare_stationary.py": "2dbcf288822c0b8e7f3d41a771362ea78415f0f4306d452b4fb80894884cc23f",
+    "v2.2/verify/replica/branch128_mid_worker.py": "5c129e9c9318a4504f0615803367d473413674f4bcdc7e1c70e9eb600ddb9da3",
+    "research/transition-order/chi128_scan_campaign.py": "5af40878d58b6ec81db7b8b28b9ef3c1fd13811bdd333609f9813fe4aab88706",
+    "research/transition-order/branch128_mid_campaign.py": "f053cbcb120b85b6c01872cd306822eb66cba740cae9c115fa6f4985c8cc6707"
+  },
+  "software": {
+    "python": "3.13.16",
+    "numpy": "2.3.5",
+    "scipy": "1.17.1"
+  },
+  "initialization": "Both accepted lower .30480 states, not the small-order .30485 endpoints; direct unbiased warm step only.",
+  "objective": "Same Hermitian half-row stationary objective; separate full-period trial evaluations, not mixed into a crossing.",
+  "budget_rule": "Internal goal is a driver. At its budget end the actual saved state may be accepted only after every original external gate and period validation, within the reserved overall time. No rounding or threshold relaxation.",
+  "bracket_rule": "A sign change requires retained distinguishable numerical families and one same-objective comparison; it is at most a candidate finite-chi pressure bracket, not a physical coexistence/stability/order certificate.",
+  "residuals_are_not_energy_error_bars": true,
+  "chi96_production": false,
+  "chi192": false,
+  "extra_rates": false,
+  "perturbation_stability_production": false,
+  "launch_validation": "Minimal compact ZIP actually passed 17+35+49=101; its 49 transfer checks use byte-identical physics kernels to the full source. Not added to the distinct full-regression count."
+}

@@ -1,0 +1,145 @@
+[PASS] 1 n=2 closure (a,b,c) matches paper's Eq.  a=0.704000 b=0.340000 c=0.074000
+[PASS] 2 Wg_{D=4}(e, transposition, 3-cycle) = 7/360, -1/180, 1/360  
+[PASS] 3 n=3 p=0 bond weights: 12 negative entries, min ~ -0.10  neg=12 min=-0.1000
+[PASS] 4 L=6 p=0.02 top levels 0.836807 / 0.834268 (x4) / 0.831750  0.836807 0.834268 0.834268 0.831750
+[PASS] 5 sectors: lam1 triv, lam_sigma = std x std (0.834268), lam_sgn = sgn x sgn (0.831750)  
+[PASS] 6 n=2 control R(10)=0.118, R(32)=0.1243, both below 1/8  R10=0.1176 R32=0.12425
+[PASS] 7 n=3 sigma-crossings reproduce the paper's table (p* to 5e-4, ratio to 1e-3)  (4,6) p*=0.27122 R=0.1069; (6,8) p*=0.29696 R=0.1442; (8,10) p*=0.30263 R=0.1614
+[PASS] 8 L=12 at p=0.30403: ratio 0.171 (paper), X_eps 6.0 (paper)  ratio=0.1705 Xeps=5.992
+[PASS] 9 ratio passes 1/6 by L=12 and rises monotonically (fixed p=0.305: L=8,10,12)  fixed-p: 0.1573 0.1669 0.1734
+[PASS] 10 S_3 class structure: Ising parity gating a 3-state Potts label (sigma^-1 tau transposition iff parities differ)  
+[PASS] 11 parity-sector crossings (8,10),(10,12) ~ 0.310 lie above the sigma crossings ~ 0.3026/0.3043  p_sgn*(8,10)=0.31021 p_sgn*(10,12)=0.31019
+[PASS] 12 p=0.3075: X_sigma increasing with L while X_sgn decreasing (intermediate-phase signature, L=8,10,12)  X_sigma 1.0571<1.0736<1.0854; X_sgn 1.8523>1.8379>1.8224
+[PASS] 13 c/x_sigma: n=2 -> 4.05 (Ising 4); n=3 -> ~9 (3-Potts would be 6; 4-Potts 8; Ising+3-Potts 9.75)  n=2: 4.053; n=3: 9.174
+[PASS] 14 VUMPS MPO (D=36) reproduces the dense one-period operator at L=6; symmetric form symmetric  |dC|=6.9e-18 |S-S^T|=3.6e-17
+[PASS] 15 n=2 VUMPS at p_c=0.233810, chi=8: converged, f=0.470270, xi_chi in [35,50], |m| in [0.40,0.55]  f=0.4702698 xi=42.1 m=0.473 eps=7.6e-08
+[PASS] 16 n=4: std crossings 0.3583/0.3790 reproduce the paper's 0.35820/0.37899; sgn crossings 0.3698/0.3939 are distinct and move away  std 0.3583 0.3790; sgn 0.3698 0.3939
+[PASS] 17 stored n=3 VUMPS scans (chi=24..72): no sampled parity-only state; both ordered and disordered samples present  rows=48 parity-only=0 both=21 neither=26
+
+17/17 checks passed  [52s]
+[PASS] Sp(4,2) contains 720 distinct matrices 
+[PASS] All sampled actions preserve the symplectic form 
+[PASS] Product-state entropy is zero 
+[PASS] Tableau rows stay commuting 
+[PASS] Tableau rows stay independent 
+[PASS] Bell-pair entropy is one bit 
+[PASS] Uniform two-qubit Clifford gives 0.4 bits per crossed cut 
+[PASS] Adapted measurement proposal has exact residual weights 
+[PASS] p=0 has zero random count and Z=1 
+[PASS] beta=0 has Z=1 and no resampling ancestry loss 
+[PASS] Within-period ancestry is reconstructed in the correct index space 
+[PASS] Finite-time n=2 product-boundary anchor Z=0.032961721
+[PASS] Finite-time n=3 benchmark independently contracted Lambda=-0.121924372
+[PASS] SMC exact-anchor regression L=16, p=0.16, beta=1 0.032957345 +/- 0.000015283; exact=0.032961721
+[PASS] SMC exact-anchor regression L=8, p=0.16, beta=2 -0.121920260 +/- 0.000019444; exact=-0.121924372
+[PASS] SMC exact-anchor regression L=8, p=0.22, beta=2 -0.169636443 +/- 0.000017709; exact=-0.169612662
+[PASS] SMC exact-anchor regression L=12, p=0.16, beta=2 -0.123862789 +/- 0.000004770; exact=-0.123856677
+[PASS] SMC exact-anchor regression L=16, p=0.22, beta=2 -0.173888665 +/- 0.000010031; exact=-0.173901000
+[PASS] SMC exact-anchor regression L=8, p=0.305, beta=2 -0.237179973 +/- 0.000058435; exact=-0.237048017
+[PASS] SMC exact-anchor regression L=12, p=0.305, beta=2 -0.241684496 +/- 0.000062325; exact=-0.241720161
+[PASS] Tilted measured-density response identity has correct sign and normalization 
+[PASS] Two-qubit fourth Clifford commutant span has exact Gram rank 29 
+[PASS] Regular-bimodule sector dimensions are 1+4+1 and 1+9+9+4+1 
+[PASS] n=3 wire and bond permutation spans differ (ranks 5 vs 6) 
+[PASS] n=5 two-qubit bond Gram has rank 119 of 120 
+[PASS] Bounded intensive variance does not justify replica/volume interchange 
+[PASS] Finite-state reducible process can expose an affine branch 
+[PASS] Exact interpolation identity retained 
+[PASS] Disordered chi=96 result is complete and stored 
+[PASS] v33 references resolve and labels are unique 
+[PASS] v33 citations have bibliography entries 
+[PASS] v33 abstract retains CTD/CPD and explicit withdrawal 
+[PASS] Complexity appendix unchanged except explicit non-overlap domain of optional thresholds 
+[PASS] Optional CPD amplified threshold gap is positive precisely for integers n>=3 
+[PASS] Core operator, LDP, interpolation and dyadic statements preserved verbatim 
+
+35/35 checks passed [74.7s]
+[PASS] Half-row exact operator n=2,d=2 error=5.55e-17
+[PASS] Momentum-zero half-row Hermiticity n=2,d=2 error=4.16e-17
+[PASS] Momentum-zero C=H^2 n=2,d=2 error=3.33e-16
+[PASS] Global Hermitian direct sum n=2,d=2 error=2.78e-17
+[PASS] Half-row exact operator n=3,d=2 error=6.11e-16
+[PASS] Momentum-zero half-row Hermiticity n=3,d=2 error=8.33e-17
+[PASS] Momentum-zero C=H^2 n=3,d=2 error=3.33e-16
+[PASS] Global Hermitian direct sum n=3,d=2 error=5.55e-17
+[PASS] Half-row exact operator n=3,d=3 error=2.60e-17
+[PASS] Momentum-zero half-row Hermiticity n=3,d=3 error=4.07e-18
+[PASS] Momentum-zero C=H^2 n=3,d=3 error=6.51e-19
+[PASS] Global Hermitian direct sum n=3,d=3 error=6.94e-18
+[PASS] Half-row exact operator n=4,d=2 error=8.33e-16
+[PASS] Momentum-zero half-row Hermiticity n=4,d=2 error=1.94e-16
+[PASS] Momentum-zero C=H^2 n=4,d=2 error=1.94e-16
+[PASS] Global Hermitian direct sum n=4,d=2 error=1.11e-15
+[PASS] Block-diagonal left environment equals dense contraction 
+[PASS] Block-diagonal right environment equals dense contraction 
+[PASS] Block-diagonal center action equals dense contraction 
+[PASS] Paired left environment reduction is an exact invariant subspace 
+[PASS] Paired right environment reduction is an exact invariant subspace 
+[PASS] Memory-safe two-site periodic MPO contraction 
+[PASS] O(d chi^3) transfer action equals the former contraction 
+[PASS] Transfer subleading spectrum agrees with dense reference 
+[PASS] NPZ checkpoint preserves all six MPS/environment tensors 
+[PASS] NPZ checkpoint preserves operator and scalar metadata 
+[PASS] Incompatible operator invalidates cached environments only 
+[PASS] Wall-budget stop persists a resumable partial state 
+[PASS] Loaded checkpoint genuinely resumes the same numerical state 
+[PASS] Fresh Ising half-row MPS converges at chi=8 
+[PASS] Fresh Ising period-Rayleigh normalization cross-check 
+[PASS] Stored Ising chi ladder has expected finite-entanglement growth kappa(16,32)=2.0382
+[PASS] Stored n=3 p=0.3 functional discrepancy decreases with chi delta24=2.09e-07,delta48=5.79e-09; lower-chi failures not promoted
+[PASS] Stored n=3 p=0.31 functional discrepancy decreases with chi delta24=3.97e-06,delta48=4.12e-07; lower-chi failures not promoted
+{
+  "labels": 30,
+  "physical_bond_rank": 29,
+  "pair_support_counts": [
+    48,
+    288,
+    384
+  ],
+  "pair_moments_n234": [
+    "2/5",
+    "1/5",
+    "1/8"
+  ],
+  "gate_commutator_errors": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0
+  ],
+  "haar_weight_error": 9.43689570931383e-16,
+  "fully_monitored": [
+    {
+      "ensemble": "haar",
+      "p": 1,
+      "L": 4,
+      "eigenvalue": 0.0001705955851728436,
+      "exact": 0.00017059558517284462
+    },
+    {
+      "ensemble": "clifford",
+      "p": 1,
+      "L": 4,
+      "eigenvalue": 0.00024414062500000087,
+      "exact": 0.000244140625
+    }
+  ]
+}
+[PASS] Fourth Clifford has 30 closed labels but physical rank 29 
+[PASS] Fourth Clifford Gram pseudoinverse is a quotient projector 
+[PASS] Uniform Clifford support ranks are exactly 48,288,384 
+[PASS] Independent pair moments are 2/5,1/5,1/8 
+[PASS] Fourth Clifford generators commute with all tested physical gate generators 
+[PASS] Fourth Haar control recovers permutation bond weights 
+[PASS] Fourth Haar and Clifford fully monitored endpoints 
+[PASS] Fourth Clifford left/right triv projector is idempotent 
+[PASS] Fourth Clifford left/right std projector is idempotent 
+[PASS] Fourth Clifford left/right sgn projector is idempotent 
+[PASS] Fourth Clifford left/right two projector is idempotent 
+[PASS] Fourth Clifford left/right stdsgn projector is idempotent 
+[PASS] Stored fourth-moment ladder completed all 52 requested cases 
+[PASS] Stored fourth-moment ladder eigenpairs have small residuals max absolute residual=1.17e-10
+[PASS] Stored Haar fourth-moment L4 p=.38 anchor reproduced 
+
+49/49 checks passed [6.4s]
