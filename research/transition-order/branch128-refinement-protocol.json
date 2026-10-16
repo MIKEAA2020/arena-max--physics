@@ -1,0 +1,39 @@
+{
+  "campaign": "2026-10-16-same-point-convergence-safety-v1",
+  "authorization": "User selected refine_same_point after seeing the exact failed right-compatibility norm; max 30 minutes, no new rate/chi/stability campaign.",
+  "p": 0.3048,
+  "chi": 128,
+  "n": 3,
+  "d": 2,
+  "external_tol": 1e-07,
+  "internal_goal": 5e-08,
+  "optimizer_budget_seconds": 1500,
+  "total_seconds": 1800,
+  "deadline_unix": 1792172563.7668107,
+  "source": {
+    "checkpoint": "v2.2/verify/replica/checkpoints/branch128_pilot_disordered_p0.3048000.npz",
+    "sha256": "5c6763ca817cf2d60f0fd76124e6fcb3e7ef7b49258ef104b6d2ba542def2b12",
+    "accepted_source": false,
+    "qualification": "actual rejected same-point physical state; original accepted .30483 ancestry retained"
+  },
+  "original_rejected_json_sha256": "3e26ba280d87d6c8da75155c666a2efadd44e52e8031a47e9727f8fe58ed3556",
+  "original_pilot_json_sha256": "f788cff67ff0cf2e56ebae1581f4fd717a58411eee4ed1efc66086a969ae8990",
+  "source_sha256": {
+    "v2.2/verify/replica/replica_vumps.py": "4830e638829e1df645e16442171a820baf7bd710c617f24c32f089f79c399247",
+    "v2.2/verify/replica/replica_halfrow.py": "b791a81675ebe697d36a82a2572753185b4b8c7d13164e12cb47feab3c85ed5d",
+    "v2.2/verify/replica/replica_tm.py": "43a5074315a61379aa70e5251111601ec41c26ff762a11dcde5b9c665e18ba20",
+    "v2.2/verify/replica/branch128_pilot_worker.py": "3dc06a84365e241a7b7c9d20b5007a4dfd7b744a35defc5e5fd88cb3c5be9aca",
+    "v2.2/verify/replica/compare_stationary.py": "2dbcf288822c0b8e7f3d41a771362ea78415f0f4306d452b4fb80894884cc23f",
+    "v2.2/verify/replica/branch128_refinement.py": "165326c90172a9c7a8e7641304cb420aadca698e1bbc1d52d4bf1c31489173a5"
+  },
+  "acceptance": "Original external gates unchanged: primary AND both compatibility defects <1e-7, canonical <1e-9, positive period expectation with relative defect <1e-8. Internal goal is a driving target, not an extra external acceptance gate.",
+  "budget_handling": "If internal driving budget ends, only the actual saved state is evaluated under all original external gates; no acceptance by rounding and no new optimization after the budget. Up to 300 seconds reserved for validation.",
+  "comparison": "Optional symmetry-aligned similarity is diagnostic, not an unannounced acceptance gate; a time-limited orientation search is reported partial.",
+  "original_failed_record_preserved": true,
+  "phase_bias": false,
+  "new_p_values": false,
+  "chi192": false,
+  "perturbation_tests": false,
+  "crossing_bracket": false,
+  "thermodynamic_order": "unresolved"
+}

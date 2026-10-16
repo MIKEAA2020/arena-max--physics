@@ -40,7 +40,7 @@ No two accepted common-target results yet; no energy-gap or coexistence inferenc
 
 The common-target small-order history passed the primary optimizer tolerance (9.995603786506e-08), but its right compatibility defect was **1.000165012751e-07**, above **1e-7** by 0.016501%. The right gate was not relaxed. No full-period value was evaluated for this rejected step, and no accepted common-target branch comparison was constructed. This is a numerical gate failure, not evidence of a physical phase or spinodal.
 
-A same-point safety refinement with a stricter internal goal and unchanged external gates is described in CONVERGENCE-REFINEMENT.md. It requires separate authorization; the original failed attempt remains preserved.
+A same-point safety refinement with a stricter internal goal and unchanged external gates is described in CONVERGENCE-REFINEMENT.md. The user subsequently authorized the separately recorded 30-minute amendment; its status and results are in BRANCH128-REFINEMENT-RESULTS.md. The original failed attempt remains preserved and is not retroactively accepted.
 
 ## Limits and next gates
 

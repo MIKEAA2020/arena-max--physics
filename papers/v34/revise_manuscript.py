@@ -68,6 +68,13 @@ if pilot:
     if common.get('ordered',{}).get('converged') and common.get('disordered',{}).get('converged'):
         pa,pb=common['ordered'],common['disordered']
         lines.append(r'At the common pilot rate $.30480$, invariant one-point order is '+f"{pa['color_l2_order']:.6f} / {pb['color_l2_order']:.6f}"+r'. Half-row trial-objective difference is '+f"{pa['f_half']-pb['f_half']:.5e}"+r', while the separately evaluated full-period trial difference is '+f"{pa['f_full_rayleigh']-pb['f_full_rayleigh']:.5e}"+r'. They are different finite-$\chi$ functionals, not a root bracket or a global error estimate. This allocation does not perform perturbation stability tests, a second common-rate crossing bracket, or $\chi\to\infty$ extrapolation; it does not certify transition order.')
+refine_path=ROOT/'v2.2/verify/replica/n3_branch128_refinement.json'
+refine=json.loads(refine_path.read_text()) if refine_path.exists() else {}
+if refine:
+    lines.append(r'\paragraph{Convergence-safety amendment.} The original pilot remains recorded with its failed right-compatibility gate; it is not retroactively accepted. A separately allocated same-$p=.30480$, same-$\chi=128$ refinement from the rejected checkpoint uses a stricter internal goal $5\times10^{-8}$ while preserving all original external gates. Its status is '+refine.get('status','unknown').replace('_',r'\_')+r'. No new rate, imposed phase constraint, perturbation test or crossing bracket is included.')
+    if refine.get('converged'):
+        large=pilot['stages']['2']['ordered']
+        lines.append(r'The separately augmented common-point comparison has invariant order '+f"{large['color_l2_order']:.6f} / {refine['color_l2_order']:.6f}"+r', with half-row objective difference '+f"{large['f_half']-refine['f_half']:.6e}"+r' and separately evaluated period-trial difference '+f"{large['f_full_rayleigh']-refine['f_full_rayleigh']:.6e}"+r'. A nonzero difference at one common point is not coexistence; a controlled crossing, stability and systematic limits remain open.')
 if accepted==12:
     left=[db['cases'][f'{p:.7f}'][side]['color_l2_order'] for p in grid if p<=.3047 for side in ['ordered','disordered']]
     right=[db['cases'][f'{p:.7f}'][side]['color_l2_order'] for p in grid if p>=.30486 for side in ['ordered','disordered']]
@@ -85,7 +92,7 @@ keys=set(re.findall(r'\\bibitem(?:\[[^]]*\])?\{([^}]+)\}',s))
 cites={k.strip() for v in re.findall(r'\\cite\{([^}]+)\}',s) for k in v.split(',')};assert cites<=keys
 out=HERE/'manuscript_revised_v34.tex';atomic(out,s)
 atomic(HERE/'v33-to-v34.diff',''.join(difflib.unified_diff(original.splitlines(True),s.splitlines(True),fromfile='manuscript_revised_v33.tex',tofile='manuscript_revised_v34.tex')))
-provenance=dict(source_v33_sha256=hashlib.sha256(source.read_bytes()).hexdigest(),output_v34_sha256=hashlib.sha256(out.read_bytes()).hexdigest(),unchanged_statement_and_proof_blocks=len(a),labels=len(labels),references_resolve=True,citations_resolve=True,scan_status=db.get('status'),scan_accepted_preparations=accepted,branch_pilot_status=pilot.get('status','not launched'),phase_order='unresolved',status='author-review; not submission certified',interpretation='Quranic/Lighthouse: real dependent creation distinct from uncreated Creator; not a physics theorem')
+provenance=dict(source_v33_sha256=hashlib.sha256(source.read_bytes()).hexdigest(),output_v34_sha256=hashlib.sha256(out.read_bytes()).hexdigest(),unchanged_statement_and_proof_blocks=len(a),labels=len(labels),references_resolve=True,citations_resolve=True,scan_status=db.get('status'),scan_accepted_preparations=accepted,branch_pilot_status=pilot.get('status','not launched'),branch_refinement_status=refine.get('status','not launched'),phase_order='unresolved',status='author-review; not submission certified',interpretation='Quranic/Lighthouse: real dependent creation distinct from uncreated Creator; not a physics theorem')
 atomic(HERE/'source-provenance.json',json.dumps(provenance,indent=2)+'\n')
 report=f'''# v34 author-review continuation
 

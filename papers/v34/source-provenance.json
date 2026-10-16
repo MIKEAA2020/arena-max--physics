@@ -1,6 +1,6 @@
 {
   "source_v33_sha256": "d27cddbaa6dee54f122d55ec16ebb7d5e2059fb3542faa72381b11e775958611",
-  "output_v34_sha256": "c238c14eee8149193f4558fa7aa8af43eacc648002f23ee41023193ca88a04dd",
+  "output_v34_sha256": "ed19242fe9b0a83c4ab31394c9acf7651e605dd1040869c91a4e2d29b83d85e7",
   "unchanged_statement_and_proof_blocks": 65,
   "labels": 160,
   "references_resolve": true,
@@ -8,6 +8,7 @@
   "scan_status": "complete: all 12 preparation results accepted",
   "scan_accepted_preparations": 12,
   "branch_pilot_status": "stopped: stage 2 acceptance gate not passed for both histories",
+  "branch_refinement_status": "accepted under unchanged external gates",
   "phase_order": "unresolved",
   "status": "author-review; not submission certified",
   "interpretation": "Quranic/Lighthouse: real dependent creation distinct from uncreated Creator; not a physics theorem"
