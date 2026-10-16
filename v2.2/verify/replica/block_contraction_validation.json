@@ -1,0 +1,17 @@
+{
+  "TL": {
+    "max_abs_error": 0.0,
+    "block_seconds": 0.0008566159999645606,
+    "dense_seconds": 0.00043620899987217854
+  },
+  "TR": {
+    "max_abs_error": 0.0,
+    "block_seconds": 0.00042148300008193473,
+    "dense_seconds": 0.00038906300005692174
+  },
+  "HAC": {
+    "max_abs_error": 2.1316282072803006e-13,
+    "block_seconds": 0.0003227580000384478,
+    "dense_seconds": 0.0004158639999332081
+  }
+}

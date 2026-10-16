@@ -1,7 +1,8 @@
 #!/usr/bin/env python3
 """
 replica_n4.py — sector-resolved spectra of the n = 4 (d = 2) compressed transfer operator at L = 4, 6, 8,
-with the full S_4 x S_4 colour resolution (characters by cycle type) and momentum zero.  Used for check (d)
+with diagonal S_4 x S_4 colour-sector scans (characters by cycle type) and momentum zero.
+The general projector supports other left/right pairs; the default scan is not the full spectrum.  Used for check (d)
 of adjudication A-1: do the std(x)std ("sigma") and sgn(x)sgn ("parity") gaps close at the same p?
 
     python3 replica_n4.py L p [sectors]      -> appends to n4.json

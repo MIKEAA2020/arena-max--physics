@@ -1,0 +1,11 @@
+{
+  "repository": "https://github.com/MIKEAA2020/arena-max--physics",
+  "branch": "main",
+  "original_head": "5f9d95e102f5e51a117957fa2ea0118027234cdd",
+  "first_published_commit": "b121f258cabab2c28dce4d08d74a731f8a217ad4",
+  "first_push_verified_remote_equals_local": true,
+  "publication_mode": "ordinary non-force push; history and license preserved",
+  "credential_scan": "passed before staging; exact secret values and archive members checked",
+  "status": "First push verified; final continuation snapshot is a later ordinary commit, independently verified in the completion message.",
+  "receipt_scope": "The first_published_commit field certifies the first publication; the later final commit is independently verified and reported in the completion message."
+}

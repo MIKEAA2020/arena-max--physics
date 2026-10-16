@@ -1,0 +1,15 @@
+{
+  "baseline_commit": "b121f258cabab2c28dce4d08d74a731f8a217ad4",
+  "protected_sources": {
+    "01-part-I.md": "77330ae64c395f4937259cb4bf73233c14f7cb3101153d1bd095245ad594a963",
+    "02-part-II.md": "ec0c1320153cfbc4d2c8ddcdffd29e358bd34e704afdf4aea0cd82f0cf558433",
+    "03-part-III-a.md": "6d52e2106db5c20f3bb743b32f2de71eb5e7f502e7159c52af47f489308245b7",
+    "04-part-III-b.md": "48409210bf7d49e009952a6efd8e7282450d564810e50d9c3ab97856368918c3",
+    "05-part-III-c.md": "6d13818607021e741ec4fe1ec99a39b4507414d2fa779d71bd41be3b84d87c70",
+    "06-part-III-d.md": "107c00488de8c23cff306b9fd0d6c39bee2af2e281448dc823b7cc0d86fbcd6d",
+    "07-part-III-e.md": "b2750a0a8d272c3f618fce4d2c4596657661b4da2189269b15fcd446897dbc08",
+    "08-part-IV-a.md": "56e78323b860ff3276a23d9a0a85344c0c02b3c90eb6a7ad879b099619528c4d"
+  },
+  "all_match_initial_publication": true,
+  "parts_I_II_unchanged": true
+}

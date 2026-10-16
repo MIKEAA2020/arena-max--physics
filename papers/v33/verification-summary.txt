@@ -1,3 +1,17 @@
+CURRENT CONTINUATION VERIFICATION — 16 October 2026
+
+Fresh full invocation: bash v2.2/verify/run_all.sh
+Result: 246/246 across 10 suites, exit 0.
+Paper-specific subset within that invocation: 17 + 35 + 49 = 101/101.
+This does not claim a separate newly run 101-check invocation.
+The 17-check suite was also re-run successfully after a text-only clarification
+that its no-parity-only assertion concerns loaded samples, not a phase theorem.
+Receipt: research/transition-order/verification-receipt.json
+Full log: v2.2/verify/run_all_transition_2026-10-16-final.log
+
+HISTORICAL ORIGINAL v33 DELIVERY RECORD — retained without relabeling
+------------------------------------------------------------------
+
 Verification, 16 October 2026 (Asia/Tehran)
 
 Legacy full invocation:

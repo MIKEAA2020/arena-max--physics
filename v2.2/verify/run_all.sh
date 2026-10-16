@@ -33,6 +33,12 @@ if [ $FAST -eq 0 ] && [ -f sector_probe.py ]; then
   printf "%-26s %-12s %s\n" "sector_probe.py" "probe" "numerical probe, no pass/fail count; output in sector_probe.log"
   timeout 900 python3 sector_probe.py > sector_probe.log 2>&1 || true
 fi
-printf "%-26s %-12s %s\n" "quran corpus" "present" "$(ls quran 2>/dev/null | wc -l | tr -d ' ') files; q.py lookups used by §4.1 and §5 (no pass/fail count)"
+qdir=quran; [ -f "$qdir/quran-simple.json" ] || qdir=../../quran
+ncorpus=$(find "$qdir" -maxdepth 1 -name '*.json' 2>/dev/null | wc -l | tr -d ' ')
+if [ "$ncorpus" -ge 4 ]; then
+  printf "%-26s %-12s %s\n" "quran corpus" "available" "$ncorpus JSON editions; optional corpus counts are not included in the suite total"
+else
+  printf "%-26s %-12s %s\n" "quran corpus" "optional" "not bundled; run quran/download_corpus.py at project root for corpus lookups/counts"
+fi
 echo "TOTAL ${total_pass}/${total_all} checks passed across $(echo $SUITES | wc -w | tr -d ' ') suites"
 exit $status

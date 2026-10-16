@@ -6,3 +6,4 @@ export OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1
 cd "$ROOT/v2.2/verify"
 python3 replica_checks.py
 python3 v33_checks.py
+python3 transfer_checks.py

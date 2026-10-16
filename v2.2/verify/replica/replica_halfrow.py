@@ -28,8 +28,7 @@ def build_half(n,d,p,hermitian_sum=True):
     if hermitian_sum:
         # Global direct sum represents H+H^dagger. Its global factor 2 is
         # subextensive: the infinite per-site eigenvalue is that of H on k=0.
-        B=np.zeros((2*N,2*N,N,N));B[:N,:N]=W;B[N:,N:]=W.transpose(0,1,3,2)
-        W=B
+        W=V.block_diagonal_mpo([W,W.transpose(0,1,3,2)])
     return W,G,gh,gmh
 
 def checkpoint(path,st,meta):
@@ -63,7 +62,8 @@ def solve(n,d,p,chi,init=None,tol=1e-8,maxiter=400,checkpoint_path=None,tag='run
               checkpoint_schema=1,tol=tol,maxiter=maxiter,
               stage_budget_seconds=float(os.environ.get('STAGE_SECONDS','0')))
     def cb(st):
-        if checkpoint_path and (st['iters']%20==0 or st['eps']<tol):checkpoint(checkpoint_path,st,meta)
+        interval=5 if chi>=96 else 20
+        if checkpoint_path and (st['iters']%interval==0 or st['eps']<tol):checkpoint(checkpoint_path,st,meta)
         budget=float(os.environ.get('STAGE_SECONDS','0'))
         if budget and st['seconds']>budget:
             if checkpoint_path:checkpoint(checkpoint_path,st,{**meta,'budget_exhausted':True})
@@ -75,7 +75,7 @@ def solve(n,d,p,chi,init=None,tol=1e-8,maxiter=400,checkpoint_path=None,tag='run
     if init is not None:
         init=dict(init)
         if init.get('FL') is not None and init['FL'].shape[1]!=2*N: init['FL']=init['FR']=None
-    st=V.vumps(W,chi,init=init,tol=tol,maxiter=maxiter,verbose=verbose,callback=cb,env_project=mirror)
+    st=V.vumps(W,chi,init=init,tol=tol,maxiter=maxiter,verbose=verbose,callback=cb,env_project=mirror,paired_env_dim=N)
     if checkpoint_path:checkpoint(checkpoint_path,st,meta)
     ob=V.observables(st,G,gh,gmh,rmax=int(os.environ.get('CORR_RMAX','400')))
     ob['eta_half']=ob['eta'];ob['f_half']=-2*np.log(ob['eta_half']);ob['f']=ob['f_half']

@@ -1,0 +1,8 @@
+{
+  "d3_exact_cases": 67,
+  "max_exact_residual": 6.83131972679534e-13,
+  "d3_mps_cases": 8,
+  "n4_mps_cases": 2,
+  "status": "passed",
+  "counted_in_suite": false
+}

@@ -38,10 +38,17 @@ def scan(data,label,depth=0):
 files=[]
 for root in ALLOW:
     for p in sorted((ROOT/root).rglob('*')):
-        if p.is_file() and not p.is_symlink() and not any(x in SKIP for x in p.relative_to(ROOT).parts):files.append(p)
+        if (p.is_file() and not p.is_symlink()
+                and not any(x in SKIP for x in p.relative_to(ROOT).parts)
+                and not (p.parent.name=='quran' and p.suffix=='.json')):files.append(p)
 for rel in INPUTS+TOP:
     p=ROOT/rel
     if p.is_file():files.append(p)
+# Prune only the four corpus copies previously introduced by this publication
+# script; raw worktree inputs are not otherwise deleted or history-rewritten.
+for rel in ['v2.2/verify/quran/'+x+'.json' for x in ['quran-simple','en.sahih','en.arberry','en.pickthall']]:
+    old=DEST/rel
+    if old.is_file():old.unlink()
 records=[]
 for src in sorted(set(files)):
     rel=src.relative_to(ROOT)

@@ -1,0 +1,62 @@
+[
+  {
+    "id": "T0",
+    "status": "complete",
+    "outcome": "immutable inputs and credential-free method-request log preserved"
+  },
+  {
+    "id": "T1",
+    "status": "complete",
+    "outcome": "exact half-row, direct-sum, paired-environment, checkpoint and contraction checks passed"
+  },
+  {
+    "id": "T2",
+    "status": "complete-with-stated-control-exceptions",
+    "outcome": "Ising ladder; n=3 gapped functional controls; lower-chi requested-tolerance misses retained"
+  },
+  {
+    "id": "T3",
+    "status": "partial-order-unresolved",
+    "outcome": "accepted new half-row observations through chi=96; 0 accepted same-rate/same-chi pair(s); inspect nonconverged and partial states"
+  },
+  {
+    "id": "T4",
+    "status": "finite-and-coarse-pilots-complete-fine-order-open",
+    "outcome": "67 exact cases, 4 finite crossings, 8 MPS pilot cases"
+  },
+  {
+    "id": "T5",
+    "status": "complete",
+    "outcome": "fourth Clifford physical twirl on rank-29 quotient"
+  },
+  {
+    "id": "T6",
+    "status": "L4-L6-complete-L8-runtime-deferred",
+    "outcome": "52 cases in five diagonal colour sectors; L8 benchmark 3.115 s/matvec"
+  },
+  {
+    "id": "T7",
+    "status": "endpoint-and-low-chi-pilot-complete",
+    "outcome": "2 n=4 Haar cases; no converged chi-to-infinity phase result"
+  },
+  {
+    "id": "T8",
+    "status": "deferred-not-implemented",
+    "outcome": "finite-cylinder gaps/interfaces need an exact boundary/operator contract and convergence controls"
+  },
+  {
+    "id": "T9",
+    "status": "gated-deferred",
+    "outcome": "guided/resample-move SMC needs separate exact/mixing/population validation; pilot failure is not a no-go"
+  },
+  {
+    "id": "T10",
+    "status": "audit-partial-proof-open",
+    "outcome": "conditional implication and counterexamples checked; full-Haar analytic hypotheses, contour/real-replica constructions open"
+  },
+  {
+    "id": "T11",
+    "status": "deferred-feasibility-gated",
+    "outcome": "n=5 rank-119 quotient/orbit-block assembler required; naive L8 Krylov memory exceeds sandbox"
+  }
+]

@@ -1,0 +1,47 @@
+STAGE disordered p 0.3049 chi 96 tol 1e-07
+    it=  0 eta=0.6085992865 lamC=1.0000021640 etaL=0.6085991759 eps=1.21e-04 [6s]
+    it= 10 eta=0.6085993274 lamC=1.0000000022 etaL=0.6085993266 eps=1.24e-05 [56s]
+    it= 20 eta=0.6085993330 lamC=1.0000000003 etaL=0.6085993330 eps=4.61e-06 [107s]
+    it= 30 eta=0.6085993358 lamC=1.0000000004 etaL=0.6085993356 eps=6.34e-06 [157s]
+    it= 40 eta=0.6085993396 lamC=1.0000000005 etaL=0.6085993394 eps=6.24e-06 [207s]
+    it= 50 eta=0.6085993435 lamC=1.0000000005 etaL=0.6085993434 eps=5.91e-06 [257s]
+    it= 60 eta=0.6085993443 lamC=1.0000000000 etaL=0.6085993443 eps=1.64e-06 [308s]
+    it= 70 eta=0.6085993444 lamC=1.0000000000 etaL=0.6085993444 eps=4.86e-07 [359s]
+    it= 80 eta=0.6085993444 lamC=1.0000000000 etaL=0.6085993444 eps=2.03e-07 [410s]
+    it= 90 eta=0.6085993444 lamC=1.0000000000 etaL=0.6085993444 eps=1.06e-07 [462s]
+    it= 92 eta=0.6085993444 lamC=1.0000000000 etaL=0.6085993444 eps=9.51e-08 [472s]
+RESULT disordered {"f": 0.9931902376058692, "eta": 0.6085993443655127, "eps": 9.510421661061392e-08, "iters": 93, "chi": 96, "seconds": 472.55666875839233, "S_ent": 1.3694369096968466, "m_parity": -0.003430844937269484, "m_parity_sym": -0.003093882829634009, "m_species": 0.0009322687224659915, "m_species_sym": 0.0008881236552637541, "m_species_even": 0.0009285926555416364, "xi_species": 45.93337965667814, "corr_species_tail": [0.26155171697625246, 0.11008594027230038, 0.035265447786187086, 0.0005525820855299068], "xi_parity": 34.98889707704903, "corr_parity_tail": [0.29094381365704375, 0.08234234677787071, 0.018951722125666603, 8.238499803714763e-05], "corr_len": 240, "xi_chi": 47.7952396933718, "transfer_eigs": [0.9999999999999956, 0.9792947730244571, 0.9792927956829391, 0.9774910697888474, 0.9769500170386846, 0.9718107968886455], "eta_half": 0.6085993443655127, "f_half": 0.9931902376058692, "n": 3, "d": 2, "p": 0.3049, "tag": "disordered", "operator": "hermitian-halfrow", "tol": 1e-07, "converged": true, "checkpoint": "checkpoints/n3_disordered_chi96_p0.3049000.npz"}
+STAGE disordered p 0.30486 chi 96 tol 1e-07
+    it=  0 eta=0.6086379233 lamC=1.0000006497 etaL=0.6086379124 eps=4.12e-05 [5s]
+    it= 10 eta=0.6086379250 lamC=1.0000000000 etaL=0.6086379250 eps=6.11e-07 [54s]
+    it= 20 eta=0.6086379250 lamC=1.0000000000 etaL=0.6086379250 eps=1.84e-07 [102s]
+    it= 30 eta=0.6086379250 lamC=1.0000000000 etaL=0.6086379250 eps=1.60e-07 [150s]
+    it= 40 eta=0.6086379250 lamC=1.0000000000 etaL=0.6086379250 eps=1.44e-07 [197s]
+    it= 50 eta=0.6086379250 lamC=1.0000000000 etaL=0.6086379250 eps=1.33e-07 [247s]
+    it= 60 eta=0.6086379250 lamC=1.0000000000 etaL=0.6086379250 eps=1.40e-07 [296s]
+    it= 70 eta=0.6086379250 lamC=1.0000000000 etaL=0.6086379250 eps=1.50e-07 [345s]
+    it= 80 eta=0.6086379250 lamC=1.0000000000 etaL=0.6086379250 eps=1.70e-07 [393s]
+    it= 90 eta=0.6086379250 lamC=1.0000000000 etaL=0.6086379250 eps=2.03e-07 [441s]
+    it=100 eta=0.6086379250 lamC=1.0000000000 etaL=0.6086379250 eps=2.56e-07 [489s]
+    it=110 eta=0.6086379250 lamC=1.0000000000 etaL=0.6086379250 eps=3.42e-07 [537s]
+    it=120 eta=0.6086379250 lamC=1.0000000000 etaL=0.6086379250 eps=4.83e-07 [589s]
+    it=130 eta=0.6086379251 lamC=1.0000000000 etaL=0.6086379251 eps=6.97e-07 [639s]
+    it=140 eta=0.6086379252 lamC=1.0000000000 etaL=0.6086379252 eps=9.18e-07 [689s]
+    it=150 eta=0.6086379254 lamC=1.0000000000 etaL=0.6086379254 eps=9.12e-07 [738s]
+STOPPED {"n": 3, "d": 2, "p": 0.30486, "chi": 96, "status": "budget-stopped", "reason": "Stage wall-clock budget exhausted; resumable checkpoint saved", "checkpoint": "checkpoints/n3_disordered_latest.npz", "tol": 1e-07, "converged": false, "last_state_metadata": {"n": 3, "d": 2, "p": 0.30486, "operator": "hermitian-halfrow", "tag": "disordered", "checkpoint_schema": 1, "tol": 1e-07, "maxiter": 300, "stage_budget_seconds": 750.0, "budget_exhausted": true, "eta": 0.6086379254023583, "eps": 8.3024100552343e-07, "chi": 96, "iters": 154, "seconds": 751.7179489135742}}
+Traceback (most recent call last):
+  File "/home/user/v2.2/verify/replica/order_campaign.py", line 35, in <module>
+    state,ob=H.solve(3,2,p,chi,init=state,tol=tol,maxiter=int(os.environ.get('MAXITER','400')),
+             ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                      checkpoint_path=roll,tag=side,verbose=True)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/v2.2/verify/replica/replica_halfrow.py", line 78, in solve
+    st=V.vumps(W,chi,init=init,tol=tol,maxiter=maxiter,verbose=verbose,callback=cb,env_project=mirror,paired_env_dim=N)
+  File "/home/user/v2.2/verify/replica/replica_vumps.py", line 219, in vumps
+    callback(dict(AL=AL, AR=AR, AC=AC, C=C, FL=FL, FR=FR, eta=eta, eps=eps,
+    ~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                  iters=it+1, chi=chi, seconds=time.time()-t0))
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/v2.2/verify/replica/replica_halfrow.py", line 70, in cb
+    raise RuntimeError('Stage wall-clock budget exhausted; resumable checkpoint saved')
+RuntimeError: Stage wall-clock budget exhausted; resumable checkpoint saved

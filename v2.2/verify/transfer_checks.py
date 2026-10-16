@@ -35,7 +35,17 @@ for n,d,p,m in [(2,2,.233810,3),(3,2,.305,3),(3,3,.6,3),(4,2,.38,2)]:
     check(f'Global Hermitian direct sum n={n},d={d}',err<1e-11,f'error={err:.2e}')
     del D,WH,K,Ki,P,M,A,C
 
-rng=np.random.default_rng(58);W=rng.normal(size=(3,3,2,2))
+rng=np.random.default_rng(58)
+WB,_,_,_=H.build_half(3,2,.305);WD=np.asarray(WB)
+A=rng.normal(size=(4,6,4));FL=rng.normal(size=(4,12,4));FR=rng.normal(size=(4,12,4));X=rng.normal(size=(4,6,4))
+check('Block-diagonal left environment equals dense contraction',np.max(np.abs(V.apply_TL(FL,A,WB)-V.apply_TL(FL,A,WD)))<1e-11)
+check('Block-diagonal right environment equals dense contraction',np.max(np.abs(V.apply_TR(FR,A,WB)-V.apply_TR(FR,A,WD)))<1e-11)
+check('Block-diagonal center action equals dense contraction',np.max(np.abs(V.apply_HAC(X,FL,FR,WB)-V.apply_HAC(X,FL,FR,WD)))<1e-11)
+B=rng.normal(size=(4,6,4));paired=np.concatenate([B,B.transpose(2,1,0)],axis=1)
+for name,fn in [('left',V.apply_TL),('right',V.apply_TR)]:
+    raw=fn(B,A,WB.blocks[0]);expected=np.concatenate([raw,raw.transpose(2,1,0)],axis=1)
+    check(f'Paired {name} environment reduction is an exact invariant subspace',np.max(np.abs(fn(paired,A,WD)-expected))<1e-11)
+W=rng.normal(size=(3,3,2,2))
 M=np.zeros((2,2,2,2))
 for a in range(3):
     for b in range(3):M+=np.einsum('st,uv->sutv',W[a,b],W[b,a])

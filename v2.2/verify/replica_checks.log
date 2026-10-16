@@ -14,6 +14,6 @@
 [PASS] 14 VUMPS MPO (D=36) reproduces the dense one-period operator at L=6; symmetric form symmetric  |dC|=6.9e-18 |S-S^T|=3.6e-17
 [PASS] 15 n=2 VUMPS at p_c=0.233810, chi=8: converged, f=0.470270, xi_chi in [35,50], |m| in [0.40,0.55]  f=0.4702698 xi=42.1 m=0.473 eps=7.6e-08
 [PASS] 16 n=4: std crossings 0.3583/0.3790 reproduce the paper's 0.35820/0.37899; sgn crossings 0.3698/0.3939 are distinct and move away  std 0.3583 0.3790; sgn 0.3698 0.3939
-[PASS] 17 n=3 VUMPS (chi=24..72): no parity-ordered/species-disordered state anywhere; ordered and disordered states both present  rows=48 parity-only=0 both=21 neither=26
+[PASS] 17 stored n=3 VUMPS scans (chi=24..72): no sampled parity-only state; both ordered and disordered samples present  rows=48 parity-only=0 both=21 neither=26
 
-17/17 checks passed  [51s]
+17/17 checks passed  [49s]

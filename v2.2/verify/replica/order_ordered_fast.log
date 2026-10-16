@@ -1,0 +1,25 @@
+STAGE ordered p 0.3048 chi 128 tol 1e-07
+    it=  0 eta=0.6086968328 lamC=1.0000000108 etaL=0.6086968330 eps=1.34e-05 [15s]
+    it= 10 eta=0.6086968342 lamC=1.0000000002 etaL=0.6086968341 eps=2.08e-06 [159s]
+    it= 20 eta=0.6086968343 lamC=1.0000000000 etaL=0.6086968343 eps=5.59e-07 [303s]
+    it= 30 eta=0.6086968344 lamC=1.0000000000 etaL=0.6086968343 eps=7.16e-07 [446s]
+    it= 40 eta=0.6086968345 lamC=1.0000000000 etaL=0.6086968344 eps=1.23e-06 [590s]
+    it= 50 eta=0.6086968348 lamC=1.0000000001 etaL=0.6086968348 eps=2.45e-06 [736s]
+    it= 60 eta=0.6086968352 lamC=1.0000000000 etaL=0.6086968352 eps=1.51e-06 [882s]
+STOPPED {"n": 3, "d": 2, "p": 0.3048, "chi": 128, "status": "budget-stopped", "reason": "Stage wall-clock budget exhausted; resumable checkpoint saved", "checkpoint": "checkpoints/n3_ordered_latest.npz", "tol": 1e-07, "converged": false, "last_state_metadata": {"n": 3, "d": 2, "p": 0.3048, "operator": "hermitian-halfrow", "tag": "ordered", "checkpoint_schema": 1, "tol": 1e-07, "maxiter": 400, "stage_budget_seconds": 900.0, "budget_exhausted": true, "eta": 0.6086968351852448, "eps": 1.1529678544331533e-06, "chi": 128, "iters": 63, "seconds": 911.0427424907684}}
+Traceback (most recent call last):
+  File "/home/user/v2.2/verify/replica/order_campaign.py", line 35, in <module>
+    state,ob=H.solve(3,2,p,chi,init=state,tol=tol,maxiter=int(os.environ.get('MAXITER','400')),
+             ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                      checkpoint_path=roll,tag=side,verbose=True)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/v2.2/verify/replica/replica_halfrow.py", line 78, in solve
+    st=V.vumps(W,chi,init=init,tol=tol,maxiter=maxiter,verbose=verbose,callback=cb,env_project=mirror,paired_env_dim=N)
+  File "/home/user/v2.2/verify/replica/replica_vumps.py", line 219, in vumps
+    callback(dict(AL=AL, AR=AR, AC=AC, C=C, FL=FL, FR=FR, eta=eta, eps=eps,
+    ~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                  iters=it+1, chi=chi, seconds=time.time()-t0))
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/v2.2/verify/replica/replica_halfrow.py", line 70, in cb
+    raise RuntimeError('Stage wall-clock budget exhausted; resumable checkpoint saved')
+RuntimeError: Stage wall-clock budget exhausted; resumable checkpoint saved

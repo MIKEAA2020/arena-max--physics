@@ -1,8 +1,13 @@
 import json, re, sys
+from pathlib import Path
+# Prefer an adjacent local corpus; public snapshots use the optional root corpus.
+CORPUS_DIR = Path(__file__).resolve().parent
+if not (CORPUS_DIR/'quran-simple.json').exists():
+    CORPUS_DIR = Path(__file__).resolve().parents[3] / 'quran'
 EDS = {"ar":"quran-simple","sahih":"en.sahih","arberry":"en.arberry","pickthall":"en.pickthall"}
 Q = {}
 for k, ed in EDS.items():
-    d = json.load(open(f"/home/user/v2.2/verify/quran/{ed}.json"))
+    d = json.loads((CORPUS_DIR / f"{ed}.json").read_text())
     Q[k] = {}
     for s in d["data"]["surahs"]:
         for a in s["ayahs"]:

@@ -1,0 +1,61 @@
+[
+  {
+    "branch": "ordered",
+    "checkpoint_metadata": {
+      "n": 3,
+      "d": 2,
+      "p": 0.3048,
+      "operator": "hermitian-halfrow",
+      "tag": "ordered",
+      "eta": 0.6086968324061826,
+      "eps": 1.666027865122564e-05,
+      "chi": 128,
+      "iters": 20,
+      "seconds": 315.51783561706543
+    },
+    "interruption": "planned performance-upgrade checkpoint resume",
+    "note": "Exact block-diagonal maps and paired-environment invariant subspace validated; no observation promoted from the interrupted segment."
+  },
+  {
+    "branch": "disordered",
+    "checkpoint_metadata": {
+      "n": 3,
+      "d": 2,
+      "p": 0.306,
+      "operator": "hermitian-halfrow",
+      "tag": "disordered",
+      "checkpoint_schema": 1,
+      "tol": 1e-07,
+      "maxiter": 400,
+      "stage_budget_seconds": 900.0,
+      "eta": 0.6075455136004498,
+      "eps": 1.0441822040323029e-07,
+      "chi": 72,
+      "iters": 200,
+      "seconds": 400.87812900543213
+    },
+    "interruption": "planned optimizer-plateau resource stop",
+    "note": "Residual plateau just above requested tolerance; no accepted chi=72 point. Later critical/high-chi stages may use this state solely as an approximate initialization."
+  },
+  {
+    "branch": "disordered",
+    "checkpoint_metadata": {
+      "n": 3,
+      "d": 2,
+      "p": 0.305,
+      "operator": "hermitian-halfrow",
+      "tag": "disordered",
+      "checkpoint_schema": 1,
+      "tol": 1e-07,
+      "maxiter": 400,
+      "stage_budget_seconds": 900.0,
+      "eta": 0.6085032590360892,
+      "eps": 2.3369284967697378e-05,
+      "chi": 128,
+      "iters": 15,
+      "seconds": 224.42552280426025
+    },
+    "interruption": "feasibility triage to matched-chi96 test",
+    "note": "No chi128 accepted observation. Partial state preserved; seed truncation is approximate and only initializes a fresh optimizer."
+  }
+]

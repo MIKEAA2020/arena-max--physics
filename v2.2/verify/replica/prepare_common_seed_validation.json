@@ -1,0 +1,11 @@
+{
+  "status": "passed",
+  "counted_in_transfer_suite": false,
+  "smaller_seed_diagnostics": {
+    "discarded_one_cut_weight": 0.012361639865517809,
+    "left_canonical_error": 6.711017899918502e-16,
+    "right_canonical_error": 7.766669378843858e-16,
+    "gauge_compatibility_error": 7.761010687916237e-13
+  },
+  "same_chi_tensor_roundtrip": true
+}

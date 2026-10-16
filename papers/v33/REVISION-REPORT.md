@@ -1,5 +1,8 @@
 # v33: assessment, verification, and implemented revision
 
+> **Historical v33 delivery report.** The later method choice, additional computations and authorized GitHub publication are documented in `research/transition-order/PLAN.md` and `RESULTS.md`. The original outcome/totals below are retained as a dated record, not asserted as the latest execution status.
+
+
 **Adjudication A-1 · Revision 2 · 16 October 2026 (Asia/Tehran)**
 
 **Deliverable status: author-review draft, not a submission-ready or peer-reviewed paper.** The uploaded v32 is preserved. A full revised LaTeX manuscript, a reproducible source-revision script, a unified diff, numerical code and results accompany this report. This report supersedes `adj-01-paper-improvement-plan.md` and the unfinished earlier revision-2 note. The user's assessment is archived as `adjudications/adj-01-c-v33-assessment.md`.

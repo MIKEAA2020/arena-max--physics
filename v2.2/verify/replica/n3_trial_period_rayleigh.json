@@ -1,0 +1,115 @@
+{
+  "kind": "frozen-trial-state evaluation, NOT coexistence",
+  "states": {
+    "ordered": {
+      "source_metadata": {
+        "n": 3,
+        "d": 2,
+        "p": 0.30486,
+        "operator": "hermitian-halfrow",
+        "tag": "ordered",
+        "checkpoint_schema": 1,
+        "tol": 1e-07,
+        "maxiter": 300,
+        "stage_budget_seconds": 750.0,
+        "budget_exhausted": true,
+        "eta": 0.6086377491573187,
+        "eps": 8.753132170263514e-07,
+        "chi": 96,
+        "iters": 153,
+        "seconds": 752.266749382019
+      },
+      "source_optimizer_converged": false,
+      "m_species": 0.46877800426912186,
+      "m_parity": 0.3077242811645243,
+      "xi_chi": 79.42897842825366,
+      "S_ent": 0.8431777760816371,
+      "right_fixed_point_residual": 8.631150777102056e-13,
+      "qualification": "a valid normalized frozen trial MPS, not necessarily a stationary phase"
+    },
+    "disordered": {
+      "source_metadata": {
+        "n": 3,
+        "d": 2,
+        "p": 0.30486,
+        "operator": "hermitian-halfrow",
+        "tag": "disordered",
+        "checkpoint_schema": 1,
+        "tol": 1e-07,
+        "maxiter": 300,
+        "stage_budget_seconds": 750.0,
+        "budget_exhausted": true,
+        "eta": 0.6086379254023583,
+        "eps": 8.3024100552343e-07,
+        "chi": 96,
+        "iters": 154,
+        "seconds": 751.7179489135742
+      },
+      "source_optimizer_converged": false,
+      "m_species": 0.001140786874246447,
+      "m_parity": -0.004187851084368976,
+      "xi_chi": 50.06799110283876,
+      "S_ent": 1.3839707203994374,
+      "right_fixed_point_residual": 1.2193689280720674e-13,
+      "qualification": "a valid normalized frozen trial MPS, not necessarily a stationary phase"
+    }
+  },
+  "evaluations": [
+    {
+      "preparation": "ordered",
+      "p": 0.30488,
+      "chi": 96,
+      "f_period_Rayleigh": 0.9931284482529135,
+      "contraction_relative_residual": 5.837978005350041e-12,
+      "seconds": 5.788892507553101,
+      "qualification": "frozen trial estimate; contraction error is not global eigenstate/variational error"
+    },
+    {
+      "preparation": "disordered",
+      "p": 0.30488,
+      "chi": 96,
+      "f_period_Rayleigh": 0.9931265018560809,
+      "contraction_relative_residual": 9.69265708352492e-12,
+      "seconds": 6.983111619949341,
+      "qualification": "frozen trial estimate; contraction error is not global eigenstate/variational error"
+    },
+    {
+      "preparation": "ordered",
+      "p": 0.30486,
+      "chi": 96,
+      "f_period_Rayleigh": 0.9930639402424273,
+      "contraction_relative_residual": 7.599828105398362e-13,
+      "seconds": 6.98426628112793,
+      "qualification": "frozen trial estimate; contraction error is not global eigenstate/variational error"
+    },
+    {
+      "preparation": "disordered",
+      "p": 0.30486,
+      "chi": 96,
+      "f_period_Rayleigh": 0.9930630909391817,
+      "contraction_relative_residual": 1.577348827093235e-11,
+      "seconds": 6.611328840255737,
+      "qualification": "frozen trial estimate; contraction error is not global eigenstate/variational error"
+    },
+    {
+      "preparation": "ordered",
+      "p": 0.3049,
+      "chi": 96,
+      "f_period_Rayleigh": 0.9931929565703219,
+      "contraction_relative_residual": 1.2955437821410513e-11,
+      "seconds": 5.720570087432861,
+      "qualification": "frozen trial estimate; contraction error is not global eigenstate/variational error"
+    },
+    {
+      "preparation": "disordered",
+      "p": 0.3049,
+      "chi": 96,
+      "f_period_Rayleigh": 0.9931899131442538,
+      "contraction_relative_residual": 9.998903412735427e-13,
+      "seconds": 6.5669403076171875,
+      "qualification": "frozen trial estimate; contraction error is not global eigenstate/variational error"
+    }
+  ],
+  "status": "benchmark-selected grid complete",
+  "seconds_total": 39.25297284126282
+}

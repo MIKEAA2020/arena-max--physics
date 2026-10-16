@@ -15,7 +15,7 @@ The immutable A-1 manuscript/reviewer inputs and credential-free assessment are 
 - Bulk third-party PDFs, web downloads and downloaded Quran JSON corpora. Bibliographic/provenance references remain in the reports. The Quran lookup/download scripts are supplied separately; source corpora can be obtained on demand and keep their source rights.
 - Installed dependencies, caches and other reproducible build output.
 
-The original repository history and license are preserved. Retaining the license does not relicense quoted literature, translations or supplied manuscripts, nor establish ownership of those inputs.
+The original repository history and license are preserved. Retaining the license does not relicense quoted literature, translations or supplied manuscripts, nor establish ownership of those inputs. The numerical Odlyzko-zero fixture `v2.2/verify/zeros1.txt` is retained for reproducible checks with its source attribution in the assessment; it is not claimed as generated numerical research. An initial snapshot also included cached corpus copies nested under verification; the follow-up snapshot removes those copies from the current tree and supplies the optional download script instead, without rewriting repository history.
 
 ## Scientific status
 

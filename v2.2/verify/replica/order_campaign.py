@@ -36,13 +36,13 @@ for p,chi in cases:
                           checkpoint_path=roll,tag=side,verbose=True)
     except RuntimeError as exc:
         _,last=H.load_state(roll,operator='hermitian-halfrow')
-        db[key]=dict(n=3,d=2,p=p,chi=chi,status='budget-stopped',reason=str(exc),
+        db[key]=dict(n=3,d=2,p=p,chi=chi,status='budget-stopped' if 'budget' in str(exc).lower() else 'optimizer-failed',reason=str(exc),
                      checkpoint=str(roll),tol=tol,converged=False,last_state_metadata=last)
         tmp=out.with_suffix('.tmp');tmp.write_text(json.dumps(db,indent=2));tmp.replace(out)
         print('STOPPED',json.dumps(db[key]),flush=True);raise
     ob['tol']=tol;ob['converged']=bool(ob['eps']<tol);ob['checkpoint']=str(roll)
     # Keep the common-point states and first high-chi anchors, while bounding disk use.
-    if chi>=128:
+    if chi>=96:
         saved=Path(f'checkpoints/n3_{side}_chi{chi}_p{p:.7f}.npz')
         shutil.copyfile(roll,saved);ob['checkpoint']=str(saved)
     if chi==128 and abs(p-.30486)<1e-9 and os.environ.get('FULL_RITZ','1')=='1':

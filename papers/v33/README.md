@@ -2,7 +2,7 @@
 
 Start with **REVISION-REPORT.md** or **v33-revision-report.docx**. The full revised paper is
 **manuscript_revised_v33.tex**. This is a corrected author-review draft, not an approved
-submission or a proof of first order. No external publication or repository was changed.
+submission or a proof of first order. At the original v33 delivery no external publication or repository had been changed. The later, user-authorized GitHub snapshot and transition-order continuation are recorded separately in `research/transition-order/`.
 
 ## Layout
 
@@ -13,9 +13,11 @@ The ZIP preserves these paths under its `v33-review/` root:
 - `adjudications/`: unmodified v32 input and the user's v33 assessment.
 - `v2.2/verify/replica/`: independent finite-size transfer operator, VUMPS implementation,
   completed chi=96 runs, tilted-Clifford sampler, exact normalizer/rank code and stored runs.
-- `v2.2/verify/replica_checks.py`, `v33_checks.py`: the two paper-specific regression suites.
-- `v2.2/verify/*.log`: verification records. The legacy framework log includes unrelated
-  suites; its 162 passes plus the 35 extension passes give the reported 197 in this workspace.
+- `v2.2/verify/replica_checks.py`, `v33_checks.py`, `transfer_checks.py`: current paper-specific regression suites.
+- `research/transition-order/`: the later method decision, exact/production status and resumable continuation instructions.
+- `v2.2/verify/*.log`: verification records. The original legacy framework log includes unrelated
+  suites; its 162 passes plus 35 extension passes gave the original 197. Current totals and
+  fresh-run provenance are in the transition-order results, not silently substituted into the historical report.
 
 The broader theological/time framework is **not** bundled into a physics reproduction
 package. Its revised `.md` and `.docx` remain separate workspace deliverables.
@@ -31,8 +33,9 @@ python3 papers/v33/make_revision_tables.py
 bash papers/v33/run_review_checks.sh
 ```
 
-The paper-specific runner performs **17 + 35 = 52** checks, including fresh fixed-seed
-SMC validation (about two minutes on the original sandbox). The full workspace's
+The original paper-specific runner performed 17 + 35 = 52 checks. The current runner adds
+49 half-row/checkpoint/fourth-Clifford regressions: **17 + 35 + 49 = 101** checks, including
+fresh fixed-seed SMC validation and exact small-ring tests. The full workspace's
 `v2.2/verify/run_all.sh` additionally runs the other framework suites; that runner and
 those unrelated inputs are not required by, or shipped in, this paper-only package.
 
@@ -71,14 +74,19 @@ new diagnostic.
 
 `smc_pilot.py` atomically checkpoints each completed parameter case and can skip it on
 restart. This does not checkpoint a partially completed particle population. Likewise,
-VUMPS JSONs save observables, not the MPS state: skipping cached lower-chi stages does not
-warm-resume a higher stage. Use a fresh output file and rerun the warm-start chain.
+the original full-period VUMPS JSONs save observables, not the MPS state: skipping cached
+lower-chi stages does not warm-resume a higher stage. The new `replica_halfrow.py` and
+`order_campaign.py` instead save real NPZ tensors/environments and optimizer metadata;
+see `research/transition-order/PLAN.md`, `NUMERICAL-NOTES.md` and the execution results.
 
 ## Scope and provenance
 
-The numerical fourth-Clifford task completed here is an **exact Gram-rank check: 29** for
-two-qubit gates. No fourth-Clifford critical point, new n=4 VUMPS solution, n=3,d=3 production
-scan, n* theorem or n→1 continuation is claimed. The source explicitly withdraws the earlier
+At the original v33 delivery, the fourth-Clifford task completed was an exact Gram-rank
+check: 29 for two-qubit gates. The later continuation derives its physical transfer operator
+and completes the L=4,6 diagonal-sector ladder; it also adds n=3,d=3 finite-size/coarse-MPS
+data and a low-chi n=4 Haar MPS pilot. These are documented separately under
+`research/transition-order/`. No fourth-Clifford critical point, controlled n=3 coexistence,
+n* theorem or n→1 continuation is claimed. The source explicitly withdraws the earlier
 n=3,4 Potts assignments. The main CTD/CPD promised completeness results are retained;
 additional independent scope corrections are explained in the report.
 

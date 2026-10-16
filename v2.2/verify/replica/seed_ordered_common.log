@@ -1,0 +1,10 @@
+{
+  "seed": "checkpoints/seed_ordered_chi96_common.npz",
+  "source": "checkpoints/n3_ordered_chi128_p0.3048000_partial_iter63.npz",
+  "diagnostics": {
+    "discarded_one_cut_weight": 3.1029245995109087e-07,
+    "left_canonical_error": 9.354739367122355e-15,
+    "right_canonical_error": 1.018702682091277e-14,
+    "gauge_compatibility_error": 9.045225302249783e-13
+  }
+}

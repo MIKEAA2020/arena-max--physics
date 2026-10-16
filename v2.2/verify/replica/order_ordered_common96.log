@@ -1,0 +1,34 @@
+STAGE ordered p 0.30486 chi 96 tol 1e-07
+    it=  0 eta=0.6086377061 lamC=1.0000080127 etaL=0.6086376322 eps=1.26e-04 [6s]
+    it= 10 eta=0.6086377302 lamC=1.0000000003 etaL=0.6086377304 eps=1.71e-06 [55s]
+    it= 20 eta=0.6086377306 lamC=1.0000000000 etaL=0.6086377307 eps=1.42e-06 [103s]
+    it= 30 eta=0.6086377316 lamC=1.0000000001 etaL=0.6086377317 eps=2.10e-06 [152s]
+    it= 40 eta=0.6086377320 lamC=1.0000000000 etaL=0.6086377321 eps=1.10e-06 [200s]
+    it= 50 eta=0.6086377323 lamC=1.0000000001 etaL=0.6086377323 eps=3.76e-06 [249s]
+    it= 60 eta=0.6086377356 lamC=1.0000000025 etaL=0.6086377351 eps=1.03e-05 [298s]
+    it= 70 eta=0.6086377381 lamC=1.0000000003 etaL=0.6086377381 eps=3.01e-06 [347s]
+    it= 80 eta=0.6086377383 lamC=1.0000000000 etaL=0.6086377383 eps=1.03e-06 [396s]
+    it= 90 eta=0.6086377387 lamC=1.0000000001 etaL=0.6086377386 eps=2.94e-06 [446s]
+    it=100 eta=0.6086377415 lamC=1.0000000010 etaL=0.6086377415 eps=5.74e-06 [495s]
+    it=110 eta=0.6086377460 lamC=1.0000000031 etaL=0.6086377459 eps=8.12e-06 [545s]
+    it=120 eta=0.6086377484 lamC=1.0000000006 etaL=0.6086377485 eps=3.66e-06 [594s]
+    it=130 eta=0.6086377489 lamC=1.0000000001 etaL=0.6086377489 eps=2.29e-06 [644s]
+    it=140 eta=0.6086377491 lamC=1.0000000000 etaL=0.6086377491 eps=1.57e-06 [692s]
+    it=150 eta=0.6086377491 lamC=1.0000000000 etaL=0.6086377492 eps=9.73e-07 [742s]
+STOPPED {"n": 3, "d": 2, "p": 0.30486, "chi": 96, "status": "budget-stopped", "reason": "Stage wall-clock budget exhausted; resumable checkpoint saved", "checkpoint": "checkpoints/n3_ordered_latest.npz", "tol": 1e-07, "converged": false, "last_state_metadata": {"n": 3, "d": 2, "p": 0.30486, "operator": "hermitian-halfrow", "tag": "ordered", "checkpoint_schema": 1, "tol": 1e-07, "maxiter": 300, "stage_budget_seconds": 750.0, "budget_exhausted": true, "eta": 0.6086377491573187, "eps": 8.753132170263514e-07, "chi": 96, "iters": 153, "seconds": 752.266749382019}}
+Traceback (most recent call last):
+  File "/home/user/v2.2/verify/replica/order_campaign.py", line 35, in <module>
+    state,ob=H.solve(3,2,p,chi,init=state,tol=tol,maxiter=int(os.environ.get('MAXITER','400')),
+             ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                      checkpoint_path=roll,tag=side,verbose=True)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/v2.2/verify/replica/replica_halfrow.py", line 78, in solve
+    st=V.vumps(W,chi,init=init,tol=tol,maxiter=maxiter,verbose=verbose,callback=cb,env_project=mirror,paired_env_dim=N)
+  File "/home/user/v2.2/verify/replica/replica_vumps.py", line 219, in vumps
+    callback(dict(AL=AL, AR=AR, AC=AC, C=C, FL=FL, FR=FR, eta=eta, eps=eps,
+    ~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                  iters=it+1, chi=chi, seconds=time.time()-t0))
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/v2.2/verify/replica/replica_halfrow.py", line 70, in cb
+    raise RuntimeError('Stage wall-clock budget exhausted; resumable checkpoint saved')
+RuntimeError: Stage wall-clock budget exhausted; resumable checkpoint saved

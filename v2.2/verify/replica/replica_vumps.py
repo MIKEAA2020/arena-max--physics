@@ -24,6 +24,23 @@ from replica_tm import make_group, weingarten, bond_weights
 HERE = os.path.dirname(os.path.abspath(__file__))
 
 # ----------------------------------------------------------------------------- MPO
+class BlockDiagonalMPO(np.ndarray):
+    """An ordinary dense MPO carrying exact global-direct-sum blocks.
+    Views discard the annotation; only the explicitly constructed object may
+    dispatch through blocks. Dense conversion and small-ring tests stay valid.
+    """
+    def __array_finalize__(self, obj):
+        self.blocks = None
+
+def block_diagonal_mpo(blocks):
+    blocks=tuple(np.ascontiguousarray(x) for x in blocks)
+    N=blocks[0].shape[2];D=sum(x.shape[0] for x in blocks)
+    W=np.zeros((D,D,N,N));i=0
+    for B in blocks:
+        d=B.shape[0];W[i:i+d,i:i+d]=B;i+=d
+    out=W.view(BlockDiagonalMPO);out.blocks=blocks
+    return out
+
 def build_mpo(n, d, p, symmetric=True):
     G = make_group(n); N = G['N']
     Wb, T, Wg = bond_weights(G, d, p)                 # Wb[x, t, u] = W_p(x | t, u)
@@ -68,6 +85,11 @@ def apply_TR(F, A, W):
     return F2.transpose(1, 0, 2)
 
 def apply_HAC(X, FL, FR, W):
+    if getattr(W,'blocks',None) is not None:
+        out=np.zeros_like(X);i=0
+        for B in W.blocks:
+            d=B.shape[0];out+=apply_HAC(X,FL[:,i:i+d,:],FR[:,i:i+d,:],B);i+=d
+        return out
     T1 = np.tensordot(FL, X, axes=([2], [0]))              # (al, a, t, dl)
     T2 = np.tensordot(T1, W, axes=([1, 2], [0, 3]))        # (al, dl, b, s)
     return np.tensordot(T2, FR, axes=([1, 2], [2, 1]))     # (al, s, be)
@@ -130,7 +152,7 @@ def mixed_canonical(A):
     return AL, AR, AC, C
 
 # ----------------------------------------------------------------------------- VUMPS
-def vumps(W, chi, init=None, tol=1e-7, maxiter=400, verbose=False, seed=0, kick=0.0, callback=None, env_project=None):
+def vumps(W, chi, init=None, tol=1e-7, maxiter=400, verbose=False, seed=0, kick=0.0, callback=None, env_project=None, paired_env_dim=None):
     D, _, d, _ = W.shape
     if init is not None and kick > 0 and init['AL'].shape[0] == chi:
         rng = np.random.default_rng(seed + 1)
@@ -161,8 +183,20 @@ def vumps(W, chi, init=None, tol=1e-7, maxiter=400, verbose=False, seed=0, kick=
             rng_env = np.random.default_rng(seed+1729)
             FL = env_project(FL if FL is not None else rng_env.standard_normal((chi,D,chi)))
             FR = env_project(FR if FR is not None else rng_env.standard_normal((chi,D,chi)))
-        etaL, FL = dominant(lambda F: apply_TL(F, AL, W), (chi, D, chi), v0=FL, tol=etol)
-        etaR, FR = dominant(lambda F: apply_TR(F, AR, W), (chi, D, chi), v0=FR, tol=etol)
+        if paired_env_dim is not None:
+            # H+H^T: F=(B,B^T) is an invariant linear subspace. Solve
+            # its first component, not two redundant copies. Center maps
+            # still contain BOTH global summands; this is not naive H VUMPS.
+            N=paired_env_dim
+            if D!=2*N or env_project is None:raise ValueError('Invalid paired environment contract')
+            W0=W.blocks[0] if getattr(W,'blocks',None) is not None else np.asarray(W)[:N,:N]
+            etaL, BL=dominant(lambda B:apply_TL(B,AL,W0),(chi,N,chi),v0=None if FL is None else FL[:,:N,:],tol=etol)
+            etaR, BR=dominant(lambda B:apply_TR(B,AR,W0),(chi,N,chi),v0=None if FR is None else FR[:,:N,:],tol=etol)
+            FL=np.concatenate([BL,BL.transpose(2,1,0)],axis=1)
+            FR=np.concatenate([BR,BR.transpose(2,1,0)],axis=1)
+        else:
+            etaL, FL = dominant(lambda F: apply_TL(F, AL, W), (chi, D, chi), v0=FL, tol=etol)
+            etaR, FR = dominant(lambda F: apply_TR(F, AR, W), (chi, D, chi), v0=FR, tol=etol)
         if env_project is not None:
             FL=env_project(FL);FR=env_project(FR)
         # normalise  <FL| C (x) C |FR> = 1

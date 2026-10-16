@@ -1,0 +1,14 @@
+suite                      result       note
+opfibration_checks.py      20/20        ok
+q_kernel.py                34/34        ok
+primon_checks.py           35/35        ok
+adelic_checks.py           12/12        ok
+bst_checks.py              17/17        ok
+clock_checks.py            12/12        ok
+replica_checks.py          17/17        ok
+v33_checks.py              35/35        ok
+transfer_checks.py         49/49        ok
+r7_check.py                15/15        ok
+sector_probe.py            probe        numerical probe, no pass/fail count; output in sector_probe.log
+quran corpus               available    4 JSON editions; optional corpus counts are not included in the suite total
+TOTAL 246/246 checks passed across 10 suites

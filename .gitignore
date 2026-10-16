@@ -12,6 +12,7 @@
 uploads/
 search/
 quran/*.json
+**/quran/*.json
 # Reproducible dependencies and caches
 __pycache__/
 *.pyc

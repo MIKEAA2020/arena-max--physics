@@ -122,7 +122,7 @@ g46 = cross4('sgn', 4, 6, 0.37, 0.375); g68 = cross4('sgn', 6, 8, 0.39, 0.395)
 check("16 n=4: std crossings 0.3583/0.3790 reproduce the paper's 0.35820/0.37899; sgn crossings 0.3698/0.3939 are distinct and move away",
       abs(c46 - 0.3582) < 5e-4 and abs(c68 - 0.3790) < 5e-4 and g46 > c46 + 0.008 and g68 > c68 + 0.012 and (g68 - c68) > (g46 - c46),
       f"std {c46:.4f} {c68:.4f}; sgn {g46:.4f} {g68:.4f}")
-# 17. n=3 VUMPS scans: no parity-ordered / species-disordered state at any chi (S1 excluded); both orders vanish together
+# 17. Stored chi=24..72 scans contain no sampled parity-only state; this is not a theorem excluding an intermediate phase.
 rows = {}
 for fn in ('vumps_n3.json', 'vumps_n3_down48.json', 'vumps_n3_fine24.json', 'vumps_n3_up72.json', 'vumps_n3_down72.json'):
     fp = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'replica', fn)
@@ -130,7 +130,7 @@ for fn in ('vumps_n3.json', 'vumps_n3_down48.json', 'vumps_n3_fine24.json', 'vum
 bad = [k for k, r in rows.items() if abs(r['m_parity']) > 0.1 and r['m_species'] < 0.1]
 both = [k for k, r in rows.items() if abs(r['m_parity']) > 0.2 and r['m_species'] > 0.3]
 none = [k for k, r in rows.items() if abs(r['m_parity']) < 0.01 and r['m_species'] < 0.05]
-check("17 n=3 VUMPS (chi=24..72): no parity-ordered/species-disordered state anywhere; ordered and disordered states both present",
+check("17 stored n=3 VUMPS scans (chi=24..72): no sampled parity-only state; both ordered and disordered samples present",
       len(bad) == 0 and len(both) > 10 and len(none) > 10, f"rows={len(rows)} parity-only={len(bad)} both={len(both)} neither={len(none)}")
 n_ok = sum(checks)
 print(f"\n{n_ok}/{len(checks)} checks passed  [{time.time()-t0:.0f}s]")

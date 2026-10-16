@@ -17,3 +17,31 @@ A documented retry is permitted: use that real MPS checkpoint **only as an initi
 ## 2026-10-16: fourth-moment ladder
 
 All 52 Haar/Clifford cases (13 rates × L=4,6 × two ensembles) completed with all five S4-left/right sectors. Maximum absolute eigenpair residual: 1.18e-10. The fourth Clifford transfer is built on 30 closed labels with Gram rank 29 and a pseudoinverse quotient. L=8 is gated by a measured memory/runtime benchmark, not launched as an unbounded ladder.
+
+## 2026-10-16: exact arithmetic-preserving contraction improvements
+
+The Hermitian MPO's exact global-direct-sum blocks are now contracted separately. The paired environment `(B,B^T)` is an exact invariant subspace; its eigenproblem is solved using B alone and then reconstructed. **Both summands remain in the center map**. Dense/block and paired-map identities were checked to roundoff; the expanded transfer extension passed **49/49** freshly. The earlier integrated driver had passed 241/241 with its then-44-check extension. Final accounting is updated only from a completed fresh integrated run.
+
+The ordered chi=128 stage was interrupted at a saved checkpoint to use these equivalent contractions, then exhausted its resumed 900-second optimizer-segment budget without reaching tolerance. Its two segment times are retained; neither the restart nor the new contractions imply that the sum of those times was below 900 seconds. The approximate state is retained, not called a converged chi=128 result.
+
+## 2026-10-16: feasibility re-triage to the matched-rate test
+
+The disordered chi=72 gapped retry plateaued just above 1e-7 and was stopped after 200 saved iterations at residual 1.044e-7. It remains unconverged. A documented critical-rate retry used that state only as initialization at chi=96,p=.305; that new stage **did** converge (residual 9.90e-8, 75 iterations). Its later chi=128 expansion was resource-triaged before convergence after the ordered chi=128 budget failure. The two chi=128 partial states are frozen separately.
+
+To prioritize the central comparison rather than automatically launch chi=192, two fresh chi=96 continuation chains were scheduled prospectively at p=.30486 and .30490, in opposite directions, with tolerance 1e-7, maximum 300 iterations and a 750-second per-point optimizer-segment ceiling. Larger chi is deferred on the measured runtime/convergence evidence; it is not a claim that larger-chi MPS is impossible in a better implementation or larger budget.
+
+The common-rate initializations are explicitly approximate Schmidt-based reductions of the saved chi=128 states, re-canonicalized in both gauges. Discarded one-cut weights are 3.10e-7 and 1.03e-6; these are **not** global/free-energy error bounds. Initial seed gauge errors are about 1e-14 (isometries) and 1e-12 (compatibility). The helper passed a fresh, separately logged smoke test; this is not added to the 49 counted checks. The fresh common-rate optimizer must independently pass before any phase/free-energy comparison is accepted. A stopped or seeded state is never substituted for such a comparison.
+
+## 2026-10-16: cheap secondary computations completed
+
+The n=3,d=3 finite-size cache has 67 exact cases and four root-solved crossings (root tolerance 3e-6); all eight bidirectional small-chi pilot cases converged at their requested tolerances. The fourth-Haar fully monitored endpoint and a chi=4,p=.38 MPS pilot also converged. A transient pilot JSON serialization error from a NumPy Boolean was fixed; the queue stopped on that error and was restarted after the fix, rather than silently treating the incomplete serialization as a saved result.
+
+The fourth-Clifford L=8 projected-matvec benchmark measured 3.115 seconds, exceeding the prospectively adopted 1-second gate. The larger ladder is **deferred after a measured runtime gate**, not reported as attempted/converged and not called scientifically impossible. No higher-size critical-point split is inferred.
+
+Legacy verification wording was narrowed without changing its tested condition: check 17 means no parity-only **sample among the loaded chi=24..72 rows**, not exclusion of an intermediate thermodynamic phase. The n=4 finite-spectrum header now distinguishes its default diagonal-sector scan from the general left/right projector and from a full spectrum. The paper-specific 17-check suite is re-run after this text-only clarification; no extra checks are added to the total.
+
+## Final snapshot outcome
+
+The common-rate chi=96,p=.30486 attempts did not satisfy tolerance before their prospective 750-second ceilings. Saved outcomes: ordered: budget-stopped, residual 8.753e-07, 153 iterations, 752.3 seconds; disordered: budget-stopped, residual 8.302e-07, 154 iterations, 751.7 seconds. The disordered-start p=.30490 point converged; the ordered-start .30490 point was not launched after its preceding failure. **No accepted stationary matched-rate pair is claimed.**
+
+Six frozen-trial full-period Rayleigh evaluations at matched p=.30486,.30488,.30490 completed with small contraction residuals. These compare actual normalized trial MPS states, not converged stationary phases. They do not supply a global variational/truncation error bound or a latent-heat/order verdict. All campaign numerical workers have now stopped; remaining work is explicitly deferred or open.

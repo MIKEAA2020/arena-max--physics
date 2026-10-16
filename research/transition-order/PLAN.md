@@ -33,6 +33,7 @@ The period free energy is f_b = -2 log eta_half, not -log eta_half. Period Rayle
 | T8 | Finite-cylinder transfer-DMRG gap/interface implementation if T3 does not discriminate | T3 | Exact small-ring and boundary tests precede L>=64; environment and chi convergence required |
 | T9 | Guided/resample-move SMC pilot, if an independent sampling discriminant is still needed | T3 plus separate proposal/mixing validation | Exact moments, unbiased normalizer checks, independent populations, time/population ladders before large L |
 | T10 | Full-Haar analyticity proof audit; contour/cluster and real-replica programs | Independent mathematical work | No finite numerical run closes an unverified analytic hypothesis |
+| T11 | Independent n=5 higher-size reproduction | Rank-119 quotient and symmetry/orbit-block assembler, after primary T3 priority | Naive L=8 requires >26 GB for 16 Krylov vectors; original assembler/deposit not supplied; do not use the singular inverse-Gram legacy path |
 
 T3 is the priority compute queue. T5/T6 run on the second core while T2/T3 run on the first. T4 and T7 follow validation and resource availability. A dependency is not marked passed merely because a process exits.
 
