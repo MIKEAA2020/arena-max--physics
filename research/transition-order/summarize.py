@@ -72,6 +72,10 @@ if latest_grid:
     paired=sum(c.get('ordered',{}).get('converged') is True and c.get('disordered',{}).get('converged') is True for c in latest_grid.get('cases',{}).values())
     ledger[3]['status']='coarse-chi128-grid-complete-order-unresolved' if paired==6 else 'coarse-chi128-grid-incomplete-order-unresolved'
     ledger[3]['outcome']=f'earlier campaign through chi={maxchi}; separate fixed-source chi128 grid {paired}/6 paired rates accepted (reference included), not a coexistence or transition-order certificate'
+latest_refinement=load(R/'n3_branch128_refinement.json')
+if latest_refinement.get('converged'):
+    ledger[3]['status']='finite-chi-retention-pair-observed-crossing-stability-open'
+    ledger[3]['outcome']='six-rate grid complete; original branch pilot 3/4 plus separately accepted same-point refinement yields an augmented numerical pair at .30480; no crossing, physical stability or thermodynamic order certificate'
 (HERE/'task-ledger.json').write_text(json.dumps(ledger,indent=2)+'\n')
 
 text=['# Transition-order continuation — executed work and status','',
@@ -180,6 +184,10 @@ if scan:
     existing=target.read_text()
     existing+='\n## Later six-rate chi128 continuation\n\nThe separate fixed-source scan is **'+scan.get('status','not recorded')+'**. Its per-rate/preparation statuses, actual checkpoints, symmetry alignment and coexistence criteria are in [SCAN128-RESULTS.md](SCAN128-RESULTS.md). The production table above is the earlier campaign, not an exhaustive or duplicate-counted merge of this new grid. The v34 author-review continuation also makes the governing real creator–creation distinction explicit while preserving v33.\n'
     target.write_text(existing)
+
+if latest_refinement.get('converged'):
+    target=HERE/'RESULTS.md'
+    target.write_text(target.read_text()+'\n## Later unbiased branch-retention pilot and safety amendment\n\nThe original two-stage pilot stopped with 3/4 steps accepted at a narrowly failed right-compatibility gate. A separately authorized same-point refinement with a stricter internal goal and unchanged external gates then produced an augmented pair of accepted chi128 approximants at p=.30480, with substantially different invariant order and unequal trial pressures. This is not a coexistence point, a stability certificate or a thermodynamic order verdict. The original rejection remains unchanged. See [refinement result](BRANCH128-REFINEMENT-RESULTS.md) and its read-only AL-state audit. No extra common rate or chi192 was launched.\n')
 
 # Standalone offline SVG chart using only the actual finite-size data.
 W,Hh=920,510;left,right,top,bottom=76,890,58,430

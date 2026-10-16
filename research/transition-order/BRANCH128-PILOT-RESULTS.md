@@ -34,7 +34,7 @@ Missing or rejected results are not zero and are not stationary branch observati
 
 ## Common-target comparison
 
-No two accepted common-target results yet; no energy-gap or coexistence inference is made.
+Within the original unamended pilot no accepted common-target pair was obtained. The separately authorized convergence-safety amendment is reported in BRANCH128-REFINEMENT-RESULTS.md; its accepted state does not retroactively change this pilot record.
 
 ## Exact validation failure — not rounded into acceptance
 

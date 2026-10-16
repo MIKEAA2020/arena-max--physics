@@ -5,7 +5,7 @@
   "total": 246,
   "suites": 10,
   "transfer_checks": 49,
-  "log": "v2.2/verify/run_all_scan128_2026-10-16.log",
+  "log": "v2.2/verify/run_all_branch128_2026-10-16.log",
   "control_reproduction_smoke": "passed; not added to counted total",
   "scope_label_recheck": "17/17 passed, exit 0, after text-only sampled-data clarification",
   "scope_recheck_log": "v2.2/verify/replica_checks.log",
@@ -17,7 +17,7 @@
       "v33_checks.py": 35,
       "transfer_checks.py": 49
     },
-    "provenance": "All three ran in this fresh full regression; no separate new 101-run is claimed."
+    "provenance": "Within the branch-pilot full regression; not a separate additional total."
   },
   "chi128_launch_transfer_recheck": "49/49; same subset, not extra checks",
   "supplementary_comparison_smoke": "4/4 product/self/gauge/symmetry checks; not added to 246",
@@ -28,7 +28,7 @@
     "counted_in_246": false,
     "provenance": "Prospective gates and immutable checkpoint hashes checked separately after both workers exited."
   },
-  "regression_timing": "Fresh full regression completed after all six \u03c7128 rates and all 12 preparation gates were complete.",
+  "regression_timing": "Fresh full regression ran during the original branch pilot, before the separately authorized convergence-only refinement. The physics kernels stayed unchanged; refinement tensors and external gates were audited separately.",
   "stationary_state_comparison": {
     "orientations": 36,
     "status": "all 36 symmetry orientations evaluated",
@@ -44,5 +44,7 @@
     "labels_references_citations": "passed",
     "counted_in_246": false,
     "not_all_theorem_certification": true
-  }
+  },
+  "branch_pilot_data_audit": "passed: 3/4 original pilot steps accepted; rejected step preserved",
+  "branch_refinement_data_audit": "passed separately: unchanged external gates, actual AL-state contrast, old failed JSON/tensors unchanged; not added to 246"
 }

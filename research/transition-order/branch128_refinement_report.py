@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Report the separately authorized refinement without rewriting its failed parent."""
 from pathlib import Path
-import json,math,importlib.util
+import json,math,importlib.util,csv
 ROOT=Path(__file__).resolve().parents[2];HERE=Path(__file__).resolve().parent;R=ROOT/'v2.2/verify/replica'
 r=json.loads((R/'n3_branch128_refinement.json').read_text());pilot=json.loads((R/'n3_branch128_pilot.json').read_text())
 o=pilot['stages']['2']['ordered'];old=pilot['stages']['2']['disordered']
@@ -37,6 +37,20 @@ if r.get('converged'):
  '',f"Ordered-history minus refined-history: **Δf_half={o['f_half']-r['f_half']:.8e}** and **Δf_period,trial={o['f_full_rayleigh']-r['f_full_rayleigh']:.8e}**. These are different finite-χ functionals, not one mixed crossing or global error bounds.",
  '',f"Symmetry-aligned comparison: {c.get('status','not performed')}; largest evaluated fidelity/site {fmt(c.get('largest_evaluated_fidelity_per_site'))}. This is a constructed-state diagnostic, not a phase-order classifier."]
 else:text+=['','No fully accepted augmented common-target pair is recorded. Rejected/partial fields are not promoted to stationary branch values.']
+if r.get('converged'):
+    text+=['','## Finite-chi retention finding','',
+    'The separately validated amendment supplies an augmented pair of accepted numerical states at the same p=.30480. Their invariant one-point order differs substantially, so they are not merely the opposite-parity orientations seen at the lower coarse-grid rates. The two trial functionals are both lower for the large-order history among these two constructed states; this is not a global-minimum certificate.',
+    '', 'This is a new rate relative to the original six-point grid and also a different preparation/continuation protocol. The result does not isolate which design change enabled retention. It does not establish two physical phases, a stable metastable state, a nonzero thermodynamic jump, or first order. Finite-chi variational artifacts and stability issues remain possible.']
+    audit_path=HERE/'branch128-refinement-data-audit.json'
+    if audit_path.exists():
+        audit=json.loads(audit_path.read_text());actual=audit.get('actual_AL_state_diagnostics',{})
+        if len(actual)==2:
+            text+=['',f"Read-only AL-state audit: invariant order recomputed from the actual right fixed point is {actual['large_order_history']['actual_AL_color_l2']:.10f} / {actual['refined_history']['actual_AL_color_l2']:.10f}. This confirms the contrast in the represented trial states rather than only their center tensors; it is not a perturbation-stability test."]
+    with (HERE/'branch128-refinement.csv').open('w',newline='') as f:
+        fields=['history','p','chi','external_tol','internal_goal','eps','gauge_left_residual','gauge_right_residual','f_half','f_full_rayleigh','m_species','m_parity','color_l2_order','xi_chi','checkpoint','checkpoint_sha256']
+        w=csv.DictWriter(f,fieldnames=fields,extrasaction='ignore');w.writeheader()
+        w.writerow(dict(o,history='large-order accepted pilot state',external_tol=1e-7,internal_goal=1e-7))
+        w.writerow(dict(r,history='separately accepted same-point refinement',internal_goal=r['optimizer_internal_goal']))
 text+=['','## What is still missing','',
 'A nonzero energy difference at one common p is not coexistence. Competing bulk branch free energies must agree at a properly bracketed crossing of distinct phases. This amendment provides neither a second common rate nor an independently tested local/thermodynamic stability certificate. The half-row objective and full-period trial evaluation differ at finite χ; no global variational/truncation error bound or χ→infinity control is obtained here.','',
 '**Physical transition order remains unresolved.** The earlier pressure values were already measured; the missing work concerns identification/retention, crossing, stability and systematic errors of phase branches. No numerical result is forced by the governing creator–creation interpretation.','']

@@ -1,0 +1,13 @@
+{
+  "research/transition-order/branch128-refinement-report.docx": {
+    "zip_crc": "passed",
+    "paragraphs": 21,
+    "tables": 2
+  },
+  "papers/v34/v34-revision-report.docx": {
+    "zip_crc": "passed",
+    "paragraphs": 17,
+    "tables": 0
+  },
+  "scope": "Native OOXML/CRC/data consistency only; no PDF visual layout, all-theorem, global-error or submission certificate."
+}

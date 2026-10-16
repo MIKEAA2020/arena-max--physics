@@ -1,0 +1,48 @@
+{
+  "status": "passed",
+  "refinement_accepted": true,
+  "original_pilot_remains_three_of_four_accepted": true,
+  "original_failed_record_and_tensors_unchanged": true,
+  "external_thresholds_unchanged": true,
+  "checks": {
+    "large_order_history": {
+      "primary": 9.065270655073124e-08,
+      "left_compatibility": 9.067603609395294e-08,
+      "right_compatibility": 9.069411859400316e-08,
+      "left_canonical": 4.3004145370087434e-14,
+      "right_canonical": 4.002751624555455e-14,
+      "period_relative_defect": 3.0479623321970725e-11
+    },
+    "refined_history": {
+      "primary": 4.988270901022994e-08,
+      "left_compatibility": 4.989559384442817e-08,
+      "right_compatibility": 4.996652741145649e-08,
+      "left_canonical": 4.007662611606098e-14,
+      "right_canonical": 4.0851272350981504e-14,
+      "period_relative_defect": 3.5233793894087276e-13
+    }
+  },
+  "actual_AL_state_diagnostics": {
+    "large_order_history": {
+      "actual_AL_color_l2": 0.488232433207643,
+      "actual_AL_m_species": 0.5175374825273441,
+      "actual_AL_m_parity": 0.3470941629150504,
+      "right_fixed_point_defect": 4.315027475220214e-12,
+      "minimum_right_density_eigenvalue": 2.4809544998752955e-09,
+      "reported_center_color_l2": 0.4882324354334573
+    },
+    "refined_history": {
+      "actual_AL_color_l2": 0.009027239682807848,
+      "actual_AL_m_species": 0.00967018874139741,
+      "actual_AL_m_parity": -0.005779767266160759,
+      "right_fixed_point_defect": 6.488666277276549e-14,
+      "minimum_right_density_eigenvalue": 1.5154469612858326e-08,
+      "reported_center_color_l2": 0.00902723953410966
+    }
+  },
+  "global_minimum_certified": false,
+  "stability_test_performed": false,
+  "crossing_bracket_measured": false,
+  "thermodynamic_order": "unresolved",
+  "counted_in_246": false
+}

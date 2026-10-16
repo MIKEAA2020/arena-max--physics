@@ -49,3 +49,9 @@ The [v34 author-review continuation](papers/v34/manuscript_revised_v34.tex) expl
 All six requested rates have two criterion-passed χ128 results: ten new optimization targets plus the two reused .30486 reference states. Both histories have large order diagnostics at .3040/.3045/.3047 and small diagnostics at .30486/.3050/.3055. Their symmetry-aligned similarities are high; no persistent ordered/disordered coexistence pair was demonstrated on this grid. The sampled finite-χ change interval .3047–.30486 is not a thermodynamic confidence interval or phase-order verdict. χ192 was not launched.
 
 The post-grid full regression passed 246/246 across ten suites (including the 101-check paper subset); checkpoint/data and v34 source-contract audits are recorded separately, not added to 246. The PAT is private workspace data, not repository content.
+
+## Unbiased continuation and convergence-safety amendment
+
+The subsequent separately authorized χ128 branch-following pilot and same-point safety amendment are recorded in [BRANCH128-PILOT-RESULTS.md](research/transition-order/BRANCH128-PILOT-RESULTS.md) and [BRANCH128-REFINEMENT-RESULTS.md](research/transition-order/BRANCH128-REFINEMENT-RESULTS.md). The original pilot stopped with 3/4 accepted steps; its narrowly rejected right-compatibility check remains unchanged. The separately authorized refinement reached internal 5e-8 while preserving all original external 1e-7 gates.
+
+The augmented p=.30480 comparison retains two constructed finite-χ states with substantially different invariant order and unequal trial pressures. This is a retention observation, **not coexistence or a first-order verdict**. No second common-rate crossing bracket, perturbation stability test, χ192 or thermodynamic limit was completed. The earlier six-point scan did measure trial-state energies; initialization histories must not be relabeled as phase branches.

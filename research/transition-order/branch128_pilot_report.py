@@ -39,7 +39,7 @@ if c.get('ordered',{}).get('converged') and c.get('disordered',{}).get('converge
  text += [f"At p=.30480: Δf_half (ordered-history minus disordered-history) = **{a['f_half']-b['f_half']:.6e}**; Δf_period,trial = **{a['f_full_rayleigh']-b['f_full_rayleigh']:.6e}**. These are different finite-χ functional comparisons, not error bars or a root bracket.",'',
  f"Invariant order is {a['color_l2_order']:.8f} / {b['color_l2_order']:.8f}; m_species is {a['m_species']:.8f} / {b['m_species']:.8f}; xi_chi is {a['xi_chi']:.3f} / {b['xi_chi']:.3f}.",'',
  f"Symmetry/gauge-aware comparison: {q.get('status','pending')}; largest evaluated fidelity per site {fmt(q.get('largest_evaluated_fidelity_per_site'),12)}. Similarity is not certified exact identity. Opposite parity or symmetry orientation alone is not a distinct thermal phase."]
-else:text.append('No two accepted common-target results yet; no energy-gap or coexistence inference is made.')
+else:text.append('Within the original unamended pilot no accepted common-target pair was obtained. The separately authorized convergence-safety amendment is reported in BRANCH128-REFINEMENT-RESULTS.md; its accepted state does not retroactively change this pilot record.')
 rejected=db.get('stages',{}).get('2',{}).get('disordered',{})
 if rejected and not rejected.get('converged') and rejected.get('optimizer_tolerance_passed'):
     right=rejected.get('gauge_right_residual')

@@ -42,6 +42,14 @@ Ordered-history minus refined-history: **Δf_half=-1.86615050e-06** and **Δf_pe
 
 Symmetry-aligned comparison: all 36 symmetry orientations evaluated; largest evaluated fidelity/site 0.997585340183. This is a constructed-state diagnostic, not a phase-order classifier.
 
+## Finite-chi retention finding
+
+The separately validated amendment supplies an augmented pair of accepted numerical states at the same p=.30480. Their invariant one-point order differs substantially, so they are not merely the opposite-parity orientations seen at the lower coarse-grid rates. The two trial functionals are both lower for the large-order history among these two constructed states; this is not a global-minimum certificate.
+
+This is a new rate relative to the original six-point grid and also a different preparation/continuation protocol. The result does not isolate which design change enabled retention. It does not establish two physical phases, a stable metastable state, a nonzero thermodynamic jump, or first order. Finite-chi variational artifacts and stability issues remain possible.
+
+Read-only AL-state audit: invariant order recomputed from the actual right fixed point is 0.4882324332 / 0.0090272397. This confirms the contrast in the represented trial states rather than only their center tensors; it is not a perturbation-stability test.
+
 ## What is still missing
 
 A nonzero energy difference at one common p is not coexistence. Competing bulk branch free energies must agree at a properly bracketed crossing of distinct phases. This amendment provides neither a second common rate nor an independently tested local/thermodynamic stability certificate. The half-row objective and full-period trial evaluation differ at finite χ; no global variational/truncation error bound or χ→infinity control is obtained here.

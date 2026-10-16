@@ -16,8 +16,8 @@
   },
   {
     "id": "T3",
-    "status": "coarse-chi128-grid-complete-order-unresolved",
-    "outcome": "earlier campaign through chi=128; separate fixed-source chi128 grid 6/6 paired rates accepted (reference included), not a coexistence or transition-order certificate"
+    "status": "finite-chi-retention-pair-observed-crossing-stability-open",
+    "outcome": "six-rate grid complete; original branch pilot 3/4 plus separately accepted same-point refinement yields an augmented numerical pair at .30480; no crossing, physical stability or thermodynamic order certificate"
   },
   {
     "id": "T4",
