@@ -2,7 +2,7 @@
 
 16 October 2026 · A-1 continuation, not a new Lighthouse clue.
 
-**Campaign status:** running: recovered after session interruption. **Accepted paired rates:** 3/6. **New terminal preparation records:** 4/10; the two previously accepted p=.30486 states are reused, not reoptimized.
+**Campaign status:** running: recovered after session interruption. **Accepted paired rates:** 4/6. **New terminal preparation records:** 6/10; the two previously accepted p=.30486 states are reused, not reoptimized.
 
 ## Method, allocation and scope
 
@@ -20,8 +20,8 @@ Preparation labels describe initial histories, not guaranteed physical phases. O
 |---:|---|---|---:|---:|---:|---:|---:|
 | 0.3040000 | ordered | pending | — | — | — | — | — |
 | 0.3040000 | disordered | pending | — | — | — | — | — |
-| 0.3045000 | ordered | pending | — | — | — | — | — |
-| 0.3045000 | disordered | pending | — | — | — | — | — |
+| 0.3045000 | ordered | accepted-finite-chi | 9.54e-08 | 0.9918951764 | 0.592863 | 0.561663 | 32.81 |
+| 0.3045000 | disordered | accepted-finite-chi | 9.68e-08 | 0.9918951764 | 0.592863 | 0.561665 | 32.80 |
 | 0.3047000 | ordered | accepted-finite-chi | 9.89e-08 | 0.9925456753 | 0.558892 | 0.528373 | 48.19 |
 | 0.3047000 | disordered | accepted-finite-chi | 9.88e-08 | 0.9925456753 | 0.558909 | 0.528386 | 48.19 |
 | 0.3048600 | ordered | accepted-stationary-at-finite-chi | 9.99e-08 | 0.9930620839 | 0.000284 | 0.000448 | 59.56 |
@@ -38,7 +38,7 @@ Color L2 is a symmetry-invariant norm of the six one-point amplitudes about thei
 | p | f_period,O − f_period,D | Largest evaluated aligned fidelity/site | Orientation search |
 |---:|---:|---:|---|
 | 0.3040000 | — | — | not applicable / pending |
-| 0.3045000 | — | — | not applicable / pending |
+| 0.3045000 | 4.77e-11 | 0.9999999992 | all 36 symmetry orientations evaluated |
 | 0.3047000 | -2.03e-13 | 0.9999999989 | all 36 symmetry orientations evaluated |
 | 0.3048600 | 3.76e-09 | 0.9999994886 | all 36 symmetry orientations evaluated |
 | 0.3050000 | -2.07e-09 | 0.9999998435 | all 36 symmetry orientations evaluated |
@@ -49,6 +49,8 @@ At p=.3047 the accepted histories have m_species 0.558892 / 0.558909 and parity 
 ## What would count as coexistence evidence
 
 **A finite bulk free-energy gap is not coexistence.** At a genuine first-order coexistence point, the competing bulk free-energy densities agree. A non-vanishing observable/slope jump or positive interface cost is a different quantity. Distinct stationary branches can persist off coexistence; optimizers need not merge immediately on either side.
+
+Small sign changes of f_period,O−f_period,D between nearly equivalent solutions do not identify a branch crossing: O/D are initialization labels, not certified ordered/disordered branches. Symmetry-related ordered orientations also have equal bulk pressure away from a thermal transition.
 
 This coarse six-point scan can locate a change, identify finite-χ competing branches or bracket a candidate crossing. It cannot guarantee that a narrow metastability window was sampled. A candidate requires distinct symmetry-inequivalent stationary branches, a properly tuned same-functional crossing, and χ/size-systematic control of any non-vanishing discontinuity. Multiple finite-χ minima alone do not establish thermodynamic first order; no separation on this grid does not prove continuity.
 
