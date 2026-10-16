@@ -236,13 +236,13 @@
     },
     {
       "path": "papers/v33-review-package.zip",
-      "bytes": 16940444,
-      "sha256": "51d91acca42ce5fe8028562ff8dc7cfc2e0f35caad26de96e5bb3477cb5c7212"
+      "bytes": 16951951,
+      "sha256": "ca24a323daa52895281575edc521312047be5ed135ebaa6107c6e1aa21910d78"
     },
     {
       "path": "papers/v33-review-package.zip.sha256",
       "bytes": 89,
-      "sha256": "82e7cb8c9faf3e06d82d30e4e93da401cabf7ec3bda4cb838987865ab9ba6570"
+      "sha256": "71d7cafd0c7cbf45156bfeb7827265a6fcb07f092a748987ce0d628166e0e223"
     },
     {
       "path": "papers/v34/README.md",
@@ -256,8 +256,8 @@
     },
     {
       "path": "papers/v34/manuscript_revised_v34.tex",
-      "bytes": 258153,
-      "sha256": "218f0d0522f976ccf6040f1bbfd536033304b4b532ba40d4c91dd6af0c976d26"
+      "bytes": 258187,
+      "sha256": "1d33a32f91bcd668ec678fabe9e411de53f30dd31b20278a101679d7627a4b9b"
     },
     {
       "path": "papers/v34/revise_manuscript.py",
@@ -276,18 +276,18 @@
     },
     {
       "path": "papers/v34/source-provenance.json",
-      "bytes": 673,
-      "sha256": "826ddd05aba8ffdd95f5eea71eb1ad16c65ec25593d1369d012ce7b7bf46817c"
+      "bytes": 707,
+      "sha256": "e8cd5073816add9ec916d8887c6b97f5ef2b1143e461b0bb3507c0828514ca25"
     },
     {
       "path": "papers/v34/v33-to-v34.diff",
-      "bytes": 31893,
-      "sha256": "c03f02abf55a0cdd907e20261127e96790b828aaafee685a4b421d8329177e9f"
+      "bytes": 31927,
+      "sha256": "46e7fd873e88bce071c30673d5b0dd492be56f7ec25e67b65797f233363ee1f5"
     },
     {
       "path": "papers/v34/v34-revision-report.docx",
       "bytes": 38308,
-      "sha256": "0a775176fadc7f16ad91bc3a074400b9c75e157d0124ef186b7b429dd3de2bc9"
+      "sha256": "0be59c061c4ced538abe3483ee6d2014b46bdf1e2a615d2394ad859cf18e38f5"
     },
     {
       "path": "quran/README.md",
@@ -316,8 +316,13 @@
     },
     {
       "path": "research/transition-order/BRANCH128-PILOT-RESULTS.md",
-      "bytes": 3572,
-      "sha256": "7ecbd26e2f0a1da277398689d67c677b086004bbac441bc57f133ec731555936"
+      "bytes": 3761,
+      "sha256": "0ed33e44e31f985046f87338e42106135ab7f386ced51e7df26b299370c51da3"
+    },
+    {
+      "path": "research/transition-order/BRANCH128-RUN-STATE.md",
+      "bytes": 2251,
+      "sha256": "9c86cd39f707e4c2d075b60dfc0643836537b455e8f647e720b0074e7916cc7a"
     },
     {
       "path": "research/transition-order/CHI128-STAGE.md",
@@ -390,19 +395,34 @@
       "sha256": "6c4811ea4c51d5144b99023135df35a0c47f6d28b188265b214e86e96bf89223"
     },
     {
+      "path": "research/transition-order/branch128/stage-1-disordered.json",
+      "bytes": 266,
+      "sha256": "ad6663a8ae7f131d54e7409b793336f645d34927446369aa29c5febbdaa31bf2"
+    },
+    {
+      "path": "research/transition-order/branch128/stage-1-master.json",
+      "bytes": 4142,
+      "sha256": "3777ac463825b71f6b7693e75848b109cfe9a70afe0cf058902c1a9fd74450e3"
+    },
+    {
+      "path": "research/transition-order/branch128/stage-1-ordered.json",
+      "bytes": 263,
+      "sha256": "bb3bce0779553322ad2dda6893a20a49e49af2ee3f3e1a0a5324bc939f446c68"
+    },
+    {
       "path": "research/transition-order/branch128-pilot-protocol.json",
       "bytes": 3409,
       "sha256": "3e8bf71d333ed9ee0d8df45117b924c58bd3176f78d665d32b30624efe06e473"
     },
     {
       "path": "research/transition-order/branch128-pilot-report.docx",
-      "bytes": 39584,
-      "sha256": "bbc553c7d9ee600485cd7b43174fe52f33fefa0f013633b7b11f66ea98293eb0"
+      "bytes": 39711,
+      "sha256": "3a073fb9ac5d46b8b55f763234cc13539858002c90a0d41df1fb05a67425e7c4"
     },
     {
       "path": "research/transition-order/branch128-pilot.csv",
-      "bytes": 157,
-      "sha256": "93f6d8bec888a74b2531df88ddaeb4adfdb5713d827e5515049bb7b7031da44a"
+      "bytes": 803,
+      "sha256": "c26a6fcbbba6e04378422e4a94c247cc2eacfd630fac02288d18993ff72308d0"
     },
     {
       "path": "research/transition-order/branch128_pilot_campaign.py",
@@ -960,6 +980,26 @@
       "sha256": "da54c1a1932217c59693df2a7f940cb94cfd5063e05adebf34d41e6b75cc85dd"
     },
     {
+      "path": "v2.2/verify/replica/branch128_pilot_disordered_p0.3048300.json",
+      "bytes": 3525,
+      "sha256": "d136bde90e9102031f95c576cf2a492c99e37c39c6ea27f937577817640632a6"
+    },
+    {
+      "path": "v2.2/verify/replica/branch128_pilot_disordered_p0.3048300.log",
+      "bytes": 668,
+      "sha256": "c9dba8628862559ac82c13be70028a84baa760cc0df0bc279cc54aa4108f231d"
+    },
+    {
+      "path": "v2.2/verify/replica/branch128_pilot_ordered_p0.3047500.json",
+      "bytes": 3598,
+      "sha256": "04f8e01ead2839c74baebabfa5db613ad8bbfae3f5a32e9840007ed494274433"
+    },
+    {
+      "path": "v2.2/verify/replica/branch128_pilot_ordered_p0.3047500.log",
+      "bytes": 574,
+      "sha256": "2d9479cf49367bf2881634c7b9db353716bd12704316f6a41ba5c7f745ce85bf"
+    },
+    {
       "path": "v2.2/verify/replica/branch128_pilot_worker.py",
       "bytes": 8412,
       "sha256": "3dc06a84365e241a7b7c9d20b5007a4dfd7b744a35defc5e5fd88cb3c5be9aca"
@@ -968,6 +1008,16 @@
       "path": "v2.2/verify/replica/branch128_serializer_smoke.log",
       "bytes": 129,
       "sha256": "3c77cabc22314acd79461178bed981887f4ca6ea26bcd0c5262882eaef521417"
+    },
+    {
+      "path": "v2.2/verify/replica/checkpoints/branch128_pilot_disordered_p0.3048300.npz",
+      "bytes": 2395852,
+      "sha256": "129445f1b062cd51f28e32d48de8cc08c860003b526e1d3d890054d62c8c87bc"
+    },
+    {
+      "path": "v2.2/verify/replica/checkpoints/branch128_pilot_ordered_p0.3047500.npz",
+      "bytes": 2395659,
+      "sha256": "e5855be4d6722377fa3d399fa7b8a780095f0b6a1802379b2b0ebc127d062d47"
     },
     {
       "path": "v2.2/verify/replica/checkpoints/control_n2_p0.233810.npz",
@@ -1231,8 +1281,8 @@
     },
     {
       "path": "v2.2/verify/replica/n3_branch128_pilot.json",
-      "bytes": 8115,
-      "sha256": "204aa8a83ce8c688d558c475b62a6b9c0ccc1a7c7ea05a16d09f5f5c7019d828"
+      "bytes": 16554,
+      "sha256": "fdb2deedab92876c5f509189c7b17a76388d30a4d18b313cac9927c44f5393df"
     },
     {
       "path": "v2.2/verify/replica/n3_chi128_bounded_disordered.json",

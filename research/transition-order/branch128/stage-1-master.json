@@ -1,0 +1,85 @@
+{
+  "campaign": "2026-10-16-unbiased-chi128-branch-retention-pilot-v1",
+  "authorization": "User selected branch_pilot_3h after the completed six-rate scan and report clarification.",
+  "n": 3,
+  "d": 2,
+  "chi": 128,
+  "tol": 1e-07,
+  "maxiter": 10000,
+  "optimizer_seconds": 5280,
+  "stage_wall_seconds": 5400,
+  "total_wall_seconds": 10800,
+  "global_deadline_unix": 1792177648.8685424,
+  "correlation_rmax": 240,
+  "canonical_ceiling": 1e-09,
+  "period_contraction_ceiling": 1e-08,
+  "max_heavy_workers": 2,
+  "threads_per_worker": 1,
+  "anchors": {
+    "ordered": {
+      "checkpoint": "v2.2/verify/replica/checkpoints/scan128_ordered_p0.3047000.npz",
+      "sha256": "1ab55f53669ccb3df9f72d55dd3ec066347221e54e6b823deae63822f2ae70d4",
+      "source_p": 0.3047,
+      "accepted_source": true,
+      "qualification": "accepted finite-chi numerical anchor; not a certified thermodynamic phase"
+    },
+    "disordered": {
+      "checkpoint": "v2.2/verify/replica/checkpoints/n3_disordered_chi128_p0.3048600.npz",
+      "sha256": "594d54643bba88ce38c933281d40949a82e80eaef0266a4136cfc8d25078e36f",
+      "source_p": 0.30486,
+      "accepted_source": true,
+      "qualification": "accepted finite-chi numerical anchor; not a certified thermodynamic phase"
+    }
+  },
+  "targets": [
+    {
+      "ordered": 0.30475,
+      "disordered": 0.30483
+    },
+    {
+      "ordered": 0.3048,
+      "disordered": 0.3048
+    }
+  ],
+  "source_sha256": {
+    "v2.2/verify/replica/replica_vumps.py": "4830e638829e1df645e16442171a820baf7bd710c617f24c32f089f79c399247",
+    "v2.2/verify/replica/replica_halfrow.py": "b791a81675ebe697d36a82a2572753185b4b8c7d13164e12cb47feab3c85ed5d",
+    "v2.2/verify/replica/replica_tm.py": "43a5074315a61379aa70e5251111601ec41c26ff762a11dcde5b9c665e18ba20",
+    "v2.2/verify/replica/branch128_pilot_worker.py": "3dc06a84365e241a7b7c9d20b5007a4dfd7b744a35defc5e5fd88cb3c5be9aca",
+    "v2.2/verify/replica/compare_stationary.py": "2dbcf288822c0b8e7f3d41a771362ea78415f0f4306d452b4fb80894884cc23f",
+    "research/transition-order/chi128_scan_campaign.py": "5af40878d58b6ec81db7b8b28b9ef3c1fd13811bdd333609f9813fe4aab88706",
+    "research/transition-order/branch128_pilot_campaign.py": "516e2e1f264c5861f690e72454e39b568b907a112777c7c8d25208b1ec31e0e8"
+  },
+  "contract_sha256": "9fbacf915d1969e2d6e70b33bb1324ade44d612fab9a5526363425eb9d415360",
+  "software": {
+    "python": "3.13.16",
+    "numpy": "2.3.5",
+    "scipy": "1.17.1"
+  },
+  "launch_validation": "49/49 transfer recheck plus 2/2 serializer-equivalence/roundtrip smoke; not added to historical 246",
+  "initialization": "True warm continuation from previous accepted checkpoint at each step; no independent reset at each target.",
+  "objective": "Unchanged zero-bias Hermitian half-row objective; full-period trial values separately evaluated.",
+  "step_gate": "Both stage-1 preparations must pass all declared gates before stage 2; a failed gate stops the pilot path.",
+  "phase_handling": "No phase, mean-order or pinning constraint. A merger/change/failure is recorded, not forced away or promoted to a physical spinodal.",
+  "interpretation": "Only one common target; no crossing bracket, no perturbation stability certificate, no global-minimum or thermodynamic order certificate.",
+  "chi96_production": false,
+  "chi192_automatic": false,
+  "extra_common_rates_automatic": false,
+  "perturbation_production_automatic": false,
+  "preparations": {
+    "ordered": {
+      "checkpoint": "v2.2/verify/replica/checkpoints/scan128_ordered_p0.3047000.npz",
+      "sha256": "1ab55f53669ccb3df9f72d55dd3ec066347221e54e6b823deae63822f2ae70d4",
+      "source_p": 0.3047,
+      "accepted_source": true,
+      "qualification": "accepted finite-chi numerical anchor; not a certified thermodynamic phase"
+    },
+    "disordered": {
+      "checkpoint": "v2.2/verify/replica/checkpoints/n3_disordered_chi128_p0.3048600.npz",
+      "sha256": "594d54643bba88ce38c933281d40949a82e80eaef0266a4136cfc8d25078e36f",
+      "source_p": 0.30486,
+      "accepted_source": true,
+      "qualification": "accepted finite-chi numerical anchor; not a certified thermodynamic phase"
+    }
+  }
+}

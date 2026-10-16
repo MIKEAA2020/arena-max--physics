@@ -1,0 +1,5 @@
+BRANCH_CASE_START ordered 0.30475
+    it=  0 eta=0.6087461319 lamC=1.0000055468 etaL=0.6087461014 eps=4.88e-05 [18s]
+    it= 10 eta=0.6087461339 lamC=1.0000000000 etaL=0.6087461340 eps=8.86e-07 [197s]
+    it= 19 eta=0.6087461339 lamC=1.0000000000 etaL=0.6087461339 eps=8.19e-08 [360s]
+BRANCH_CASE_RESULT {"preparation": "ordered", "p": 0.30475, "status": "accepted-finite-chi", "eps": 8.193568914998944e-08, "iters": 20, "total_stage_seconds": 376.77474599200104, "m_species": 0.5433273739521833, "color_l2_order": 0.5132197632404928, "f_full_rayleigh": 0.9927078985313891}
