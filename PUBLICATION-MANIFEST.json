@@ -236,13 +236,13 @@
     },
     {
       "path": "papers/v33-review-package.zip",
-      "bytes": 16963885,
-      "sha256": "910bc84aeef9a488365ee12ab2a3a54b54a66ea9fe0756186c0b763d1721333b"
+      "bytes": 16963911,
+      "sha256": "476b4635ae9dfaa595a1641c581ba30d190912e8df21999050f34f08d035f83b"
     },
     {
       "path": "papers/v33-review-package.zip.sha256",
       "bytes": 89,
-      "sha256": "981bf5993b6d5697f630db00bff54cf562f85cc287ad2d2baa0df1b158428a49"
+      "sha256": "4d09b4bde105e1ccc59cf70bda6c5cb1190079803fae4b2c28a937e60f94e30a"
     },
     {
       "path": "papers/v34/README.md",
@@ -287,7 +287,7 @@
     {
       "path": "papers/v34/v34-revision-report.docx",
       "bytes": 38308,
-      "sha256": "012d4869c58c7de00cffef773bc050ab5a41ef602790a9a04aaceed308903a55"
+      "sha256": "19c520e7595a1d2ec9e0b74bac81ec4d98e69d447d7edad71d4db3f1b01a52df"
     },
     {
       "path": "quran/README.md",
@@ -437,7 +437,7 @@
     {
       "path": "research/transition-order/branch128-pilot-report.docx",
       "bytes": 39814,
-      "sha256": "cb2747171a76e6b295a5818ad73331436ce47858386d26e9e51c116dad1b3343"
+      "sha256": "adcfe25261bfb5351fa5670277d86fa69212cc02c854be89918c9328bfbdc678"
     },
     {
       "path": "research/transition-order/branch128-pilot.csv",
@@ -1331,8 +1331,8 @@
     },
     {
       "path": "v2.2/verify/replica/n3_branch128_pilot.json",
-      "bytes": 24579,
-      "sha256": "4789a077e678686b497ea89b7c4a9f408c3f785eef5ab6c8669d8f8a6be9a1d5"
+      "bytes": 24621,
+      "sha256": "f788cff67ff0cf2e56ebae1581f4fd717a58411eee4ed1efc66086a969ae8990"
     },
     {
       "path": "v2.2/verify/replica/n3_chi128_bounded_disordered.json",

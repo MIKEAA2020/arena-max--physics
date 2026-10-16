@@ -614,5 +614,6 @@
   "thermodynamic_order": "unresolved",
   "crossing_bracket_measured": false,
   "perturbation_stability_tests_performed": false,
-  "chi192_launched": false
+  "chi192_launched": false,
+  "finished_at_unix": 1792169262.2305124
 }
