@@ -1,6 +1,6 @@
 {
   "campaign": "2026-10-16-fixed-source-chi128-six-rate-v1",
-  "status": "running: recovered after session interruption",
+  "status": "complete: all 12 preparation results accepted",
   "cases": {
     "0.3048600": {
       "ordered": {
@@ -3772,5 +3772,6 @@
       "global_deadline_unchanged": 1792174012.0154197,
       "qualification": "Checkpoint iteration/seconds are segment lower bounds; lost uncheckpointed work and session downtime are not disguised as converged results."
     }
-  ]
+  ],
+  "completed_at_unix": 1792162445.824384
 }

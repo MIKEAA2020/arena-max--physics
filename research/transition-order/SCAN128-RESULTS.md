@@ -2,7 +2,7 @@
 
 16 October 2026 · A-1 continuation, not a new Lighthouse clue.
 
-**Campaign status:** running: recovered after session interruption. **Accepted paired rates:** 6/6. **New terminal preparation records:** 10/10; the two previously accepted p=.30486 states are reused, not reoptimized.
+**Campaign status:** complete: all 12 preparation results accepted. **Accepted paired rates:** 6/6. **New terminal preparation records:** 10/10; the two previously accepted p=.30486 states are reused, not reoptimized.
 
 ## Method, allocation and scope
 

@@ -1,11 +1,11 @@
 {
   "source_v33_sha256": "d27cddbaa6dee54f122d55ec16ebb7d5e2059fb3542faa72381b11e775958611",
-  "output_v34_sha256": "b6608e19fa1bd173e2c022ba0a345fefa666062a031097b7657250ea9ef858d1",
+  "output_v34_sha256": "a3791b1d7a3f444bed6c292ef2b7e3742c9ea463771d760194e227cf8a30baa8",
   "unchanged_statement_and_proof_blocks": 65,
   "labels": 160,
   "references_resolve": true,
   "citations_resolve": true,
-  "scan_status": "running: recovered after session interruption",
+  "scan_status": "complete: all 12 preparation results accepted",
   "scan_accepted_preparations": 12,
   "phase_order": "unresolved",
   "status": "author-review; not submission certified",

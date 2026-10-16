@@ -42,7 +42,7 @@
 +The following is a later author-review continuation, separate from the historical full-period $\chi\le96$ table above. It uses the same two immutable warm sources independently at every target rate; it is not a bidirectional hysteresis continuation. The $p=.30486$ source-matched accepted pair is reused rather than reoptimized. Acceptance requires the original $10^{-7}$ residual, both canonical compatibility checks, and a checked full-period expectation contraction. Half-row stationarity does not imply independent full-period optimizer convergence. Real canonical/physical tensors are saved; omitted environments are recomputable caches.
 +
 +
-+Campaign status at source generation: running: recovered after session interruption.
++Campaign status at source generation: complete: all 12 preparation results accepted.
 +
 +\begin{table*}[t]
 +
