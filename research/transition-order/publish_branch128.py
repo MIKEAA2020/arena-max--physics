@@ -9,9 +9,12 @@ ROOT=Path(__file__).resolve().parents[2];HERE=Path(__file__).resolve().parent
 R=ROOT/'v2.2/verify/replica';db=json.loads((R/'n3_branch128_pilot.json').read_text())
 refinement_path=R/'n3_branch128_refinement.json'
 refinement=json.loads(refinement_path.read_text()) if refinement_path.exists() else None
+upper_path=R/'n3_branch128_upper.json'
+upper=json.loads(upper_path.read_text()) if upper_path.exists() else None
 def run(args):subprocess.run(args,check=True,cwd=ROOT)
 run([sys.executable,str(HERE/'branch128_pilot_report.py')])
 if refinement is not None:run([sys.executable,str(HERE/'branch128_refinement_report.py')])
+if upper is not None:run([sys.executable,str(HERE/'branch128_upper_report.py')])
 run([sys.executable,str(ROOT/'papers/v34/revise_manuscript.py')])
 run([sys.executable,str(HERE/'bundle_review.py')])
 run([sys.executable,str(HERE/'prepare_publication.py')])
@@ -29,10 +32,10 @@ if head!=remote:
 assert not git('diff','--','LICENSE',capture=True)
 git('add','--all')
 if git('diff','--cached','--name-only',capture=True).strip():
- git('-c','user.name=Arena Research Assistant','-c','user.email=assistant@arena.invalid','-c','commit.gpgsign=false','commit','-m',('Record chi128 convergence-safety refinement: '+refinement['status']) if refinement is not None else ('Record unbiased chi128 branch-pilot progress: '+db['status']))
+ git('-c','user.name=Arena Research Assistant','-c','user.email=assistant@arena.invalid','-c','commit.gpgsign=false','commit','-m',('Record chi128 second-common-rate test: '+upper['status']) if upper is not None else (('Record chi128 convergence-safety refinement: '+refinement['status']) if refinement is not None else ('Record unbiased chi128 branch-pilot progress: '+db['status'])))
  git('push','origin','main')
 a=git('rev-parse','HEAD',capture=True).strip();b=git('ls-remote','origin','refs/heads/main',capture=True).split()[0];assert a==b
-receipt=dict(commit=a,remote_equals_local=True,ordinary_push=True,status=db['status'],refinement_status=refinement.get('status') if refinement else None,stage_count=len(db.get('stages',{})),thermodynamic_order='unresolved')
+receipt=dict(commit=a,remote_equals_local=True,ordinary_push=True,status=db['status'],refinement_status=refinement.get('status') if refinement else None,upper_rate_status=upper.get('status') if upper else None,stage_count=len(db.get('stages',{})),thermodynamic_order='unresolved')
 (ROOT/'handoff').mkdir(exist_ok=True)
 (ROOT/'handoff/branch128-publication-receipt.json').write_text(json.dumps(receipt,indent=2)+'\n')
 print('BRANCH_PUSH_VERIFIED',json.dumps(receipt),flush=True)

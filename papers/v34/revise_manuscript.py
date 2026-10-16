@@ -75,6 +75,13 @@ if refine:
     if refine.get('converged'):
         large=pilot['stages']['2']['ordered']
         lines.append(r'The separately augmented common-point comparison has invariant order '+f"{large['color_l2_order']:.6f} / {refine['color_l2_order']:.6f}"+r', with half-row objective difference '+f"{large['f_half']-refine['f_half']:.6e}"+r' and separately evaluated period-trial difference '+f"{large['f_full_rayleigh']-refine['f_full_rayleigh']:.6e}"+r'. A nonzero difference at one common point is not coexistence; a controlled crossing, stability and systematic limits remain open.')
+upper_path=ROOT/'v2.2/verify/replica/n3_branch128_upper.json'
+upper=json.loads(upper_path.read_text()) if upper_path.exists() else {}
+if upper:
+    lines.append(r'\paragraph{One additional common rate.} A separately authorized zero-bias warm continuation takes both accepted $.30480$, $\chi=128$ states to $.30485$ with the original external gates and an internal driving goal $5\times10^{-8}$. Its status is '+upper.get('status','unknown').replace('_',r'\_')+r'. Optimizer residuals are not energy-error bars, and a lower computed trial value among two states is not a global-minimum certificate. A pressure-ranking flip is relevant to a candidate bracket only if two distinguishable numerical families are retained; a merger, lost character or failed numerical gate does not locate a physical spinodal or bound a metastability-window width. No extra rate, $\chi=192$ or stability production is automatic.')
+    if upper.get('results',{}).get('ordered',{}).get('converged') and upper.get('results',{}).get('disordered',{}).get('converged'):
+        ua,ub=upper['results']['ordered'],upper['results']['disordered']
+        lines.append(r'At the upper common rate, invariant order is '+f"{ua['color_l2_order']:.6f} / {ub['color_l2_order']:.6f}"+r'; half-row objective difference is '+f"{ua['f_half']-ub['f_half']:.6e}"+r' and separately evaluated period-trial difference is '+f"{ua['f_full_rayleigh']-ub['f_full_rayleigh']:.6e}"+r'. These signs are not by themselves coexistence or thermodynamic order certificates.')
 if accepted==12:
     left=[db['cases'][f'{p:.7f}'][side]['color_l2_order'] for p in grid if p<=.3047 for side in ['ordered','disordered']]
     right=[db['cases'][f'{p:.7f}'][side]['color_l2_order'] for p in grid if p>=.30486 for side in ['ordered','disordered']]
@@ -92,7 +99,7 @@ keys=set(re.findall(r'\\bibitem(?:\[[^]]*\])?\{([^}]+)\}',s))
 cites={k.strip() for v in re.findall(r'\\cite\{([^}]+)\}',s) for k in v.split(',')};assert cites<=keys
 out=HERE/'manuscript_revised_v34.tex';atomic(out,s)
 atomic(HERE/'v33-to-v34.diff',''.join(difflib.unified_diff(original.splitlines(True),s.splitlines(True),fromfile='manuscript_revised_v33.tex',tofile='manuscript_revised_v34.tex')))
-provenance=dict(source_v33_sha256=hashlib.sha256(source.read_bytes()).hexdigest(),output_v34_sha256=hashlib.sha256(out.read_bytes()).hexdigest(),unchanged_statement_and_proof_blocks=len(a),labels=len(labels),references_resolve=True,citations_resolve=True,scan_status=db.get('status'),scan_accepted_preparations=accepted,branch_pilot_status=pilot.get('status','not launched'),branch_refinement_status=refine.get('status','not launched'),phase_order='unresolved',status='author-review; not submission certified',interpretation='Quranic/Lighthouse: real dependent creation distinct from uncreated Creator; not a physics theorem')
+provenance=dict(source_v33_sha256=hashlib.sha256(source.read_bytes()).hexdigest(),output_v34_sha256=hashlib.sha256(out.read_bytes()).hexdigest(),unchanged_statement_and_proof_blocks=len(a),labels=len(labels),references_resolve=True,citations_resolve=True,scan_status=db.get('status'),scan_accepted_preparations=accepted,branch_pilot_status=pilot.get('status','not launched'),branch_refinement_status=refine.get('status','not launched'),upper_common_rate_status=upper.get('status','not launched'),phase_order='unresolved',status='author-review; not submission certified',interpretation='Quranic/Lighthouse: real dependent creation distinct from uncreated Creator; not a physics theorem')
 atomic(HERE/'source-provenance.json',json.dumps(provenance,indent=2)+'\n')
 report=f'''# v34 author-review continuation
 

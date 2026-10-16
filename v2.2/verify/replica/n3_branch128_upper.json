@@ -1,0 +1,625 @@
+{
+  "campaign": "2026-10-16-chi128-one-upper-common-rate-v1",
+  "status": "running: one common upper rate",
+  "p": 0.30485,
+  "chi": 128,
+  "protocol_sha256": "cdd1f05de5edeae45369457e0330990af82d45f3e2df16442f1ac73ad2ac96e7",
+  "previous_common": {
+    "ordered": {
+      "campaign": "2026-10-16-unbiased-chi128-branch-retention-pilot-v1",
+      "preparation": "ordered",
+      "n": 3,
+      "d": 2,
+      "p": 0.3048,
+      "chi": 128,
+      "tol": 1e-07,
+      "status": "accepted-finite-chi",
+      "converged": true,
+      "source": {
+        "checkpoint": "v2.2/verify/replica/checkpoints/branch128_pilot_ordered_p0.3047500.npz",
+        "sha256": "e5855be4d6722377fa3d399fa7b8a780095f0b6a1802379b2b0ebc127d062d47",
+        "source_p": 0.30475,
+        "accepted_source": true,
+        "qualification": "actual accepted state from previous continuation step; not a certified thermodynamic phase"
+      },
+      "source_metadata": {
+        "n": 3,
+        "d": 2,
+        "p": 0.30475,
+        "operator": "hermitian-halfrow",
+        "tag": "branch128-pilot-ordered",
+        "checkpoint_schema": 1,
+        "tol": 1e-07,
+        "maxiter": 10000,
+        "stage_budget_seconds": 5279.523905515671,
+        "environment_cache_omitted": true,
+        "checkpoint_contents": "AL, AR, AC, C; recompute FL/FR on restart",
+        "eta": 0.6087461339372335,
+        "eps": 8.193568914998944e-08,
+        "chi": 128,
+        "iters": 20,
+        "seconds": 359.7289891242981
+      },
+      "source_is_accepted_observation": true,
+      "master_sha256": "2782b56c903ea8276a1467bcffe77b68e00d19d69a3dc1ff67b4f465a0a14034",
+      "point_protocol": "research/transition-order/branch128/stage-2-ordered.json",
+      "checkpoint": "checkpoints/branch128_pilot_ordered_p0.3048000.npz",
+      "preparation_mode": "unbiased warm continuation from the previous accepted state; initialization history is not a certified phase",
+      "qualification": "criterion-passed finite-chi optimizer states are not thermodynamic phases",
+      "eps": 9.065270655073124e-08,
+      "iters": 23,
+      "optimizer_seconds": 408.12628960609436,
+      "intermediate_eta_half": 0.6086968352227667,
+      "f": 0.9928698854710404,
+      "eta": 0.6086968352227667,
+      "seconds": 408.12628960609436,
+      "S_ent": 0.7196783337296508,
+      "m_parity": 0.3470941647631317,
+      "m_parity_sym": 0.3130124771865971,
+      "m_species": 0.5175374848476134,
+      "m_species_sym": 0.49306279498778355,
+      "m_species_even": 0.5175374855587298,
+      "xi_species": 72.66450362175365,
+      "corr_species_tail": [
+        0.22645163781603436,
+        0.07423220968967295,
+        0.02182574330902845,
+        0.0013602873895283973
+      ],
+      "xi_parity": 72.61874211996323,
+      "corr_parity_tail": [
+        0.22958250787348938,
+        0.05318919522885475,
+        0.013585284814309331,
+        0.0008281311305608219
+      ],
+      "corr_len": 240,
+      "xi_chi": 72.8756693249285,
+      "transfer_eigs": [
+        1.000000000000004,
+        0.9863717166016217,
+        0.9697279630403064,
+        0.964569448510898,
+        0.9645694278346323,
+        0.9617444939059596
+      ],
+      "eta_half": 0.6086968352227667,
+      "f_half": 0.9928698854710404,
+      "tag": "branch128-pilot-ordered",
+      "operator": "hermitian-halfrow",
+      "gauge_left_residual": 9.067603609395294e-08,
+      "gauge_right_residual": 9.069411859400316e-08,
+      "left_canonical_residual": 4.3004145370087434e-14,
+      "right_canonical_residual": 4.002751624555455e-14,
+      "optimizer_tolerance_passed": true,
+      "f_full_rayleigh": 0.992869864437846,
+      "period_contraction_relative_residual": 3.0479623321970725e-11,
+      "color_one_point_amplitudes": [
+        0.5695406844996058,
+        0.10881763919642373,
+        0.1088176387320674,
+        0.052003388163345356,
+        0.052003009718614684,
+        0.10881763968994239
+      ],
+      "color_sum": 0.9999999999999994,
+      "color_l2_order": 0.4882324354334573,
+      "color_qualification": "symmetry-invariant one-point order diagnostic; not a phase certificate or a probability-positivity assertion",
+      "total_stage_seconds": 426.6295054410002,
+      "checkpoint_sha256": "418da13e207187eacec7bf1c4cee0f12319b3cba81ba15928ea5854db73fbccc",
+      "process_exit_code": 0
+    },
+    "disordered": {
+      "campaign": "2026-10-16-same-point-convergence-safety-v1",
+      "p": 0.3048,
+      "n": 3,
+      "d": 2,
+      "chi": 128,
+      "history": "disordered",
+      "status": "accepted under unchanged external gates",
+      "converged": true,
+      "external_tol": 1e-07,
+      "optimizer_internal_goal": 5e-08,
+      "source": {
+        "checkpoint": "v2.2/verify/replica/checkpoints/branch128_pilot_disordered_p0.3048000.npz",
+        "sha256": "5c6763ca817cf2d60f0fd76124e6fcb3e7ef7b49258ef104b6d2ba542def2b12",
+        "accepted_source": false,
+        "qualification": "actual rejected same-point physical state; original accepted .30483 ancestry retained"
+      },
+      "source_is_accepted_observation": false,
+      "source_metadata": {
+        "n": 3,
+        "d": 2,
+        "p": 0.3048,
+        "operator": "hermitian-halfrow",
+        "tag": "branch128-pilot-disordered",
+        "checkpoint_schema": 1,
+        "tol": 1e-07,
+        "maxiter": 10000,
+        "stage_budget_seconds": 5279.484578371048,
+        "environment_cache_omitted": true,
+        "checkpoint_contents": "AL, AR, AC, C; recompute FL/FR on restart",
+        "eta": 0.6086962672622023,
+        "eps": 9.995603786506007e-08,
+        "chi": 128,
+        "iters": 101,
+        "seconds": 1796.7586560249329
+      },
+      "original_failed_pilot_unchanged": true,
+      "protocol_sha256": "c41d1edef31432462e10bf28b6ec826f6740717339042e7f15e29dcd2c61425d",
+      "checkpoint": "checkpoints/branch128_refinement_disordered_p0.3048000.npz",
+      "qualification": "same-point unbiased numerical refinement, not a new rate or a thermodynamic phase certificate",
+      "eps": 4.988270901022994e-08,
+      "iters": 55,
+      "optimizer_seconds": 854.4465465545654,
+      "optimizer_stop": "internal target / iteration return",
+      "gauge_left_residual": 4.989559384442817e-08,
+      "gauge_right_residual": 4.996652741145649e-08,
+      "left_canonical_residual": 4.007662611606098e-14,
+      "right_canonical_residual": 4.0851272350981504e-14,
+      "internal_goal_met": true,
+      "f": 0.9928717516215393,
+      "eta": 0.6086962672630803,
+      "seconds": 854.4465465545654,
+      "S_ent": 1.4588769232834227,
+      "m_parity": -0.0057797672345033455,
+      "m_parity_sym": -0.0052119407751495175,
+      "m_species": 0.009670188585542711,
+      "m_species_sym": 0.009212455218803196,
+      "m_species_even": 8.155464936910985e-09,
+      "xi_species": 68.75762696839246,
+      "corr_species_tail": [
+        0.2673320556904535,
+        0.11997265601576872,
+        0.048295009463889704,
+        0.003000211715678206
+      ],
+      "xi_parity": 52.52581396931221,
+      "corr_parity_tail": [
+        0.2959023525214976,
+        0.09107236552786108,
+        0.028361016270919154,
+        0.0007316592024181421
+      ],
+      "corr_len": 240,
+      "xi_chi": 73.25471918542496,
+      "transfer_eigs": [
+        0.9999999999999895,
+        0.986441754677384,
+        0.9845506711620527,
+        0.9844143496369364,
+        0.9844143476386998,
+        0.9806298441244391
+      ],
+      "eta_half": 0.6086962672630803,
+      "f_half": 0.9928717516215393,
+      "tag": "branch128-refinement",
+      "operator": "hermitian-halfrow",
+      "f_full_rayleigh": 0.992871518918753,
+      "period_contraction_relative_residual": 3.5233793894087276e-13,
+      "color_one_point_amplitudes": [
+        0.1657033775534874,
+        0.16453172775353492,
+        0.17407514866958448,
+        0.1657033691142887,
+        0.16570336971497265,
+        0.1642830071941324
+      ],
+      "color_sum": 1.0000000000000007,
+      "color_l2_order": 0.00902723953410966,
+      "color_qualification": "symmetry-invariant one-point order diagnostic; not a phase certificate or a probability-positivity assertion",
+      "common_comparison": {
+        "status": "all 36 symmetry orientations evaluated",
+        "orientations": [
+          {
+            "radius": 0.9972862452593674,
+            "eigenvalue": [
+              0.9972862452593674,
+              0.0
+            ],
+            "relative_residual": 1.6074213646119946e-13,
+            "left": 0,
+            "right": 0,
+            "normalized_fidelity_per_site": 0.9972862452593878
+          },
+          {
+            "radius": 0.9972973857221396,
+            "eigenvalue": [
+              0.9972973857221396,
+              0.0
+            ],
+            "relative_residual": 9.514423419506104e-12,
+            "left": 0,
+            "right": 1,
+            "normalized_fidelity_per_site": 0.9972973857221601
+          },
+          {
+            "radius": 0.997585339982663,
+            "eigenvalue": [
+              0.997585339982663,
+              0.0
+            ],
+            "relative_residual": 3.70041292052261e-11,
+            "left": 0,
+            "right": 2,
+            "normalized_fidelity_per_site": 0.9975853399826835
+          },
+          {
+            "radius": 0.99728624496419,
+            "eigenvalue": [
+              0.99728624496419,
+              0.0
+            ],
+            "relative_residual": 3.246487418659641e-11,
+            "left": 0,
+            "right": 3,
+            "normalized_fidelity_per_site": 0.9972862449642105
+          },
+          {
+            "radius": 0.9972862449855175,
+            "eigenvalue": [
+              0.9972862449855175,
+              0.0
+            ],
+            "relative_residual": 5.3267502323941495e-12,
+            "left": 0,
+            "right": 4,
+            "normalized_fidelity_per_site": 0.997286244985538
+          },
+          {
+            "radius": 0.9972890770023698,
+            "eigenvalue": [
+              0.9972890770023698,
+              0.0
+            ],
+            "relative_residual": 2.710880672511381e-13,
+            "left": 0,
+            "right": 5,
+            "normalized_fidelity_per_site": 0.9972890770023902
+          },
+          {
+            "radius": 0.9972973784740826,
+            "eigenvalue": [
+              0.9972973784740826,
+              0.0
+            ],
+            "relative_residual": 2.8225433158648914e-11,
+            "left": 1,
+            "right": 0,
+            "normalized_fidelity_per_site": 0.9972973784741032
+          },
+          {
+            "radius": 0.9972862452735491,
+            "eigenvalue": [
+              0.9972862452735491,
+              0.0
+            ],
+            "relative_residual": 3.817787582668644e-13,
+            "left": 1,
+            "right": 1,
+            "normalized_fidelity_per_site": 0.9972862452735696
+          },
+          {
+            "radius": 0.997286244984632,
+            "eigenvalue": [
+              0.997286244984632,
+              0.0
+            ],
+            "relative_residual": 3.748136430295375e-12,
+            "left": 1,
+            "right": 2,
+            "normalized_fidelity_per_site": 0.9972862449846525
+          },
+          {
+            "radius": 0.9972890840827076,
+            "eigenvalue": [
+              0.9972890840827076,
+              0.0
+            ],
+            "relative_residual": 3.4702239477680965e-11,
+            "left": 1,
+            "right": 3,
+            "normalized_fidelity_per_site": 0.997289084082728
+          },
+          {
+            "radius": 0.9975853401732957,
+            "eigenvalue": [
+              0.9975853401732957,
+              0.0
+            ],
+            "relative_residual": 4.6546339681473205e-14,
+            "left": 1,
+            "right": 4,
+            "normalized_fidelity_per_site": 0.9975853401733162
+          },
+          {
+            "radius": 0.9972862449535138,
+            "eigenvalue": [
+              0.9972862449535138,
+              0.0
+            ],
+            "relative_residual": 1.9640144011076447e-13,
+            "left": 1,
+            "right": 5,
+            "normalized_fidelity_per_site": 0.9972862449535342
+          },
+          {
+            "radius": 0.9975853401763207,
+            "eigenvalue": [
+              0.9975853401763207,
+              0.0
+            ],
+            "relative_residual": 1.0792507973369121e-11,
+            "left": 2,
+            "right": 0,
+            "normalized_fidelity_per_site": 0.9975853401763413
+          },
+          {
+            "radius": 0.9972862449627463,
+            "eigenvalue": [
+              0.9972862449627463,
+              0.0
+            ],
+            "relative_residual": 1.9162825980554957e-13,
+            "left": 2,
+            "right": 1,
+            "normalized_fidelity_per_site": 0.9972862449627667
+          },
+          {
+            "radius": 0.9972862452594359,
+            "eigenvalue": [
+              0.9972862452594359,
+              0.0
+            ],
+            "relative_residual": 6.043306345186731e-13,
+            "left": 2,
+            "right": 2,
+            "normalized_fidelity_per_site": 0.9972862452594563
+          },
+          {
+            "radius": 0.9972973784711762,
+            "eigenvalue": [
+              0.9972973784711762,
+              0.0
+            ],
+            "relative_residual": 2.403805494775153e-11,
+            "left": 2,
+            "right": 3,
+            "normalized_fidelity_per_site": 0.9972973784711967
+          },
+          {
+            "radius": 0.997289084081023,
+            "eigenvalue": [
+              0.997289084081023,
+              0.0
+            ],
+            "relative_residual": 1.3993238684289874e-11,
+            "left": 2,
+            "right": 4,
+            "normalized_fidelity_per_site": 0.9972890840810434
+          },
+          {
+            "radius": 0.9972862449893476,
+            "eigenvalue": [
+              0.9972862449893476,
+              0.0
+            ],
+            "relative_residual": 3.5163231832070953e-13,
+            "left": 2,
+            "right": 5,
+            "normalized_fidelity_per_site": 0.997286244989368
+          },
+          {
+            "radius": 0.9972862449890301,
+            "eigenvalue": [
+              0.9972862449890301,
+              0.0
+            ],
+            "relative_residual": 1.0245524123336665e-12,
+            "left": 3,
+            "right": 0,
+            "normalized_fidelity_per_site": 0.9972862449890505
+          },
+          {
+            "radius": 0.9972890770023058,
+            "eigenvalue": [
+              0.9972890770023058,
+              0.0
+            ],
+            "relative_residual": 6.029554050125387e-13,
+            "left": 3,
+            "right": 1,
+            "normalized_fidelity_per_site": 0.9972890770023263
+          },
+          {
+            "radius": 0.9972973857235459,
+            "eigenvalue": [
+              0.9972973857235459,
+              0.0
+            ],
+            "relative_residual": 3.785871046673849e-14,
+            "left": 3,
+            "right": 2,
+            "normalized_fidelity_per_site": 0.9972973857235664
+          },
+          {
+            "radius": 0.9972862452691409,
+            "eigenvalue": [
+              0.9972862452691409,
+              0.0
+            ],
+            "relative_residual": 4.67891161895361e-13,
+            "left": 3,
+            "right": 3,
+            "normalized_fidelity_per_site": 0.9972862452691613
+          },
+          {
+            "radius": 0.997286244953338,
+            "eigenvalue": [
+              0.997286244953338,
+              0.0
+            ],
+            "relative_residual": 3.715287399877146e-13,
+            "left": 3,
+            "right": 4,
+            "normalized_fidelity_per_site": 0.9972862449533584
+          },
+          {
+            "radius": 0.9975853399940537,
+            "eigenvalue": [
+              0.9975853399940537,
+              0.0
+            ],
+            "relative_residual": 1.7466697295426423e-11,
+            "left": 3,
+            "right": 5,
+            "normalized_fidelity_per_site": 0.9975853399940743
+          },
+          {
+            "radius": 0.9972862449631562,
+            "eigenvalue": [
+              0.9972862449631562,
+              0.0
+            ],
+            "relative_residual": 1.2604579297301386e-13,
+            "left": 4,
+            "right": 0,
+            "normalized_fidelity_per_site": 0.9972862449631766
+          },
+          {
+            "radius": 0.9975853399935312,
+            "eigenvalue": [
+              0.9975853399935312,
+              0.0
+            ],
+            "relative_residual": 6.0761214397837194e-12,
+            "left": 4,
+            "right": 1,
+            "normalized_fidelity_per_site": 0.9975853399935517
+          },
+          {
+            "radius": 0.9972890769973997,
+            "eigenvalue": [
+              0.9972890769973997,
+              0.0
+            ],
+            "relative_residual": 1.567604393766962e-11,
+            "left": 4,
+            "right": 2,
+            "normalized_fidelity_per_site": 0.9972890769974201
+          },
+          {
+            "radius": 0.997286244975159,
+            "eigenvalue": [
+              0.997286244975159,
+              0.0
+            ],
+            "relative_residual": 3.5136772232041667e-12,
+            "left": 4,
+            "right": 3,
+            "normalized_fidelity_per_site": 0.9972862449751795
+          },
+          {
+            "radius": 0.9972862452732679,
+            "eigenvalue": [
+              0.9972862452732679,
+              0.0
+            ],
+            "relative_residual": 3.038304829030242e-13,
+            "left": 4,
+            "right": 4,
+            "normalized_fidelity_per_site": 0.9972862452732884
+          },
+          {
+            "radius": 0.997297385719368,
+            "eigenvalue": [
+              0.997297385719368,
+              0.0
+            ],
+            "relative_residual": 2.570992086321747e-11,
+            "left": 4,
+            "right": 5,
+            "normalized_fidelity_per_site": 0.9972973857193885
+          },
+          {
+            "radius": 0.9972890840791416,
+            "eigenvalue": [
+              0.9972890840791416,
+              0.0
+            ],
+            "relative_residual": 6.726770063569959e-11,
+            "left": 5,
+            "right": 0,
+            "normalized_fidelity_per_site": 0.9972890840791621
+          },
+          {
+            "radius": 0.997286244975329,
+            "eigenvalue": [
+              0.997286244975329,
+              0.0
+            ],
+            "relative_residual": 1.680695301067194e-13,
+            "left": 5,
+            "right": 1,
+            "normalized_fidelity_per_site": 0.9972862449753495
+          },
+          {
+            "radius": 0.9972862449657005,
+            "eigenvalue": [
+              0.9972862449657005,
+              0.0
+            ],
+            "relative_residual": 7.948558900172896e-12,
+            "left": 5,
+            "right": 2,
+            "normalized_fidelity_per_site": 0.9972862449657209
+          },
+          {
+            "radius": 0.9975853401833958,
+            "eigenvalue": [
+              0.9975853401833958,
+              0.0
+            ],
+            "relative_residual": 7.07572252508566e-11,
+            "left": 5,
+            "right": 3,
+            "normalized_fidelity_per_site": 0.9975853401834164
+          },
+          {
+            "radius": 0.9972973784644976,
+            "eigenvalue": [
+              0.9972973784644976,
+              0.0
+            ],
+            "relative_residual": 7.786745141768727e-11,
+            "left": 5,
+            "right": 4,
+            "normalized_fidelity_per_site": 0.9972973784645182
+          },
+          {
+            "radius": 0.9972862452687299,
+            "eigenvalue": [
+              0.9972862452687299,
+              0.0
+            ],
+            "relative_residual": 9.60085695367665e-14,
+            "left": 5,
+            "right": 5,
+            "normalized_fidelity_per_site": 0.9972862452687503
+          }
+        ],
+        "delta_f_half": -1.8661504989081479e-06,
+        "delta_f_period_trial": -1.6544809070540012e-06,
+        "large_order_source_checkpoint": "checkpoints/branch128_pilot_ordered_p0.3048000.npz",
+        "largest_evaluated_fidelity_per_site": 0.9975853401834164
+      },
+      "total_refinement_seconds": 883.4795175569998,
+      "checkpoint_sha256": "d7c00c75b1b0064efc97cc58587b3d31aceab6fd6892d10d99bc295e795731ea"
+    }
+  },
+  "results": {},
+  "thermodynamic_order": "unresolved",
+  "automatic_physical_bracket": false,
+  "stability_tests_performed": false,
+  "chi192_launched": false
+}

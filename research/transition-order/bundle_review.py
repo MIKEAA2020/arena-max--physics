@@ -61,7 +61,8 @@ SHA256SUMS hashes the supplied files. Source attributions/rights are retained.
 '''
 manifest=''.join(f'{hashlib.sha256(data).hexdigest()}  {name}\n' for name,data in sorted(files.items()))
 files['SHA256SUMS']=manifest.encode()
-path=ROOT/'papers/v33-review-package.zip';tmp=path.with_suffix('.tmp')
+path=ROOT/'papers/v33-review-package.zip';tmp=ROOT/'.arena/package-work/v33-review-package.tmp'
+tmp.parent.mkdir(parents=True,exist_ok=True)
 with zipfile.ZipFile(tmp,'w',compression=zipfile.ZIP_DEFLATED,compresslevel=6) as z:
     for name,data in sorted(files.items()):z.writestr('v33-review/'+name,data)
 with zipfile.ZipFile(tmp) as z:
