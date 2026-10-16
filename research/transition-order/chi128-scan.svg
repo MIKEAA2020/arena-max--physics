@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="480" viewBox="0 0 960 480">
+<rect width="100%" height="100%" fill="white"/>
+<g font-family="Arial,sans-serif" fill="#173047">
+<text x="28" y="28" font-size="20" font-weight="bold">χ128 fixed-source scan: accepted one-point order diagnostics</text>
+<line x1="78" y1="390.0" x2="920" y2="390.0" stroke="#e4eaf0"/>
+<text x="65" y="394.0" text-anchor="end" font-size="12">0</text>
+<line x1="78" y1="306.25" x2="920" y2="306.25" stroke="#e4eaf0"/>
+<text x="65" y="310.25" text-anchor="end" font-size="12">0.25</text>
+<line x1="78" y1="222.5" x2="920" y2="222.5" stroke="#e4eaf0"/>
+<text x="65" y="226.5" text-anchor="end" font-size="12">0.5</text>
+<line x1="78" y1="138.75" x2="920" y2="138.75" stroke="#e4eaf0"/>
+<text x="65" y="142.75" text-anchor="end" font-size="12">0.75</text>
+<line x1="78" y1="55.0" x2="920" y2="55.0" stroke="#e4eaf0"/>
+<text x="65" y="59.0" text-anchor="end" font-size="12">1</text>
+<text x="127.52941176470102" y="418" text-anchor="middle" font-size="11">0.30400</text>
+<text x="375.17647058823366" y="418" text-anchor="middle" font-size="11">0.30450</text>
+<text x="474.2352941176632" y="418" text-anchor="middle" font-size="11">0.30470</text>
+<text x="553.4823529411904" y="418" text-anchor="middle" font-size="11">0.30486</text>
+<text x="622.8235294117663" y="418" text-anchor="middle" font-size="11">0.30500</text>
+<text x="870.4705882352989" y="418" text-anchor="middle" font-size="11">0.30550</text>
+<circle cx="551.4823529411904" cy="389.8498384204608" r="5" fill="#126b9a"/>
+<circle cx="100" cy="76" r="5" fill="#126b9a"/>
+<text x="115" y="80" font-size="13">ordered-start history</text>
+<circle cx="555.4823529411904" cy="388.7541764264573" r="5" fill="#bd5b2e"/>
+<circle cx="100" cy="101" r="5" fill="#bd5b2e"/>
+<text x="115" y="105" font-size="13">disordered-start history</text>
+<text x="490" y="447" text-anchor="middle" font-size="14">Measurement rate p</text>
+<text x="24" y="240" transform="rotate(-90 24 240)" text-anchor="middle" font-size="13">Invariant color L2 order</text>
+<text x="78" y="473" font-size="12">Accepted points only; no fit, global error bars, or transition-order certificate.</text>
+</g></svg>

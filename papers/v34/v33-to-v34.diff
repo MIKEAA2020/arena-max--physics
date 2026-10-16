@@ -1,0 +1,136 @@
+--- manuscript_revised_v33.tex
++++ manuscript_revised_v34.tex
+@@ -1,3 +1,5 @@
++% manuscript_revised_v34.tex -- author-review continuation; 16 October 2026
++% Source: preserved v33; numerical and interpretation changes recorded separately.
+ % manuscript_revised_v33.tex -- author-review draft; 16 October 2026
+ % Reproduction: papers/v33/revise_manuscript.py; see REVISION-REPORT.md.
+ % The v32 provenance ledger below is historical, not a certificate of the new numerics.
+@@ -41,7 +43,7 @@
+ \date{\today}
+ 
+ \begin{abstract}
+-We develop exact replica mechanics and Born-record large-deviation tools for monitored quantum circuits, using the annealed record-moment free energy as an organizing object without conflating it with normalized trajectory entanglement. Fixed-basis measurements leak from the one-wire permutation span; independently averaged two-site gates restore exact post-gate closure through an explicit Weingarten channel. The nonzero period spectrum is positive and semisimple and compresses to bond labels. At two replicas we recover the anisotropic triangular-Ising model of Bao, Choi and Altman, its critical point $p_c^{(2)}=0.233810$, and a closed free-fermion spectrum. For three replicas, uniform matrix-product-state calculations through bond dimension $\chi=96$ locate a single transition near $p_c^{(3)}=0.3049(2)$, with sign and standard order lost together. Weak first order is favored, but a continuous transition is not excluded. We withdraw the earlier three- and four-state-Potts assignments at $n=3,4$: small-system crossing ratios did not establish either class. The relevant structural comparison is instead to $n!$ permutation labels, with the regular $S_n$-bimodule splitting into distinct symmetry sectors; this count does not determine transition order at finite local dimension. Four- and five-replica spectra retain their value as finite-size diagnostics. Independently, conditional-trajectory and conditional-purity decision are PostBQP-complete under the stated promises. We establish record-LDP and multifractal identities, retain a no-freezing result under explicit analytic-cocycle hypotheses, derive an exact annealed--quenched interpolation identity, and report quenched Haar record-SCGF data. The Clifford dyadic identity closes the three-replica annealed moment exactly and enables sign-free tilted-stabilizer SMC. Its small-system benchmarks pass, while large-system genealogy collapse prevents a coexistence verdict from the present pilot.
++We develop exact replica mechanics and Born-record large-deviation tools for monitored quantum circuits, using the annealed record-moment free energy as an organizing object without conflating it with normalized trajectory entanglement. Fixed-basis measurements leak from the one-wire permutation span; independently averaged two-site gates restore exact post-gate closure through an explicit Weingarten channel. The nonzero period spectrum is positive and semisimple and compresses to bond labels. At two replicas we recover the anisotropic triangular-Ising model of Bao, Choi and Altman, its critical point $p_c^{(2)}=0.233810$, and a closed free-fermion spectrum. For three replicas, uniform matrix-product-state calculations through bond dimension $\chi=96$ locate a single transition near $p_c^{(3)}=0.3049(2)$, with sign and standard order lost together. Transition order remains unresolved. A later $\chi=128$ shared-rate test yields two accepted small-order solutions at $p=.30486$; this does not establish continuity or coexistence. We withdraw the earlier three- and four-state-Potts assignments at $n=3,4$: small-system crossing ratios did not establish either class. The relevant structural comparison is instead to $n!$ permutation labels, with the regular $S_n$-bimodule splitting into distinct symmetry sectors; this count does not determine transition order at finite local dimension. Four- and five-replica spectra retain their value as finite-size diagnostics. Independently, conditional-trajectory and conditional-purity decision are PostBQP-complete under the stated promises. We establish record-LDP and multifractal identities, retain a no-freezing result under explicit analytic-cocycle hypotheses, derive an exact annealed--quenched interpolation identity, and report quenched Haar record-SCGF data. The Clifford dyadic identity closes the three-replica annealed moment exactly and enables sign-free tilted-stabilizer SMC. Its small-system benchmarks pass, while large-system genealogy collapse prevents a coexistence verdict from the present pilot.
+ 
+ \end{abstract}
+ 
+@@ -747,9 +749,66 @@
+ 
+ \emph{Reading the thermodynamic-limit approximation.} The $p=0.3050$, $\chi=48$ state is an ordered local optimum; it melts into a disordered state at $\chi=72$ and remains disordered at $96$. No parity-only ordered state was found in the sampled scans, and both diagnostics lose order together within their resolution. Approximate branch crossings at $\chi=24,48,72$ give $p^*\simeq0.30538,0.30498,0.30489$. Linear continuation of the completed $\chi=96$ branches gives $p^*\simeq0.30487$; this is a branch-model estimate, not direct measurement of a coexistence window or a certified bracket. We retain $p_c^{(3)}=0.3049(2)$ as a numerical location with optimizer and finite-$\chi$ systematics.
+ 
+-The persistence of sizable order near the edge and the difference of branch slopes favor weak first order. They do not establish it: $\xi_\chi$ has not demonstrably saturated, resolved hysteresis disappears with increasing $\chi$, and the possible latent heat is extracted from approximate branches. At $p=0.3048$, $\xi_\chi$ grows nearly as $\chi^{1.1}$ from $72$ to $96$. Effective $-\Delta\log m/\Delta\log\xi_\chi$ values of about $0.03$--$0.08$ at fixed nearby rates are off-critical diagnostics, not estimates or upper bounds on an asymptotic $\beta/\nu$. Thus no $\nu$ bound is claimed. Nor is $\xi_{\rm coex}\simeq40$--$60$ quoted as a converged physical length: these are finite-$\chi$ lengths. The three-state-Potts assignment is withdrawn; a continuous non-Potts transition remains a serious alternative to weak first order.
++These earlier finite-$\chi$ observations motivated a weak-first-order preference, but did not establish a non-vanishing thermodynamic discontinuity. The later accepted $\chi=128$ two-preparation calculation at $p=.30486$ gives small order diagnostics for both histories, rather than a persistent large ordered/disordered separation at that point. It does not prove continuity, nor establish that this rate is on the thermodynamic disordered side: both finite-$\chi$ approximations could lie on one side of a shifted first-order crossing. Earlier unconverged $\chi=96$ states and the later run also differ in runtime and continuation details; the change is not a one-variable $\chi$ scaling experiment.
++
++No nonzero latent heat, limiting exponent, or converged coexistence length is quoted. In particular, the earlier approximate slope proxy near $.11$ and $\xi_{\rm coex}\simeq40$--$60$ are not validated physical coexistence measurements. The reported $\xi_\chi$ is an MPS transfer length. The three-state-Potts assignment remains withdrawn, and a continuous non-Potts transition and weak first order both remain live alternatives.
+ 
+ \emph{Retrospective: what $L\le18$ showed.} The ratio passes $1/6$ between the third and fourth crossing and keeps rising. The earlier statement that $0.107,0.144,0.161,0.171$ converges to $1/6$ was not supported, and a proposed $1/L^2$ extrapolation to $0.194$ is not an established asymptote either. Sign-sector crossings are offset from the standard-sector crossings at accessible sizes even though the uniform-MPS scans find no resolved intermediate phase. A gap approximately proportional to $1/L$ over small rings does not exclude a weak first-order transition: a tunnelling gap can be exponential only beyond its crossover scale. Exact evaluation of a finite operator does not remove finite-size systematics. The finite-size sequence is retained as a result about inference and method, not rebranded as a measured CFT dimension ratio.
++
++\subsection{Later $\chi=128$ two-preparation rate scan}
++
++\label{sec:chi128-scan}
++
++The following is a later author-review continuation, separate from the historical full-period $\chi\le96$ table above. It uses the same two immutable warm sources independently at every target rate; it is not a bidirectional hysteresis continuation. The $p=.30486$ source-matched accepted pair is reused rather than reoptimized. Acceptance requires the original $10^{-7}$ residual, both canonical compatibility checks, and a checked full-period expectation contraction. Half-row stationarity does not imply independent full-period optimizer convergence. Real canonical/physical tensors are saved; omitted environments are recomputable caches.
++
++
++Campaign status at source generation: running: recovered after session interruption.
++
++\begin{table*}[t]
++
++\caption{Fixed-$\chi=128$ two-start rate scan. O/D label initialization histories, not phases. Only accepted rows carry observables; pending or failed rows are not zero. $m_{\rm color}$ is the invariant norm of the six one-point amplitudes about uniformity. $\xi_\chi$ is an MPS length, not a certified physical coexistence length.}
++
++\label{tab:chi128-scan}
++
++\begin{ruledtabular}
++
++\begin{tabular}{cclrrrr}
++
++$p$ & prep. & status & $f_{\rm period}$ & $m_{\rm sp}$ & $m_{\rm color}$ & $\xi_\chi$\\
++
++\colrule
++
++0.30400 & O & pending & --- & --- & --- & ---\\
++
++0.30400 & D & pending & --- & --- & --- & ---\\
++
++0.30450 & O & pending & --- & --- & --- & ---\\
++
++0.30450 & D & pending & --- & --- & --- & ---\\
++
++0.30470 & O & pending & --- & --- & --- & ---\\
++
++0.30470 & D & pending & --- & --- & --- & ---\\
++
++0.30486 & O & accepted & 0.9930620839 & 0.000284 & 0.000448 & 59.56\\
++
++0.30486 & D & accepted & 0.9930620802 & 0.003909 & 0.003719 & 62.49\\
++
++0.30500 & O & pending & --- & --- & --- & ---\\
++
++0.30500 & D & pending & --- & --- & --- & ---\\
++
++0.30550 & O & pending & --- & --- & --- & ---\\
++
++0.30550 & D & pending & --- & --- & --- & ---\\
++
++\end{tabular}
++
++\end{ruledtabular}
++
++\end{table*}
++
++At first-order coexistence, the competing bulk free-energy densities agree. A finite bulk gap at a sampled rate is not coexistence; a persistent observable/slope discontinuity or interface cost is a different diagnostic. Distinct finite-$\chi$ minima may persist away from a crossing, and a coarse grid may miss a narrow window. Neither branch separation at one $\chi$ nor its absence on these six points supplies a thermodynamic order verdict. A controlled branch crossing and $\chi$/size-systematic analysis remain necessary.
+ 
+ \subsection{Four- and five-replica finite-size diagnostics}
+ \label{sec:n4n5}
+@@ -1670,11 +1729,11 @@
+ 
+ The exact contribution is an operator contract, not a replacement for thermodynamic extrapolation. Fixed-basis measurement leaks from the local permutation span; the subsequent independent gate twirl restores the post-gate bond space. Compression and Hilbert--Schmidt positivity organize the spectrum, and the $n=2$ Ising identification recovers an established benchmark~\cite{Bao2020}. General-$n$ ranks, exceptional sets and growth-rate regularity remain mathematical questions even where finite computations are accurate.
+ 
+-For phase identification, the revision replaces short-ring universality assignments by two complementary methods. Uniform MPS accesses infinite spatial extent but has finite bond dimension and optimizer systematics. Tilted Clifford SMC has positive weights and exact tableau updates but has finite-population, finite-time and genealogy errors. Neither method removes the need for a controlled extrapolation. At $n=3$ the completed $\chi=96$ points support a single transition near $.3049$; weak first order is favored but not established. At $n=4$ the four-state-Potts claim is withdrawn, not suspended pending another fit. At $n=5$ the raw gap ladder remains consistent with stronger first-order behavior, without a demonstrated positive asymptotic interface tension.
++For phase identification, the revision replaces short-ring universality assignments by two complementary methods. Uniform MPS accesses infinite spatial extent but has finite bond dimension and optimizer systematics. Tilted Clifford SMC has positive weights and exact tableau updates but has finite-population, finite-time and genealogy errors. Neither method removes the need for a controlled extrapolation. At $n=3$ the earlier $\chi\le96$ data supply a working locator near $.3049$; the later accepted $\chi=128$ shared-rate comparison does not settle order. Weak first order and continuity both remain live. At $n=4$ the four-state-Potts claim is withdrawn, not suspended pending another fit. At $n=5$ the raw gap ladder remains consistent with stronger first-order behavior, without a demonstrated positive asymptotic interface tension.
+ 
+ The $n!$ comparison organizes the sectors more accurately than $q=n$, but it is not a new theorem of universality. Ref.~\cite{Vasseur2019} already establishes permutation-spin and Potts-limit connections in its setting, and the regular bimodule is standard algebra. The contribution here is their disciplined use in this particular monitored-circuit model and the independent numerical tests they motivate. A real-moment changeover between the Ising rung and $n=3$ is conditional on the latter being first-order and on the existence and regularity of the interpolating phase boundary. No unique $n_*$ or replica CFT is derived. Fits toward $q=1$ remain conjectural and do not determine a quenched entropy, in accordance with Theorem~\ref{thm:no-go}.
+ 
+-The next computation is population-controlled tilted SMC, not merely a larger raw histogram. It should combine exact finite-time anchors near $.305$, population ladders and independent seeds, sufficient temporal buffers, blocked additive-density observables and a direct check that both candidate phases are sampled. Genealogical ESS and phase-switching histories are required alongside incremental ESS. Bias or non-mixing at coexistence may require tempering, trajectory-space moves or an improved guiding function. A larger MPS calculation should separately resolve two branches at the same $p$, quantify residuals and test correlation-length saturation; $\chi\ge200$ is a computational target, not a guarantee. The unchanged six-label MPO at $n=3,d=3$ is an economical next dimension test. A sector-aware $n=4$ MPS implementation and the 29-dimensional two-qubit Clifford fourth commutant are further tasks, not completed computations.
++The chosen next production computation is the deterministic Hermitian half-row transfer-MPS two-preparation rate scan at $\chi=128$, using actual saved MPS states and the original $10^{-7}$ tolerance. This is the same replica operator, not an independent disorder tilt. It is accompanied by exact small-ring identities, Ising and gapped controls, and same-period expectation contractions. Guided or resample-move SMC remains gated behind separate population, genealogy and mixing controls; the earlier pilot is not a no-go for every SMC method. The $n=3,d=3$ finite-size/coarse-MPS tests and the rank-29 two-qubit fourth-Clifford transfer operator with an $L=4,6$ ladder have also been implemented. Their finite-size observations do not establish a thermodynamic order or critical-point split. Larger ladders, a fine fourth-moment MPS scan and the $n=5$ quotient/orbit assembler remain open.
+ 
+ The analytic program also has explicit gates. A large-$d$ expansion must be derived for this monitored-circuit operator before an ordinary Potts result is imported. A Pirogov--Sinai or contour route, including the methods of Borgs and Imbrie~\cite{BorgsImbrie1989}, would require identified stable phases and verified contour/Peierls bounds; the presence of signed coordinates does not make the theorem automatically applicable. A cluster or loop representation exposing real $q$ as a parameter would be valuable, but is not constructed. The exact $n=2$ endpoint $p_c(d)\to1$ and a proposed $n\to\infty$ endpoint should not be conflated with a proof of noncommuting replica and dimension limits.
+ 
+@@ -1685,22 +1744,26 @@
+ \section{Interpretive status of the record formalism}
+ \label{sec:interpretation}
+ 
+-The record can be read operationally as an ordered stream of outcomes. Its probabilities, entropy rates, LDPs and conditional states are specified within the circuit model. Calling the record an ``appearance-stream'' changes no result and establishes no ontology. Theorems about a stochastic process presupposing an event order do not derive time, consciousness, a universal observer, or the identity of a creator with creation.
+-
+-The exact distinction is informational: symmetric unconditioned summaries need not determine Born-weighted conditional entanglement, while record-resolved information can. This does not derive the Born rule; that rule is a premise of the process. Nor does self-averaging mean that agents with different histories must converge to identical probabilities without common model and inference assumptions. It is a statement about specified random quantities and limits.
+-
+-Interpretations that reproduce the same operational instrument reproduce the same record law. A modified-collapse dynamics, a different instrument, or a different probability rule need not do so, and is not covered by a theorem about the original law. There is no theorem here making Bohmian, Everettian, QBist or collapse descriptions equivalent in general. The phase-transition retraction therefore changes no interpretation-specific prediction; the old references to ``specific Potts classes'' and marginal corrections as established facts are removed.
+-
+-The manuscript's commitments are checkability, explicit primitives, stable distinctions between theorem, numerical evidence and conjecture, and reproducible artifacts. Its former non-dual working assumption is not required or imported as a premise. Any separate philosophical account must be argued independently; neither a theological premise nor its negation is established by these circuit calculations. This section carries no evidential weight for the physics.
++The record formalism describes an ordered stream of outcomes within a specified physical instrument. Its probabilities, entropy rates, large deviations and conditional states are mathematical objects of that model. They do not derive consciousness, an all-encompassing observer, the ultimate nature of time, or an identity between the Creator and creation. The description of a record is not a claim that the world is merely an unreal appearance.
++
++\paragraph{Governing interpretive framework.}
++The interpretation adopted for this project is governed by the Qur'anic/Lighthouse framework, not by an ``only the Absolute exists'' or non-dual working premise. On that reading, God is uncreated; creation is real, created, sustained and dependent, and is really distinct from its Creator. Dependence is not identity, and distinction does not make creation a second independent absolute. This is an ontological distinction, not a spatial distance or a relation between two physical objects.\footnote{The separate framework argues this reading from text, context and tafsir before formalization; the user's choice of an override is not itself interpretive authority. Relevant textual constraints include Qur'an 42:11 (nothing like Him), 39:62 (God as Creator), and 112:1--4, together with the asymmetric-dependence argument in the Lighthouse framework, Part I, Sec.~4.1. These are not conclusions inferred from the circuit calculations.}
++
++Consequently, a quantum state, a Hilbert space, an observable algebra, a channel, a record stream, or a modular flow is not identified with God or with a divine substance. The physical systems modeled here belong to the created order. God is not inserted as a clock, Hamiltonian, field, measurement mechanism, or gap-filling physical variable. Neither the replica calculation nor a change in its transition-order assessment establishes or refutes the grounding relation asserted by this separate interpretive framework.
++
++\paragraph{Operational and mathematical scope.}
++Symmetric unconditioned summaries need not determine Born-weighted conditional entanglement, while record-resolved information can. This distinction does not derive the Born rule, which is a premise of the process. Nor does self-averaging force agents with different histories to identical probabilities without common model and inference assumptions. A stochastic process that presupposes an event order does not by itself solve the fundamental problem of time; its temporal indexing concerns the created system, not the Creator.
++
++Interpretations reproducing the same operational instrument reproduce the same record law. Modified-collapse dynamics, a different instrument, or a different probability rule need not do so. There is no theorem here identifying Bohmian, Everettian, QBist and collapse descriptions in general. These limits are unchanged by the governing creator--creation distinction. The mathematical claims must stand on their own proofs and hypotheses, empirical claims on their data and error controls, and this interpretive reading on its independently argued textual and philosophical warrant. No circuit theorem is advertised as a proof of theology.
+ 
+ \section{Conclusion}
+ \label{sec:conclusion}
+ 
+ The paper establishes exact local leakage and post-gate closure, a compressed positive-semidefinite spectral description, rank certificates in their stated scope, and a recovery of the Bao--Choi--Altman two-replica Ising solution with closed spectrum. These are independent of the withdrawn numerical class assignments.
+ 
+-The corrected annealed phase diagram has a numerically located three-replica transition near $p_c^{(3)}=.3049(2)$, with simultaneous loss of sign and standard order in the sampled uniform-MPS scans through $\chi=96$. Weak first order is favored; continuity remains open. We retract the three- and four-state-Potts assignments and the argument from the dimension of one standard irrep. The regular bimodule and the conditional $n!$ ordered-state orbit supply the appropriate structural comparison without proving transition order. Four- and five-replica small-system spectra are retained as such; the $n=5$ first-order reading is plausible but not asymptotically certified. No converged coexistence length, nonzero latent heat, real-replica changeover, or $q\to1$ continuation is claimed.
+-
+-Conditional-trajectory and conditional-purity decision remain PostBQP-complete under their promises. The record theory retains the exact LDP/multifractal and interpolation identities, numerical quenched Haar SCGFs, a correctly scoped no-freezing statement, and the Clifford dyadic closure through the third Haar moment. The new tilted stabilizer sampler independently reproduces finite-time anchors and reaches $L=128$ without signed weights or MPS truncation. Its large-size genealogies nevertheless collapse, so this pilot does not settle coexistence. The two-qubit fourth Clifford commutant has rank 29, not an independent stable-regime 30-label basis; its transfer operator and possible critical-point split are future computations.
++The corrected annealed phase diagram has a numerically located three-replica transition near $p_c^{(3)}=.3049(2)$, with simultaneous loss of sign and standard order in the sampled uniform-MPS scans through $\chi=96$. Weak first order and continuity remain open; the later $\chi=128$ one-point comparison is not a binary order test. We retract the three- and four-state-Potts assignments and the argument from the dimension of one standard irrep. The regular bimodule and the conditional $n!$ ordered-state orbit supply the appropriate structural comparison without proving transition order. Four- and five-replica small-system spectra are retained as such; the $n=5$ first-order reading is plausible but not asymptotically certified. No converged coexistence length, nonzero latent heat, real-replica changeover, or $q\to1$ continuation is claimed.
++
++Conditional-trajectory and conditional-purity decision remain PostBQP-complete under their promises. The record theory retains the exact LDP/multifractal and interpolation identities, numerical quenched Haar SCGFs, a correctly scoped no-freezing statement, and the Clifford dyadic closure through the third Haar moment. The new tilted stabilizer sampler independently reproduces finite-time anchors and reaches $L=128$ without signed weights or MPS truncation. Its large-size genealogies nevertheless collapse, so this pilot does not settle coexistence. The two-qubit fourth Clifford commutant has rank 29, not an independent stable-regime 30-label basis; its transfer operator and finite $L=4,6$ Haar/Clifford comparison have since been implemented, while any thermodynamic critical-point split remains open.
+ 
+ The methodological result is not that exact spectra settle universality on small lattices, but that exact operators can be reused with independent, controlled limiting methods. The revised paper separates what is proved, what is reproduced, what is preferred, and what still requires a discriminating computation.
+ 

@@ -1,0 +1,8 @@
+{
+  "p": 0.3047,
+  "master_protocol": "research/transition-order/scan128/recovery-master-p0.3047000-1.json",
+  "master_sha256": "5f4acf826dda05938d32d8289d671b9cc34c68120cfcad607aa952bc6fbb7441",
+  "deadline_unix": 1792159505.2491722,
+  "recovery_event": 1,
+  "original_global_deadline_unchanged": true
+}

@@ -1,0 +1,13 @@
+p,preparation,status,accepted,reference_reused,eps,iters,total_stage_seconds,f_half,f_full_rayleigh,m_species,m_parity,color_l2_order,xi_chi,checkpoint,checkpoint_sha256
+0.304,ordered,pending,False,False,,,,,,,,,,,
+0.304,disordered,pending,False,False,,,,,,,,,,,
+0.3045,ordered,pending,False,False,,,,,,,,,,,
+0.3045,disordered,pending,False,False,,,,,,,,,,,
+0.3047,ordered,pending,False,False,,,,,,,,,,,
+0.3047,disordered,pending,False,False,,,,,,,,,,,
+0.30486,ordered,accepted-stationary-at-finite-chi,True,True,9.991478996514631e-08,186,2507.052783944,0.9930622852597312,0.9930620839285511,0.0002838875322486894,-1.1385678931165669e-06,0.00044824352101255626,59.5577422027584,checkpoints/n3_ordered_chi128_p0.3048600.npz,44816bca83abc7fa8dbc8ba61d52a0d05adf860febe928c4fef2ce2a70dc602d
+0.30486,disordered,accepted-stationary-at-finite-chi,True,True,9.56534706713505e-08,79,1022.7505504999999,0.9930622737045575,0.9930620801716004,0.00390943249061822,-0.0028372904097786213,0.003718876338933457,62.490784381254116,checkpoints/n3_disordered_chi128_p0.3048600.npz,594d54643bba88ce38c933281d40949a82e80eaef0266a4136cfc8d25078e36f
+0.305,ordered,pending,False,False,,,,,,,,,,,
+0.305,disordered,pending,False,False,,,,,,,,,,,
+0.3055,ordered,pending,False,False,,,,,,,,,,,
+0.3055,disordered,pending,False,False,,,,,,,,,,,

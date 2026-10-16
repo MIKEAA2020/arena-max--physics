@@ -1,0 +1,3 @@
+SCAN_CASE_START disordered 0.3047
+    it=  0 eta=0.6087929015 lamC=1.0000453642 etaL=0.6087922279 eps=3.61e-04 [15s]
+    it= 10 eta=0.6087931515 lamC=1.0000028422 etaL=0.6087931281 eps=1.86e-04 [166s]

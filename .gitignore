@@ -1,3 +1,5 @@
+# Durable private workspace storage; never publish
+.private/
 # Authentication and private metadata
 .arena/
 .git/

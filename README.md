@@ -37,3 +37,9 @@ See `v2.2/verify/replica/replica_halfrow.py` and `order_campaign.py` for actual 
 [PUBLICATION-SCOPE.md](PUBLICATION-SCOPE.md) describes the generated-artifact snapshot, narrowly identified supplied reproduction inputs, excluded bulk downloads and credential handling. `PUBLICATION-MANIFEST.json` records file hashes for the publication snapshot. The existing repository license is not a representation of ownership of quoted literature, translations or supplied manuscripts; those materials retain their original rights and attributions.
 
 No access token belongs in this repository. Authentication metadata, dependency caches and bulk source downloads are excluded. The original repository history is retained; publication uses ordinary, non-force commits.
+
+## Six-rate continuation and interpretation update
+
+The requested χ128 fixed-source grid is recorded in [SCAN128-RESULTS.md](research/transition-order/SCAN128-RESULTS.md). Pending, interrupted, budget-stopped and accepted preparations remain distinct; no finite bulk gap or missing sampled separation is automatically called a transition-order verdict.
+
+The [v34 author-review continuation](papers/v34/manuscript_revised_v34.tex) explicitly applies the governing Qur’anic/Lighthouse reading: real, dependent creation is distinct from its uncreated Creator. It does not identify God with a state, observable algebra or physical clock, and it does not derive theology from circuit physics. Original v33 is preserved; [the v34 report](papers/v34/REVISION-REPORT.md) records unchanged mathematical blocks and remaining submission blockers.

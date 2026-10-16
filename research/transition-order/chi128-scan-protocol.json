@@ -1,0 +1,66 @@
+{
+  "campaign": "2026-10-16-fixed-source-chi128-six-rate-v1",
+  "authorization": "User selected full_grid: up to 7.5 hours, same two preparations, full requested six-point grid.",
+  "grid": [
+    0.304,
+    0.3045,
+    0.3047,
+    0.30486,
+    0.305,
+    0.3055
+  ],
+  "priority_new_rates": [
+    0.3047,
+    0.305,
+    0.3045,
+    0.304,
+    0.3055
+  ],
+  "n": 3,
+  "d": 2,
+  "chi": 128,
+  "tol": 1e-07,
+  "maxiter": 10000,
+  "optimizer_seconds": 5280,
+  "point_wall_seconds": 5400,
+  "campaign_wall_seconds": 27000,
+  "campaign_deadline_unix": 1792174012.0154197,
+  "correlation_rmax": 240,
+  "canonical_ceiling": 1e-09,
+  "period_contraction_ceiling": 1e-08,
+  "preparations": {
+    "ordered": {
+      "checkpoint": "v2.2/verify/replica/checkpoints/n3_ordered_chi128_p0.3048000_partial_iter63.npz",
+      "sha256": "207a40c1cd9be0da903dcc9ce944ba1665022ee04979c62a647029f6fff204dd",
+      "qualification": "unconverged warm initializer, not an accepted observation"
+    },
+    "disordered": {
+      "checkpoint": "v2.2/verify/replica/checkpoints/n3_disordered_chi128_p0.3050000_partial_iter15.npz",
+      "sha256": "94846e70a2d61d61d8ef4cf9a24ac25d763bb3c011b8517886a5d7188a369842",
+      "qualification": "unconverged warm initializer, not an accepted observation"
+    }
+  },
+  "source_sha256": {
+    "v2.2/verify/replica/replica_vumps.py": "4830e638829e1df645e16442171a820baf7bd710c617f24c32f089f79c399247",
+    "v2.2/verify/replica/replica_halfrow.py": "b791a81675ebe697d36a82a2572753185b4b8c7d13164e12cb47feab3c85ed5d",
+    "v2.2/verify/replica/replica_tm.py": "43a5074315a61379aa70e5251111601ec41c26ff762a11dcde5b9c665e18ba20",
+    "v2.2/verify/replica/scan128_worker.py": "48856fb67ed26b2908d0c9705173446c3b112b459a43c0873cb626211e4219dd",
+    "v2.2/verify/replica/compare_stationary.py": "2dbcf288822c0b8e7f3d41a771362ea78415f0f4306d452b4fb80894884cc23f",
+    "research/transition-order/chi128_scan_campaign.py": "5af40878d58b6ec81db7b8b28b9ef3c1fd13811bdd333609f9813fe4aab88706"
+  },
+  "software": {
+    "python": "3.13.16",
+    "numpy": "2.3.5",
+    "scipy": "1.17.1"
+  },
+  "max_heavy_workers": 2,
+  "threads_per_worker": 1,
+  "preparation_mode": "Same two immutable initial MPS states independently at every p; not a bidirectional hysteresis continuation.",
+  "reference_reuse": "p=.30486 reuses both actual accepted NPZ states and source-matched protocol; no scalar-cache substitution.",
+  "checkpoint_policy": "AL, AR, AC, C saved every five iterations and at stop. FL/FR omitted only as recomputable caches. Two serializer-equivalence/roundtrip smoke checks passed.",
+  "launch_checks": "49/49 transfer checks passed freshly; same subset as historical 246, not additional distinct checks.",
+  "coexistence_rule": "Competing bulk free energies agree at coexistence; finite gap is not coexistence. Persistent distinct stationary branches plus a controlled crossing and chi/size-stable discontinuity would be candidate evidence, not a one-chi theorem.",
+  "classification": "No automatic first-order or continuous verdict, including if no branch separation is sampled. A six-point grid can miss a narrow window.",
+  "chi96_production": false,
+  "chi192_automatic": false
+}

@@ -1,0 +1,12 @@
+{
+  "recovery_driver": "research/transition-order/resume_chi128_scan.py",
+  "recovery_driver_sha256": "81c3f2a1d09eb07b25065a606444985adc820cf2b8d31fdf1705633822e3221b",
+  "original_protocol_sha256": "6b77eaca105b7fef3ee7564df84e6e83cde5f215f32d853852d0ba956f96820b",
+  "recovery_master_files": {
+    "research/transition-order/scan128/recovery-master-p0.3047000-1.json": "5f4acf826dda05938d32d8289d671b9cc34c68120cfcad607aa952bc6fbb7441"
+  },
+  "no_numerical_tolerance_change": true,
+  "original_math_sources_unchanged": true,
+  "original_global_deadline_unchanged": true,
+  "time_accounting": "prior checkpoint seconds/iterations retained as lower-bound segments; session pause and unknown lost work are not counted as a measured CPU total"
+}

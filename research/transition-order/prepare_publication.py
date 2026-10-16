@@ -1,16 +1,23 @@
 #!/usr/bin/env python3
 """Prepare (not push) the allowlisted generated-work snapshot for GitHub.
-The destination must be an existing Git clone. Credentials stay in its excluded
-.git metadata. Scan actual secrets without ever printing them. ZIP/OOXML/NPZ
+The public clone can be restored if excluded operational Git metadata is absent.
+Credentials live only in the private workspace directory (legacy excluded Git
+metadata is also scanned when present). Scan actual secrets without printing them. ZIP/OOXML/NPZ
 members are scanned too; a suspicious file aborts before staging.
 """
 from pathlib import Path
-import os,sys,shutil,json,hashlib,zipfile,io,re
+import os,sys,shutil,json,hashlib,zipfile,io,re,subprocess
 from urllib.parse import urlsplit,unquote
 ROOT=Path(__file__).resolve().parents[2]
 DEST=Path(os.environ.get('PUBLISH_CLONE',ROOT/'.arena/publish')).resolve()
-if not (DEST/'.git').is_dir():raise SystemExit('Destination is not an existing Git clone')
+if not (DEST/'.git').is_dir():
+    if DEST.exists() and any(DEST.iterdir()):raise SystemExit('Refusing to replace a nonempty non-Git destination')
+    DEST.parent.mkdir(parents=True,exist_ok=True)
+    env=os.environ.copy();env['GIT_TERMINAL_PROMPT']='0'
+    subprocess.run(['git','-c','credential.helper=','clone','--quiet','https://github.com/MIKEAA2020/arena-max--physics.git',str(DEST)],check=True,env=env)
 if DEST==ROOT:raise SystemExit('Refusing workspace root as publication clone')
+publication_remote=subprocess.check_output(['git','-C',str(DEST),'remote','get-url','origin'],text=True).strip()
+if publication_remote not in ['https://github.com/MIKEAA2020/arena-max--physics.git','https://github.com/MIKEAA2020/arena-max--physics']:raise SystemExit('Refusing a publication remote outside the authorized repository')
 SKIP={'.git','.arena','.cache','.local','.npm','.pytest_cache','.venv','__pycache__','node_modules','build','dist','target','out','.next','.vite','Unselected files'}
 ALLOW=['v2.1','v2.2','papers','clues','research']
 # These supplied inputs are included solely for the reproducible A-1 record.
@@ -25,6 +32,9 @@ if cred.exists():
         u=urlsplit(line)
         if u.password:
             raw=unquote(u.password).encode();secrets.extend([raw,u.password.encode()])
+persistent_private_token=ROOT/'.private/github-repository.pat'
+if persistent_private_token.exists():
+    secrets.append(persistent_private_token.read_bytes().strip())
 patterns=[re.compile(rb'github_pat_[A-Za-z0-9_]{20,}'),re.compile(rb'gh[pousr]_[A-Za-z0-9]{20,}'),re.compile(rb'-----BEGIN (?:RSA |EC |OPENSSH )?PRIVATE KEY-----')]
 def scan(data,label,depth=0):
     if any(s and s in data for s in secrets) or any(p.search(data) for p in patterns):
