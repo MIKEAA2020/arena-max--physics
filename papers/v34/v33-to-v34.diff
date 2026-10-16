@@ -24,7 +24,7 @@
  
  The third contribution is logically independent of those class assignments. Born normalization separates conditional trajectories from symmetric replica summaries: an information-theoretic no-go has an explicit bivariate recovery, and conditional-trajectory and conditional-purity decision are PostBQP-complete for universal-circuit descriptions under the promises of Appendix~\ref{app:complexity}. The record theory supplies quenched large-deviation and multifractal identities, a no-freezing statement with explicit analytic-cocycle and nondegeneracy hypotheses, the exact replica interpolation identity, and numerical quenched Haar record SCGFs. These are results in their own right, not merely consequences of a proposed phase diagram. Clifford records provide exact dyadic identities and a second numerical route: the Haar $n=3$ annealed moment equals a positive $4^{-N_{\rm rand}}$ disorder tilt of stabilizer circuits. We implement that route and state the finite-population and genealogy limitations of its present pilot.
  
-@@ -747,9 +749,82 @@
+@@ -747,9 +749,84 @@
  
  \emph{Reading the thermodynamic-limit approximation.} The $p=0.3050$, $\chi=48$ state is an ordered local optimum; it melts into a disordered state at $\chi=72$ and remains disordered at $96$. No parity-only ordered state was found in the sampled scans, and both diagnostics lose order together within their resolution. Approximate branch crossings at $\chi=24,48,72$ give $p^*\simeq0.30538,0.30498,0.30489$. Linear continuation of the completed $\chi=96$ branches gives $p^*\simeq0.30487$; this is a branch-model estimate, not direct measurement of a coexistence window or a certified bracket. We retain $p_c^{(3)}=0.3049(2)$ as a numerical location with optimizer and finite-$\chi$ systematics.
  
@@ -102,13 +102,15 @@
 +
 +The upper-rate large-order history did not remain large-order: both accepted $.30485$ approximants have small invariant one-point order. The numerical ranking signs reverse relative to $.30480$, but the upper O-history value is not a retained ordered-branch pressure. Thus this test supplies no retained two-family pressure-crossing bracket. It does not prove continuity, branch absence or a physical spinodal, nor bound a thermodynamic metastability-window width. No smaller step or stability/large-$\chi$ campaign was automatically run.
 +
-+\paragraph{Separately authorized closer common rate.} The closer test at $.304825$, $\chi=128$, warm-starts both accepted $.30480$ states, not the small-order $.30485$ outputs. It uses unchanged external gates, zero phase bias and a one-hour cap. Its status is running: one common closer rate. No further rate, $\chi=192$ or stability production is automatic. A same-objective ranking sign change is relevant only if distinguishable numerical families are retained; it is not a global-minimum, spinodal or thermodynamic-order certificate.
++\paragraph{Separately authorized closer common rate.} The closer test at $.304825$, $\chi=128$, warm-starts both accepted $.30480$ states, not the small-order $.30485$ outputs. It uses unchanged external gates, zero phase bias and a one-hour cap. Its status is complete: both closer-rate numerical states accepted. No further rate, $\chi=192$ or stability production is automatic. A same-objective ranking sign change is relevant only if distinguishable numerical families are retained; it is not a global-minimum, spinodal or thermodynamic-order certificate.
++
++At $.304825$, invariant order is 0.464386 / 0.005823, with half-row objective difference -4.359393e-07 and separately evaluated period-trial difference -2.528837e-07. The same-objective crossing question and finite-$\chi$ systematics are kept distinct from these raw values.
 +
 +The completed six-rate experiment gives large order diagnostics for both histories at $.3040,.3045,.3047$ and small diagnostics for both at $.30486,.3050,.3055$. No persistent ordered/disordered branch separation was demonstrated at these sampled rates after symmetry alignment. The large-to-small change is sampled between $.3047$ and $.30486$ at this fixed $\chi$; this is not a thermodynamic critical-point confidence interval or a measured jump. A narrower stationary-branch bracket and $\chi$/size-systematic control remain necessary, so first order and continuity both remain live.
  
  \subsection{Four- and five-replica finite-size diagnostics}
  \label{sec:n4n5}
-@@ -1670,11 +1745,11 @@
+@@ -1670,11 +1747,11 @@
  
  The exact contribution is an operator contract, not a replacement for thermodynamic extrapolation. Fixed-basis measurement leaks from the local permutation span; the subsequent independent gate twirl restores the post-gate bond space. Compression and Hilbert--Schmidt positivity organize the spectrum, and the $n=2$ Ising identification recovers an established benchmark~\cite{Bao2020}. General-$n$ ranks, exceptional sets and growth-rate regularity remain mathematical questions even where finite computations are accurate.
  
@@ -122,7 +124,7 @@
  
  The analytic program also has explicit gates. A large-$d$ expansion must be derived for this monitored-circuit operator before an ordinary Potts result is imported. A Pirogov--Sinai or contour route, including the methods of Borgs and Imbrie~\cite{BorgsImbrie1989}, would require identified stable phases and verified contour/Peierls bounds; the presence of signed coordinates does not make the theorem automatically applicable. A cluster or loop representation exposing real $q$ as a parameter would be valuable, but is not constructed. The exact $n=2$ endpoint $p_c(d)\to1$ and a proposed $n\to\infty$ endpoint should not be conflated with a proof of noncommuting replica and dimension limits.
  
-@@ -1685,22 +1760,26 @@
+@@ -1685,22 +1762,26 @@
  \section{Interpretive status of the record formalism}
  \label{sec:interpretation}
  

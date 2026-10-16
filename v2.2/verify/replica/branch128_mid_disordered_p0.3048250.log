@@ -1,0 +1,7 @@
+CLOSER_CASE_START disordered 0.304825 internal 5e-08 external 1e-07
+    it=  0 eta=0.6086720967 lamC=1.0000005320 etaL=0.6086720905 eps=3.61e-05 [19s]
+    it= 10 eta=0.6086720980 lamC=1.0000000001 etaL=0.6086720980 eps=1.71e-06 [191s]
+    it= 20 eta=0.6086720980 lamC=1.0000000000 etaL=0.6086720980 eps=3.09e-07 [345s]
+    it= 30 eta=0.6086720980 lamC=1.0000000000 etaL=0.6086720980 eps=7.37e-08 [515s]
+    it= 33 eta=0.6086720980 lamC=1.0000000000 etaL=0.6086720980 eps=4.98e-08 [565s]
+CLOSER_CASE_RESULT {"history": "disordered", "status": "accepted closer-rate numerical state", "eps": 4.977076637266288e-08, "gauge_right_residual": 4.987013692568735e-08, "m_species": 0.006180026912085373, "color_l2_order": 0.005822616215237372, "f_half": 0.9929511664732216, "f_full_rayleigh": 0.9929509516459257, "total_stage_seconds": 582.825875464}
