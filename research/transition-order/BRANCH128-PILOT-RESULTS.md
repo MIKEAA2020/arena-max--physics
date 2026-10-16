@@ -2,7 +2,7 @@
 
 16 October 2026 · A-1 continuation · numerical retention test, not an order verdict.
 
-**Status:** running: stage 1 accepted; next step remains separately gated. The user separately authorized at most three hours overall, with at most two single-thread CPU workers. No χ192, extra crossing point or perturbation production is automatic.
+**Status:** stopped: stage 2 acceptance gate not passed for both histories. The user separately authorized at most three hours overall, with at most two single-thread CPU workers. No χ192, extra crossing point or perturbation production is automatic.
 
 ## Protocol and objective
 
@@ -27,6 +27,8 @@ These anchors are at different rates and are not a coexistence pair. Their origi
 |---:|---|---:|---|---:|---:|---:|---:|
 | 1 | ordered | 0.30475 | accepted-finite-chi | 8.194e-08 | 0.513220 | 0.99270791085 | 0.99270789853 |
 | 1 | disordered | 0.30483 | accepted-finite-chi | 9.913e-08 | 0.005362 | 0.99296704401 | 0.99296683247 |
+| 2 | ordered | 0.30480 | accepted-finite-chi | 9.065e-08 | 0.488232 | 0.99286988547 | 0.99286986444 |
+| 2 | disordered | 0.30480 | iteration-cap-or-stationarity-check-failed | 9.996e-08 | — | — | — |
 
 Missing or rejected results are not zero and are not stationary branch observations. If a step fails, its path stops; it is not promoted by skipping to the next target.
 

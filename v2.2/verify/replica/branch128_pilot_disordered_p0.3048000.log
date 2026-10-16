@@ -1,0 +1,13 @@
+BRANCH_CASE_START disordered 0.3048
+    it=  0 eta=0.6086962655 lamC=1.0000006954 etaL=0.6086962573 eps=4.20e-05 [20s]
+    it= 10 eta=0.6086962672 lamC=1.0000000003 etaL=0.6086962672 eps=2.07e-06 [206s]
+    it= 20 eta=0.6086962673 lamC=1.0000000000 etaL=0.6086962672 eps=5.97e-07 [390s]
+    it= 30 eta=0.6086962673 lamC=1.0000000000 etaL=0.6086962673 eps=2.92e-07 [583s]
+    it= 40 eta=0.6086962673 lamC=1.0000000000 etaL=0.6086962673 eps=2.17e-07 [775s]
+    it= 50 eta=0.6086962673 lamC=1.0000000000 etaL=0.6086962673 eps=1.86e-07 [969s]
+    it= 60 eta=0.6086962673 lamC=1.0000000000 etaL=0.6086962673 eps=1.64e-07 [1142s]
+    it= 70 eta=0.6086962673 lamC=1.0000000000 etaL=0.6086962673 eps=1.45e-07 [1315s]
+    it= 80 eta=0.6086962673 lamC=1.0000000000 etaL=0.6086962673 eps=1.28e-07 [1477s]
+    it= 90 eta=0.6086962673 lamC=1.0000000000 etaL=0.6086962673 eps=1.13e-07 [1639s]
+    it=100 eta=0.6086962673 lamC=1.0000000000 etaL=0.6086962673 eps=1.00e-07 [1797s]
+BRANCH_CASE_RESULT {"preparation": "disordered", "p": 0.3048, "status": "iteration-cap-or-stationarity-check-failed", "eps": 9.995603786506007e-08, "iters": 101, "total_stage_seconds": 1799.1741312839986, "m_species": 0.009658798016031341, "color_l2_order": null, "f_full_rayleigh": null}

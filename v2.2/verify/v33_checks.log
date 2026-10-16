@@ -34,4 +34,4 @@
 [PASS] Optional CPD amplified threshold gap is positive precisely for integers n>=3 
 [PASS] Core operator, LDP, interpolation and dyadic statements preserved verbatim 
 
-35/35 checks passed [72.3s]
+35/35 checks passed [96.1s]

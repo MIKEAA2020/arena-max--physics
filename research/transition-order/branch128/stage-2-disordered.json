@@ -1,0 +1,8 @@
+{
+  "p": 0.3048,
+  "master_protocol": "research/transition-order/branch128/stage-2-master.json",
+  "master_sha256": "2782b56c903ea8276a1467bcffe77b68e00d19d69a3dc1ff67b4f465a0a14034",
+  "deadline_unix": 1792172847.889281,
+  "stage": 2,
+  "history": "disordered"
+}
