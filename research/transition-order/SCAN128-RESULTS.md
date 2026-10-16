@@ -2,7 +2,7 @@
 
 16 October 2026 · A-1 continuation, not a new Lighthouse clue.
 
-**Campaign status:** running: recovered after session interruption. **Accepted paired rates:** 2/6. **New terminal preparation records:** 2/10; the two previously accepted p=.30486 states are reused, not reoptimized.
+**Campaign status:** running: recovered after session interruption. **Accepted paired rates:** 3/6. **New terminal preparation records:** 4/10; the two previously accepted p=.30486 states are reused, not reoptimized.
 
 ## Method, allocation and scope
 
@@ -26,8 +26,8 @@ Preparation labels describe initial histories, not guaranteed physical phases. O
 | 0.3047000 | disordered | accepted-finite-chi | 9.88e-08 | 0.9925456753 | 0.558909 | 0.528386 | 48.19 |
 | 0.3048600 | ordered | accepted-stationary-at-finite-chi | 9.99e-08 | 0.9930620839 | 0.000284 | 0.000448 | 59.56 |
 | 0.3048600 | disordered | accepted-stationary-at-finite-chi | 9.57e-08 | 0.9930620802 | 0.003909 | 0.003719 | 62.49 |
-| 0.3050000 | ordered | pending | — | — | — | — | — |
-| 0.3050000 | disordered | pending | — | — | — | — | — |
+| 0.3050000 | ordered | accepted-finite-chi | 9.92e-08 | 0.9935058481 | 0.000159 | 0.000156 | 49.53 |
+| 0.3050000 | disordered | accepted-finite-chi | 8.58e-08 | 0.9935058501 | 0.001305 | 0.001263 | 50.23 |
 | 0.3055000 | ordered | pending | — | — | — | — | — |
 | 0.3055000 | disordered | pending | — | — | — | — | — |
 
@@ -41,8 +41,10 @@ Color L2 is a symmetry-invariant norm of the six one-point amplitudes about thei
 | 0.3045000 | — | — | not applicable / pending |
 | 0.3047000 | -2.03e-13 | 0.9999999989 | all 36 symmetry orientations evaluated |
 | 0.3048600 | 3.76e-09 | 0.9999994886 | all 36 symmetry orientations evaluated |
-| 0.3050000 | — | — | not applicable / pending |
+| 0.3050000 | -2.07e-09 | 0.9999998435 | all 36 symmetry orientations evaluated |
 | 0.3055000 | — | — | not applicable / pending |
+
+At p=.3047 the accepted histories have m_species 0.558892 / 0.558909 and parity 0.382684 / -0.382692. Their invariant order and symmetry-aligned comparison must be used together: opposite parity signs alone do not identify different thermal phases. Largest evaluated aligned fidelity/site is 0.9999999989. These large-order solutions are consistent with symmetry-related orientations, not evidence by themselves of ordered/disordered coexistence.
 
 ## What would count as coexistence evidence
 

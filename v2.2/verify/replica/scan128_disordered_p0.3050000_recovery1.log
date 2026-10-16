@@ -1,0 +1,8 @@
+SCAN_CASE_START disordered 0.305
+    it=  0 eta=0.6085032598 lamC=1.0000000074 etaL=0.6085032591 eps=1.87e-05 [15s]
+    it= 10 eta=0.6085032626 lamC=1.0000000002 etaL=0.6085032625 eps=3.24e-06 [166s]
+    it= 20 eta=0.6085032653 lamC=1.0000000003 etaL=0.6085032651 eps=4.02e-06 [311s]
+    it= 30 eta=0.6085032687 lamC=1.0000000002 etaL=0.6085032685 eps=3.73e-06 [457s]
+    it= 40 eta=0.6085032697 lamC=1.0000000000 etaL=0.6085032697 eps=5.23e-07 [608s]
+    it= 48 eta=0.6085032697 lamC=1.0000000000 etaL=0.6085032697 eps=8.58e-08 [724s]
+SCAN_CASE_RESULT {"preparation": "disordered", "p": 0.305, "status": "accepted-finite-chi", "eps": 8.581377431210945e-08, "iters": 49, "total_stage_seconds": 741.492586522, "m_species": 0.0013049083474677603, "color_l2_order": 0.001262749018578788, "f_full_rayleigh": 0.9935058501388628}

@@ -44,6 +44,10 @@ for p in protocol['grid']:
  c=db.get('cases',{}).get(f'{p:.7f}',{});a=c.get('ordered',{});b=c.get('disordered',{});q=c.get('comparison',{})
  delta=a['f_full_rayleigh']-b['f_full_rayleigh'] if a.get('converged') and b.get('converged') else None
  text.append(f"| {p:.7f} | {sci(delta)} | {fmt(q.get('largest_evaluated_fidelity_per_site'),10)} | {q.get('status','not applicable / pending')} |")
+observed=db.get('cases',{}).get('0.3047000',{})
+if observed.get('ordered',{}).get('converged') and observed.get('disordered',{}).get('converged'):
+    a,b=observed['ordered'],observed['disordered'];q=observed.get('comparison',{})
+    text+=['',f"At p=.3047 the accepted histories have m_species {a['m_species']:.6f} / {b['m_species']:.6f} and parity {a['m_parity']:.6f} / {b['m_parity']:.6f}. Their invariant order and symmetry-aligned comparison must be used together: opposite parity signs alone do not identify different thermal phases. Largest evaluated aligned fidelity/site is {fmt(q.get('largest_evaluated_fidelity_per_site'),10)}. These large-order solutions are consistent with symmetry-related orientations, not evidence by themselves of ordered/disordered coexistence."]
 text+=['','## What would count as coexistence evidence','',
 '**A finite bulk free-energy gap is not coexistence.** At a genuine first-order coexistence point, the competing bulk free-energy densities agree. A non-vanishing observable/slope jump or positive interface cost is a different quantity. Distinct stationary branches can persist off coexistence; optimizers need not merge immediately on either side.','',
 'This coarse six-point scan can locate a change, identify finite-χ competing branches or bracket a candidate crossing. It cannot guarantee that a narrow metastability window was sampled. A candidate requires distinct symmetry-inequivalent stationary branches, a properly tuned same-functional crossing, and χ/size-systematic control of any non-vanishing discontinuity. Multiple finite-χ minima alone do not establish thermodynamic first order; no separation on this grid does not prove continuity.','',

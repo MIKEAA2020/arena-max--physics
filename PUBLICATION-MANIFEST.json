@@ -236,28 +236,28 @@
     },
     {
       "path": "papers/v33-review-package.zip",
-      "bytes": 16818367,
-      "sha256": "04b75dd7a7bbd1b68fcea80b42d63e1e6e2bf4aab33b8fe20fe8604ba3ee5a52"
+      "bytes": 16831635,
+      "sha256": "dbfd0ee2988dac3d464782cf5c3ac1daeb0ba400ceb72bd54a5820fd1f8ea373"
     },
     {
       "path": "papers/v33-review-package.zip.sha256",
       "bytes": 89,
-      "sha256": "aaf33a5d3a950588121202489608ede3b12f1efa7fbc1386c55ff8d7accb6d1f"
+      "sha256": "5da75b94b377dac93a7a7ee9b099f03705006c9ae7b2d441170caf2d65059e5e"
     },
     {
       "path": "papers/v34/REVISION-REPORT.md",
       "bytes": 2338,
-      "sha256": "1b926e61852b7c5673f99e76c4728163544d1c0270f1a6c7431b783c9294549d"
+      "sha256": "9285a3c0b5be14ba3e1a1dd31a1b714ecdd244ecff9c8379efa161b80c4c3e3e"
     },
     {
       "path": "papers/v34/manuscript_revised_v34.tex",
-      "bytes": 255789,
-      "sha256": "84cc2272918c8fc99fa5fb14a96966935ed9a8045385f0f02118b3015db8537b"
+      "bytes": 256013,
+      "sha256": "a52cfaaf132dee654c36ba93a35a62e4cc79b02c278d75533709af3b01c6cc66"
     },
     {
       "path": "papers/v34/revise_manuscript.py",
-      "bytes": 11841,
-      "sha256": "cb15966c0cdf6563efcd3c0e2abbf30e7daa9142afb12554139701b30c147f7d"
+      "bytes": 12409,
+      "sha256": "165f8e868ec7de907a73068137cb96de3d658a8443fd496ac7c98eea204d2055"
     },
     {
       "path": "papers/v34/sections/interpretation.tex",
@@ -265,19 +265,24 @@
       "sha256": "1900ac07972b6695f1d42407fc1365b76c50d12755cb768523413f3cf51f7453"
     },
     {
+      "path": "papers/v34/source-contract-check.log",
+      "bytes": 616,
+      "sha256": "81c3a17b42be244eddd76df4e26ca1e6b7047ba5c10729c96b23693b1964e0b6"
+    },
+    {
       "path": "papers/v34/source-provenance.json",
       "bytes": 616,
-      "sha256": "c7977bb09e05ce1138956ab343cf820e5ca4f77aaf51eb40a7adfb894d09062a"
+      "sha256": "451f767ab7746a626f320d924b55cf63b04502652c1483b05e266c0ae942589c"
     },
     {
       "path": "papers/v34/v33-to-v34.diff",
-      "bytes": 25415,
-      "sha256": "3814e95f0ef399f04480d7d7f01bb7e558eadcd061df26f2fc00762542aa2a63"
+      "bytes": 29749,
+      "sha256": "56293eba80aa5b7fa2a9ba9e3f81ff6d5d9ace99843d15727e482d70267dbf54"
     },
     {
       "path": "papers/v34/v34-revision-report.docx",
       "bytes": 38090,
-      "sha256": "3d5eeba2aac899c8e00788012cfbc174f67988f3158fe3308175755dcf4aa2a4"
+      "sha256": "454f211f9f7fce1308ba1876e77be21699add0a4f567e72ddb8be9d8bf7727d0"
     },
     {
       "path": "quran/README.md",
@@ -346,8 +351,8 @@
     },
     {
       "path": "research/transition-order/SCAN128-RESULTS.md",
-      "bytes": 6177,
-      "sha256": "9a360e11628084e22debeb0cc46b79522dfe86ed199738f53c25831d9b7b6f7d"
+      "bytes": 6730,
+      "sha256": "759a92bcb82a391cd9f39e04bdeda8efb81e594214ee6b05c1c475f8bc120212"
     },
     {
       "path": "research/transition-order/amend_framework.py",
@@ -406,18 +411,18 @@
     },
     {
       "path": "research/transition-order/chi128-scan-report.docx",
-      "bytes": 41776,
-      "sha256": "501658df921f699fb2fd74756e84ba29d1aac0f9cb5f5d1d11d7ec667857f6ae"
+      "bytes": 42012,
+      "sha256": "7a646dd5e7341933ab9e1381e18a94fc46eb28f1990bbfe59aafd8e521f133c6"
     },
     {
       "path": "research/transition-order/chi128-scan.csv",
-      "bytes": 1859,
-      "sha256": "f024bb4d246e2a83e2034e64c4ee878d19ce20513985c879415adb7774481310"
+      "bytes": 2403,
+      "sha256": "166fb58854ee1ed8cefb2d7af641f92b864f4d1f481e81b605dba1a7b3c3618e"
     },
     {
       "path": "research/transition-order/chi128-scan.svg",
-      "bytes": 2368,
-      "sha256": "f6ac04b6fd10138c08cb1576c8949d117732048c938a8f1b2c1fce0f7784a4d4"
+      "bytes": 2523,
+      "sha256": "67908ce5809f1dde510708f7a0e26b3af5691c253602af4652fab2efedd4f6c1"
     },
     {
       "path": "research/transition-order/chi128-stage-summary.json",
@@ -515,6 +520,11 @@
       "sha256": "7c2f43100e613bcfe6e68166b0d2e672d95a189eee1015824e006c56c1b26cdd"
     },
     {
+      "path": "research/transition-order/scan128/point-0.3050000-recovery1.json",
+      "bytes": 288,
+      "sha256": "b3ddfd1f8834c7d772f7dc11a269cc68295dd614946825c5f8764f3667e1c52c"
+    },
+    {
       "path": "research/transition-order/scan128/recovery-master-p0.3047000-1.json",
       "bytes": 4680,
       "sha256": "5f4acf826dda05938d32d8289d671b9cc34c68120cfcad607aa952bc6fbb7441"
@@ -536,8 +546,8 @@
     },
     {
       "path": "research/transition-order/scan128_report.py",
-      "bytes": 11145,
-      "sha256": "d05fa0a09e47b5fc36ee23f2244a8e7415d3bacb1c6ee2608c76fc95a6510e18"
+      "bytes": 11927,
+      "sha256": "ca14a96deadb892c19ec1a741697f7b2bd641b49512d5d011ccf81d1ab5225e6"
     },
     {
       "path": "research/transition-order/secondary-result-audit.json",
@@ -546,8 +556,8 @@
     },
     {
       "path": "research/transition-order/summarize.py",
-      "bytes": 25401,
-      "sha256": "6f49c7070a91755ccadbb570af993a50c2178cd5ac24505db997592fd5189bb5"
+      "bytes": 26156,
+      "sha256": "d09d2f77e7858235a8784ee40c4a13b7cf4b154400b0535fce97d49bd05b758e"
     },
     {
       "path": "research/transition-order/task-ledger.json",
@@ -945,6 +955,11 @@
       "sha256": "59d69588a778c32ce94dccd6c3ce0db885a52902fd51f1ccb65bf107f2ffd43b"
     },
     {
+      "path": "v2.2/verify/replica/checkpoints/scan128_disordered_p0.3050000.npz",
+      "bytes": 2396580,
+      "sha256": "d2966dd9c8165b8a6a8580a063bc5b8cedca941c0e12f17a617d91236afd069d"
+    },
+    {
       "path": "v2.2/verify/replica/checkpoints/scan128_ordered_p0.3047000.npz",
       "bytes": 2396514,
       "sha256": "1ab55f53669ccb3df9f72d55dd3ec066347221e54e6b823deae63822f2ae70d4"
@@ -953,6 +968,11 @@
       "path": "v2.2/verify/replica/checkpoints/scan128_ordered_p0.3047000_resume-source1.npz",
       "bytes": 2396659,
       "sha256": "e3db3d0fdcb3fa5339ddb18e0b82ddda925f5cf019e6f6006d781eef2019e848"
+    },
+    {
+      "path": "v2.2/verify/replica/checkpoints/scan128_ordered_p0.3050000.npz",
+      "bytes": 2388727,
+      "sha256": "dd313e4097648376257ec59d1f351a62970fe256ef877df7dc0c447eed2958e2"
     },
     {
       "path": "v2.2/verify/replica/checkpoints/seed_disordered_chi96_common.npz",
@@ -1101,8 +1121,8 @@
     },
     {
       "path": "v2.2/verify/replica/n3_chi128_scan.json",
-      "bytes": 42659,
-      "sha256": "13fbc1f80b3c71a74af585281e5553a74d328f4c1abee3da952c8a0251624d47"
+      "bytes": 63353,
+      "sha256": "7386b266cf58658edcc1672e62ecd0e3b1892e7d5dc8a8913c7ef2c0ff649f7c"
     },
     {
       "path": "v2.2/verify/replica/n3_chi128_stationary_comparison.json",
@@ -1280,6 +1300,11 @@
       "sha256": "597ea86e5f799209d7e7a6f9a02a6655a5080a65e3c8caf1e716d887ef833205"
     },
     {
+      "path": "v2.2/verify/replica/scan128_comparison_p0.3050000.json",
+      "bytes": 9986,
+      "sha256": "ef46dc42e9769266cb709e1b568ad78551500d359d7ca62641ed7cdf91f12c7d"
+    },
+    {
       "path": "v2.2/verify/replica/scan128_disordered_p0.3047000.json",
       "bytes": 3677,
       "sha256": "de7af4e4f316d4823744f070bd0e318ea20ad574b80cbbe558a6a62d6ddbfc6a"
@@ -1293,6 +1318,16 @@
       "path": "v2.2/verify/replica/scan128_disordered_p0.3047000_recovery1.log",
       "bytes": 1246,
       "sha256": "f3cf1d5669d588b6f37b7bdc531ef3ad29057f42cd3a1610838663c9c6b83bc3"
+    },
+    {
+      "path": "v2.2/verify/replica/scan128_disordered_p0.3050000.json",
+      "bytes": 3411,
+      "sha256": "c93381b023ed145ac19c3045979bd352c999b7bb2574816c151d01435b374efd"
+    },
+    {
+      "path": "v2.2/verify/replica/scan128_disordered_p0.3050000_recovery1.log",
+      "bytes": 824,
+      "sha256": "4beff92cb120381f213028da8abb75e71688c0855dae5d25e11726693f459b17"
     },
     {
       "path": "v2.2/verify/replica/scan128_launch_transfer.log",
@@ -1313,6 +1348,16 @@
       "path": "v2.2/verify/replica/scan128_ordered_p0.3047000_recovery1.log",
       "bytes": 567,
       "sha256": "92822f4a8d1ada1945a1cc6b2bc04845483d986ffefee2d2fc8dea62ce669726"
+    },
+    {
+      "path": "v2.2/verify/replica/scan128_ordered_p0.3050000.json",
+      "bytes": 3429,
+      "sha256": "77a72a057b410acf3058bd7bcf42cf433b3210ff58a969f6d3ddfdc706f218e1"
+    },
+    {
+      "path": "v2.2/verify/replica/scan128_ordered_p0.3050000_recovery1.log",
+      "bytes": 2093,
+      "sha256": "f1baaa5fbed7167416c29f7ce21c28e27785b74c388bbf24aae2ad7f7cbc4806"
     },
     {
       "path": "v2.2/verify/replica/scan128_serializer_smoke.log",

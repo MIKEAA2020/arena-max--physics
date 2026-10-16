@@ -168,6 +168,14 @@ text+=['',publication_text,'',
 'The v33 manuscript remains an **author-review draft**, not a certified submission: the original figure/SM, author approval and specialist analytic-hypothesis audit are still required. This continuation does not rewrite the original v33 numerical claims silently. A-1 stays separate from the Lighthouse source lineage, and Parts I–II commitments are unchanged.','']
 (HERE/'RESULTS.md').write_text('\n'.join(text))
 
+# The separate fixed-source grid must not be silently folded into older campaign counts.
+scan=load(R/'n3_chi128_scan.json')
+if scan:
+    target=HERE/'RESULTS.md'
+    existing=target.read_text()
+    existing+='\n## Later six-rate chi128 continuation\n\nThe separate fixed-source scan is **'+scan.get('status','not recorded')+'**. Its per-rate/preparation statuses, actual checkpoints, symmetry alignment and coexistence criteria are in [SCAN128-RESULTS.md](SCAN128-RESULTS.md). The production table above is the earlier campaign, not an exhaustive or duplicate-counted merge of this new grid. The v34 author-review continuation also makes the governing real creator–creation distinction explicit while preserving v33.\n'
+    target.write_text(existing)
+
 # Standalone offline SVG chart using only the actual finite-size data.
 W,Hh=920,510;left,right,top,bottom=76,890,58,430
 xmin,xmax=.315,.405;ymin,ymax=0,2.5
