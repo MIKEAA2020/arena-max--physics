@@ -1,0 +1,91 @@
+{
+  "kind": "independent saved-state tensor, geometry, color and Rayleigh audit; no re-optimization",
+  "p": 0.3048,
+  "chi": 192,
+  "gates_recomputed": true,
+  "states": {
+    "ordered": {
+      "checkpoint": "v2.2/verify/replica/checkpoints/branch192_retry1_ordered_p0.3048000.npz",
+      "checkpoint_sha256": "d15055d94d8a527a698a7967f468704d4c5cdaf1513c2388198170f0652ca1da",
+      "metadata": {
+        "n": 3,
+        "d": 2,
+        "p": 0.3048,
+        "operator": "hermitian-halfrow",
+        "tag": "chi192-ordered",
+        "checkpoint_schema": 1,
+        "tol": 5e-08,
+        "maxiter": 10000,
+        "stage_budget_seconds": 14476.19982099533,
+        "environment_cache_omitted": true,
+        "checkpoint_contents": "AL,AR,AC,C; recompute FL/FR on restart",
+        "acceptance_tol": 1e-07,
+        "optimizer_internal_goal": 5e-08,
+        "campaign": "2026-10-17-chi192-same-point-resource-gated-v1",
+        "eta": 0.6086968625326385,
+        "eps": 4.806925901917989e-08,
+        "chi": 192,
+        "iters": 116,
+        "seconds": 9355.655919075012
+      },
+      "eps": 4.806925901917989e-08,
+      "gauge_left_residual": 4.806566181426694e-08,
+      "gauge_right_residual": 4.806517168917646e-08,
+      "left_canonical_residual": 5.72204555005928e-14,
+      "right_canonical_residual": 5.842707064541364e-14,
+      "period_contraction_relative_residual": 4.561688771873639e-12,
+      "f_half": 0.9928697957387809,
+      "f_full_rayleigh": 0.9928697879764544,
+      "color_l2_order": 0.4791266806773358,
+      "color_sum": 0.9999999999999982,
+      "equality_to_worker_fields": {
+        "f_half_abs_diff": 0.0,
+        "f_full_abs_diff": 1.6064927166326015e-13,
+        "color_l2_abs_diff": 0.0
+      }
+    },
+    "disordered": {
+      "checkpoint": "v2.2/verify/replica/checkpoints/branch192_retry1_disordered_p0.3048000.npz",
+      "checkpoint_sha256": "d97c11e4b79292af6d644b5b744e6b586042657e82eee23be474020517d0c80d",
+      "metadata": {
+        "n": 3,
+        "d": 2,
+        "p": 0.3048,
+        "operator": "hermitian-halfrow",
+        "tag": "chi192-disordered",
+        "checkpoint_schema": 1,
+        "tol": 5e-08,
+        "maxiter": 10000,
+        "stage_budget_seconds": 14476.272572040558,
+        "environment_cache_omitted": true,
+        "checkpoint_contents": "AL,AR,AC,C; recompute FL/FR on restart",
+        "acceptance_tol": 1e-07,
+        "optimizer_internal_goal": 5e-08,
+        "campaign": "2026-10-17-chi192-same-point-resource-gated-v1",
+        "eta": 0.6086968625233218,
+        "eps": 4.855261359073852e-08,
+        "chi": 192,
+        "iters": 72,
+        "seconds": 6021.900643587112
+      },
+      "eps": 4.855261359073852e-08,
+      "gauge_left_residual": 4.856402410254244e-08,
+      "gauge_right_residual": 4.855856265757594e-08,
+      "left_canonical_residual": 6.03442260746415e-14,
+      "right_canonical_residual": 5.841202800083327e-14,
+      "period_contraction_relative_residual": 4.674545847188665e-13,
+      "f_half": 0.992869795769393,
+      "f_full_rayleigh": 0.9928697881333748,
+      "color_l2_order": 0.4790272221360972,
+      "color_sum": 1.0000000000000002,
+      "equality_to_worker_fields": {
+        "f_half_abs_diff": 0.0,
+        "f_full_abs_diff": 7.37188088351104e-14,
+        "color_l2_abs_diff": 0.0
+      }
+    }
+  },
+  "comparison_record": "all 36 symmetry orientations evaluated",
+  "largest_evaluated_fidelity_per_site": 0.9999999960134567,
+  "interpretation": "Numerical audit only; not an error bar or thermodynamic conclusion."
+}

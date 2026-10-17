@@ -1,0 +1,48 @@
+{
+  "campaign": "2026-10-17-chi192-same-point-resource-gated-v1",
+  "status": "feasibility gate failed; no production run launched",
+  "protocol": "research/transition-order/branch192-protocol.json",
+  "benchmark": {
+    "ordered": {
+      "kind": "disposable one-iteration resource/finite-output benchmark; not an accepted state",
+      "preparation": "ordered",
+      "p": 0.3048,
+      "source_checkpoint": "v2.2/verify/replica/checkpoints/branch128_pilot_ordered_p0.3048000.npz",
+      "source_sha256": "418da13e207187eacec7bf1c4cee0f12319b3cba81ba15928ea5854db73fbccc",
+      "initial_chi": 128,
+      "trial_chi": 192,
+      "iterations": 1,
+      "seconds": 155.076291131,
+      "seconds_per_iteration": 155.076291131,
+      "eps_after_single_iteration": 0.0005590392260730565,
+      "finite_output": true,
+      "peak_rss_kib": 172436,
+      "no_state_checkpoint_written": true,
+      "not_a_convergence_observation": true
+    },
+    "disordered": {
+      "kind": "disposable one-iteration resource/finite-output benchmark; not an accepted state",
+      "preparation": "disordered",
+      "p": 0.3048,
+      "source_checkpoint": "v2.2/verify/replica/checkpoints/branch128_refinement_disordered_p0.3048000.npz",
+      "source_sha256": "d7c00c75b1b0064efc97cc58587b3d31aceab6fd6892d10d99bc295e795731ea",
+      "initial_chi": 128,
+      "trial_chi": 192,
+      "iterations": 1,
+      "seconds": 149.85788716999997,
+      "seconds_per_iteration": 149.85788716999997,
+      "eps_after_single_iteration": 0.005220440783268256,
+      "finite_output": true,
+      "peak_rss_kib": 172308,
+      "no_state_checkpoint_written": true,
+      "not_a_convergence_observation": true
+    }
+  },
+  "feasibility_gate": {
+    "time_passed": false,
+    "memory_passed": true,
+    "production_authorized_by_gate": false,
+    "decision": "STOP after feasibility; no \u03c7192 production optimizer launched"
+  },
+  "results": {}
+}

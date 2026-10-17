@@ -1,0 +1,17 @@
+    it=  0 eta=0.6087531660 lamC=1.0367749339 etaL=0.6083371762 eps=5.59e-04 [86s]
+Traceback (most recent call last):
+  File "/home/user/v2.2/verify/replica/branch192_worker.py", line 80, in production
+    state,obs=H.solve(3,2,p,chi,init=initial,tol=protocol['internal_goal'],maxiter=protocol['maxiter'],checkpoint_path=cp,tag='chi192-'+side,verbose=True)
+              ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/v2.2/verify/replica/replica_halfrow.py", line 78, in solve
+    st=V.vumps(W,chi,init=init,tol=tol,maxiter=maxiter,verbose=verbose,callback=cb,env_project=mirror,paired_env_dim=N)
+  File "/home/user/v2.2/verify/replica/replica_vumps.py", line 219, in vumps
+    callback(dict(AL=AL, AR=AR, AC=AC, C=C, FL=FL, FR=FR, eta=eta, eps=eps,
+    ~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                  iters=it+1, chi=chi, seconds=time.time()-t0))
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/v2.2/verify/replica/replica_halfrow.py", line 66, in cb
+    if checkpoint_path and (st['iters']%interval==0 or st['eps']<tol):checkpoint(checkpoint_path,st,meta)
+                                                                      ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: production.<locals>.callback() takes 2 positional arguments but 3 were given
+CHI192_RESULT {"history": "ordered", "status": "unexpected error", "converged": false, "eps": null, "gauge_right_residual": null, "iters": null, "total_stage_seconds": 478.9882095449999, "f_half": null, "f_full_rayleigh": null, "m_species": null, "color_l2_order": null}

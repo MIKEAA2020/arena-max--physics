@@ -1,0 +1,27 @@
+{
+  "campaign": "2026-10-17-chi192-retry1-runtime-update-10iter",
+  "observed_unix": 1792187047.7315664,
+  "observed_after_iterations": 10,
+  "preparation_checkpoints": {
+    "ordered": {
+      "iters": 10,
+      "eps": 0.0001289867617230861,
+      "optimizer_seconds": 850.6660294532776,
+      "seconds_per_iteration": 85.06660294532776,
+      "checkpoint_sha256": "f260a09121dbfc5b67ff95be8bb9f2a2c37b0c5fb64dbd6840f70bce9070eb0b"
+    },
+    "disordered": {
+      "iters": 10,
+      "eps": 8.08137873631197e-05,
+      "optimizer_seconds": 877.8963587284088,
+      "seconds_per_iteration": 87.78963587284088,
+      "checkpoint_sha256": "aee7d5e9a6527105cb186e43ec7e3e4555be9e54cc63f4c0f61c63ebd3f89091"
+    }
+  },
+  "per_iteration_forecast_seconds": 95,
+  "projected_iterations_per_history": 110,
+  "projected_pair_wall_plus_setup_and_validation_seconds": 13270,
+  "remaining_original_authorized_seconds": 16197.703794956207,
+  "feasibility": "still fits original five-hour cap including reserved validation time",
+  "qualification": "These are still transient unconverged checkpoints; optimizer residual is far above the acceptance gate."
+}

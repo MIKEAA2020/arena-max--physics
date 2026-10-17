@@ -1,0 +1,731 @@
+{
+  "campaign": "2026-10-17-chi192-same-point-resource-gated-v1",
+  "status": "both accepted finite-chi states",
+  "protocol": "research/transition-order/branch192-protocol.json",
+  "execution_addendum": "research/transition-order/branch192-execution-addendum.json",
+  "retry_addendum": "research/transition-order/branch192-retry-addendum.json",
+  "initial_conservative_gate": {
+    "time_passed": false,
+    "memory_passed": true,
+    "production_authorized_by_gate": false,
+    "decision": "STOP after feasibility; no \u03c7192 production optimizer launched"
+  },
+  "first_estimate_refined_gate": {
+    "time_passed": true,
+    "memory_passed": true,
+    "production_proceed": true,
+    "decision": "Launch exactly the two accepted-source \u03c7192 preparations at p=.30480, with the original five-hour absolute deadline and 45-minute validation reserve."
+  },
+  "benchmark": {
+    "ordered": {
+      "kind": "disposable one-iteration resource/finite-output benchmark; not an accepted state",
+      "preparation": "ordered",
+      "p": 0.3048,
+      "source_checkpoint": "v2.2/verify/replica/checkpoints/branch128_pilot_ordered_p0.3048000.npz",
+      "source_sha256": "418da13e207187eacec7bf1c4cee0f12319b3cba81ba15928ea5854db73fbccc",
+      "initial_chi": 128,
+      "trial_chi": 192,
+      "iterations": 1,
+      "seconds": 155.076291131,
+      "seconds_per_iteration": 155.076291131,
+      "eps_after_single_iteration": 0.0005590392260730565,
+      "finite_output": true,
+      "peak_rss_kib": 172436,
+      "no_state_checkpoint_written": true,
+      "not_a_convergence_observation": true,
+      "vumps_internal_seconds_rounded": 82
+    },
+    "disordered": {
+      "kind": "disposable one-iteration resource/finite-output benchmark; not an accepted state",
+      "preparation": "disordered",
+      "p": 0.3048,
+      "source_checkpoint": "v2.2/verify/replica/checkpoints/branch128_refinement_disordered_p0.3048000.npz",
+      "source_sha256": "d7c00c75b1b0064efc97cc58587b3d31aceab6fd6892d10d99bc295e795731ea",
+      "initial_chi": 128,
+      "trial_chi": 192,
+      "iterations": 1,
+      "seconds": 149.85788716999997,
+      "seconds_per_iteration": 149.85788716999997,
+      "eps_after_single_iteration": 0.005220440783268256,
+      "finite_output": true,
+      "peak_rss_kib": 172308,
+      "no_state_checkpoint_written": true,
+      "not_a_convergence_observation": true,
+      "vumps_internal_seconds_rounded": 87
+    }
+  },
+  "attempt1": {
+    "status": "serializer-wrapper error; no checkpoint or accepted state saved",
+    "record": "v2.2/verify/replica/n3_branch192_attempt1.json"
+  },
+  "feasibility_gate": {
+    "time_passed": true,
+    "memory_passed": true,
+    "production_proceed": true,
+    "decision": "Retry exactly the same two authorized preparations with corrected serialization; original absolute deadline and thresholds remain unchanged."
+  },
+  "results": {
+    "ordered": {
+      "campaign": "2026-10-17-chi192-same-point-resource-gated-v1",
+      "history": "ordered",
+      "n": 3,
+      "d": 2,
+      "p": 0.3048,
+      "chi": 192,
+      "external_tol": 1e-07,
+      "optimizer_internal_goal": 5e-08,
+      "status": "accepted finite-chi numerical state",
+      "converged": true,
+      "source": {
+        "record": "v2.2/verify/replica/branch128_pilot_ordered_p0.3048000.json",
+        "record_sha256": "f568e5314a1075433e2ff824d212f123788cb1aaa1de17805b8aa6020064802b",
+        "checkpoint": "v2.2/verify/replica/checkpoints/branch128_pilot_ordered_p0.3048000.npz",
+        "sha256": "418da13e207187eacec7bf1c4cee0f12319b3cba81ba15928ea5854db73fbccc",
+        "p": 0.3048,
+        "chi": 128,
+        "n": 3,
+        "d": 2,
+        "accepted_source": true,
+        "source_status": "accepted-finite-chi",
+        "source_eps": 9.065270655073124e-08,
+        "external_gates": {
+          "optimizer": 9.065270655073124e-08,
+          "compatibility": 9.069411859400316e-08,
+          "canonical": 4.3004145370087434e-14,
+          "period": 3.0479623321970725e-11
+        },
+        "qualification": "actual accepted finite-chi state at p=.30480; not a thermodynamic phase certificate"
+      },
+      "source_metadata": {
+        "n": 3,
+        "d": 2,
+        "p": 0.3048,
+        "operator": "hermitian-halfrow",
+        "tag": "branch128-pilot-ordered",
+        "checkpoint_schema": 1,
+        "tol": 1e-07,
+        "maxiter": 10000,
+        "stage_budget_seconds": 5279.6621017456055,
+        "environment_cache_omitted": true,
+        "checkpoint_contents": "AL, AR, AC, C; recompute FL/FR on restart",
+        "eta": 0.6086968352227667,
+        "eps": 9.065270655073124e-08,
+        "chi": 128,
+        "iters": 23,
+        "seconds": 408.12628960609436
+      },
+      "source_is_accepted_observation": true,
+      "checkpoint": "checkpoints/branch192_retry1_ordered_p0.3048000.npz",
+      "qualification": "finite-chi warm continuation, not a global minimum, thermodynamic phase or coexistence certificate",
+      "eps": 4.806925901917989e-08,
+      "iters": 116,
+      "optimizer_seconds": 9355.655919075012,
+      "gauge_left_residual": 4.806566181426694e-08,
+      "gauge_right_residual": 4.806517168917646e-08,
+      "left_canonical_residual": 5.72204555005928e-14,
+      "right_canonical_residual": 5.842707064541364e-14,
+      "internal_goal_met": true,
+      "f": 0.9928697957387809,
+      "eta": 0.6086968625326385,
+      "seconds": 9355.655919075012,
+      "S_ent": 0.7568893290364547,
+      "m_parity": 0.3395758259429398,
+      "m_parity_sym": 0.3062322137664658,
+      "m_species": 0.5080769273468638,
+      "m_species_sym": 0.4840492932201323,
+      "m_species_even": 0.508060069726402,
+      "xi_species": 94.02817107141182,
+      "corr_species_tail": [
+        0.23136777127407637,
+        0.07889290366712742,
+        0.025537202865159314,
+        0.003014481693542098
+      ],
+      "xi_parity": 101.92147649942004,
+      "corr_parity_tail": [
+        0.23296037299644784,
+        0.0558152568507405,
+        0.01555480449269403,
+        0.0017438923888736663
+      ],
+      "corr_len": 240,
+      "xi_chi": 103.2591713308597,
+      "transfer_eigs": [
+        0.9999999999999954,
+        0.9903623727009034,
+        0.9791202903366972,
+        0.9737543723755059,
+        0.973418819707902,
+        0.9727245105961788
+      ],
+      "eta_half": 0.6086968625326385,
+      "f_half": 0.9928697957387809,
+      "tag": "chi192-ordered",
+      "operator": "hermitian-halfrow",
+      "f_full_rayleigh": 0.9928697879762938,
+      "period_contraction_relative_residual": 4.176148146172982e-12,
+      "color_one_point_amplitudes": [
+        0.56196935080809,
+        0.11006118967167645,
+        0.11008193406008196,
+        0.053909281161370885,
+        0.053909281002008036,
+        0.11006896329677102
+      ],
+      "color_sum": 0.9999999999999982,
+      "color_l2_order": 0.4791266806773358,
+      "color_qualification": "symmetry-invariant one-point order diagnostic; not a phase certificate or a probability-positivity assertion",
+      "process_peak_rss_kib": 605488,
+      "total_stage_seconds": 9482.710292521,
+      "checkpoint_sha256": "d15055d94d8a527a698a7967f468704d4c5cdaf1513c2388198170f0652ca1da",
+      "process_exit_code": 0
+    },
+    "disordered": {
+      "campaign": "2026-10-17-chi192-same-point-resource-gated-v1",
+      "history": "disordered",
+      "n": 3,
+      "d": 2,
+      "p": 0.3048,
+      "chi": 192,
+      "external_tol": 1e-07,
+      "optimizer_internal_goal": 5e-08,
+      "status": "accepted finite-chi numerical state",
+      "converged": true,
+      "source": {
+        "record": "v2.2/verify/replica/n3_branch128_refinement.json",
+        "record_sha256": "e6a8531299ecd301d17d3b3dd3d9e10ab0cfd05c9d122e256af4b6010a99944a",
+        "checkpoint": "v2.2/verify/replica/checkpoints/branch128_refinement_disordered_p0.3048000.npz",
+        "sha256": "d7c00c75b1b0064efc97cc58587b3d31aceab6fd6892d10d99bc295e795731ea",
+        "p": 0.3048,
+        "chi": 128,
+        "n": 3,
+        "d": 2,
+        "accepted_source": true,
+        "source_status": "accepted under unchanged external gates",
+        "source_eps": 4.988270901022994e-08,
+        "external_gates": {
+          "optimizer": 4.988270901022994e-08,
+          "compatibility": 4.996652741145649e-08,
+          "canonical": 4.0851272350981504e-14,
+          "period": 3.5233793894087276e-13
+        },
+        "qualification": "actual accepted finite-chi state at p=.30480; not a thermodynamic phase certificate"
+      },
+      "source_metadata": {
+        "n": 3,
+        "d": 2,
+        "p": 0.3048,
+        "operator": "hermitian-halfrow",
+        "tag": "branch128-refinement",
+        "checkpoint_schema": 1,
+        "tol": 5e-08,
+        "maxiter": 10000,
+        "stage_budget_seconds": 1491.5392844676971,
+        "acceptance_tol": 1e-07,
+        "optimizer_internal_goal": 5e-08,
+        "convergence_safety_amendment": "2026-10-16-same-point-convergence-safety-v1",
+        "environment_cache_omitted": true,
+        "checkpoint_contents": "AL, AR, AC, C; recompute FL/FR on restart",
+        "eta": 0.6086962672630803,
+        "eps": 4.988270901022994e-08,
+        "chi": 128,
+        "iters": 55,
+        "seconds": 854.4465465545654
+      },
+      "source_is_accepted_observation": true,
+      "checkpoint": "checkpoints/branch192_retry1_disordered_p0.3048000.npz",
+      "qualification": "finite-chi warm continuation, not a global minimum, thermodynamic phase or coexistence certificate",
+      "eps": 4.855261359073852e-08,
+      "iters": 72,
+      "optimizer_seconds": 6021.900643587112,
+      "gauge_left_residual": 4.856402410254244e-08,
+      "gauge_right_residual": 4.855856265757594e-08,
+      "left_canonical_residual": 6.03442260746415e-14,
+      "right_canonical_residual": 5.841202800083327e-14,
+      "internal_goal_met": true,
+      "f": 0.992869795769393,
+      "eta": 0.6086968625233218,
+      "seconds": 6021.900643587112,
+      "S_ent": 0.757210329015086,
+      "m_parity": 0.33951767340963906,
+      "m_parity_sym": 0.3061797728221324,
+      "m_species": 0.5079526649752051,
+      "m_species_sym": 0.4839309038825239,
+      "m_species_even": 0.5079525438413426,
+      "xi_species": 99.46327344489208,
+      "corr_species_tail": [
+        0.12595298292023818,
+        0.03253445163253191,
+        0.007990766870081337,
+        0.0007633823750747351
+      ],
+      "xi_parity": 101.85299718660896,
+      "corr_parity_tail": [
+        0.23298257621738,
+        0.05582825331631146,
+        0.015561737093864728,
+        0.0017425829865458653
+      ],
+      "corr_len": 240,
+      "xi_chi": 103.20261569888379,
+      "transfer_eigs": [
+        1.0000000000000087,
+        0.9903571167717963,
+        0.9791076585867202,
+        0.973692749748249,
+        0.9726590055003798,
+        0.972656842949276
+      ],
+      "eta_half": 0.6086968625233218,
+      "f_half": 0.992869795769393,
+      "tag": "chi192-disordered",
+      "operator": "hermitian-halfrow",
+      "f_full_rayleigh": 0.9928697881334485,
+      "period_contraction_relative_residual": 1.5159951516340426e-12,
+      "color_one_point_amplitudes": [
+        0.053935599521328,
+        0.11008046852094405,
+        0.11008038082779473,
+        0.05393526238771304,
+        0.5618879747957788,
+        0.11008031394644159
+      ],
+      "color_sum": 1.0000000000000002,
+      "color_l2_order": 0.4790272221360972,
+      "color_qualification": "symmetry-invariant one-point order diagnostic; not a phase certificate or a probability-positivity assertion",
+      "process_peak_rss_kib": 606252,
+      "total_stage_seconds": 6143.3699085339995,
+      "checkpoint_sha256": "d97c11e4b79292af6d644b5b744e6b586042657e82eee23be474020517d0c80d",
+      "process_exit_code": 0
+    }
+  },
+  "comparison": {
+    "status": "all 36 symmetry orientations evaluated",
+    "kind": "finite-chi symmetry-aligned MPS overlap diagnostic, not an order classifier",
+    "p": 0.3048,
+    "chi": 192,
+    "orientations": [
+      {
+        "radius": 0.9941546293193904,
+        "eigenvalue": [
+          0.9941546293193904,
+          0.0
+        ],
+        "relative_residual": 1.1350394408236158e-10,
+        "left": 0,
+        "right": 0,
+        "normalized_fidelity_per_site": 0.9941546293234717
+      },
+      {
+        "radius": 0.9947784917128303,
+        "eigenvalue": [
+          0.9947784917128303,
+          0.0
+        ],
+        "relative_residual": 4.940781613644054e-10,
+        "left": 0,
+        "right": 1,
+        "normalized_fidelity_per_site": 0.9947784917169141
+      },
+      {
+        "radius": 0.9947679898800496,
+        "eigenvalue": [
+          0.9947679898800496,
+          0.0
+        ],
+        "relative_residual": 8.862219673527367e-11,
+        "left": 0,
+        "right": 2,
+        "normalized_fidelity_per_site": 0.9947679898841334
+      },
+      {
+        "radius": 0.994154297011853,
+        "eigenvalue": [
+          0.994154297011853,
+          0.0
+        ],
+        "relative_residual": 5.4969535533445664e-11,
+        "left": 0,
+        "right": 3,
+        "normalized_fidelity_per_site": 0.9941542970159343
+      },
+      {
+        "radius": 0.9999999959908196,
+        "eigenvalue": [
+          0.9999999959908196,
+          0.0
+        ],
+        "relative_residual": 1.5490581164743988e-10,
+        "left": 0,
+        "right": 4,
+        "normalized_fidelity_per_site": 0.9999999959949248
+      },
+      {
+        "radius": 0.9947970685518173,
+        "eigenvalue": [
+          0.9947970685518173,
+          0.0
+        ],
+        "relative_residual": 4.810763370935818e-11,
+        "left": 0,
+        "right": 5,
+        "normalized_fidelity_per_site": 0.9947970685559012
+      },
+      {
+        "radius": 0.9947972071431043,
+        "eigenvalue": [
+          0.9947972071431043,
+          0.0
+        ],
+        "relative_residual": 7.516144390717573e-11,
+        "left": 1,
+        "right": 0,
+        "normalized_fidelity_per_site": 0.9947972071471882
+      },
+      {
+        "radius": 0.9941546295384613,
+        "eigenvalue": [
+          0.9941546295384613,
+          0.0
+        ],
+        "relative_residual": 1.425036092081609e-10,
+        "left": 1,
+        "right": 1,
+        "normalized_fidelity_per_site": 0.9941546295425426
+      },
+      {
+        "radius": 0.9999999959959713,
+        "eigenvalue": [
+          0.9999999959959713,
+          0.0
+        ],
+        "relative_residual": 8.319964400723851e-11,
+        "left": 1,
+        "right": 2,
+        "normalized_fidelity_per_site": 0.9999999960000766
+      },
+      {
+        "radius": 0.9947783516050162,
+        "eigenvalue": [
+          0.9947783516050162,
+          0.0
+        ],
+        "relative_residual": 1.7155095589605442e-10,
+        "left": 1,
+        "right": 3,
+        "normalized_fidelity_per_site": 0.9947783516091
+      },
+      {
+        "radius": 0.9947679893613078,
+        "eigenvalue": [
+          0.9947679893613078,
+          0.0
+        ],
+        "relative_residual": 1.9499768854961725e-11,
+        "left": 1,
+        "right": 4,
+        "normalized_fidelity_per_site": 0.9947679893653917
+      },
+      {
+        "radius": 0.9941542962561299,
+        "eigenvalue": [
+          0.9941542962561299,
+          0.0
+        ],
+        "relative_residual": 9.600827036086802e-10,
+        "left": 1,
+        "right": 5,
+        "normalized_fidelity_per_site": 0.9941542962602112
+      },
+      {
+        "radius": 0.9947784197424107,
+        "eigenvalue": [
+          0.9947784197424107,
+          0.0
+        ],
+        "relative_residual": 2.5307385261260732e-11,
+        "left": 2,
+        "right": 0,
+        "normalized_fidelity_per_site": 0.9947784197464945
+      },
+      {
+        "radius": 0.9941542964731989,
+        "eigenvalue": [
+          0.9941542964731989,
+          0.0
+        ],
+        "relative_residual": 8.517106447424773e-11,
+        "left": 2,
+        "right": 1,
+        "normalized_fidelity_per_site": 0.9941542964772802
+      },
+      {
+        "radius": 0.994154629974186,
+        "eigenvalue": [
+          0.994154629974186,
+          0.0
+        ],
+        "relative_residual": 3.033461474221248e-11,
+        "left": 2,
+        "right": 2,
+        "normalized_fidelity_per_site": 0.9941546299782673
+      },
+      {
+        "radius": 0.9947680626187395,
+        "eigenvalue": [
+          0.9947680626187395,
+          0.0
+        ],
+        "relative_residual": 4.08085639352799e-11,
+        "left": 2,
+        "right": 3,
+        "normalized_fidelity_per_site": 0.9947680626228234
+      },
+      {
+        "radius": 0.9947970682870019,
+        "eigenvalue": [
+          0.9947970682870019,
+          0.0
+        ],
+        "relative_residual": 9.931624267631064e-10,
+        "left": 2,
+        "right": 4,
+        "normalized_fidelity_per_site": 0.9947970682910858
+      },
+      {
+        "radius": 0.9999999960093514,
+        "eigenvalue": [
+          0.9999999960093514,
+          0.0
+        ],
+        "relative_residual": 1.6663501762996942e-10,
+        "left": 2,
+        "right": 5,
+        "normalized_fidelity_per_site": 0.9999999960134567
+      },
+      {
+        "radius": 0.9999999959889032,
+        "eigenvalue": [
+          0.9999999959889032,
+          0.0
+        ],
+        "relative_residual": 1.86208947287329e-11,
+        "left": 3,
+        "right": 0,
+        "normalized_fidelity_per_site": 0.9999999959930085
+      },
+      {
+        "radius": 0.9947679210509472,
+        "eigenvalue": [
+          0.9947679210509472,
+          0.0
+        ],
+        "relative_residual": 6.732595851405451e-10,
+        "left": 3,
+        "right": 1,
+        "normalized_fidelity_per_site": 0.9947679210550311
+      },
+      {
+        "radius": 0.9947972074433393,
+        "eigenvalue": [
+          0.9947972074433393,
+          0.0
+        ],
+        "relative_residual": 3.277127175404521e-11,
+        "left": 3,
+        "right": 2,
+        "normalized_fidelity_per_site": 0.9947972074474233
+      },
+      {
+        "radius": 0.9941546285469093,
+        "eigenvalue": [
+          0.9941546285469093,
+          0.0
+        ],
+        "relative_residual": 9.544290808041114e-10,
+        "left": 3,
+        "right": 3,
+        "normalized_fidelity_per_site": 0.9941546285509906
+      },
+      {
+        "radius": 0.9941542968282284,
+        "eigenvalue": [
+          0.9941542968282284,
+          0.0
+        ],
+        "relative_residual": 6.28952147183315e-10,
+        "left": 3,
+        "right": 4,
+        "normalized_fidelity_per_site": 0.9941542968323097
+      },
+      {
+        "radius": 0.9947784189393022,
+        "eigenvalue": [
+          0.9947784189393022,
+          0.0
+        ],
+        "relative_residual": 3.848478239315705e-11,
+        "left": 3,
+        "right": 5,
+        "normalized_fidelity_per_site": 0.994778418943386
+      },
+      {
+        "radius": 0.9941542965274505,
+        "eigenvalue": [
+          0.9941542965274505,
+          0.0
+        ],
+        "relative_residual": 1.40412454729589e-10,
+        "left": 4,
+        "right": 0,
+        "normalized_fidelity_per_site": 0.9941542965315318
+      },
+      {
+        "radius": 0.9947971357324539,
+        "eigenvalue": [
+          0.9947971357324539,
+          0.0
+        ],
+        "relative_residual": 3.1764450223715374e-10,
+        "left": 4,
+        "right": 1,
+        "normalized_fidelity_per_site": 0.9947971357365378
+      },
+      {
+        "radius": 0.9947783508209437,
+        "eigenvalue": [
+          0.9947783508209437,
+          0.0
+        ],
+        "relative_residual": 2.263573812346234e-11,
+        "left": 4,
+        "right": 2,
+        "normalized_fidelity_per_site": 0.9947783508250275
+      },
+      {
+        "radius": 0.9999999959961527,
+        "eigenvalue": [
+          0.9999999959961527,
+          0.0
+        ],
+        "relative_residual": 4.588177271445442e-11,
+        "left": 4,
+        "right": 3,
+        "normalized_fidelity_per_site": 0.999999996000258
+      },
+      {
+        "radius": 0.9941546296960799,
+        "eigenvalue": [
+          0.9941546296960799,
+          0.0
+        ],
+        "relative_residual": 1.1097517380037723e-10,
+        "left": 4,
+        "right": 4,
+        "normalized_fidelity_per_site": 0.9941546297001612
+      },
+      {
+        "radius": 0.994768063066188,
+        "eigenvalue": [
+          0.994768063066188,
+          0.0
+        ],
+        "relative_residual": 1.330109386947812e-10,
+        "left": 4,
+        "right": 5,
+        "normalized_fidelity_per_site": 0.9947680630702719
+      },
+      {
+        "radius": 0.9947679207061327,
+        "eigenvalue": [
+          0.9947679207061327,
+          0.0
+        ],
+        "relative_residual": 8.39973436002633e-11,
+        "left": 5,
+        "right": 0,
+        "normalized_fidelity_per_site": 0.9947679207102166
+      },
+      {
+        "radius": 0.9999999959851845,
+        "eigenvalue": [
+          0.9999999959851845,
+          0.0
+        ],
+        "relative_residual": 2.7747439133185833e-11,
+        "left": 5,
+        "right": 1,
+        "normalized_fidelity_per_site": 0.9999999959892898
+      },
+      {
+        "radius": 0.9941542959495174,
+        "eigenvalue": [
+          0.9941542959495174,
+          0.0
+        ],
+        "relative_residual": 3.368719857551283e-10,
+        "left": 5,
+        "right": 2,
+        "normalized_fidelity_per_site": 0.9941542959535987
+      },
+      {
+        "radius": 0.9947971355111741,
+        "eigenvalue": [
+          0.9947971355111741,
+          0.0
+        ],
+        "relative_residual": 6.137481038293884e-10,
+        "left": 5,
+        "right": 3,
+        "normalized_fidelity_per_site": 0.9947971355152581
+      },
+      {
+        "radius": 0.9947784924620693,
+        "eigenvalue": [
+          0.9947784924620693,
+          0.0
+        ],
+        "relative_residual": 5.853595612332918e-10,
+        "left": 5,
+        "right": 4,
+        "normalized_fidelity_per_site": 0.9947784924661531
+      },
+      {
+        "radius": 0.994154629944288,
+        "eigenvalue": [
+          0.994154629944288,
+          0.0
+        ],
+        "relative_residual": 1.8919650411604675e-10,
+        "left": 5,
+        "right": 5,
+        "normalized_fidelity_per_site": 0.9941546299483693
+      }
+    ],
+    "normalization_ordered": {
+      "radius": 0.9999999999972856,
+      "eigenvalue": [
+        0.9999999999972856,
+        0.0
+      ],
+      "relative_residual": 1.3566162874051153e-11
+    },
+    "normalization_disordered": {
+      "radius": 0.999999999994504,
+      "eigenvalue": [
+        0.999999999994504,
+        0.0
+      ],
+      "relative_residual": 1.3999592797948433e-11
+    },
+    "seconds": 28.894748660000914,
+    "largest_evaluated_fidelity_per_site": 0.9999999960134567,
+    "qualification": "Similarity or difference at one p and chi does not decide transition order; no thermodynamic jump, crossing or global-minimum claim follows."
+  },
+  "interpretation": "Finite-chi warm continuations only; no thermodynamic transition-order certificate.",
+  "worker_exit_codes": {
+    "ordered": 0,
+    "disordered": 0
+  },
+  "attempt1_record": "v2.2/verify/replica/n3_branch192_attempt1.json"
+}

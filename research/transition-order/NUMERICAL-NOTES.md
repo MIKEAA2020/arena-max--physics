@@ -50,7 +50,7 @@ Six frozen-trial full-period Rayleigh evaluations at matched p=.30486,.30488,.30
 
 ordered: accepted-stationary-at-finite-chi, eps=9.991478996514631e-08, iterations=186, total stage 2507.1s; disordered: accepted-stationary-at-finite-chi, eps=9.56534706713505e-08, iterations=79, total stage 1022.8s.
 
-2/2 preparations passed the prospective acceptance gates at p=.30486. This does not decide first order versus continuous. Chi192 was not launched; no campaign numerical production remains running. The earlier chi96 failures do not establish two stationary phases. See `CHI128-STAGE.md` for the interpretation contract and logical counterexamples.
+2/2 preparations passed the prospective acceptance gates at p=.30486. This does not decide first order versus continuous. At completion of this stage, before the later separate χ192 authorization, chi192 had not been launched and no campaign numerical production remained running. The earlier chi96 failures do not establish two stationary phases. See `CHI128-STAGE.md` for the interpretation contract and logical counterexamples.
 
 ## Completed six-rate chi128 scan
 
@@ -58,4 +58,8 @@ All six paired rates passed (10 new targets plus 2 reused reference states), wit
 
 ## One upper common rate — completed outcome
 
-At .30485, chi128, both warm continuations passed unchanged external gates and the internal 5e-8 goal. The former large-order history took 205 iterations/3206.8 seconds; the other history took 33/538.2 seconds. Both final order diagnostics are small. Arithmetic pressure-sign reversals do not identify a retained ordered/disordered crossing because upper family character changed. This result does not prove a physical spinodal, missing branch, exact window width or transition order. No extra rate, chi192 or stability test was launched.
+At .30485, chi128, both warm continuations passed unchanged external gates and the internal 5e-8 goal. The former large-order history took 205 iterations/3206.8 seconds; the other history took 33/538.2 seconds. Both final order diagnostics are small. Arithmetic pressure-sign reversals do not identify a retained ordered/disordered crossing because upper family character changed. This result does not prove a physical spinodal, missing branch, exact window width or transition order. No extra rate, chi192 or stability test was launched at that stage.
+
+## Subsequent authorized chi192 same-p enlargement
+
+A later, separate five-hour authorization tested only the two accepted chi128 p=.30480 source MPS at chi=192. Both corrected-run outputs passed unchanged external gates (116 and 72 iterations). The continuation from the low-order chi128 input moved to a high-order chi192 solution (color L2 .479027); it was nearly the same symmetry orbit as the ordered-start result (L2 .479127; 36-orientation maximum normalized fidelity per site .999999996013). Thus low-order branch retention was **not** observed along this enlargement path, but no theorem/thermodynamic branch-absence or order conclusion follows. See `BRANCH192-RESULTS.md`, the immutable staged protocol/addenda and independent `branch192_state_audit.json`. The first failed serialization attempt is retained, and the corrected retry stayed inside the original five-hour deadline. No other rate or stability work was run.

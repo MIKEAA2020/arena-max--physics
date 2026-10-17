@@ -1,0 +1,10 @@
+    it=  0 eta=0.6087255715 lamC=1.0194253836 etaL=0.6083798877 eps=5.22e-03 [101s]
+    it= 10 eta=0.6086968460 lamC=1.0000003990 etaL=0.6086968477 eps=6.81e-05 [956s]
+    it= 20 eta=0.6086968612 lamC=1.0000000081 etaL=0.6086968617 eps=1.19e-05 [1794s]
+    it= 30 eta=0.6086968621 lamC=1.0000000003 etaL=0.6086968624 eps=3.71e-06 [2708s]
+    it= 40 eta=0.6086968624 lamC=1.0000000000 etaL=0.6086968625 eps=8.97e-07 [3483s]
+    it= 50 eta=0.6086968625 lamC=1.0000000000 etaL=0.6086968625 eps=6.35e-07 [4265s]
+    it= 60 eta=0.6086968625 lamC=1.0000000000 etaL=0.6086968626 eps=2.68e-07 [5075s]
+    it= 70 eta=0.6086968625 lamC=1.0000000000 etaL=0.6086968625 eps=5.53e-08 [5931s]
+    it= 71 eta=0.6086968625 lamC=1.0000000000 etaL=0.6086968625 eps=4.86e-08 [6022s]
+CHI192_RESULT {"history": "disordered", "status": "accepted finite-chi numerical state", "converged": true, "eps": 4.855261359073852e-08, "gauge_right_residual": 4.855856265757594e-08, "iters": 72, "total_stage_seconds": 6143.3699085339995, "f_half": 0.992869795769393, "f_full_rayleigh": 0.9928697881334485, "m_species": 0.5079526649752051, "color_l2_order": 0.4790272221360972}

@@ -1,0 +1,31 @@
+{
+  "campaign": "2026-10-17-chi192-same-point-corrected-execution-v1",
+  "parent_protocol": "research/transition-order/branch192-protocol.json",
+  "parent_protocol_sha256": "8e83b8ff572a9265f2771f54594b493d3918368d640fd19438fd23d9475f7a66",
+  "preceding_feasibility_addendum": "research/transition-order/branch192-execution-addendum.json",
+  "preceding_addendum_sha256": "c82b822c0d86131469adb2f7319c086ee40964467c4cb6aa29e8aa9324278ac2",
+  "preserved_attempt1_record": "v2.2/verify/replica/n3_branch192_attempt1.json",
+  "attempt1_sha256": "763071ecf794d976a41e5f69611c7a2d05c62b5094d72102f03d84c72f22bb46",
+  "failure_cause": "A callback adapter passed (state, metadata) where the existing H.checkpoint API requires (path, state, metadata). Both first workers failed on their first periodic serialization callback, before an attempt-one NPZ was created. The two failed logs/records are retained; the 5h deadline is unchanged.",
+  "correction": "Use a three-argument compact checkpoint adapter that delegates atomically to the original checked serializer; separately named retry1 records/checkpoints prevent overwriting attempt one.",
+  "corrected_worker": "v2.2/verify/replica/branch192_worker_v2.py",
+  "corrected_worker_sha256": "e42700815197566423027c21de9078eaf655beed718e1019e0d49123b270796f",
+  "attempt1_optimizer_wall_seconds": {
+    "ordered": 478.9882095449999,
+    "disordered": 462.30744826700004
+  },
+  "authorized_absolute_deadline_unix": 1792203245.4353614,
+  "remaining_seconds_at_retry_gate": 17176.5651948452,
+  "runtime_forecast_seconds": 12720,
+  "projected_iterations_per_preparation": 110,
+  "per_iteration_ceiling_seconds": 90,
+  "validation_reserve_seconds": 2700,
+  "setup_reserve_seconds": 120,
+  "feasibility_gate": {
+    "time_passed": true,
+    "memory_passed": true,
+    "production_proceed": true,
+    "decision": "Retry exactly the same two authorized preparations with corrected serialization; original absolute deadline and thresholds remain unchanged."
+  },
+  "limits": "No other rates, perturbations, stability campaign, thresholds, or extra preparations; stop at the original deadline."
+}
