@@ -1,0 +1,2 @@
+campaign,status,p,chi,source_checkpoint,benchmark_seconds_per_iteration,forecast_seconds,remaining_seconds,production_authorized,production_status,converged,iters,eps,color_l2_order,f_half,f_full_rayleigh
+2026-10-17-chi192-upper-retry1-fresh-six-hour-v1,accepted finite-chi upper-rate state,0.30485,192,v2.2/verify/replica/checkpoints/branch192_retry1_ordered_p0.3048000.npz,64.63295769691467,17553.702270779115,21534.52575659752,True,accepted finite-chi numerical state,True,83,4.820251039960831e-08,0.00030083577200990306,0.9930296661814955,0.9930296063889548

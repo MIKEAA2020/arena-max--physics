@@ -1,0 +1,18 @@
+{
+  "kind": "disposable one-step \u03c7192 p=.30485 warm-enlargement/runtime benchmark; no scientific result",
+  "preparation": "ordered",
+  "p": 0.30485,
+  "chi": 192,
+  "initial_chi": 192,
+  "source_checkpoint": "v2.2/verify/replica/checkpoints/branch192_retry1_ordered_p0.3048000.npz",
+  "source_sha256": "d15055d94d8a527a698a7967f468704d4c5cdaf1513c2388198170f0652ca1da",
+  "iterations": 1,
+  "vumps_seconds": 64.63295769691467,
+  "seconds_per_iteration": 64.63295769691467,
+  "wall_seconds": 64.662869436,
+  "eps_after_one_step": 0.00019020648111457204,
+  "finite_output": true,
+  "peak_rss_kib": 169372,
+  "no_state_checkpoint_written": true,
+  "not_a_convergence_observation": true
+}

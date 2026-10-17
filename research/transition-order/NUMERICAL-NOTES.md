@@ -71,3 +71,7 @@ The user then authorized one ordered-source p=.30485 follow-up, benchmark-first 
 ### χ192 p=.30485 extension interruption
 
 The user authorized one extra hour (six hours total from the original start). The unchanged forecast/runtime and memory gates passed and the single ordered production worker was launched. No final optimizer record, saved target checkpoint, or independent audit was produced before the worker disappeared; its log is empty and iteration count is unknown. The absolute cap has expired. There is no p=.30485 χ192 order, energy, or collapse observation; any restart requires renewed user authorization. See `BRANCH192-UPPER-RESULTS.md`.
+
+### χ192 p=.30485 fresh continuation
+
+One fresh user-authorized six-hour retry, with a new disposable benchmark and passing resource gate, converged from the accepted ordered χ192 p=.30480 source in 83 iterations. ε=4.8203e−8; max compatibility=4.8223e−8; max canonical defect=5.97e−14; independent period residual=2.89e−12. The invariant color L2 fell to 3.00836e−4 (m_species=2.94986e−4; ξχ=83.41), compared with 0.479127 in the χ192 p=.30480 source; the result resembles the χ128 p=.30485 small-order state (L2≈5.95e−4). This is a one-history finite-χ optimizer outcome, not evidence that no other χ192 ordered stationary state exists. No phase ranking, crossing, spinodal or transition-order conclusion follows. Audit first wrote a passing JSON but exited on a print keyword TypeError; a corrected audit copy reran and passed, with both provenance records retained.

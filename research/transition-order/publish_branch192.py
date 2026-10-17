@@ -47,9 +47,24 @@ row=json.loads((R/'n3_branch192_upper_ordered.json').read_text())
 cp=R/'checkpoints/branch192_upper_ordered_p0.3048500.npz'
 if row.get('status')!='running' or interruption.get('cap_expired') is not True or interruption.get('target_checkpoint_exists') is not False or cp.exists():
  raise SystemExit('Interruption/no-checkpoint evidence mismatch')
+# Validate the separately authorized fresh retry and its corrected independent audit.
+retry_proto_path=HERE/'branch192-upper-retry1-protocol.json';retry_proto=json.loads(retry_proto_path.read_text())
+retry_campaign=json.loads((R/'n3_branch192_upper_retry1.json').read_text());retry_result=retry_campaign.get('result') or {}
+retry_cp=R/'checkpoints/branch192_upper_retry1_ordered_p0.3048500.npz'
+if retry_campaign.get('status')!='accepted finite-chi upper-rate state' or not retry_result.get('converged') or retry_campaign.get('audit_status')!='passed':
+ raise SystemExit('Fresh retry1 optimizer result and independent audit are not accepted')
+for name,expected in retry_proto.get('source_sha256',{}).items():
+ if digest(ROOT/name)!=expected:raise SystemExit('Fresh retry1 frozen source hash mismatch: '+name)
+if digest(retry_cp)!=retry_result.get('checkpoint_sha256'):raise SystemExit('Fresh retry1 checkpoint hash mismatch')
+repair_path=HERE/'branch192-upper-retry1-audit-repair.json';repair=json.loads(repair_path.read_text())
+fixed=R/'branch192_upper_retry1_audit_corrected.py';audit_json=R/'branch192_upper_retry1_state_audit.json'
+if repair.get('corrected_audit_passed') is not True or repair.get('corrected_audit_sha256')!=digest(fixed) or repair.get('corrected_audit_json_sha256')!=digest(audit_json):
+ raise SystemExit('Corrected audit provenance mismatch')
+if json.loads(audit_json.read_text()).get('passed') is not True or retry_campaign.get('audit_repair_addendum_sha256')!=digest(repair_path):
+ raise SystemExit('Fresh retry1 independent audit evidence mismatch')
 # No chi192 optimizer remains active.
 ps=run(['ps','-eo','args='],capture=True)
-active=[line for line in ps.splitlines() if ('branch192_worker_v2.py' in line or 'branch192_retry_execution.py' in line or 'branch192_upper_worker.py' in line) and 'publish_branch192.py' not in line]
+active=[line for line in ps.splitlines() if ('branch192_worker_v2.py' in line or 'branch192_retry_execution.py' in line or 'branch192_upper_worker.py' in line or 'branch192_upper_retry1_worker.py' in line) and 'publish_branch192.py' not in line]
 if active:raise SystemExit('Active chi192 process remains; refuse publication snapshot')
 env=os.environ.copy();env.update(GIT_ASKPASS=str(ROOT/'.private/github-askpass.py'),GIT_TERMINAL_PROMPT='0')
 for k in ['GIT_TRACE','GIT_TRACE_PACKET','GIT_TRACE_CURL','GIT_CURL_VERBOSE']:env.pop(k,None)
@@ -67,7 +82,7 @@ for name in names:
 if not names:raise SystemExit('No publication diff')
 git('diff','--cached','--check')
 print('CHI192_STAGED',json.dumps(dict(files=len(names),license_unchanged=True,credential_scan='passed by prepare_publication.py',ordinary_push_only=True)),flush=True)
-git('-c','user.name=Arena Research Assistant','-c','user.email=assistant@arena.invalid','-c','commit.gpgsign=false','commit','-m','Record chi192 upper-rate interruption and cap extension')
+git('-c','user.name=Arena Research Assistant','-c','user.email=assistant@arena.invalid','-c','commit.gpgsign=false','commit','-m','Publish accepted chi192 p=.30485 continuation')
 new=git('rev-parse','HEAD',capture=True).strip()
 # Refuse a race and never force; a normal push will fail if main moved.
 git('push','origin','main')
@@ -84,7 +99,12 @@ receipt=dict(commit=new,remote_commit=remote_commit,remote_equals_local=True,ord
  upper_rate_benchmark_seconds_per_iteration=upper['benchmark']['seconds_per_iteration'],upper_rate_forecast_seconds=ext['extended_gate']['forecast_seconds'],
  upper_rate_remaining_seconds=ext['extended_gate']['remaining_seconds'],upper_rate_protocol_sha256=digest(HERE/'branch192-upper-protocol.json'),
  upper_rate_extension_addendum_sha256=digest(ext_path),upper_rate_interruption_sha256=digest(HERE/'branch192-upper-interruption.json'),
- upper_rate_report_sha256=digest(HERE/'BRANCH192-UPPER-RESULTS.md'),review_package_sha256=digest(ROOT/'papers/v33-review-package.zip'),license_unchanged=True,credential_scan='passed')
+ upper_rate_report_sha256=digest(HERE/'BRANCH192-UPPER-RESULTS.md'),
+ upper_retry1_campaign=retry_proto['campaign'],upper_retry1_status=retry_campaign['status'],upper_retry1_p=retry_proto['p'],upper_retry1_chi=retry_proto['chi'],
+ upper_retry1_production_accepted=bool(retry_result['converged']),upper_retry1_iterations=retry_result['iters'],upper_retry1_eps=retry_result['eps'],
+ upper_retry1_color_l2=retry_result['color_l2_order'],upper_retry1_checkpoint_sha256=retry_result['checkpoint_sha256'],upper_retry1_audit_status=retry_campaign['audit_status'],
+ upper_retry1_protocol_sha256=digest(retry_proto_path),upper_retry1_audit_json_sha256=digest(audit_json),upper_retry1_audit_repair_sha256=digest(repair_path),
+ upper_retry1_report_sha256=digest(HERE/'BRANCH192-UPPER-RETRY1-RESULTS.md'),review_package_sha256=digest(ROOT/'papers/v33-review-package.zip'),license_unchanged=True,credential_scan='passed')
 (ROOT/'handoff').mkdir(exist_ok=True)
 (ROOT/'handoff/chi192-publication-receipt.json').write_text(json.dumps(receipt,indent=2)+'\n')
 print('CHI192_PUSH_VERIFIED',json.dumps(receipt),flush=True)

@@ -12,7 +12,7 @@ The immutable first resource gate used a deliberately broad 200-iteration foreca
 
 One first production attempt stopped at its first five-iteration checkpoint callback because the adapter used the wrong argument signature; it wrote no χ192 checkpoint and yielded no scientific state. Its logs and JSON are preserved. A corrected serializer was used for one same-source retry, under the *original* deadline, unchanged thresholds, and same two-worker cap. This was a code-execution correction, not an added preparation. The retry and error details are in the campaign record/addenda.
 
-Elapsed from the initial benchmark through this report: **12.28 h** of the authorized five hours; approximate time remaining at report generation: **0.00 h**. Both accepted states and their checks completed within the cap.
+Elapsed from the initial benchmark through this report: **14.67 h** of the authorized five hours; approximate time remaining at report generation: **0.00 h**. Both accepted states and their checks completed within the cap.
 
 Frozen and amended protocol records:
 

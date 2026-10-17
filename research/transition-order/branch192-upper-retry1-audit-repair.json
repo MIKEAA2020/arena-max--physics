@@ -1,0 +1,29 @@
+{
+  "kind": "independent audit logging-only correction record",
+  "original_audit_sha256": "2806bd96f685c624d46c3064c99a26e1810b06ac6b5e8aa6fb624bac4623a085",
+  "original_protocol_expected_audit_sha256": "2806bd96f685c624d46c3064c99a26e1810b06ac6b5e8aa6fb624bac4623a085",
+  "original_audit_exit_status": "nonzero solely after audit JSON was written: final status print passed flush=True to json.dumps, raising TypeError",
+  "original_audit_saved_json_passed": true,
+  "corrected_audit_script": "v2.2/verify/replica/branch192_upper_retry1_audit_corrected.py",
+  "corrected_audit_sha256": "cfbab19f9fb38ba33528693476ad1935b1518ff2c5d1dc29d99dfdd974b705ef",
+  "correction": "Moved flush=True from json.dumps keyword arguments to print; no calculations, thresholds, input paths, or state tensors changed.",
+  "corrected_rerun_exit_status": 0,
+  "corrected_audit_passed": true,
+  "checkpoint_sha256": "decf371716b717cfd059c268b198a73449423c593ba34bb2272c7dee37c896f1",
+  "corrected_audit_json_sha256": "ec989cdfad2c75960c05febaae548006eed5f1b9f9b1ee1337c162f7171205c0",
+  "corrected_results": {
+    "eps": 4.820251039960831e-08,
+    "gauge_left_residual": 4.822115123219958e-08,
+    "gauge_right_residual": 4.822315840381217e-08,
+    "left_canonical_residual": 5.962011378638302e-14,
+    "right_canonical_residual": 5.834787628449982e-14,
+    "period_contraction_relative_residual": 2.88981749385944e-12,
+    "f_half": 0.9930296661814955,
+    "f_full_rayleigh": 0.9930296063885501,
+    "color_l2_order": 0.00030083577200990306,
+    "passed": true
+  },
+  "initial_audit_period_residual": 8.539305713390307e-11,
+  "corrected_audit_period_residual": 2.88981749385944e-12,
+  "interpretation": "Independent saved-state audit passed on a corrected rerun; report formatting bug in first audit invocation did not alter the optimizer or saved checkpoint."
+}
