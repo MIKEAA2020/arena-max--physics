@@ -236,13 +236,13 @@
     },
     {
       "path": "papers/v33-review-package.zip",
-      "bytes": 3604453,
-      "sha256": "bacd95ed343edf7c3c87b2c33b8486e3ea3f0de4f265ccffe36e4de7531facd6"
+      "bytes": 3622272,
+      "sha256": "4a666382c051a836f29736521f0e94bead2e0f82bafd4de110c75efb6281fdeb"
     },
     {
       "path": "papers/v33-review-package.zip.sha256",
       "bytes": 89,
-      "sha256": "7e9944a7fdec094b6a1930f81be13eb0a91d87ad1aa761a96bf801024d9f9e25"
+      "sha256": "c6c2ae1fc5fa99856baf6cd786122a7a24498d12f3aeab962f4ba364115f2a36"
     },
     {
       "path": "papers/v34/README.md",
@@ -341,13 +341,13 @@
     },
     {
       "path": "research/transition-order/BRANCH192-RESULTS.md",
-      "bytes": 8079,
-      "sha256": "0137d6c0231fc29ce13f23ab69e235e7787b046f221ef8351802e27414179f77"
+      "bytes": 8080,
+      "sha256": "48f65ef526425531155b216723d29d5832de01e4d68935be5d40989076154729"
     },
     {
       "path": "research/transition-order/BRANCH192-UPPER-RESULTS.md",
-      "bytes": 2932,
-      "sha256": "12d4169c204c4b107691f58ace0d13dc02515a0ecce0ed288e9a6046b4e7e6bd"
+      "bytes": 4562,
+      "sha256": "f01f792b775254d460ed9799d83533d3078e647cd3a6e7068829e54b12f20d20"
     },
     {
       "path": "research/transition-order/CHI128-STAGE.md",
@@ -361,8 +361,8 @@
     },
     {
       "path": "research/transition-order/FEASIBILITY.md",
-      "bytes": 8882,
-      "sha256": "550a96b3fab463545f5e8e846146131db4d7a970a7398701f5b0eb82473a60b3"
+      "bytes": 9544,
+      "sha256": "cc96b061e2734396e3397e85d497af956355b46517d3f10a25f0f4c6296999f8"
     },
     {
       "path": "research/transition-order/MID128-RUN-STATE.md",
@@ -371,8 +371,8 @@
     },
     {
       "path": "research/transition-order/NUMERICAL-NOTES.md",
-      "bytes": 10733,
-      "sha256": "d7a13d899e4c3524ad4877619751ce534c9a054d17f05fae8363afe339a3c580"
+      "bytes": 11311,
+      "sha256": "1636ec67c32e450a4b3e57324e0826e310888a71ab5661dd5567d3cd56838dbe"
     },
     {
       "path": "research/transition-order/PLAN.md",
@@ -391,8 +391,8 @@
     },
     {
       "path": "research/transition-order/RESULTS.md",
-      "bytes": 21439,
-      "sha256": "e0c51b8dc0efa04b507445e2fd489e526df4b725bb91912981090c44b1720642"
+      "bytes": 22325,
+      "sha256": "e1626fee9048cbf5f626503df3bfd092a42ea90072481c4625f9d80db1ff4ef1"
     },
     {
       "path": "research/transition-order/SCAN-RUN-STATE.md",
@@ -652,7 +652,7 @@
     {
       "path": "research/transition-order/branch192-report.docx",
       "bytes": 41910,
-      "sha256": "25508e5b6f68323649d476da7607feb0692ec19c4f566182f05c4379473cbec5"
+      "sha256": "4d421b1302521d25f7964e3cca4a6de7762a298f3b85bb88d838e14aa42e3c95"
     },
     {
       "path": "research/transition-order/branch192-retry-addendum.json",
@@ -670,19 +670,29 @@
       "sha256": "7db1a60b18b0c3429528bb29a395ddf3ba4f774c0236774769b06196eba66ac9"
     },
     {
+      "path": "research/transition-order/branch192-upper-extension-addendum.json",
+      "bytes": 2683,
+      "sha256": "e6842924e22ed19b713e91776be62715bd66846da7aef58a93724f641d0eab54"
+    },
+    {
+      "path": "research/transition-order/branch192-upper-interruption.json",
+      "bytes": 1639,
+      "sha256": "5c9cd307f0c155d02d698f71333bece5afcfeeddce0d13b0c8c82cf6a7c662d1"
+    },
+    {
       "path": "research/transition-order/branch192-upper-protocol.json",
       "bytes": 5248,
       "sha256": "132fb29511384d03b637fbd91458d85e8acfd7483d1d4ba3428b0e9db437b1a1"
     },
     {
       "path": "research/transition-order/branch192-upper-report.docx",
-      "bytes": 38285,
-      "sha256": "1c379f482b1c300c53ecc3f9f9db75513be3dbd1ef4eff1dc42895431b21f42c"
+      "bytes": 38914,
+      "sha256": "69d5b1a8951b4713ebdb6d5a061525779755a8c5573354f3a65b66cca7b279c1"
     },
     {
       "path": "research/transition-order/branch192-upper.csv",
-      "bytes": 433,
-      "sha256": "f46eb12c11d5fb0748e7d08ef0083b2d942fe385fb35a2b5cab723f2f6e764d7"
+      "bytes": 559,
+      "sha256": "e5accc7dfa3c93a03adb6315c1781dcc9547a15e191b627c1b085a709ed19faa"
     },
     {
       "path": "research/transition-order/branch192.csv",
@@ -713,6 +723,21 @@
       "path": "research/transition-order/branch192_upper_campaign.py",
       "bytes": 9765,
       "sha256": "ddbd31ae20dcdc8cf9ce2e1b7c64350626f8dc9514a3875a7ac51af746e61351"
+    },
+    {
+      "path": "research/transition-order/branch192_upper_extension.py",
+      "bytes": 7772,
+      "sha256": "33e89764852fe93471032743e8b10a4a4cb44aec6c3f0ecfae254f2095812d43"
+    },
+    {
+      "path": "research/transition-order/branch192_upper_extension_report.py",
+      "bytes": 2690,
+      "sha256": "b42ad6fbd24a44777b357152f6d6817e1dee8030be7bbb11c0f37256e95c04ae"
+    },
+    {
+      "path": "research/transition-order/branch192_upper_interruption_report.py",
+      "bytes": 6485,
+      "sha256": "cebab68f9c0e76892324290c8b7ce0038921221720b55ac707881f80337ee01b"
     },
     {
       "path": "research/transition-order/branch192_upper_report.py",
@@ -876,8 +901,8 @@
     },
     {
       "path": "research/transition-order/publish_branch192.py",
-      "bytes": 7072,
-      "sha256": "485557ee1b19904730b812ee6d3b44cf573ff0553acab8d009f1ade9c1ebcc18"
+      "bytes": 8227,
+      "sha256": "3b03619540500a0f7d25569b0985ef45674b6f84e55a666c1d75b1e0114c6da7"
     },
     {
       "path": "research/transition-order/render_report.py",
@@ -1465,6 +1490,16 @@
       "sha256": "4784ab83a1366c74584581cd1352e2a2b26eea4d6f1f8b2e758ae06dfaee6a1d"
     },
     {
+      "path": "v2.2/verify/replica/branch192_upper_extension_worker.py",
+      "bytes": 7497,
+      "sha256": "eeb2c3de38a6337d395996d03ca56c6f09ec73b82176f5ea6bdd0b8aaf15b8f2"
+    },
+    {
+      "path": "v2.2/verify/replica/branch192_upper_ordered.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
       "path": "v2.2/verify/replica/branch192_upper_worker.py",
       "bytes": 7159,
       "sha256": "fe4adc2a7e9b3f3d3c5311bafb35348b170af4bb1cf9db83b03871d3fe58d47a"
@@ -1851,8 +1886,13 @@
     },
     {
       "path": "v2.2/verify/replica/n3_branch192_upper.json",
-      "bytes": 2648,
-      "sha256": "4c2dd32687bf8af8fda172381ccb7aaee13d642f69e1ccdf8cd7c734384f3db0"
+      "bytes": 5232,
+      "sha256": "73cc72c78d5f07a55545f934e92123a2b2e8e592c11197df2064755835d7ba37"
+    },
+    {
+      "path": "v2.2/verify/replica/n3_branch192_upper_ordered.json",
+      "bytes": 1625,
+      "sha256": "790a86a581301046813e734364da1315bfc45f46193a418e455aab5f879d84e9"
     },
     {
       "path": "v2.2/verify/replica/n3_chi128_bounded_disordered.json",

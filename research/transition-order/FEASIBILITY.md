@@ -54,3 +54,7 @@ Accepted ordered/low-order-source results: 116/72 iterations; residuals 4.807e-8
 ### Subsequent χ192 p=.30485 feasibility authorization
 
 One user-authorized, benchmark-first single-history check at p=.30485 was gated under a fresh five-hour cap. The actual χ192 VUMPS benchmark measured 87.335 seconds per iteration; at the same rate the accepted χ128 ordered-history continuation needed 205 iterations. The frozen forecast including 120 seconds setup and 900 seconds validation was 18,923.66 seconds, exceeding the 17,912.24 seconds left after the disposable benchmark. Memory passed. **The χ192 p=.30485 production optimizer was not launched**; the disposable one-step iterate was not saved as a scientific state. See `BRANCH192-UPPER-RESULTS.md`. No upper-rate χ192 order, energy, or collapse result exists.
+
+### χ192 p=.30485 extension status
+
+A user-authorized +1-hour extension changed the original campaign cap to six hours total. Its runtime and memory gates passed, so the one ordered-history production worker was launched. The process later disappeared without a final result; the JSON record still says `running`, the log is empty, and there is no target checkpoint. Completed optimizer iterations, if any, cannot be determined. The six-hour absolute cap has expired; no accepted p=.30485 numerical observation exists and no restart should occur without renewed authorization. Full record: `BRANCH192-UPPER-RESULTS.md` and `branch192-upper-interruption.json`.

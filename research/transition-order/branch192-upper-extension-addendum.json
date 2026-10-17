@@ -1,0 +1,41 @@
+{
+  "kind": "user-authorized cap-extension addendum; preserves original frozen protocol and failed five-hour gate",
+  "authorization": "User selected +60 minutes: extend the same campaign absolute cap from five hours to six hours, measured from the original protocol start. Exactly one ordered \u03c7192 p=.30485 continuation from the accepted \u03c7192 p=.30480 state remains in scope.",
+  "extension_seconds": 3600,
+  "total_wall_cap_seconds": 21600,
+  "original_started_unix": 1792197360.3899221,
+  "original_deadline_unix": 1792215360.3899221,
+  "extended_deadline_unix": 1792218960.3899221,
+  "extension_decision_unix": 1792199324.342259,
+  "original_protocol_sha256": "132fb29511384d03b637fbd91458d85e8acfd7483d1d4ba3428b0e9db437b1a1",
+  "original_benchmark_sha256": "5152e31f87c23aa7f36f8f66fc27911138248b1cddf7287e248ccb307032f30c",
+  "benchmark_seconds_per_iteration": 87.33492684364319,
+  "benchmark_peak_rss_kib": 168784,
+  "forecast_rule": "Preserve the original frozen forecast unchanged: 205 iterations \u00d7 measured/reference seconds per iteration, plus 120-second setup reserve and 900-second independent validation/report reserve.",
+  "optimizer_budget_seconds": 18616.047663211823,
+  "setup_reserve_seconds": 120,
+  "validation_reserve_seconds": 900,
+  "extended_gate": {
+    "time_passed": true,
+    "memory_passed": true,
+    "forecast_seconds": 18923.660002946854,
+    "remaining_seconds": 19636.047663211823,
+    "headroom_seconds": 712.3876602649689,
+    "forecast_iterations": 205,
+    "per_iteration_seconds": 87.33492684364319,
+    "setup_reserve_seconds": 120,
+    "validation_reserve_seconds": 900,
+    "peak_rss_kib": 168784,
+    "mem_available_kib": 1423172,
+    "production_authorized": true,
+    "decision": "PROCEED with exactly one ordered \u03c7192 p=.30485 continuation under the extended six-hour absolute cap"
+  },
+  "extension_code_sha256": {
+    "v2.2/verify/replica/branch192_upper_extension_worker.py": "eeb2c3de38a6337d395996d03ca56c6f09ec73b82176f5ea6bdd0b8aaf15b8f2",
+    "research/transition-order/branch192_upper_extension.py": "33e89764852fe93471032743e8b10a4a4cb44aec6c3f0ecfae254f2095812d43",
+    "research/transition-order/branch192_upper_extension_report.py": "b42ad6fbd24a44777b357152f6d6817e1dee8030be7bbb11c0f37256e95c04ae",
+    "v2.2/verify/replica/branch192_upper_audit.py": "b68468adb97e022eb6840f7b0a5146ad114ef2ef7c5a741d8b1c73dd4c6c3495"
+  },
+  "extension_worker_sha256": "eeb2c3de38a6337d395996d03ca56c6f09ec73b82176f5ea6bdd0b8aaf15b8f2",
+  "scope": "Only the previously authorized single ordered \u03c7192 p=.30485 continuation. No new rates, preparation, excited-state/gap, perturbation or stability calculations."
+}

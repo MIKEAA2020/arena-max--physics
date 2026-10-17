@@ -67,3 +67,7 @@ A later, separate five-hour authorization tested only the two accepted chi128 p=
 ### Single χ192 upper-rate feasibility gate
 
 The user then authorized one ordered-source p=.30485 follow-up, benchmark-first under a fresh five-hour cap. The disposable χ192 step measured 87.335s/iteration; the relevant accepted χ128 same-p ordered-history reference took 205 iterations. With the frozen 120s setup and 900s validation reserves, the forecast was 18,923.66s versus 17,912.24s remaining after the benchmark. Memory passed, runtime failed. Production was **not launched**; no p=.30485 χ192 MPS, order, energy, or collapse measurement exists. See `BRANCH192-UPPER-RESULTS.md` and `branch192-upper-protocol.json`.
+
+### χ192 p=.30485 extension interruption
+
+The user authorized one extra hour (six hours total from the original start). The unchanged forecast/runtime and memory gates passed and the single ordered production worker was launched. No final optimizer record, saved target checkpoint, or independent audit was produced before the worker disappeared; its log is empty and iteration count is unknown. The absolute cap has expired. There is no p=.30485 χ192 order, energy, or collapse observation; any restart requires renewed user authorization. See `BRANCH192-UPPER-RESULTS.md`.

@@ -1,6 +1,6 @@
 {
   "campaign": "2026-10-17-chi192-single-ordered-upper-rate-v1",
-  "status": "feasibility gate failed; production not launched",
+  "status": "production interrupted without final record; no target checkpoint",
   "protocol": "research/transition-order/branch192-upper-protocol.json",
   "benchmark": {
     "kind": "disposable one-step \u03c7192 p=.30485 warm-enlargement/runtime benchmark; no scientific result",
@@ -60,5 +60,42 @@
     "final_color_l2": 0.0005949375817170854
   },
   "result": null,
-  "interpretation": "No \u03c7192 p=.30485 optimizer observation was made; a disposable benchmark is not a scientific result."
+  "interpretation": "No \u03c7192 p=.30485 optimizer observation was made; a disposable benchmark is not a scientific result.",
+  "extension_addendum": "research/transition-order/branch192-upper-extension-addendum.json",
+  "extension_gate": {
+    "time_passed": true,
+    "memory_passed": true,
+    "forecast_seconds": 18923.660002946854,
+    "remaining_seconds": 19636.047663211823,
+    "headroom_seconds": 712.3876602649689,
+    "forecast_iterations": 205,
+    "per_iteration_seconds": 87.33492684364319,
+    "setup_reserve_seconds": 120,
+    "validation_reserve_seconds": 900,
+    "peak_rss_kib": 168784,
+    "mem_available_kib": 1423172,
+    "production_authorized": true,
+    "decision": "PROCEED with exactly one ordered \u03c7192 p=.30485 continuation under the extended six-hour absolute cap"
+  },
+  "extension_authorization": "User selected +60 minutes: extend the same campaign absolute cap from five hours to six hours, measured from the original protocol start. Exactly one ordered \u03c7192 p=.30485 continuation from the accepted \u03c7192 p=.30480 state remains in scope.",
+  "execution_interruption": {
+    "kind": "post-cap execution interruption record; no accepted p=.30485 result",
+    "observed_unix": 1792229368.4707386,
+    "observed_utc": "2026-10-17T09:29:28.470739+00:00",
+    "campaign": "2026-10-17-chi192-single-ordered-upper-rate-v1",
+    "original_protocol_sha256": "132fb29511384d03b637fbd91458d85e8acfd7483d1d4ba3428b0e9db437b1a1",
+    "extension_addendum_sha256": "e6842924e22ed19b713e91776be62715bd66846da7aef58a93724f641d0eab54",
+    "extended_deadline_unix": 1792218960.3899221,
+    "cap_expired": true,
+    "last_worker_record": "v2.2/verify/replica/n3_branch192_upper_ordered.json",
+    "last_worker_record_sha256": "790a86a581301046813e734364da1315bfc45f46193a418e455aab5f879d84e9",
+    "last_worker_record_state": "running",
+    "optimizer_iterations_known": false,
+    "worker_log": "v2.2/verify/replica/branch192_upper_ordered.log",
+    "worker_log_bytes": 0,
+    "target_checkpoint": "v2.2/verify/replica/checkpoints/branch192_upper_ordered_p0.3048500.npz",
+    "target_checkpoint_exists": false,
+    "matching_worker_processes_present": [],
+    "interpretation": "The production worker was launched after the six-hour extension gate passed. The durable worker record remains at its initial running status; its log is empty, no target checkpoint or final result is present, and no matching process remains. The number of completed internal optimizer iterations cannot be recovered from these artifacts. No accepted p=.30485 numerical observation is available. The extended absolute cap has expired; do not restart without renewed authorization."
+  }
 }
