@@ -25,10 +25,10 @@ Forecast for both preparations including setup and validation reserves: 37946.25
 
 ## Same-rate state outcomes
 
-| Preparation | Status | Iterations | eps | Max compatibility | Max canonical defect | Color L2 | m_species | ξχ | f_half | f_period,trial | Audit |
+| Preparation | Reported status | Iterations | eps | Max compatibility | Max canonical defect | Color L2 | m_species | ξχ | f_half | f_period,trial | Audit record / current tensor |
 |---|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|---|
-| ordered | accepted finite-chi numerical state | 146 | 0.00000005 | 0.00000005 | 0.000 | 0.42451135 | 0.45108317 | 170.442 | 0.992950567266 | 0.992950547331 | passed |
-| small | accepted finite-chi numerical state | 199 | 0.00000005 | 0.00000005 | 0.000 | 0.00062433 | 0.00060714 | 90.690 | 0.992950208167 | 0.992950139868 | passed |
+| ordered | accepted finite-chi state reported | 146 | 0.00000005 | 0.00000005 | 0.000 | 0.42451135 | 0.45108317 | 170.442 | 0.992950567266 | 0.992950547331 | historical audit pass; final file missing |
+| small | accepted finite-chi state reported | 199 | 0.00000005 | 0.00000005 | 0.000 | 0.00062433 | 0.00060714 | 90.690 | 0.992950208167 | 0.992950139868 | historical audit pass; final file missing |
 
 Same-p invariant-order separation |Δcolor L2| = 0.42388702. Same-objective half-row difference Δf_half (ordered−small) = +3.5909916507e-07. At χ128 and the same rate, the recorded Δf_half (ordered−disordered) was −4.359393e-07. The magnitudes are of the same order and the sign changes with χ. These are finite-χ numerical comparisons, not calibrated uncertainty or a thermodynamic crossing. Full-period Rayleigh trial values remain a separate objective.
 
