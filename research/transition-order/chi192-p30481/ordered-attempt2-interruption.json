@@ -1,0 +1,18 @@
+{
+  "attempt": 2,
+  "history": "ordered",
+  "rate": 0.30481,
+  "status": "interrupted after first resumable atomic checkpoint",
+  "observed_at_utc": "2026-10-18T17:17:42Z",
+  "progress_record": "branch192_p30481_ordered_attempt2_interrupted.json",
+  "iterations": 5,
+  "eps": 4.784957732151458e-06,
+  "optimizer_seconds": 354.871191740036,
+  "checkpoint": "checkpoints/branch192_p30481_ordered_p0.3048100.npz",
+  "checkpoint_sha256": "816854bdd9b8c5824ef39d0b4a687836cd45d83a8e8d76a605d4dbecd959c786",
+  "checkpoint_reopens": true,
+  "worker_process_manager_id": "192-p-30481-continuation-9e15bebe",
+  "worker_pid_last_recorded": 1802,
+  "worker_process_state": "process manager returned not_found; no matching worker found in ps; exact termination cause unknown",
+  "recovery": "Resume the same ordered p=.30481 warm preparation from this verified p=.30481 checkpoint; do not restart from p=.30480 and do not count as a new history."
+}

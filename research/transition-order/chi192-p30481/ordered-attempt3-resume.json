@@ -1,0 +1,21 @@
+{
+  "attempt": 3,
+  "history": "ordered",
+  "rate": 0.30481,
+  "restart_started_unix": 1792343862.2811646,
+  "restart_started_utc": "2026-10-18T17:17:42Z",
+  "source_checkpoint": "checkpoints/branch192_p30481_ordered_p0.3048100.npz",
+  "source_checkpoint_sha256": "816854bdd9b8c5824ef39d0b4a687836cd45d83a8e8d76a605d4dbecd959c786",
+  "cumulative_iterations_before_resume": 5,
+  "cumulative_optimizer_seconds_before_resume": 354.871191740036,
+  "source_residual": 4.784957732151458e-06,
+  "prior_attempt": "attempt 2 had interrupted after iteration 5; this resume continues the same ordered warm history.",
+  "deadline_unix": 1792387201.1643448,
+  "deadline_reset": false,
+  "worker_script": {
+    "path": "research/transition-order/chi192-p30481/branch192_p30481_resume_worker.py",
+    "sha256": "269fce8cc1ab6f7561607b990558304f060bca8f935645d83558b750e42c78a2",
+    "purpose": "resume the same ordered p=.30481 checkpoint lineage after interruption; preserve cumulative iterations/time; save a recovery checkpoint each iteration. Uses the existing unchanged VUMPS implementation and objective."
+  },
+  "checkpoint_policy": "recovery worker writes an atomic state checkpoint every optimizer iteration."
+}

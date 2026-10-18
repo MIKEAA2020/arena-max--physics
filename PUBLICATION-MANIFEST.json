@@ -1,6 +1,6 @@
 {
   "scope": "generated work plus specifically identified A-1 reproduction inputs",
-  "credential_scan": "passed (contents and nested archives; no secret values printed)",
+  "credential_scan": "passed for this update (text artifacts scanned for credential markers; no secret values printed)",
   "omitted": [
     "raw uploads directory",
     "bulk third-party search downloads",
@@ -336,8 +336,8 @@
     },
     {
       "path": "research/transition-order/BRANCH192-MID-PAIR-RESULTS.md",
-      "bytes": 8831,
-      "sha256": "001e9e49534470d7e372e7fa51459b2ed9c2c196491e0f3a45e08eac6842cf43"
+      "bytes": 9108,
+      "sha256": "c7fdc9a7c165060ad54afb864f059b1ac85bcddb1178d90f964d98cfcef92247"
     },
     {
       "path": "research/transition-order/BRANCH192-RESULTS.md",
@@ -666,8 +666,8 @@
     },
     {
       "path": "research/transition-order/branch192-mid-pair-report.docx",
-      "bytes": 41446,
-      "sha256": "11412659c6537fb7d10637efa308b7aab53a79a4483ca8bc17aee66cee00a207"
+      "bytes": 41581,
+      "sha256": "3eabad85a7084e0cb1d59f9680eb5afa5d1632a7d57006bb50d44a75c3ac2098"
     },
     {
       "path": "research/transition-order/branch192-mid-pair-small-restart-protocol.json",
@@ -791,8 +791,8 @@
     },
     {
       "path": "research/transition-order/branch192_mid_pair_report.py",
-      "bytes": 10270,
-      "sha256": "eb701d0d04bcde529eefa173b2635124722aa0ca2767883a3803234e182e2eb1"
+      "bytes": 10547,
+      "sha256": "9d979bc159d132946109d7b3965b22edfdec8b929f88d7fa33e9c1ee35ffab43"
     },
     {
       "path": "research/transition-order/branch192_report.py",
@@ -921,8 +921,23 @@
     },
     {
       "path": "research/transition-order/chi192-p30481/branch192_p30481_ordered.json",
-      "bytes": 1386,
-      "sha256": "dfb6f84c855bed75b82ba170e186ea8c448451b059d7ef13320ba071fea54574"
+      "bytes": 2649,
+      "sha256": "c8b68ea008467e5d874f9fbffe9d535bb91f2aa7991117419fa5e6ed592f27dc"
+    },
+    {
+      "path": "research/transition-order/chi192-p30481/branch192_p30481_ordered_attempt2_interrupted.json",
+      "bytes": 2649,
+      "sha256": "c8b68ea008467e5d874f9fbffe9d535bb91f2aa7991117419fa5e6ed592f27dc"
+    },
+    {
+      "path": "research/transition-order/chi192-p30481/branch192_p30481_resume_worker.py",
+      "bytes": 11386,
+      "sha256": "269fce8cc1ab6f7561607b990558304f060bca8f935645d83558b750e42c78a2"
+    },
+    {
+      "path": "research/transition-order/chi192-p30481/checkpoints/branch192_p30481_ordered_p0.3048100.npz",
+      "bytes": 5381682,
+      "sha256": "816854bdd9b8c5824ef39d0b4a687836cd45d83a8e8d76a605d4dbecd959c786"
     },
     {
       "path": "research/transition-order/chi192-p30481/ordered-attempt1-interrupted.json",
@@ -935,14 +950,24 @@
       "sha256": "5d287df7dea2fb81e312fc4453cb492152f1963be31d414b481f152c8c093114"
     },
     {
+      "path": "research/transition-order/chi192-p30481/ordered-attempt2-interruption.json",
+      "bytes": 937,
+      "sha256": "0f4ac7a5ab07df6177b07744294e5dc291330aa0a0b12aa29c047ab57f818f4a"
+    },
+    {
       "path": "research/transition-order/chi192-p30481/ordered-attempt2-restart.json",
       "bytes": 552,
       "sha256": "fc239b6002af3e0c95a50dfad05d7cfeaa8419540d265ec0f9dd06736ff275bd"
     },
     {
+      "path": "research/transition-order/chi192-p30481/ordered-attempt3-resume.json",
+      "bytes": 1206,
+      "sha256": "281c9714322ff09c69595db599e58169e28fd255235f3412fc480a7766250787"
+    },
+    {
       "path": "research/transition-order/chi192-p30481/protocol.json",
-      "bytes": 9814,
-      "sha256": "20e1684ce852483d1313b76c04152d1e5b01c7ceb71a6e1dd615f780e933990b"
+      "bytes": 13401,
+      "sha256": "1c939b3dc09637881dc5b13cf44a7608d511c6b1ce88b9a26121da0980d11b0b"
     },
     {
       "path": "research/transition-order/compact-package-101.log",

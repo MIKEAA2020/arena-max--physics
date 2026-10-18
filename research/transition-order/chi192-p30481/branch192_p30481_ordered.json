@@ -7,7 +7,7 @@
   "chi": 192,
   "external_tol": 1e-07,
   "internal_goal": 5e-08,
-  "status": "running",
+  "status": "interrupted; resumable checkpoint saved",
   "converged": false,
   "source": {
     "checkpoint": "v2.2/verify/replica/checkpoints/branch192_retry1_ordered_p0.3048000.npz",
@@ -39,5 +39,28 @@
   },
   "source_is_accepted_observation": true,
   "checkpoint": "checkpoints/branch192_p30481_ordered_p0.3048100.npz",
-  "qualification": "one of a paired single-rate finite-chi branch-retention test; not a global-minimum or transition certificate"
+  "qualification": "one of a paired single-rate finite-chi branch-retention test; not a global-minimum or transition certificate",
+  "eps": 4.784957732151458e-06,
+  "iters": 5,
+  "optimizer_seconds": 354.871191740036,
+  "interruption": {
+    "attempt": 2,
+    "history": "ordered",
+    "rate": 0.30481,
+    "status": "interrupted after first resumable atomic checkpoint",
+    "observed_at_utc": "2026-10-18T17:17:42Z",
+    "progress_record": "branch192_p30481_ordered_attempt2_interrupted.json",
+    "iterations": 5,
+    "eps": 4.784957732151458e-06,
+    "optimizer_seconds": 354.871191740036,
+    "checkpoint": "checkpoints/branch192_p30481_ordered_p0.3048100.npz",
+    "checkpoint_sha256": "816854bdd9b8c5824ef39d0b4a687836cd45d83a8e8d76a605d4dbecd959c786",
+    "checkpoint_reopens": true,
+    "worker_process_manager_id": "192-p-30481-continuation-9e15bebe",
+    "worker_pid_last_recorded": 1802,
+    "worker_process_state": "process manager returned not_found; no matching worker found in ps; exact termination cause unknown",
+    "recovery": "Resume the same ordered p=.30481 warm preparation from this verified p=.30481 checkpoint; do not restart from p=.30480 and do not count as a new history."
+  },
+  "checkpoint_sha256": "816854bdd9b8c5824ef39d0b4a687836cd45d83a8e8d76a605d4dbecd959c786",
+  "interruption_record": "ordered-attempt2-interruption.json"
 }

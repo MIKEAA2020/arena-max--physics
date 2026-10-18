@@ -177,9 +177,27 @@
       "worker_process_id": "192-lower-edge-continuation-58b1723d",
       "worker_process_state": "not found at continuation check; exact termination cause unknown",
       "recovery": "Restart the same ordered preparation from its verified accepted p=.30480 source checkpoint. This is not a new rate or independent warm history."
+    },
+    {
+      "attempt": 2,
+      "history": "ordered",
+      "rate": 0.30481,
+      "status": "interrupted after first resumable atomic checkpoint",
+      "observed_at_utc": "2026-10-18T17:17:42Z",
+      "progress_record": "branch192_p30481_ordered_attempt2_interrupted.json",
+      "iterations": 5,
+      "eps": 4.784957732151458e-06,
+      "optimizer_seconds": 354.871191740036,
+      "checkpoint": "checkpoints/branch192_p30481_ordered_p0.3048100.npz",
+      "checkpoint_sha256": "816854bdd9b8c5824ef39d0b4a687836cd45d83a8e8d76a605d4dbecd959c786",
+      "checkpoint_reopens": true,
+      "worker_process_manager_id": "192-p-30481-continuation-9e15bebe",
+      "worker_pid_last_recorded": 1802,
+      "worker_process_state": "process manager returned not_found; no matching worker found in ps; exact termination cause unknown",
+      "recovery": "Resume the same ordered p=.30481 warm preparation from this verified p=.30481 checkpoint; do not restart from p=.30480 and do not count as a new history."
     }
   ],
-  "current_execution_status": "attempt 2: ordered history restarting from the verified accepted p=.30480 source; small history follows sequentially after ordered result.",
+  "current_execution_status": "attempt 3: resume ordered p=.30481 from accepted in-flight p=.30481 checkpoint after attempt 2 stopped at iteration 5; small-order history follows sequentially after ordered result.",
   "previous_attempt_deadline_unix": 1792342906.9236,
   "restart_started_unix": 1792336801.1643448,
   "cap_override_note": "User explicitly said to run either lower-edge rate regardless of cap. The first launch ended before any atomic checkpoint, and the same ordered preparation is restarted from its unchanged accepted source under a fresh 14-hour operational timer; one sequential worker and validation/memory gates remain in force.",
@@ -193,6 +211,45 @@
       "source_checkpoint_sha256": "d15055d94d8a527a698a7967f468704d4c5cdaf1513c2388198170f0652ca1da",
       "prior_attempt": "attempt 1 ended before first atomic checkpoint; no iteration/residual/checkpoint was recorded",
       "authorization": "User said run either rate regardless of cap; same rate/preparation restart, not an added independent history."
+    },
+    {
+      "attempt": 3,
+      "history": "ordered",
+      "rate": 0.30481,
+      "restart_started_unix": 1792343862.2811646,
+      "source_checkpoint": "checkpoints/branch192_p30481_ordered_p0.3048100.npz",
+      "source_checkpoint_sha256": "816854bdd9b8c5824ef39d0b4a687836cd45d83a8e8d76a605d4dbecd959c786",
+      "cumulative_iterations_before_resume": 5,
+      "cumulative_optimizer_seconds_before_resume": 354.871191740036,
+      "prior_attempt": "attempt 2 ended after five iterations with a valid atomic checkpoint; termination cause unknown.",
+      "authorization": "User said go on. This is the same ordered rate/preparation and preserves its saved state; no new rate or independent warm history. Continue under the original attempt-2 14-hour deadline; no timer reset."
     }
-  ]
+  ],
+  "recovery_worker": {
+    "path": "research/transition-order/chi192-p30481/branch192_p30481_resume_worker.py",
+    "sha256": "269fce8cc1ab6f7561607b990558304f060bca8f935645d83558b750e42c78a2",
+    "purpose": "resume the same ordered p=.30481 checkpoint lineage after interruption; preserve cumulative iterations/time; save a recovery checkpoint each iteration. Uses the existing unchanged VUMPS implementation and objective."
+  },
+  "resume_source": {
+    "history": "ordered",
+    "p": 0.30481,
+    "checkpoint": "checkpoints/branch192_p30481_ordered_p0.3048100.npz",
+    "sha256": "816854bdd9b8c5824ef39d0b4a687836cd45d83a8e8d76a605d4dbecd959c786",
+    "iterations": 5,
+    "eps": 4.784957732151458e-06,
+    "optimizer_seconds": 354.871191740036,
+    "metadata": "verified chi=192, n=3, d=2, hermitian-halfrow, tag=chi192-p30481-ordered"
+  },
+  "recovery_budget_snapshot": {
+    "observed_at_unix": 1792343862.2811646,
+    "observed_at_utc": "2026-10-18T17:17:42Z",
+    "remaining_original_deadline_seconds": 43338.88318014145,
+    "remaining_optimizer_forecast_seconds": 40878.51929926872,
+    "remaining_forecast_with_setup_validation_safety_seconds": 43518.51929926872,
+    "headroom_seconds": -179.63611912727356,
+    "note": "The original deadline remains unchanged. Current optimizer plus setup/validation forecast leaves the recorded headroom; the full 10-minute safety buffer is short by the amount recorded. Estimates are planning values, not scientific uncertainty. The user said go on; proceed without resetting the deadline.",
+    "remaining_forecast_with_setup_validation_seconds": 42918.51929926872,
+    "headroom_after_setup_validation_seconds": 420.36388087272644,
+    "safety_buffer_shortfall_seconds": 179.63611912727356
+  }
 }
