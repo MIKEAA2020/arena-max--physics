@@ -1,0 +1,20 @@
+{
+  "attempt": 3,
+  "history": "ordered",
+  "rate": 0.30481,
+  "status": "interrupted; latest iteration checkpoint saved",
+  "observed_at_utc": "2026-10-18T18:03:33Z",
+  "process_manager_id": "192-p-30481-continuation-2a32f56f",
+  "start_process_pid": 1998,
+  "last_os_worker_pid_observed": 2002,
+  "termination_signal": "SIGTERM caught by the worker; worker is now absent from process list",
+  "reason_recorded_by_worker": "paired campaign manager stop",
+  "exact_sender_or_termination_cause": "unknown",
+  "iterations": 9,
+  "eps": 2.054131623020729e-06,
+  "optimizer_seconds": 656.5157632827759,
+  "checkpoint": "checkpoints/branch192_p30481_ordered_p0.3048100.npz",
+  "checkpoint_sha256": "3c8cca2f0980188fd485cf8c8465d08a45af41dc6df2a4909219820a62a08167",
+  "checkpoint_reopens": true,
+  "recovery": "Resume the same ordered p=.30481 path from this p=.30481 checkpoint; no new rate or independent warm history."
+}

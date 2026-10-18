@@ -195,9 +195,29 @@
       "worker_pid_last_recorded": 1802,
       "worker_process_state": "process manager returned not_found; no matching worker found in ps; exact termination cause unknown",
       "recovery": "Resume the same ordered p=.30481 warm preparation from this verified p=.30481 checkpoint; do not restart from p=.30480 and do not count as a new history."
+    },
+    {
+      "attempt": 3,
+      "history": "ordered",
+      "rate": 0.30481,
+      "status": "interrupted; latest iteration checkpoint saved",
+      "observed_at_utc": "2026-10-18T18:03:33Z",
+      "process_manager_id": "192-p-30481-continuation-2a32f56f",
+      "start_process_pid": 1998,
+      "last_os_worker_pid_observed": 2002,
+      "termination_signal": "SIGTERM caught by the worker; worker is now absent from process list",
+      "reason_recorded_by_worker": "paired campaign manager stop",
+      "exact_sender_or_termination_cause": "unknown",
+      "iterations": 9,
+      "eps": 2.054131623020729e-06,
+      "optimizer_seconds": 656.5157632827759,
+      "checkpoint": "checkpoints/branch192_p30481_ordered_p0.3048100.npz",
+      "checkpoint_sha256": "3c8cca2f0980188fd485cf8c8465d08a45af41dc6df2a4909219820a62a08167",
+      "checkpoint_reopens": true,
+      "recovery": "Resume the same ordered p=.30481 path from this p=.30481 checkpoint; no new rate or independent warm history."
     }
   ],
-  "current_execution_status": "attempt 3: resume ordered p=.30481 from accepted in-flight p=.30481 checkpoint after attempt 2 stopped at iteration 5; small-order history follows sequentially after ordered result.",
+  "current_execution_status": "attempt 4: resume ordered p=.30481 from saved cumulative iteration 9; the user has since granted standing \u03c7192 authorization for the listed rates as needed, without per-rate confirmation, under the unchanged deadline.",
   "previous_attempt_deadline_unix": 1792342906.9236,
   "restart_started_unix": 1792336801.1643448,
   "cap_override_note": "User explicitly said to run either lower-edge rate regardless of cap. The first launch ended before any atomic checkpoint, and the same ordered preparation is restarted from its unchanged accepted source under a fresh 14-hour operational timer; one sequential worker and validation/memory gates remain in force.",
@@ -223,33 +243,74 @@
       "cumulative_optimizer_seconds_before_resume": 354.871191740036,
       "prior_attempt": "attempt 2 ended after five iterations with a valid atomic checkpoint; termination cause unknown.",
       "authorization": "User said go on. This is the same ordered rate/preparation and preserves its saved state; no new rate or independent warm history. Continue under the original attempt-2 14-hour deadline; no timer reset."
+    },
+    {
+      "attempt": 4,
+      "history": "ordered",
+      "rate": 0.30481,
+      "restart_started_unix": 1792346613.1200168,
+      "source_checkpoint": "checkpoints/branch192_p30481_ordered_p0.3048100.npz",
+      "source_checkpoint_sha256": "3c8cca2f0980188fd485cf8c8465d08a45af41dc6df2a4909219820a62a08167",
+      "cumulative_iterations_before_resume": 9,
+      "cumulative_optimizer_seconds_before_resume": 656.5157632827759,
+      "prior_attempt": "attempt 3 received SIGTERM; exact sender/cause unknown; valid checkpoint at cumulative iteration 9 preserved.",
+      "authorization": "Standing \u03c7192 campaign authorization received 2026-10-18. This resumes the same p=.30481 history under the original deadline; no timer reset."
     }
   ],
   "recovery_worker": {
     "path": "research/transition-order/chi192-p30481/branch192_p30481_resume_worker.py",
-    "sha256": "269fce8cc1ab6f7561607b990558304f060bca8f935645d83558b750e42c78a2",
-    "purpose": "resume the same ordered p=.30481 checkpoint lineage after interruption; preserve cumulative iterations/time; save a recovery checkpoint each iteration. Uses the existing unchanged VUMPS implementation and objective."
+    "sha256": "5623a291c5f182332311408b0955a00ae855a9499cb6b0a3fb597172e0e95751",
+    "purpose": "resume the same ordered p=.30481 checkpoint lineage; preserve cumulative iterations/time and checkpoint after every iteration. Uses the unchanged VUMPS implementation and objective; classifies SIGTERM manager interruption separately from deadline expiry."
   },
   "resume_source": {
     "history": "ordered",
-    "p": 0.30481,
+    "rate": 0.30481,
     "checkpoint": "checkpoints/branch192_p30481_ordered_p0.3048100.npz",
-    "sha256": "816854bdd9b8c5824ef39d0b4a687836cd45d83a8e8d76a605d4dbecd959c786",
-    "iterations": 5,
-    "eps": 4.784957732151458e-06,
-    "optimizer_seconds": 354.871191740036,
-    "metadata": "verified chi=192, n=3, d=2, hermitian-halfrow, tag=chi192-p30481-ordered"
+    "sha256": "3c8cca2f0980188fd485cf8c8465d08a45af41dc6df2a4909219820a62a08167",
+    "iterations": 9,
+    "eps": 2.054131623020729e-06,
+    "optimizer_seconds": 656.5157632827759,
+    "checkpoint_metadata_verified": true
   },
   "recovery_budget_snapshot": {
-    "observed_at_unix": 1792343862.2811646,
-    "observed_at_utc": "2026-10-18T17:17:42Z",
-    "remaining_original_deadline_seconds": 43338.88318014145,
-    "remaining_optimizer_forecast_seconds": 40878.51929926872,
-    "remaining_forecast_with_setup_validation_safety_seconds": 43518.51929926872,
-    "headroom_seconds": -179.63611912727356,
-    "note": "The original deadline remains unchanged. Current optimizer plus setup/validation forecast leaves the recorded headroom; the full 10-minute safety buffer is short by the amount recorded. Estimates are planning values, not scientific uncertainty. The user said go on; proceed without resetting the deadline.",
-    "remaining_forecast_with_setup_validation_seconds": 42918.51929926872,
-    "headroom_after_setup_validation_seconds": 420.36388087272644,
-    "safety_buffer_shortfall_seconds": 179.63611912727356
+    "observed_at_unix": 1792346613.1200168,
+    "observed_at_utc": "2026-10-18T18:03:33Z",
+    "remaining_original_deadline_seconds": 40588.04432797432,
+    "remaining_optimizer_forecast_seconds": 40576.87472772598,
+    "remaining_forecast_with_setup_validation_seconds": 42616.87472772598,
+    "headroom_after_setup_validation_seconds": -2028.8303997516632,
+    "remaining_forecast_with_setup_validation_safety_seconds": 43216.87472772598,
+    "safety_buffer_shortfall_seconds": 2628.830399751663,
+    "note": "Existing absolute deadline retained; no reset. Forecast is based on the earlier one-step benchmark and is planning-only. User now gave standing authorization to proceed within the listed \u03c7192 rates and stop conditions."
+  },
+  "standing_campaign_authorization": {
+    "authorization_date": "2026-10-18",
+    "rates_authorized": [
+      0.30481,
+      0.304815,
+      0.30482,
+      0.30483,
+      0.30484
+    ],
+    "bond_dimension": 192,
+    "histories": "Run both ordered and small-order histories at each rate actually needed to bracket the finite-chi two-branch interval; sequentially, at most one heavy worker.",
+    "autonomy": "No per-rate confirmation is required within the listed rates and stop conditions.",
+    "stop_conditions": [
+      "Stop when the sampled two-branch interval is resolved with retained states at the relevant edges and a collapse outcome at an edge.",
+      "Stop at the existing absolute 14-hour campaign deadline; do not reset or extend it. If there is insufficient budget to finish a pair, stop at the next clean saved checkpoint and report.",
+      "Stop and report if a saved-state validation or audit fails."
+    ],
+    "interpretation": "Record partial optimizer progress and residuals, but do not call an unconverged state accepted branch retention; only accepted states passing the established numerical gates count as retention evidence.",
+    "excluded": "No chi=256, no rates outside this list, and no unrelated scans."
+  },
+  "latest_checkpoint": {
+    "history": "ordered",
+    "rate": 0.30481,
+    "checkpoint": "checkpoints/branch192_p30481_ordered_p0.3048100.npz",
+    "sha256": "3c8cca2f0980188fd485cf8c8465d08a45af41dc6df2a4909219820a62a08167",
+    "iterations": 9,
+    "eps": 2.054131623020729e-06,
+    "optimizer_seconds": 656.5157632827759,
+    "checkpoint_metadata_verified": true
   }
 }

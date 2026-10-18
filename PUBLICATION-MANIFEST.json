@@ -1,6 +1,6 @@
 {
   "scope": "generated work plus specifically identified A-1 reproduction inputs",
-  "credential_scan": "passed for this update (text artifacts scanned for credential markers; no secret values printed)",
+  "credential_scan": "passed for this update (new text artifacts scanned for credential markers; no secret values printed)",
   "omitted": [
     "raw uploads directory",
     "bulk third-party search downloads",
@@ -336,8 +336,8 @@
     },
     {
       "path": "research/transition-order/BRANCH192-MID-PAIR-RESULTS.md",
-      "bytes": 9108,
-      "sha256": "c7fdc9a7c165060ad54afb864f059b1ac85bcddb1178d90f964d98cfcef92247"
+      "bytes": 9788,
+      "sha256": "3435e2b4c00a20b8367aa65ab3b947d04b03667c9ca7aab8fee1c90001ddac75"
     },
     {
       "path": "research/transition-order/BRANCH192-RESULTS.md",
@@ -666,8 +666,8 @@
     },
     {
       "path": "research/transition-order/branch192-mid-pair-report.docx",
-      "bytes": 41581,
-      "sha256": "3eabad85a7084e0cb1d59f9680eb5afa5d1632a7d57006bb50d44a75c3ac2098"
+      "bytes": 41858,
+      "sha256": "5788bde87ec6dbf3be3dc26cd679a0da97229253a1b0eaac15adc75dd20a3be3"
     },
     {
       "path": "research/transition-order/branch192-mid-pair-small-restart-protocol.json",
@@ -791,8 +791,8 @@
     },
     {
       "path": "research/transition-order/branch192_mid_pair_report.py",
-      "bytes": 10547,
-      "sha256": "9d979bc159d132946109d7b3965b22edfdec8b929f88d7fa33e9c1ee35ffab43"
+      "bytes": 11227,
+      "sha256": "0378412f066da2b458165e837c8dabb6655d75e976f39878b950f1a3f339fd3e"
     },
     {
       "path": "research/transition-order/branch192_report.py",
@@ -921,8 +921,8 @@
     },
     {
       "path": "research/transition-order/chi192-p30481/branch192_p30481_ordered.json",
-      "bytes": 2649,
-      "sha256": "c8b68ea008467e5d874f9fbffe9d535bb91f2aa7991117419fa5e6ed592f27dc"
+      "bytes": 3780,
+      "sha256": "f924cdcd4f167b75162805b8b534ed587d977257e042c42f2cc22602477da05a"
     },
     {
       "path": "research/transition-order/chi192-p30481/branch192_p30481_ordered_attempt2_interrupted.json",
@@ -930,14 +930,19 @@
       "sha256": "c8b68ea008467e5d874f9fbffe9d535bb91f2aa7991117419fa5e6ed592f27dc"
     },
     {
+      "path": "research/transition-order/chi192-p30481/branch192_p30481_ordered_attempt3_interrupted.json",
+      "bytes": 3780,
+      "sha256": "f924cdcd4f167b75162805b8b534ed587d977257e042c42f2cc22602477da05a"
+    },
+    {
       "path": "research/transition-order/chi192-p30481/branch192_p30481_resume_worker.py",
-      "bytes": 11386,
-      "sha256": "269fce8cc1ab6f7561607b990558304f060bca8f935645d83558b750e42c78a2"
+      "bytes": 11522,
+      "sha256": "5623a291c5f182332311408b0955a00ae855a9499cb6b0a3fb597172e0e95751"
     },
     {
       "path": "research/transition-order/chi192-p30481/checkpoints/branch192_p30481_ordered_p0.3048100.npz",
-      "bytes": 5381682,
-      "sha256": "816854bdd9b8c5824ef39d0b4a687836cd45d83a8e8d76a605d4dbecd959c786"
+      "bytes": 5381570,
+      "sha256": "3c8cca2f0980188fd485cf8c8465d08a45af41dc6df2a4909219820a62a08167"
     },
     {
       "path": "research/transition-order/chi192-p30481/ordered-attempt1-interrupted.json",
@@ -960,14 +965,24 @@
       "sha256": "fc239b6002af3e0c95a50dfad05d7cfeaa8419540d265ec0f9dd06736ff275bd"
     },
     {
+      "path": "research/transition-order/chi192-p30481/ordered-attempt3-interruption.json",
+      "bytes": 919,
+      "sha256": "46512cc174c0c19fd1bafc038093b81a665a4dbd32ac8bc666c3f543f8d8581c"
+    },
+    {
       "path": "research/transition-order/chi192-p30481/ordered-attempt3-resume.json",
       "bytes": 1206,
       "sha256": "281c9714322ff09c69595db599e58169e28fd255235f3412fc480a7766250787"
     },
     {
+      "path": "research/transition-order/chi192-p30481/ordered-attempt4-resume.json",
+      "bytes": 1222,
+      "sha256": "e39febcb9454570e21419f6f7e56c9d39a2bc12cfd60d8d72a4d7d44c1df632c"
+    },
+    {
       "path": "research/transition-order/chi192-p30481/protocol.json",
-      "bytes": 13401,
-      "sha256": "1c939b3dc09637881dc5b13cf44a7608d511c6b1ce88b9a26121da0980d11b0b"
+      "bytes": 16670,
+      "sha256": "f0aceff5861cfefee0c267a6e65de36541b41cf381ab7c1ba906377caac39426"
     },
     {
       "path": "research/transition-order/compact-package-101.log",

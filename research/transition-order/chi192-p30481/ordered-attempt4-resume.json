@@ -1,0 +1,21 @@
+{
+  "attempt": 4,
+  "history": "ordered",
+  "rate": 0.30481,
+  "restart_started_unix": 1792346613.1200168,
+  "restart_started_utc": "2026-10-18T18:03:33Z",
+  "source_checkpoint": "checkpoints/branch192_p30481_ordered_p0.3048100.npz",
+  "source_checkpoint_sha256": "3c8cca2f0980188fd485cf8c8465d08a45af41dc6df2a4909219820a62a08167",
+  "cumulative_iterations_before_resume": 9,
+  "cumulative_optimizer_seconds_before_resume": 656.5157632827759,
+  "source_residual": 2.054131623020729e-06,
+  "prior_attempt": "attempt 3 received SIGTERM; the exact sender/cause is unknown; valid p=.30481 checkpoint is intact.",
+  "deadline_unix": 1792387201.1643448,
+  "deadline_reset": false,
+  "worker_script": {
+    "path": "research/transition-order/chi192-p30481/branch192_p30481_resume_worker.py",
+    "sha256": "5623a291c5f182332311408b0955a00ae855a9499cb6b0a3fb597172e0e95751",
+    "purpose": "resume the same ordered p=.30481 checkpoint lineage; preserve cumulative iterations/time and checkpoint after every iteration. Uses the unchanged VUMPS implementation and objective; classifies SIGTERM manager interruption separately from deadline expiry."
+  },
+  "checkpoint_policy": "atomic checkpoint after every optimizer iteration."
+}

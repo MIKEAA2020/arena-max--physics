@@ -127,7 +127,8 @@ def production(prep,resume=False):
    accepted=defect<p['period_contraction_ceiling'];result.update(converged=bool(accepted),status='accepted finite-chi numerical state' if accepted else 'period contraction gate failed')
   result['process_peak_rss_kib']=resource.getrusage(resource.RUSAGE_SELF).ru_maxrss
  except TimeoutError as e:
-  result.update(status='authorized wall-clock budget reached',converged=False,reason=str(e))
+  deadline_hit='authorized p=.30481 campaign deadline reached' in str(e)
+  result.update(status='authorized wall-clock budget reached' if deadline_hit else 'interrupted; resumable checkpoint saved',converged=False,reason=str(e))
   if cp.exists():
    try:_,m=H.load_state(cp,operator='hermitian-halfrow');result.update(last_state_metadata=m,eps=m.get('eps'),iters=m.get('iters'),optimizer_seconds=m.get('seconds'))
    except Exception:pass
