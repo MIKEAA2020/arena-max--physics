@@ -1,0 +1,16 @@
+{
+  "revision": "v35 author-review continuation",
+  "source_v34_sha256": "d48a4eebcd51d8b2832292e457cdf890860e4703f92635842d629a556601cc9d",
+  "source_v33_sha256": "d27cddbaa6dee54f122d55ec16ebb7d5e2059fb3542faa72381b11e775958611",
+  "output_v35_sha256": "d1958065376d6e787002f820afb8f59c45d033d579581d51087c732ff0bed8bd",
+  "unchanged_math_statement_and_proof_blocks": 65,
+  "labels_unique": true,
+  "internal_references_resolve": true,
+  "citation_keys_resolve": true,
+  "chi192_p304825_status": "historically reported accepted; audits marked passed; final checkpoint blobs unavailable for reopening",
+  "chi192_p30481_status": "incomplete at cumulative iteration 19; not accepted",
+  "transition_order": "unresolved",
+  "finite_chi_window": "coarse sampled warm-history change zone p=.30480--.30485; not thermodynamic coexistence interval",
+  "chi256": "proposed future paired-history/extrapolation study; not run",
+  "submission_status": "author-review; not submission certified"
+}
