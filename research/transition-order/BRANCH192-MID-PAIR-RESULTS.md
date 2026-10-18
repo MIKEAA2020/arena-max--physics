@@ -30,13 +30,27 @@ Forecast for both preparations including setup and validation reserves: 37946.25
 | ordered | accepted finite-chi numerical state | 146 | 0.00000005 | 0.00000005 | 0.000 | 0.42451135 | 0.45108317 | 170.442 | 0.992950567266 | 0.992950547331 | passed |
 | small | accepted finite-chi numerical state | 199 | 0.00000005 | 0.00000005 | 0.000 | 0.00062433 | 0.00060714 | 90.690 | 0.992950208167 | 0.992950139868 | passed |
 
-Same-p invariant-order separation |Δcolor L2| = 0.42388702. Same-objective half-row difference Δf_half (ordered−small) = 3.5909916507e-07. These are finite-χ numerical state diagnostics, not calibrated uncertainty or a thermodynamic crossing. Full-period Rayleigh trial values remain a separate objective.
+Same-p invariant-order separation |Δcolor L2| = 0.42388702. Same-objective half-row difference Δf_half (ordered−small) = +3.5909916507e-07. At χ128 and the same rate, the recorded Δf_half (ordered−disordered) was −4.359393e-07. The magnitudes are of the same order and the sign changes with χ. These are finite-χ numerical comparisons, not calibrated uncertainty or a thermodynamic crossing. Full-period Rayleigh trial values remain a separate objective.
+
+## Cross-rate χ192 context
+
+The accepted χ192 p=.30480 pair converged to nearly the same large-order state; the low-order-start path was not retained as a distinct low-order state. At p=.304825, the two authorized histories produced clearly separated accepted states (color L2 0.42451 versus 0.000624). At p=.30485, the ordered-start retry ended in the small-order state. Thus, among these sampled warm-history outcomes, p=.304825 is the first χ192 point with a retained pair, between the sampled .30480 and .30485 outcomes.
+
+A useful shorthand is a **coarse sampled finite-χ warm-history change zone** of approximately (.30480, .30485), with distinct-state retention demonstrated at .304825. The spacing from .304825 to either sampled endpoint is 2.5×10⁻⁵. This is not a measured two-branch stability interval: the endpoints are path outcomes, not mapped boundaries, and no local stability or thermodynamic coexistence test was done. The actual retention limits could differ.
 
 ## Interpretation
 
-If two accepted, distinguishable numerical families are retained at p=.304825, that supports finite-χ branch retention at this one common rate. Their same-objective values may be ranked arithmetically at this p, but one point cannot bracket a crossing. If the histories merge, this shows only that these warm paths did not retain distinct states; it does not prove no other stationary state exists. Neither outcome identifies a spinodal, global minimum, coexistence point, or thermodynamic transition order.
+This pattern strengthens a **first-order-like finite-χ reading** relative to the earlier χ192 .30480 result alone: two distinguishable states are now retained at one common rate, while the sampled warm paths change character at the neighboring rates. It is compatible with a narrow metastable-branch picture if the transition is first-order. A continuous transition with a small exponent β, together with finite-χ crossover or long-lived numerical configurations, remains possible. The current data cannot distinguish these explanations or place the thermodynamic critical point inside the sampled interval.
 
-Optimizer residuals are not free-energy error bars. A VUMPS state is not a global-minimum certificate. No additional p, gap, or stability computation is inferred.
+At p=.304825 the half-row objective difference is +3.59×10⁻⁷ at χ192 and −4.36×10⁻⁷ at χ128. The comparable magnitudes and opposite signs are worth recording, but residuals are not objective error bars; this is not a crossing bracket or evidence that the gap has a controlled χ-scaling.
+
+> **Ledger:** χ192 at p=.304825: two distinct warm-history numerical states reported (color L2 0.4245 vs. 0.0006; Δf_half, ordered−small = +3.59×10⁻⁷). Both final accepted checkpoint files are missing; historical audit records say “passed,” but the final tensors cannot now be independently reopened. Coarse sampled warm-history change zone: .30480–.30485, with pair retention at .304825; not a thermodynamic window or coexistence bracket. First-order-like narrow-window reading strengthened; continuous transition with small β remains live. **Transition order unresolved.**
+
+Optimizer residuals are not free-energy error bars. An accepted VUMPS state is not a global-minimum certificate. The result supports finite-χ warm-history branch retention at one sampled rate, not thermodynamic metastability, global optimality, or transition order.
+
+## Candidate follow-up work (not run)
+
+One additional χ192 probe at p=.30481 or p=.304815 could refine the lower-side warm-history outcome; the supplied estimate is about five hours per rate. It would not restore the missing p=.304825 tensors. No choice between those rates has been made here, and no new run was launched. A χ256 campaign at two or more rates is a separate, roughly 20–30 hour research project and was not started.
 
 Artifacts: `v2.2/verify/replica/n3_branch192_mid_pair.json`, surviving source checkpoints, audit records, disposable benchmarks/logs, and `branch192-mid-pair-protocol.json`.
 

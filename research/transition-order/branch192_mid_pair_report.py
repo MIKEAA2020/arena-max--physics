@@ -31,21 +31,28 @@ if results:
   lines += ['',f"Same-p invariant-order separation |Δcolor L2| = {dc:.8g}. Same-objective half-row difference Δf_half (ordered−small) = {df:.12g}. These are finite-χ numerical state diagnostics, not calibrated uncertainty or a thermodynamic crossing. Full-period Rayleigh trial values remain a separate objective.",'']
 else:
  lines += ['', 'No production result is available; a disposable benchmark is not a numerical state.','']
-lines += ['## Interpretation','',
-'If two accepted, distinguishable numerical families are retained at p=.304825, that supports finite-χ branch retention at this one common rate. Their same-objective values may be ranked arithmetically at this p, but one point cannot bracket a crossing. If the histories merge, this shows only that these warm paths did not retain distinct states; it does not prove no other stationary state exists. Neither outcome identifies a spinodal, global minimum, coexistence point, or thermodynamic transition order.','',
-'Optimizer residuals are not free-energy error bars. A VUMPS state is not a global-minimum certificate. No additional p, gap, or stability computation is inferred.','',
+lines += ['## Cross-rate χ192 context','',
+'The accepted χ192 p=.30480 pair converged to nearly the same large-order state; the low-order-start path was not retained as a distinct low-order state. At p=.304825, the two authorized histories produced clearly separated accepted states (color L2 0.42451 versus 0.000624). At p=.30485, the ordered-start retry ended in the small-order state. Thus, among these sampled warm-history outcomes, p=.304825 is the first χ192 point with a retained pair, between the sampled .30480 and .30485 outcomes.','',
+'A useful shorthand is a **coarse sampled finite-χ warm-history change zone** of approximately (.30480, .30485), with distinct-state retention demonstrated at .304825. The spacing from .304825 to either sampled endpoint is 2.5×10⁻⁵. This is not a measured two-branch stability interval: the endpoints are path outcomes, not mapped boundaries, and no local stability or thermodynamic coexistence test was done. The actual retention limits could differ.','',
+'At χ128 and p=.304825, Δf_half (ordered−disordered) = −4.359393×10⁻⁷; at χ192, Δf_half (ordered−small) = +3.590992×10⁻⁷. The magnitudes are of the same order but the sign changes with χ. These are not calibrated errors or a crossing bracket.','',
+'## Interpretation','',
+'This pattern strengthens a **first-order-like finite-χ reading** relative to the earlier χ192 .30480 result alone: two distinguishable states are now retained at one common rate, while the sampled warm paths change character at neighboring rates. It is compatible with a narrow metastable-branch picture if the transition is first-order. A continuous transition with a small exponent β, together with finite-χ crossover or long-lived numerical configurations, remains possible. The current data cannot distinguish these explanations or place the thermodynamic critical point inside the sampled interval.','',
+'Optimizer residuals are not free-energy error bars. A VUMPS state is not a global-minimum certificate. The evidence is finite-χ warm-history retention at one sampled rate, not thermodynamic metastability, global optimality, or transition order.','',
+'> **Ledger:** χ192 at p=.304825: two distinct warm-history numerical states reported (color L2 0.4245 vs. 0.0006; Δf_half, ordered−small = +3.59×10⁻⁷). Both final accepted checkpoint files are missing; historical audit records say “passed,” but the final tensors cannot now be independently reopened. Coarse sampled warm-history change zone: .30480–.30485, with pair retention at .304825; not a thermodynamic window or coexistence bracket. First-order-like narrow-window reading strengthened; continuous transition with small β remains live. **Transition order unresolved.**','',
+'## Candidate follow-up work (not run)','',
+'One additional χ192 probe at p=.30481 or p=.304815 could refine the lower-side warm-history outcome; the supplied estimate is about five hours per rate. It would not restore the missing p=.304825 tensors. No choice between those rates has been made here, and no new run was launched. A χ256 campaign at two or more rates is a separate, roughly 20–30 hour research project and was not started.','',
 'Artifacts: `v2.2/verify/replica/n3_branch192_mid_pair.json`, surviving source checkpoints, audit records, disposable benchmarks/logs, and `branch192-mid-pair-protocol.json`.','']
 if db.get('artifact_integrity_note'):
  lines += ['## Artifact availability note','',db['artifact_integrity_note'],'']
 (HERE/'BRANCH192-MID-PAIR-RESULTS.md').write_text('\n'.join(lines))
-fields=['campaign','status','p','chi','preparation','iters','eps','color_l2_order','m_species','xi_chi','f_half','f_full_rayleigh','audit_status','checkpoint_sha256']
+fields=['campaign','status','p','chi','preparation','iters','eps','color_l2_order','m_species','xi_chi','f_half','f_full_rayleigh','audit_record_status','final_checkpoint_present','checkpoint_sha256']
 with (HERE/'branch192-mid-pair.csv').open('w',newline='') as f:
  w=csv.DictWriter(f,fieldnames=fields,lineterminator='\n');w.writeheader()
  for name in ['ordered','small']:
   r=results.get(name,{})
-  w.writerow({'campaign':p['campaign'],'status':db.get('status'),'p':p['p'],'chi':p['chi'],'preparation':name,'iters':r.get('iters'),'eps':r.get('eps'),
+  w.writerow({'campaign':p['campaign'],'status':'reported accepted finite-chi numerical state','p':p['p'],'chi':p['chi'],'preparation':name,'iters':r.get('iters'),'eps':r.get('eps'),
    'color_l2_order':r.get('color_l2_order'),'m_species':r.get('m_species'),'xi_chi':r.get('xi_chi'),'f_half':r.get('f_half'),'f_full_rayleigh':r.get('f_full_rayleigh'),
-   'audit_status':audits.get(name),'checkpoint_sha256':r.get('checkpoint_sha256')})
+   'audit_record_status':'historical audit record passed','final_checkpoint_present':False,'checkpoint_sha256':r.get('checkpoint_sha256')})
 spec=importlib.util.spec_from_file_location('md2docx',ROOT/'v2.2/md2docx.py');m=importlib.util.module_from_spec(spec);spec.loader.exec_module(m);out=HERE/'branch192-mid-pair-report.docx';m.convert(str(HERE/'BRANCH192-MID-PAIR-RESULTS.md'),str(out))
 from docx import Document
 from docx.shared import Cm
