@@ -217,7 +217,7 @@
       "recovery": "Resume the same ordered p=.30481 path from this p=.30481 checkpoint; no new rate or independent warm history."
     }
   ],
-  "current_execution_status": "attempt 4: resume ordered p=.30481 from saved cumulative iteration 9; the user has since granted standing \u03c7192 authorization for the listed rates as needed, without per-rate confirmation, under the unchanged deadline.",
+  "current_execution_status": "Paused for source investigation. Latest ordered p=.30481 checkpoint is cumulative iteration 16; no worker is running.",
   "previous_attempt_deadline_unix": 1792342906.9236,
   "restart_started_unix": 1792336801.1643448,
   "cap_override_note": "User explicitly said to run either lower-edge rate regardless of cap. The first launch ended before any atomic checkpoint, and the same ordered preparation is restarted from its unchanged accepted source under a fresh 14-hour operational timer; one sequential worker and validation/memory gates remain in force.",
@@ -266,22 +266,22 @@
     "history": "ordered",
     "rate": 0.30481,
     "checkpoint": "checkpoints/branch192_p30481_ordered_p0.3048100.npz",
-    "sha256": "3c8cca2f0980188fd485cf8c8465d08a45af41dc6df2a4909219820a62a08167",
-    "iterations": 9,
-    "eps": 2.054131623020729e-06,
-    "optimizer_seconds": 656.5157632827759,
+    "sha256": "4f4e7bc7321ae839cfbcad8b2f85917f996df303f7fc7dd59a24d25e42b61e81",
+    "iterations": 16,
+    "eps": 3.6810718513208667e-07,
+    "optimizer_seconds": 1438.3509275913239,
     "checkpoint_metadata_verified": true
   },
   "recovery_budget_snapshot": {
-    "observed_at_unix": 1792346613.1200168,
-    "observed_at_utc": "2026-10-18T18:03:33Z",
-    "remaining_original_deadline_seconds": 40588.04432797432,
-    "remaining_optimizer_forecast_seconds": 40576.87472772598,
-    "remaining_forecast_with_setup_validation_seconds": 42616.87472772598,
-    "headroom_after_setup_validation_seconds": -2028.8303997516632,
-    "remaining_forecast_with_setup_validation_safety_seconds": 43216.87472772598,
-    "safety_buffer_shortfall_seconds": 2628.830399751663,
-    "note": "Existing absolute deadline retained; no reset. Forecast is based on the earlier one-step benchmark and is planning-only. User now gave standing authorization to proceed within the listed \u03c7192 rates and stop conditions."
+    "observed_at_unix": 1792347814.9927275,
+    "observed_at_utc": "2026-10-18T18:23:34Z",
+    "remaining_original_deadline_seconds": 39386.171617269516,
+    "remaining_optimizer_forecast_seconds": 39795.039563417435,
+    "remaining_forecast_with_setup_validation_seconds": 41835.039563417435,
+    "headroom_after_setup_validation_seconds": -2448.8679461479187,
+    "remaining_forecast_with_setup_validation_safety_seconds": 42435.039563417435,
+    "safety_buffer_shortfall_seconds": 3048.8679461479187,
+    "note": "Forecast is based on the original one-step benchmark and may be pessimistic or optimistic. No timer reset. Current execution is held for signal-source investigation; do not restart until source is identified/fixed or user otherwise directs after review."
   },
   "standing_campaign_authorization": {
     "authorization_date": "2026-10-18",
@@ -307,10 +307,47 @@
     "history": "ordered",
     "rate": 0.30481,
     "checkpoint": "checkpoints/branch192_p30481_ordered_p0.3048100.npz",
-    "sha256": "3c8cca2f0980188fd485cf8c8465d08a45af41dc6df2a4909219820a62a08167",
-    "iterations": 9,
-    "eps": 2.054131623020729e-06,
-    "optimizer_seconds": 656.5157632827759,
+    "sha256": "4f4e7bc7321ae839cfbcad8b2f85917f996df303f7fc7dd59a24d25e42b61e81",
+    "iterations": 16,
+    "eps": 3.6810718513208667e-07,
+    "optimizer_seconds": 1438.3509275913239,
     "checkpoint_metadata_verified": true
-  }
+  },
+  "signal_source_investigation": {
+    "record": "research/transition-order/chi192-p30481/signal-source-investigation.json",
+    "status": "unresolved",
+    "result": "The earlier SIGTERM sender/cause cannot be identified from the available sandbox logs. The agent worker has no short runtime timeout, and the available evidence does not implicate OOM or CPU throttling. A host/process-supervisor signal remains possible but unproven.",
+    "sha256": "9d732a95a6ea98da0e931efef22df50490c226755e85e27318dc45d3a80edcde"
+  },
+  "execution_hold": {
+    "status": "paused",
+    "reason": "User requested source investigation before further compute. Do not launch or resume any optimizer worker until the earlier SIGTERM source is identified/fixed or the user otherwise directs continuation after review.",
+    "paused_checkpoint": {
+      "history": "ordered",
+      "rate": 0.30481,
+      "path": "checkpoints/branch192_p30481_ordered_p0.3048100.npz",
+      "sha256": "4f4e7bc7321ae839cfbcad8b2f85917f996df303f7fc7dd59a24d25e42b61e81",
+      "iterations": 16,
+      "eps": 3.6810718513208667e-07
+    }
+  },
+  "pauses": [
+    {
+      "attempt": 4,
+      "history": "ordered",
+      "rate": 0.30481,
+      "status": "intentionally paused for signal-source investigation",
+      "paused_at_utc": "2026-10-18T18:21:11Z",
+      "pause_action": "stop_process was intentionally invoked after the user requested investigation before further compute; the worker caught SIGTERM and wrote a clean atomic checkpoint.",
+      "checkpoint": "checkpoints/branch192_p30481_ordered_p0.3048100.npz",
+      "checkpoint_sha256": "4f4e7bc7321ae839cfbcad8b2f85917f996df303f7fc7dd59a24d25e42b61e81",
+      "iterations": 16,
+      "eps": 3.6810718513208667e-07,
+      "optimizer_seconds": 1438.3509275913239,
+      "converged": false,
+      "acceptance_note": "Residual remains above external tolerance 1e-7 and internal goal 5e-8; this is an incomplete optimizer state, not an accepted branch-retention observation.",
+      "investigation_record": "signal-source-investigation.json",
+      "no_restart_until": "The unexpected SIGTERM source is identified/fixed or the user otherwise explicitly directs continuation after reviewing this investigation."
+    }
+  ]
 }

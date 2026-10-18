@@ -1,0 +1,22 @@
+{
+  "recorded_at_utc": "2026-10-18T18:21:11Z",
+  "question": "Who sent the unexpected SIGTERM caught during attempt 3, and why?",
+  "findings": {
+    "worker_code": "The only in-worker timer is signal.setitimer(ITIMER_REAL, remaining_campaign_seconds), which is intended to raise SIGALRM at the recorded absolute campaign deadline. A separate SIGTERM handler labels a received SIGTERM as a generic campaign-manager stop; it does not identify the sender. No subprocess timeout=, signal.alarm, or shell timeout wrapper is present in the resume worker or the VUMPS/half-row solver.",
+    "process_wrapper": "The observed start_process run.cmd contains only the env assignments and python command; the process metadata records name, command, working directory, and startedAt, with no runtime timeout. start_process was called with startup_wait=5 seconds; this is startup waiting, not a runtime cap.",
+    "process_limits": "At observation, /proc/2925/limits showed unlimited CPU time, resident set, data size, and address space. The worker used one thread and about 110608 KiB RSS. Its cgroup path was /user; available root cpu.stat had nr_throttled=0 and throttled_usec=0; no memory.max or memory.events file was exposed at the mounted cgroup root. This does not show an OOM or CPU-quota cause.",
+    "kernel_and_journal": "dmesg and journalctl -k searches over the relevant window returned no OOM, killed-process, quota/throttling, or SIGTERM entries. The sandbox does not expose a signal-audit record containing the sender PID.",
+    "process_manager_records": "The attempt-3 process-manager directory/log was no longer available when checked. The active attempt-4 metadata had no runtime timeout field. get_process_output had returned not_found for the earlier handle, but this did not identify the signal sender.",
+    "behavioral_test": "Attempt 3 is the only recorded unexpected SIGTERM. The next worker (attempt 4) passed cumulative iteration 9 and reached iteration 16; it therefore was not killed at a deterministic 9\u201310-iteration threshold. No run outside the Arena process supervisor is available from these tools.",
+    "intentional_pause": "After the user asked to investigate before further compute, I intentionally invoked stop_process on attempt 4. The worker caught that requested SIGTERM, wrote the iteration-16 checkpoint, and exited. This deliberate pause is known and distinct from the earlier unexplained SIGTERM."
+  },
+  "result": "The earlier SIGTERM sender/cause cannot be identified from the available sandbox logs. The agent worker has no short runtime timeout, and the available evidence does not implicate OOM or CPU throttling. A host/process-supervisor signal remains possible but unproven.",
+  "status": "unresolved; compute held pending signal-source identification or external supervisor logs",
+  "current_checkpoint": {
+    "path": "checkpoints/branch192_p30481_ordered_p0.3048100.npz",
+    "sha256": "4f4e7bc7321ae839cfbcad8b2f85917f996df303f7fc7dd59a24d25e42b61e81",
+    "iterations": 16,
+    "eps": 3.6810718513208667e-07,
+    "optimizer_seconds": 1438.3509275913239
+  }
+}
