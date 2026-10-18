@@ -48,9 +48,9 @@ At p=.304825 the half-row objective difference is +3.59×10⁻⁷ at χ192 and �
 
 Optimizer residuals are not free-energy error bars. An accepted VUMPS state is not a global-minimum certificate. The result supports finite-χ warm-history branch retention at one sampled rate, not thermodynamic metastability, global optimality, or transition order.
 
-## Candidate follow-up work (not run)
+## Follow-up status
 
-One additional χ192 probe at p=.30481 or p=.304815 could refine the lower-side warm-history outcome; the supplied estimate is about five hours per rate. It would not restore the missing p=.304825 tensors. No choice between those rates has been made here, and no new run was launched. A χ256 campaign at two or more rates is a separate, roughly 20–30 hour research project and was not started.
+One additional lower-side probe was authorized and selected at χ192 p=.30481 (closer to .30480 than .304815). Disposable benchmarks measured 101.90 s/step for the ordered source and 99.23 s/step for the small-order source. The paired forecast, including setup, both validations, and safety reserve, is 43,873 s (about 12.2 hours); the memory gate passed. A fresh 14-hour cap was set, and one single-thread worker is now running the two histories sequentially. At report update, the ordered history is in progress; no result is available yet. This run cannot restore the missing p=.304825 tensors. The alternative .304815 and the χ256 campaign have not been run.
 
 Artifacts: `v2.2/verify/replica/n3_branch192_mid_pair.json`, surviving source checkpoints, audit records, disposable benchmarks/logs, and `branch192-mid-pair-protocol.json`.
 
