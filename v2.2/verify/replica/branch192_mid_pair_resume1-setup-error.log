@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "/home/user/v2.2/verify/replica/branch192_mid_pair_resume_worker.py", line 85, in <module>
+    if __name__=='__main__':run()
+                            ~~~^^
+  File "/home/user/v2.2/verify/replica/branch192_mid_pair_resume_worker.py", line 27, in run
+    remaining=p['deadline_unix']-time.time();stage=min(r['ordered_resume_budget_seconds'],remaining-r['remaining_setup_reserve_seconds']-r['remaining_validation_reserve_seconds']-r['postreserve_safety_buffer_seconds'])
+                                                                                                    ~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+KeyError: 'remaining_setup_reserve_seconds'

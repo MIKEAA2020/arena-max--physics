@@ -1,0 +1,18 @@
+{
+  "kind": "disposable one-step \u03c7192 p=.304825 branch-retention feasibility benchmark; no scientific result",
+  "preparation": "small",
+  "p": 0.304825,
+  "chi": 192,
+  "initial_chi": 192,
+  "source_checkpoint": "v2.2/verify/replica/checkpoints/branch192_upper_retry1_ordered_p0.3048500.npz",
+  "source_sha256": "decf371716b717cfd059c268b198a73449423c593ba34bb2272c7dee37c896f1",
+  "iterations": 1,
+  "vumps_seconds": 61.39095687866211,
+  "seconds_per_iteration": 61.39095687866211,
+  "wall_seconds": 61.391730069000005,
+  "eps_after_one_step": 3.37864856698553e-05,
+  "finite_output": true,
+  "peak_rss_kib": 168708,
+  "no_state_checkpoint_written": true,
+  "not_a_convergence_observation": true
+}

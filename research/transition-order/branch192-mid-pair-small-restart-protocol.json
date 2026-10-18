@@ -1,0 +1,96 @@
+{
+  "campaign": "2026-10-17-chi192-paired-midpoint-retention-v1",
+  "recovery": "Restart the same originally authorized small-order \u03c7192 preparation from its unchanged accepted p=.30485 source. The prior midpoint attempt reached 65 iterations but its expected p=.304825 checkpoint is absent; its running row and log are preserved. This is not a third history or a new rate.",
+  "original_protocol": "research/transition-order/branch192-mid-pair-protocol.json",
+  "original_protocol_sha256": "0effe148dddeb1f74da37752600c07d2f52ddb260e75237a75521589e2d9874a",
+  "original_12h_deadline_unix": 1792284024.1784415,
+  "recovery_started_unix": 1792261015.8540132,
+  "remaining_at_restart_seconds": 23008.32442831993,
+  "preparation": "small",
+  "rate": 0.304825,
+  "chi": 192,
+  "n": 3,
+  "d": 2,
+  "accepted_start": {
+    "record": "v2.2/verify/replica/n3_branch192_upper_retry1.json",
+    "record_sha256": "7eb4536e2abb7e2ec69c3d4d87d9fdb0e498a03470392bca93cc036a9d71720d",
+    "checkpoint": "v2.2/verify/replica/checkpoints/branch192_upper_retry1_ordered_p0.3048500.npz",
+    "checkpoint_sha256": "decf371716b717cfd059c268b198a73449423c593ba34bb2272c7dee37c896f1",
+    "p": 0.30485,
+    "eps": 4.820251039960831e-08,
+    "color_l2_order": 0.00030083577200990306,
+    "audit": "passed"
+  },
+  "interrupted_attempt": {
+    "record": "v2.2/verify/replica/branch192_mid_pair_small.json",
+    "record_sha256": "e72065367b4ac52967d460823ec578653ed1476ad60ce3e6ab2081700d2305e1",
+    "status": "authorized wall-clock budget reached",
+    "iterations": 65,
+    "eps": 8.020345505935396e-08,
+    "optimizer_seconds": 4746.03155207634,
+    "checkpoint_expected": "checkpoints/branch192_mid_pair_small_p0.3048250.npz",
+    "checkpoint_present": false,
+    "signal_reason": "paired campaign manager stop",
+    "log": "v2.2/verify/replica/branch192_mid_pair_small.log"
+  },
+  "source_sha256": {
+    "v2.2/verify/replica/replica_halfrow.py": "b791a81675ebe697d36a82a2572753185b4b8c7d13164e12cb47feab3c85ed5d",
+    "v2.2/verify/replica/replica_vumps.py": "4830e638829e1df645e16442171a820baf7bd710c617f24c32f089f79c399247",
+    "v2.2/verify/replica/replica_tm.py": "43a5074315a61379aa70e5251111601ec41c26ff762a11dcde5b9c665e18ba20",
+    "v2.2/verify/replica/branch128_pilot_worker.py": "3dc06a84365e241a7b7c9d20b5007a4dfd7b744a35defc5e5fd88cb3c5be9aca",
+    "v2.2/verify/replica/branch192_mid_pair_worker.py": "db895062808da21b94cd77f51125865c4644869862c86cae258db0966b0befa5",
+    "v2.2/verify/replica/branch192_mid_pair_small_restart_worker.py": "f66f0ada9f883900f22f9dcc84e4e2d4458ecc12bd7a7f544669c40b98f81381",
+    "v2.2/verify/replica/branch192_mid_pair_audit.py": "0daec8a0d14c6a17eeb8e94c3d4b5dcd90702a87cfe7e46e306c217f4aad52cd",
+    "research/transition-order/branch192_mid_pair_report.py": "876dc14aa6b77feef74a995e1bff5bd7bddaacbe87ab36a13996152b2cf046f0",
+    "research/transition-order/branch192_mid_pair_recovery2.py": "0651568e642480fcc16fb3c03f4bb06dcd7c22abb770d138a1c62df40be42c9a"
+  },
+  "external_tol": 1e-07,
+  "internal_goal": 5e-08,
+  "maxiter": 10000,
+  "canonical_ceiling": 1e-09,
+  "period_contraction_ceiling": 1e-08,
+  "correlation_rmax": 240,
+  "optimizer_budget_seconds": {
+    "small": 21388.32442831993
+  },
+  "setup_reserve_seconds_total": 120,
+  "validation_reserve_seconds_total": 1500,
+  "validation_breakdown": {
+    "independent_audit_seconds": 900,
+    "postreserve_safety_buffer_seconds": 600
+  },
+  "feasibility_gate": {
+    "time_passed": true,
+    "memory_passed": true,
+    "production_authorized": true,
+    "forecast_iterations": 205,
+    "seconds_per_iteration": 94.50021276703801,
+    "optimizer_forecast_seconds": 19372.54361724279,
+    "forecast_seconds_including_setup_and_validation": 20392.54361724279,
+    "remaining_seconds": 23008.32442831993,
+    "headroom_seconds": 2615.7808110771402,
+    "forecast_peak_rss_kib": 609208,
+    "mem_available_kib": 1421660,
+    "optimizer_budget_seconds": 21388.32442831993
+  },
+  "worker_policy": "Exactly one single-thread \u03c7192 worker, direct process, same small-order accepted starting state, same common target p=.304825. Keep the original absolute 12-hour deadline; no other rate or preparation.",
+  "sources": {
+    "small": {
+      "record": "v2.2/verify/replica/n3_branch192_upper_retry1.json",
+      "record_sha256": "7eb4536e2abb7e2ec69c3d4d87d9fdb0e498a03470392bca93cc036a9d71720d",
+      "checkpoint": "v2.2/verify/replica/checkpoints/branch192_upper_retry1_ordered_p0.3048500.npz",
+      "sha256": "decf371716b717cfd059c268b198a73449423c593ba34bb2272c7dee37c896f1",
+      "p": 0.30485,
+      "chi": 192,
+      "accepted_source": true,
+      "eps": 4.820251039960831e-08,
+      "color_l2_order": 0.00030083577200990306,
+      "optimizer_seconds": 7843.517659664154,
+      "iters": 83,
+      "audit": "passed"
+    }
+  },
+  "protocol_freeze_note": "Complete worker inputs frozen before launching restart; this protocol file itself is identified by the aggregate path and the worker source hashes are unchanged.",
+  "p": 0.304825,
+  "deadline_unix": 1792284024.1784415
+}

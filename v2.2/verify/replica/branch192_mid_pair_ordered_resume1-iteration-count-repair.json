@@ -1,0 +1,14 @@
+{
+  "kind": "metadata-only cumulative iteration-count repair",
+  "original_row": "v2.2/verify/replica/branch192_mid_pair_ordered_resume1.json",
+  "original_row_sha256": "22deacb16f4c6f98f355606e44e29e88e3a43d847f5d33f5eef58b8d90dcaa2e",
+  "old_displayed_iters": 46,
+  "previous_segment_iterations": 100,
+  "resumed_segment_iterations": 46,
+  "corrected_cumulative_iterations": 146,
+  "optimizer_seconds_unchanged": 9797.508978128433,
+  "checkpoint_sha256_unchanged": "126569ca938197635600e219eb5f090b2997fa6987962e44269489f149568807",
+  "acceptance_and_audit_status_unchanged": "passed",
+  "reason": "V.observables returned the resumed segment iteration count and overwrote the cumulative display count; corrected to prior segment plus resumed segment. Numerical checkpoint and acceptance diagnostics unchanged.",
+  "corrected_row_sha256": "de110551d12cd8d6d2c206844364f27c818e1a057d5f10667681efe413e4e228"
+}

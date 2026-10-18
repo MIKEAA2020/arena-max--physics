@@ -1,0 +1,91 @@
+{
+  "campaign": "2026-10-17-chi192-paired-midpoint-retention-v1",
+  "recovery": "resume authorized ordered \u03c7192 p=.304825 preparation from last atomic checkpoint; Original manager/worker process was no longer present with aggregate and row still marked running. Recovery1 then failed during Python setup before any resumed VUMPS iteration because its reserve-key lookup was wrong; no scientific compute occurred in that setup-only attempt. Cause of original process disappearance remains unknown.",
+  "original_protocol": "research/transition-order/branch192-mid-pair-protocol.json",
+  "original_protocol_sha256": "0effe148dddeb1f74da37752600c07d2f52ddb260e75237a75521589e2d9874a",
+  "original_deadline_unix": 1792284024.1784415,
+  "recovery_started_unix": 1792251329.979432,
+  "remaining_at_recovery_start_seconds": 32694.199009418488,
+  "interrupted_checkpoint": {
+    "path": "v2.2/verify/replica/checkpoints/branch192_mid_pair_ordered_p0.3048250.npz",
+    "sha256": "329004f3403c79ea509b5b6d19abb0f97b41b5d38b20c1c8a144b9a27f78378c",
+    "record": "v2.2/verify/replica/branch192_mid_pair_ordered.json",
+    "record_sha256": "ba356f31b818b3d1976319d65df8641c4255f5aa52cac6d75177690d429bf80d",
+    "iters": 100,
+    "eps": 1.5151812866980227e-07,
+    "optimizer_seconds": 6313.069154024124,
+    "metadata": {
+      "n": 3,
+      "d": 2,
+      "p": 0.304825,
+      "operator": "hermitian-halfrow",
+      "tag": "chi192-mid-ordered",
+      "checkpoint_schema": 1,
+      "tol": 5e-08,
+      "maxiter": 10000,
+      "stage_budget_seconds": 18620.212840537573,
+      "environment_cache_omitted": true,
+      "checkpoint_contents": "AL,AR,AC,C; recompute FL/FR on restart",
+      "acceptance_tol": 1e-07,
+      "optimizer_internal_goal": 5e-08,
+      "campaign": "2026-10-17-chi192-paired-midpoint-retention-v1",
+      "eta": 0.6086722801940052,
+      "eps": 1.5151812866980227e-07,
+      "chi": 192,
+      "iters": 100,
+      "seconds": 6313.069154024124
+    }
+  },
+  "original_sources": {
+    "v2.2/verify/replica/replica_vumps.py": "4830e638829e1df645e16442171a820baf7bd710c617f24c32f089f79c399247",
+    "v2.2/verify/replica/replica_halfrow.py": "b791a81675ebe697d36a82a2572753185b4b8c7d13164e12cb47feab3c85ed5d",
+    "v2.2/verify/replica/replica_tm.py": "43a5074315a61379aa70e5251111601ec41c26ff762a11dcde5b9c665e18ba20",
+    "v2.2/verify/replica/branch128_pilot_worker.py": "3dc06a84365e241a7b7c9d20b5007a4dfd7b744a35defc5e5fd88cb3c5be9aca",
+    "v2.2/verify/replica/branch192_mid_pair_worker.py": "db895062808da21b94cd77f51125865c4644869862c86cae258db0966b0befa5",
+    "v2.2/verify/replica/branch192_mid_pair_audit.py": "0daec8a0d14c6a17eeb8e94c3d4b5dcd90702a87cfe7e46e306c217f4aad52cd",
+    "research/transition-order/branch192_mid_pair_report.py": "876dc14aa6b77feef74a995e1bff5bd7bddaacbe87ab36a13996152b2cf046f0",
+    "research/transition-order/branch192_mid_pair.py": "2555eaa0db8598c86a8d7132fd3ef206e8b7709b3f2d665e3b795dc988847adb"
+  },
+  "source_sha256": {
+    "v2.2/verify/replica/replica_halfrow.py": "b791a81675ebe697d36a82a2572753185b4b8c7d13164e12cb47feab3c85ed5d",
+    "v2.2/verify/replica/replica_vumps.py": "4830e638829e1df645e16442171a820baf7bd710c617f24c32f089f79c399247",
+    "v2.2/verify/replica/replica_tm.py": "43a5074315a61379aa70e5251111601ec41c26ff762a11dcde5b9c665e18ba20",
+    "v2.2/verify/replica/branch128_pilot_worker.py": "3dc06a84365e241a7b7c9d20b5007a4dfd7b744a35defc5e5fd88cb3c5be9aca",
+    "v2.2/verify/replica/branch192_mid_pair_worker.py": "db895062808da21b94cd77f51125865c4644869862c86cae258db0966b0befa5",
+    "v2.2/verify/replica/branch192_mid_pair_audit.py": "0daec8a0d14c6a17eeb8e94c3d4b5dcd90702a87cfe7e46e306c217f4aad52cd",
+    "v2.2/verify/replica/branch192_mid_pair_resume_worker2.py": "08e7c2e9bf38506d951865298661832df6510f0b8cdf53b05c08c72fcd5617ba",
+    "research/transition-order/branch192_mid_pair_recovery2.py": "0651568e642480fcc16fb3c03f4bb06dcd7c22abb770d138a1c62df40be42c9a",
+    "research/transition-order/branch192_mid_pair_report.py": "876dc14aa6b77feef74a995e1bff5bd7bddaacbe87ab36a13996152b2cf046f0"
+  },
+  "ordered_resume_budget_seconds": 12307.14368651345,
+  "ordered_optimizer_seconds_already_spent": 6313.069154024124,
+  "forecast": {
+    "unfinished_ordered_iterations": 105,
+    "small_iterations": 205,
+    "ordered_seconds_per_iteration": 80.65220619892251,
+    "small_seconds_per_iteration": 94.50021276703801,
+    "ordered_optimizer_seconds": 8468.481650886864,
+    "small_optimizer_seconds": 19372.54361724279,
+    "total_with_setup_and_validation_seconds": 29881.025268129655,
+    "remaining_seconds": 32694.199009418488,
+    "headroom_seconds": 2813.1737412888324
+  },
+  "feasibility_gate": {
+    "time_passed": true,
+    "memory_passed": true,
+    "production_authorized": true,
+    "forecast_seconds": 29881.025268129655,
+    "remaining_seconds": 32694.199009418488,
+    "headroom_seconds": 2813.1737412888324,
+    "forecast_peak_rss_kib": 609208,
+    "mem_available_kib": 1396124,
+    "ordered_resume_budget_seconds": 12307.14368651345,
+    "reserves": {
+      "setup_seconds": 240,
+      "validation_seconds": 1800,
+      "postreserve_safety_buffer_seconds": 600
+    }
+  },
+  "worker_policy": "One single-thread worker at a time. First resume ordered from the saved midpoint checkpoint, then run the not-yet-started small-order history with the original frozen worker. Both independent audits remain reserved inside the original absolute 12-hour deadline.",
+  "interpretation": "Finite-chi same-rate warm-history retention only; not a crossing, coexistence, global-minimum, or transition-order certificate."
+}

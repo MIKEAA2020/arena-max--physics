@@ -1,0 +1,55 @@
+#!/usr/bin/env python3
+"""Report the χ192 p=.304825 paired-history retention test."""
+from pathlib import Path
+import json,csv,importlib.util
+ROOT=Path(__file__).resolve().parents[2];HERE=Path(__file__).resolve().parent;R=ROOT/'v2.2/verify/replica'
+p=json.loads((HERE/'branch192-mid-pair-protocol.json').read_text());db=json.loads((R/'n3_branch192_mid_pair.json').read_text())
+bench=db.get('benchmarks',{});g=db.get('feasibility_gate',{});results=db.get('results',{});audits=db.get('audits',{})
+fmt=lambda x,n=9:'—' if x is None else f'{float(x):.{n}f}'
+lines=['# χ192 paired-history test at p=.304825','',
+'17 October 2026 · separately authorized paired one-rate test · finite-χ branch-retention evidence only.','',
+f"**Status:** {db.get('status')}.",'',
+'## Authorization and protocol','',
+'The user authorized one rate with two ordered histories, run sequentially by one single-thread worker under a fresh 12-hour absolute cap. The ordered preparation starts from the accepted χ192 p=.30480 state; the small-order preparation starts from the accepted χ192 p=.30485 state. Both target p=.304825 with identical gates and objective. No other rate, gap/excited-state, perturbation or stability calculation is included.','',
+'These histories test whether both numerical characters are retained at the same finite χ and same p. A two-state result at one p does not itself locate a coexistence crossing or determine transition order.','',
+f"Ordered source: `{p['sources']['ordered']['checkpoint']}` (SHA-256 `{p['sources']['ordered']['sha256']}`, source color L2 {p['sources']['ordered']['color_l2_order']:.8f}).",
+f"Small-order source: `{p['sources']['small']['checkpoint']}` (SHA-256 `{p['sources']['small']['sha256']}`, source color L2 {p['sources']['small']['color_l2_order']:.8f}).",
+'Execution provenance: the accepted small-order state resumes from the verified p=.304825 iteration-40 checkpoint. Its reported 199 cumulative iterations are for that accepted checkpoint lineage; the separate earlier no-checkpoint 65-iteration attempt is not added to these counts. The resume used the same preparation and rate, not an extra branch or rate.','',
+'Acceptance gates remain unchanged: optimizer and both compatibility residuals <1e−7, canonical defects <1e−9, positive full-period trial contraction with relative defect <1e−8.','',
+'## Disposable benchmarks and feasibility gate','']
+for name in ['ordered','small']:
+ b=bench.get(name,{})
+ lines.append(f"- **{name}:** {b.get('iterations','—')} step(s), {fmt(b.get('seconds_per_iteration'),2)} s/step, wall {fmt(b.get('wall_seconds'),2)} s, peak RSS {b.get('peak_rss_kib','—')} KiB; no state checkpoint written.")
+lines += [f"\nForecast for both preparations including setup and validation reserves: {fmt(g.get('forecast_seconds'),2)} s versus {fmt(g.get('remaining_seconds'),2)} s remaining; headroom {fmt(g.get('headroom_seconds'),2)} s. Memory gate passed={g.get('memory_passed','—')} (forecast peak {g.get('forecast_peak_rss_kib','—')} KiB; available {g.get('mem_available_kib','—')} KiB). Decision: **{g.get('decision','pending')}**.",'']
+if results:
+ lines += ['## Same-rate state outcomes','', '| Preparation | Status | Iterations | eps | Max compatibility | Max canonical defect | Color L2 | m_species | ξχ | f_half | f_period,trial | Audit |','|---|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|---|']
+ for name in ['ordered','small']:
+  r=results.get(name,{})
+  lines.append(f"| {name} | {r.get('status','—')} | {r.get('iters','—')} | {fmt(r.get('eps'),8)} | {fmt(max(r.get('gauge_left_residual',0),r.get('gauge_right_residual',0)),8) if r else '—'} | {fmt(max(r.get('left_canonical_residual',0),r.get('right_canonical_residual',0)),3) if r else '—'} | {fmt(r.get('color_l2_order'),8)} | {fmt(r.get('m_species'),8)} | {fmt(r.get('xi_chi'),3)} | {fmt(r.get('f_half'),12)} | {fmt(r.get('f_full_rayleigh'),12)} | {audits.get(name,'pending')} |")
+ if all(results.get(n,{}).get('converged') for n in ['ordered','small']):
+  ro,rs=results['ordered'],results['small'];dc=abs(ro['color_l2_order']-rs['color_l2_order']);df=ro['f_half']-rs['f_half']
+  lines += ['',f"Same-p invariant-order separation |Δcolor L2| = {dc:.8g}. Same-objective half-row difference Δf_half (ordered−small) = {df:.12g}. These are finite-χ numerical state diagnostics, not calibrated uncertainty or a thermodynamic crossing. Full-period Rayleigh trial values remain a separate objective.",'']
+else:
+ lines += ['', 'No production result is available; a disposable benchmark is not a numerical state.','']
+lines += ['## Interpretation','',
+'If two accepted, distinguishable numerical families are retained at p=.304825, that supports finite-χ branch retention at this one common rate. Their same-objective values may be ranked arithmetically at this p, but one point cannot bracket a crossing. If the histories merge, this shows only that these warm paths did not retain distinct states; it does not prove no other stationary state exists. Neither outcome identifies a spinodal, global minimum, coexistence point, or thermodynamic transition order.','',
+'Optimizer residuals are not free-energy error bars. A VUMPS state is not a global-minimum certificate. No additional p, gap, or stability computation is inferred.','',
+'Artifacts: `v2.2/verify/replica/n3_branch192_mid_pair.json`, surviving source checkpoints, audit records, disposable benchmarks/logs, and `branch192-mid-pair-protocol.json`.','']
+if db.get('artifact_integrity_note'):
+ lines += ['## Artifact availability note','',db['artifact_integrity_note'],'']
+(HERE/'BRANCH192-MID-PAIR-RESULTS.md').write_text('\n'.join(lines))
+fields=['campaign','status','p','chi','preparation','iters','eps','color_l2_order','m_species','xi_chi','f_half','f_full_rayleigh','audit_status','checkpoint_sha256']
+with (HERE/'branch192-mid-pair.csv').open('w',newline='') as f:
+ w=csv.DictWriter(f,fieldnames=fields,lineterminator='\n');w.writeheader()
+ for name in ['ordered','small']:
+  r=results.get(name,{})
+  w.writerow({'campaign':p['campaign'],'status':db.get('status'),'p':p['p'],'chi':p['chi'],'preparation':name,'iters':r.get('iters'),'eps':r.get('eps'),
+   'color_l2_order':r.get('color_l2_order'),'m_species':r.get('m_species'),'xi_chi':r.get('xi_chi'),'f_half':r.get('f_half'),'f_full_rayleigh':r.get('f_full_rayleigh'),
+   'audit_status':audits.get(name),'checkpoint_sha256':r.get('checkpoint_sha256')})
+spec=importlib.util.spec_from_file_location('md2docx',ROOT/'v2.2/md2docx.py');m=importlib.util.module_from_spec(spec);spec.loader.exec_module(m);out=HERE/'branch192-mid-pair-report.docx';m.convert(str(HERE/'BRANCH192-MID-PAIR-RESULTS.md'),str(out))
+from docx import Document
+from docx.shared import Cm
+D=Document(out)
+for sec in D.sections:sec.page_width=Cm(21);sec.page_height=Cm(29.7);sec.left_margin=Cm(2);sec.right_margin=Cm(2)
+D.core_properties.title='χ192 paired histories at p=.304825';D.save(out)
+print(json.dumps(dict(status=db.get('status'),preparations=list(results),audits=audits,report=str(HERE/'BRANCH192-MID-PAIR-RESULTS.md'))))
