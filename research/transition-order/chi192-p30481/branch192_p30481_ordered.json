@@ -7,7 +7,7 @@
   "chi": 192,
   "external_tol": 1e-07,
   "internal_goal": 5e-08,
-  "status": "ready to resume from verified cumulative iteration 16",
+  "status": "paused at clean checkpoint; worker disappearance unclassified",
   "converged": false,
   "source": {
     "checkpoint": "v2.2/verify/replica/checkpoints/branch192_retry1_ordered_p0.3048000.npz",
@@ -40,9 +40,9 @@
   "source_is_accepted_observation": true,
   "checkpoint": "checkpoints/branch192_p30481_ordered_p0.3048100.npz",
   "qualification": "one of a paired single-rate finite-chi branch-retention test; not a global-minimum or transition certificate",
-  "eps": 3.6810718513208667e-07,
-  "iters": 16,
-  "optimizer_seconds": 1438.3509275913239,
+  "eps": 1.308536380704902e-06,
+  "iters": 19,
+  "optimizer_seconds": 3222.734782934189,
   "interruption": {
     "attempt": 3,
     "history": "ordered",
@@ -63,14 +63,14 @@
     "checkpoint_reopens": true,
     "recovery": "Resume the same ordered p=.30481 path from this p=.30481 checkpoint; no new rate or independent warm history."
   },
-  "checkpoint_sha256": "4f4e7bc7321ae839cfbcad8b2f85917f996df303f7fc7dd59a24d25e42b61e81",
+  "checkpoint_sha256": "a8097162c27ca104556edd5c789bcf36e5c9c89ef5af7eb92ad3811248319cee",
   "interruption_record": "ordered-attempt3-interruption.json",
   "resumed_from_checkpoint": "checkpoints/branch192_p30481_ordered_p0.3048100.npz",
-  "resumed_from_sha256": "3c8cca2f0980188fd485cf8c8465d08a45af41dc6df2a4909219820a62a08167",
-  "resume_source_iterations": 9,
-  "resume_source_optimizer_seconds": 656.5157632827759,
-  "stage_budget_seconds": 21343.484236717224,
-  "resume_count": 2,
+  "resumed_from_sha256": "4f4e7bc7321ae839cfbcad8b2f85917f996df303f7fc7dd59a24d25e42b61e81",
+  "resume_source_iterations": 16,
+  "resume_source_optimizer_seconds": 1438.3509275913239,
+  "stage_budget_seconds": 20561.649072408676,
+  "resume_count": 3,
   "last_state_metadata": {
     "n": 3,
     "d": 2,
@@ -95,7 +95,6 @@
     "seconds": 1438.3509275913239
   },
   "total_stage_seconds": 571.271686301,
-  "reason": "Intentional stop_process signal after user requested source investigation; latest checkpoint preserved.",
   "pause_record": {
     "attempt": 4,
     "history": "ordered",
@@ -114,5 +113,27 @@
     "no_restart_until": "The unexpected SIGTERM source is identified/fixed or the user otherwise explicitly directs continuation after reviewing this investigation."
   },
   "next_attempt": 5,
-  "resume_authorization": "User directed resumption after reviewing the completed investigation; one prior unexplained SIGTERM is recorded, and the next will trigger checkpoint flush and exit without retry."
+  "resume_authorization": "User directed resumption after reviewing the completed investigation; one prior unexplained SIGTERM is recorded, and the next will trigger checkpoint flush and exit without retry.",
+  "termination_event": {
+    "attempt": 5,
+    "history": "ordered",
+    "rate": 0.30481,
+    "observed_at_utc": "2026-10-18T22:36:06Z",
+    "status": "worker process disappeared without finalization; latest atomic checkpoint remains valid",
+    "process_manager_id": "192-p-30481-continuation-0796f304",
+    "start_process_pid": 4417,
+    "last_os_worker_pid_observed": 4421,
+    "process_manager_state": "get_process_output returned not_found; /tmp/arena-workspace/procs record was absent; no matching OS worker remained",
+    "progress_row_state": "still marked running, so the worker did not write its final status record",
+    "last_checkpoint": "checkpoints/branch192_p30481_ordered_p0.3048100.npz",
+    "checkpoint_sha256": "a8097162c27ca104556edd5c789bcf36e5c9c89ef5af7eb92ad3811248319cee",
+    "iterations": 19,
+    "eps": 1.308536380704902e-06,
+    "optimizer_seconds": 3222.734782934189,
+    "checkpoint_metadata_verified": true,
+    "signal_status": "No second SIGTERM was caught or recorded. Termination signal/type and cause are unknown; do not count this as a second SIGTERM without evidence.",
+    "recovery": "No worker relaunched. Preserve this iteration-19 checkpoint; any later continuation must resume from it."
+  },
+  "process_loss_record": "ordered-attempt5-process-loss.json",
+  "reason": "Campaign held at next clean checkpoint because current remaining budget is insufficient for the paired completion forecast."
 }

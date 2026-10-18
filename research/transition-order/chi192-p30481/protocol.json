@@ -217,7 +217,7 @@
       "recovery": "Resume the same ordered p=.30481 path from this p=.30481 checkpoint; no new rate or independent warm history."
     }
   ],
-  "current_execution_status": "Ready to resume attempt 5 from verified ordered p=.30481 cumulative iteration 16; one prior unexplained SIGTERM counted. The next one will flush, stop without retry, and be reported.",
+  "current_execution_status": "No worker running. Ordered p=.30481 stopped at cumulative iteration 19 (epsilon 1.3085e-6) on a valid checkpoint. Small-order history has not started. The remaining original deadline is shorter than the forecast for completing the paired histories plus setup/validation; stop condition applied.",
   "previous_attempt_deadline_unix": 1792342906.9236,
   "restart_started_unix": 1792336801.1643448,
   "cap_override_note": "User explicitly said to run either lower-edge rate regardless of cap. The first launch ended before any atomic checkpoint, and the same ordered preparation is restarted from its unchanged accepted source under a fresh 14-hour operational timer; one sequential worker and validation/memory gates remain in force.",
@@ -281,22 +281,24 @@
     "history": "ordered",
     "rate": 0.30481,
     "checkpoint": "checkpoints/branch192_p30481_ordered_p0.3048100.npz",
-    "sha256": "4f4e7bc7321ae839cfbcad8b2f85917f996df303f7fc7dd59a24d25e42b61e81",
-    "iterations": 16,
-    "eps": 3.6810718513208667e-07,
-    "optimizer_seconds": 1438.3509275913239,
+    "sha256": "a8097162c27ca104556edd5c789bcf36e5c9c89ef5af7eb92ad3811248319cee",
+    "iterations": 19,
+    "eps": 1.308536380704902e-06,
+    "optimizer_seconds": 3222.734782934189,
     "checkpoint_metadata_verified": true
   },
   "recovery_budget_snapshot": {
-    "observed_at_unix": 1792348828.6261928,
-    "observed_at_utc": "2026-10-18T18:40:28Z",
-    "remaining_original_deadline_seconds": 38372.53815197945,
-    "remaining_optimizer_forecast_seconds": 39795.039563417435,
-    "remaining_forecast_with_setup_validation_seconds": 41835.039563417435,
-    "headroom_after_setup_validation_seconds": -3462.5014114379883,
-    "remaining_forecast_with_setup_validation_safety_seconds": 42435.039563417435,
-    "safety_buffer_shortfall_seconds": 4062.5014114379883,
-    "note": "Planning estimate from the one-step benchmark; actual runtime uncertain. User directs resumption. Original absolute deadline unchanged; if the pair cannot be completed in budget, stop at a clean checkpoint and report."
+    "observed_at_unix": 1792362966.84461,
+    "observed_at_utc": "2026-10-18T22:36:06Z",
+    "remaining_original_deadline_seconds": 24234.319734811783,
+    "remaining_ordered_optimizer_forecast_seconds": 17667.77393555641,
+    "small_optimizer_forecast_seconds": 20342.881772518158,
+    "remaining_optimizer_forecast_seconds": 38010.65570807457,
+    "remaining_forecast_with_setup_validation_seconds": 40050.65570807457,
+    "headroom_after_setup_validation_seconds": -15816.335973262787,
+    "remaining_forecast_with_setup_validation_safety_seconds": 40650.65570807457,
+    "safety_buffer_shortfall_seconds": 16416.335973262787,
+    "note": "One-step benchmark forecast; actual runtime uncertain. Under the standing stop condition, the campaign was halted at the existing clean checkpoint rather than attempting an incomplete paired run."
   },
   "standing_campaign_authorization": {
     "authorization_date": "2026-10-18",
@@ -322,10 +324,10 @@
     "history": "ordered",
     "rate": 0.30481,
     "checkpoint": "checkpoints/branch192_p30481_ordered_p0.3048100.npz",
-    "sha256": "4f4e7bc7321ae839cfbcad8b2f85917f996df303f7fc7dd59a24d25e42b61e81",
-    "iterations": 16,
-    "eps": 3.6810718513208667e-07,
-    "optimizer_seconds": 1438.3509275913239,
+    "sha256": "a8097162c27ca104556edd5c789bcf36e5c9c89ef5af7eb92ad3811248319cee",
+    "iterations": 19,
+    "eps": 1.308536380704902e-06,
+    "optimizer_seconds": 3222.734782934189,
     "checkpoint_metadata_verified": true
   },
   "signal_source_investigation": {
@@ -336,9 +338,9 @@
     "decision": "Resume from iteration 16. A second unexplained SIGTERM will be checkpointed and terminate the worker without retry, then be reported."
   },
   "execution_hold": {
-    "status": "cleared by user instruction on 2026-10-18",
-    "reason": "The user reviewed the sandbox investigation and directed resumption; one unexplained SIGTERM is treated as an anomaly, not a reproducible block.",
-    "prior_paused_checkpoint_sha256": "4f4e7bc7321ae839cfbcad8b2f85917f996df303f7fc7dd59a24d25e42b61e81"
+    "status": "paused at clean checkpoint",
+    "reason": "Process manager handle disappeared without a final status, and the updated remaining-time forecast is insufficient to complete both histories before the original 14-hour deadline. No second SIGTERM was caught; the event remains unclassified.",
+    "latest_checkpoint_sha256": "a8097162c27ca104556edd5c789bcf36e5c9c89ef5af7eb92ad3811248319cee"
   },
   "pauses": [
     {
@@ -365,5 +367,27 @@
     "stop_after_count": 2,
     "on_next_sigterm": "The worker catches SIGTERM, atomically rewrites the latest valid checkpoint and records its iteration/residual, then exits without automatic retry; report the second occurrence.",
     "checkpoint_interval": "Every optimizer iteration during production."
-  }
+  },
+  "unclassified_process_exits": [
+    {
+      "attempt": 5,
+      "history": "ordered",
+      "rate": 0.30481,
+      "observed_at_utc": "2026-10-18T22:36:06Z",
+      "status": "worker process disappeared without finalization; latest atomic checkpoint remains valid",
+      "process_manager_id": "192-p-30481-continuation-0796f304",
+      "start_process_pid": 4417,
+      "last_os_worker_pid_observed": 4421,
+      "process_manager_state": "get_process_output returned not_found; /tmp/arena-workspace/procs record was absent; no matching OS worker remained",
+      "progress_row_state": "still marked running, so the worker did not write its final status record",
+      "last_checkpoint": "checkpoints/branch192_p30481_ordered_p0.3048100.npz",
+      "checkpoint_sha256": "a8097162c27ca104556edd5c789bcf36e5c9c89ef5af7eb92ad3811248319cee",
+      "iterations": 19,
+      "eps": 1.308536380704902e-06,
+      "optimizer_seconds": 3222.734782934189,
+      "checkpoint_metadata_verified": true,
+      "signal_status": "No second SIGTERM was caught or recorded. Termination signal/type and cause are unknown; do not count this as a second SIGTERM without evidence.",
+      "recovery": "No worker relaunched. Preserve this iteration-19 checkpoint; any later continuation must resume from it."
+    }
+  ]
 }

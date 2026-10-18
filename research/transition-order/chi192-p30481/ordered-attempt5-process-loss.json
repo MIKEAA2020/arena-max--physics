@@ -1,0 +1,20 @@
+{
+  "attempt": 5,
+  "history": "ordered",
+  "rate": 0.30481,
+  "observed_at_utc": "2026-10-18T22:36:06Z",
+  "status": "worker process disappeared without finalization; latest atomic checkpoint remains valid",
+  "process_manager_id": "192-p-30481-continuation-0796f304",
+  "start_process_pid": 4417,
+  "last_os_worker_pid_observed": 4421,
+  "process_manager_state": "get_process_output returned not_found; /tmp/arena-workspace/procs record was absent; no matching OS worker remained",
+  "progress_row_state": "still marked running, so the worker did not write its final status record",
+  "last_checkpoint": "checkpoints/branch192_p30481_ordered_p0.3048100.npz",
+  "checkpoint_sha256": "a8097162c27ca104556edd5c789bcf36e5c9c89ef5af7eb92ad3811248319cee",
+  "iterations": 19,
+  "eps": 1.308536380704902e-06,
+  "optimizer_seconds": 3222.734782934189,
+  "checkpoint_metadata_verified": true,
+  "signal_status": "No second SIGTERM was caught or recorded. Termination signal/type and cause are unknown; do not count this as a second SIGTERM without evidence.",
+  "recovery": "No worker relaunched. Preserve this iteration-19 checkpoint; any later continuation must resume from it."
+}

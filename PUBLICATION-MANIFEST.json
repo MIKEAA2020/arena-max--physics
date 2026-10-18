@@ -336,8 +336,8 @@
     },
     {
       "path": "research/transition-order/BRANCH192-MID-PAIR-RESULTS.md",
-      "bytes": 9776,
-      "sha256": "42e7629d3b1bbcfed75a882d96addb66e8cb0fa23c7276de0c161d620afefa87"
+      "bytes": 9945,
+      "sha256": "d0410b3b186dfc5b7ba7aee966ddb3ede0404108fb9a9235d60249ec702e3926"
     },
     {
       "path": "research/transition-order/BRANCH192-RESULTS.md",
@@ -666,8 +666,8 @@
     },
     {
       "path": "research/transition-order/branch192-mid-pair-report.docx",
-      "bytes": 41890,
-      "sha256": "eff13ac203163a2d2ba6c4f85b710c19241cb98cda2391ec39c12c40d660f8ec"
+      "bytes": 41898,
+      "sha256": "a4b33aa6041f1fbda22002be96e18df30442aa4558e34b146ed147c0221f9f17"
     },
     {
       "path": "research/transition-order/branch192-mid-pair-small-restart-protocol.json",
@@ -791,8 +791,8 @@
     },
     {
       "path": "research/transition-order/branch192_mid_pair_report.py",
-      "bytes": 11215,
-      "sha256": "a5da57f7ac3c7e424bc5491308274199c55b97a271023a3ffedf44caafc9893a"
+      "bytes": 11384,
+      "sha256": "a23592d61649a4eb4a3c2bb9dd13002fafdc5d15d5b63ff56cf596fc9c52f761"
     },
     {
       "path": "research/transition-order/branch192_report.py",
@@ -921,8 +921,8 @@
     },
     {
       "path": "research/transition-order/chi192-p30481/branch192_p30481_ordered.json",
-      "bytes": 5199,
-      "sha256": "ac11f52f4b7619ab64981b78ed0411ad74d81d8f01d1423012a35c96fe3f1e2d"
+      "bytes": 6528,
+      "sha256": "0874ac21a023d06c081ac375eb44800e9130042411995331fe6952a07c499218"
     },
     {
       "path": "research/transition-order/chi192-p30481/branch192_p30481_ordered_attempt2_interrupted.json",
@@ -940,14 +940,19 @@
       "sha256": "7361210579138bfeb5f73aca65ddc403117d33a476db3a5ae70784158a1f4e79"
     },
     {
+      "path": "research/transition-order/chi192-p30481/branch192_p30481_ordered_attempt5_interrupted.json",
+      "bytes": 6389,
+      "sha256": "9b1dd82cab617a8f79b64038890dc26332d8a15acc9ebdeafdfdbd392a900034"
+    },
+    {
       "path": "research/transition-order/chi192-p30481/branch192_p30481_resume_worker.py",
       "bytes": 12512,
       "sha256": "09897cd01879d89abc9901693c7490b74a2ab4dd667cf1c8f81dfb69cb9b7e76"
     },
     {
       "path": "research/transition-order/chi192-p30481/checkpoints/branch192_p30481_ordered_p0.3048100.npz",
-      "bytes": 5381632,
-      "sha256": "4f4e7bc7321ae839cfbcad8b2f85917f996df303f7fc7dd59a24d25e42b61e81"
+      "bytes": 5381685,
+      "sha256": "a8097162c27ca104556edd5c789bcf36e5c9c89ef5af7eb92ad3811248319cee"
     },
     {
       "path": "research/transition-order/chi192-p30481/ordered-attempt1-interrupted.json",
@@ -990,14 +995,19 @@
       "sha256": "e39febcb9454570e21419f6f7e56c9d39a2bc12cfd60d8d72a4d7d44c1df632c"
     },
     {
+      "path": "research/transition-order/chi192-p30481/ordered-attempt5-process-loss.json",
+      "bytes": 1176,
+      "sha256": "999751560678f773066d217f5a82f89bc6dfd209112012065be15c34356ab24a"
+    },
+    {
       "path": "research/transition-order/chi192-p30481/ordered-attempt5-resume.json",
       "bytes": 1320,
       "sha256": "9ee7289fe37afee507d2bcbdf1eaef480b1588b9eee6e225c82a9c6b51dbd9b3"
     },
     {
       "path": "research/transition-order/chi192-p30481/protocol.json",
-      "bytes": 20209,
-      "sha256": "a577be5feb31b123a36d5fac19602c09562764f5d56380a978d0d6b006dc5433"
+      "bytes": 21793,
+      "sha256": "784ab21ac8da04a4d53359d88a85e74ace03faacc5d175ca00567b137522e2d6"
     },
     {
       "path": "research/transition-order/chi192-p30481/signal-source-investigation.json",
