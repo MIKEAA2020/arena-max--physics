@@ -7,7 +7,7 @@
   "chi": 192,
   "external_tol": 1e-07,
   "internal_goal": 5e-08,
-  "status": "paused for signal-source investigation",
+  "status": "ready to resume from verified cumulative iteration 16",
   "converged": false,
   "source": {
     "checkpoint": "v2.2/verify/replica/checkpoints/branch192_retry1_ordered_p0.3048000.npz",
@@ -112,5 +112,7 @@
     "acceptance_note": "Residual remains above external tolerance 1e-7 and internal goal 5e-8; this is an incomplete optimizer state, not an accepted branch-retention observation.",
     "investigation_record": "signal-source-investigation.json",
     "no_restart_until": "The unexpected SIGTERM source is identified/fixed or the user otherwise explicitly directs continuation after reviewing this investigation."
-  }
+  },
+  "next_attempt": 5,
+  "resume_authorization": "User directed resumption after reviewing the completed investigation; one prior unexplained SIGTERM is recorded, and the next will trigger checkpoint flush and exit without retry."
 }

@@ -217,7 +217,7 @@
       "recovery": "Resume the same ordered p=.30481 path from this p=.30481 checkpoint; no new rate or independent warm history."
     }
   ],
-  "current_execution_status": "Paused for source investigation. Latest ordered p=.30481 checkpoint is cumulative iteration 16; no worker is running.",
+  "current_execution_status": "Ready to resume attempt 5 from verified ordered p=.30481 cumulative iteration 16; one prior unexplained SIGTERM counted. The next one will flush, stop without retry, and be reported.",
   "previous_attempt_deadline_unix": 1792342906.9236,
   "restart_started_unix": 1792336801.1643448,
   "cap_override_note": "User explicitly said to run either lower-edge rate regardless of cap. The first launch ended before any atomic checkpoint, and the same ordered preparation is restarted from its unchanged accepted source under a fresh 14-hour operational timer; one sequential worker and validation/memory gates remain in force.",
@@ -255,12 +255,27 @@
       "cumulative_optimizer_seconds_before_resume": 656.5157632827759,
       "prior_attempt": "attempt 3 received SIGTERM; exact sender/cause unknown; valid checkpoint at cumulative iteration 9 preserved.",
       "authorization": "Standing \u03c7192 campaign authorization received 2026-10-18. This resumes the same p=.30481 history under the original deadline; no timer reset."
+    },
+    {
+      "attempt": 5,
+      "history": "ordered",
+      "rate": 0.30481,
+      "source_checkpoint": "checkpoints/branch192_p30481_ordered_p0.3048100.npz",
+      "source_checkpoint_sha256": "4f4e7bc7321ae839cfbcad8b2f85917f996df303f7fc7dd59a24d25e42b61e81",
+      "cumulative_iterations_before_resume": 16,
+      "cumulative_optimizer_seconds_before_resume": 1438.3509275913239,
+      "prior_attempt": "Attempt 4 was intentionally stopped after iteration 16 for investigation. User reviewed findings and cleared the hold.",
+      "authorization": "Standing \u03c7192 campaign authorization resumes; original absolute deadline retained, no reset.",
+      "restart_authorized_at_unix": 1792348828.6261928,
+      "restart_authorized_at_utc": "2026-10-18T18:40:28Z",
+      "actual_worker_started": false,
+      "worker_script_sha256": "09897cd01879d89abc9901693c7490b74a2ab4dd667cf1c8f81dfb69cb9b7e76"
     }
   ],
   "recovery_worker": {
     "path": "research/transition-order/chi192-p30481/branch192_p30481_resume_worker.py",
-    "sha256": "5623a291c5f182332311408b0955a00ae855a9499cb6b0a3fb597172e0e95751",
-    "purpose": "resume the same ordered p=.30481 checkpoint lineage; preserve cumulative iterations/time and checkpoint after every iteration. Uses the unchanged VUMPS implementation and objective; classifies SIGTERM manager interruption separately from deadline expiry."
+    "sha256": "09897cd01879d89abc9901693c7490b74a2ab4dd667cf1c8f81dfb69cb9b7e76",
+    "purpose": "resume the cumulative p=.30481 continuation and other authorized rates with atomic checkpoints each iteration; when the next unexplained SIGTERM makes the total two, flush the latest state, exit without retry, and record the stop."
   },
   "resume_source": {
     "history": "ordered",
@@ -273,15 +288,15 @@
     "checkpoint_metadata_verified": true
   },
   "recovery_budget_snapshot": {
-    "observed_at_unix": 1792347814.9927275,
-    "observed_at_utc": "2026-10-18T18:23:34Z",
-    "remaining_original_deadline_seconds": 39386.171617269516,
+    "observed_at_unix": 1792348828.6261928,
+    "observed_at_utc": "2026-10-18T18:40:28Z",
+    "remaining_original_deadline_seconds": 38372.53815197945,
     "remaining_optimizer_forecast_seconds": 39795.039563417435,
     "remaining_forecast_with_setup_validation_seconds": 41835.039563417435,
-    "headroom_after_setup_validation_seconds": -2448.8679461479187,
+    "headroom_after_setup_validation_seconds": -3462.5014114379883,
     "remaining_forecast_with_setup_validation_safety_seconds": 42435.039563417435,
-    "safety_buffer_shortfall_seconds": 3048.8679461479187,
-    "note": "Forecast is based on the original one-step benchmark and may be pessimistic or optimistic. No timer reset. Current execution is held for signal-source investigation; do not restart until source is identified/fixed or user otherwise directs after review."
+    "safety_buffer_shortfall_seconds": 4062.5014114379883,
+    "note": "Planning estimate from the one-step benchmark; actual runtime uncertain. User directs resumption. Original absolute deadline unchanged; if the pair cannot be completed in budget, stop at a clean checkpoint and report."
   },
   "standing_campaign_authorization": {
     "authorization_date": "2026-10-18",
@@ -315,21 +330,15 @@
   },
   "signal_source_investigation": {
     "record": "research/transition-order/chi192-p30481/signal-source-investigation.json",
-    "status": "unresolved",
+    "status": "complete within sandbox evidence; source remains unidentified, no reproducible failure found; user cleared hold and directs resume.",
     "result": "The earlier SIGTERM sender/cause cannot be identified from the available sandbox logs. The agent worker has no short runtime timeout, and the available evidence does not implicate OOM or CPU throttling. A host/process-supervisor signal remains possible but unproven.",
-    "sha256": "9d732a95a6ea98da0e931efef22df50490c226755e85e27318dc45d3a80edcde"
+    "sha256": "9d732a95a6ea98da0e931efef22df50490c226755e85e27318dc45d3a80edcde",
+    "decision": "Resume from iteration 16. A second unexplained SIGTERM will be checkpointed and terminate the worker without retry, then be reported."
   },
   "execution_hold": {
-    "status": "paused",
-    "reason": "User requested source investigation before further compute. Do not launch or resume any optimizer worker until the earlier SIGTERM source is identified/fixed or the user otherwise directs continuation after review.",
-    "paused_checkpoint": {
-      "history": "ordered",
-      "rate": 0.30481,
-      "path": "checkpoints/branch192_p30481_ordered_p0.3048100.npz",
-      "sha256": "4f4e7bc7321ae839cfbcad8b2f85917f996df303f7fc7dd59a24d25e42b61e81",
-      "iterations": 16,
-      "eps": 3.6810718513208667e-07
-    }
+    "status": "cleared by user instruction on 2026-10-18",
+    "reason": "The user reviewed the sandbox investigation and directed resumption; one unexplained SIGTERM is treated as an anomaly, not a reproducible block.",
+    "prior_paused_checkpoint_sha256": "4f4e7bc7321ae839cfbcad8b2f85917f996df303f7fc7dd59a24d25e42b61e81"
   },
   "pauses": [
     {
@@ -349,5 +358,12 @@
       "investigation_record": "signal-source-investigation.json",
       "no_restart_until": "The unexpected SIGTERM source is identified/fixed or the user otherwise explicitly directs continuation after reviewing this investigation."
     }
-  ]
+  ],
+  "unexplained_sigterm_count": 1,
+  "sigterm_policy": {
+    "prior_unexplained_sigterm_count": 1,
+    "stop_after_count": 2,
+    "on_next_sigterm": "The worker catches SIGTERM, atomically rewrites the latest valid checkpoint and records its iteration/residual, then exits without automatic retry; report the second occurrence.",
+    "checkpoint_interval": "Every optimizer iteration during production."
+  }
 }

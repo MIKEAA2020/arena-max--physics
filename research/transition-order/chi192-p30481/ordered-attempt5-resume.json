@@ -1,0 +1,21 @@
+{
+  "attempt": 5,
+  "history": "ordered",
+  "rate": 0.30481,
+  "authorized_at_unix": 1792348828.6261928,
+  "authorized_at_utc": "2026-10-18T18:40:28Z",
+  "source_checkpoint": "checkpoints/branch192_p30481_ordered_p0.3048100.npz",
+  "source_checkpoint_sha256": "4f4e7bc7321ae839cfbcad8b2f85917f996df303f7fc7dd59a24d25e42b61e81",
+  "cumulative_iterations_before_resume": 16,
+  "cumulative_optimizer_seconds_before_resume": 1438.3509275913239,
+  "source_residual": 3.6810718513208667e-07,
+  "prior_attempt": "Attempt 4 was intentionally stopped at iteration 16 after the SIGTERM investigation. User reviewed the findings and directs resumption.",
+  "deadline_unix": 1792387201.1643448,
+  "deadline_reset": false,
+  "worker_script": {
+    "path": "research/transition-order/chi192-p30481/branch192_p30481_resume_worker.py",
+    "sha256": "09897cd01879d89abc9901693c7490b74a2ab4dd667cf1c8f81dfb69cb9b7e76",
+    "purpose": "resume the cumulative p=.30481 continuation and other authorized rates with atomic checkpoints each iteration; when the next unexplained SIGTERM makes the total two, flush the latest state, exit without retry, and record the stop."
+  },
+  "checkpoint_policy": "Atomic save after every optimizer iteration. One prior unexplained SIGTERM is recorded; if a second occurs, flush and exit without retry."
+}

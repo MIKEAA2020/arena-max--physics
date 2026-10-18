@@ -94,12 +94,16 @@ def production(prep,resume=False):
     cumulative_iteration_offset=base_iters,cumulative_seconds_offset=base_seconds)
   saver(path,physical,info);result.update(eps=float(st['eps']),iters=int(cumulative['iters']),optimizer_seconds=float(cumulative['seconds']));atomic(outpath,result)
  original=H.checkpoint;H.checkpoint=compact;started=time.monotonic()
+ sigterm_state={'received':False}
  signal.signal(signal.SIGALRM,lambda s,f:(_ for _ in ()).throw(TimeoutError('authorized p=.30481 campaign deadline reached')))
- signal.signal(signal.SIGTERM,lambda s,f:(_ for _ in ()).throw(TimeoutError('paired campaign manager stop')))
+ def on_sigterm(signum,frame):
+  sigterm_state['received']=True
+  raise TimeoutError('SIGTERM received during χ192 campaign')
+ signal.signal(signal.SIGTERM,on_sigterm)
  signal.setitimer(signal.ITIMER_REAL,max(1,int(remaining)));atomic(outpath,result)
  try:
   try:
-   solver=solve_every_step if resume else H.solve
+   solver=solve_every_step
    state,obs=solver(3,2,rate,chi,init=init,tol=p['internal_goal'],maxiter=p['maxiter'],checkpoint_path=cp,tag='chi192-p30481-'+prep,verbose=True)
   except RuntimeError as e:
    if 'budget' not in str(e).lower():raise
@@ -128,10 +132,26 @@ def production(prep,resume=False):
   result['process_peak_rss_kib']=resource.getrusage(resource.RUSAGE_SELF).ru_maxrss
  except TimeoutError as e:
   deadline_hit='authorized p=.30481 campaign deadline reached' in str(e)
-  result.update(status='authorized wall-clock budget reached' if deadline_hit else 'interrupted; resumable checkpoint saved',converged=False,reason=str(e))
+  sigterm_hit=bool(sigterm_state['received'])
+  if deadline_hit:
+   result.update(status='authorized wall-clock budget reached',converged=False,reason=str(e))
+  elif sigterm_hit:
+   prior_count=int(p.get('unexplained_sigterm_count',0));count=prior_count+1
+   second=count>=int(p.get('sigterm_policy',{}).get('stop_after_count',2))
+   result.update(status='second SIGTERM; checkpoint preserved; stop and report' if second else 'SIGTERM received; checkpoint preserved; exit without retry',
+       converged=False,reason=str(e),unexplained_sigterm_count=count,resume_blocked=bool(second))
+  else:
+   result.update(status='interrupted; resumable checkpoint saved',converged=False,reason=str(e))
   if cp.exists():
-   try:_,m=H.load_state(cp,operator='hermitian-halfrow');result.update(last_state_metadata=m,eps=m.get('eps'),iters=m.get('iters'),optimizer_seconds=m.get('seconds'))
-   except Exception:pass
+   try:
+    latest,m=H.load_state(cp,operator='hermitian-halfrow')
+    if sigterm_hit:
+     saver(cp,latest,{**m,'sigterm_received':True,'unexplained_sigterm_count':result.get('unexplained_sigterm_count'),
+       'checkpoint_flushed_after_signal':True,'signal_sender_pid_unavailable':True})
+     result['checkpoint_flushed_after_signal']=True
+    result.update(last_state_metadata=m,eps=m.get('eps'),iters=m.get('iters'),optimizer_seconds=m.get('seconds'))
+   except Exception as flush_error:
+    result['checkpoint_flush_error']=f'{type(flush_error).__name__}: {flush_error}'
  except Exception as e:
   result.update(status='unexpected execution/validation error',converged=False,reason=f'{type(e).__name__}: {e}');traceback.print_exc()
  finally:
