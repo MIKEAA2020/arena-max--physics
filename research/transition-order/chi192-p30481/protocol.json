@@ -1,0 +1,168 @@
+{
+  "campaign": "2026-10-18-chi192-paired-lower-edge-p304810-v1",
+  "authorization": "User explicitly authorized either p=.30481 or p=.304815 regardless of the previous cap; select p=.30481 as the lower-side probe. Exactly one rate, two warm histories, sequentially with one single-thread worker. Benchmark first; retain validation time; no other rate or \u03c7256 work.",
+  "started_unix": 1792292506.9236,
+  "deadline_unix": 1792342906.9236,
+  "total_wall_cap_seconds": 50400,
+  "selected_rate_reason": "p=.30481 is closer to the lower sampled endpoint .30480 and therefore probes the lower side of the observed retention point.",
+  "p": 0.30481,
+  "n": 3,
+  "d": 2,
+  "chi": 192,
+  "preparations": [
+    "ordered",
+    "small"
+  ],
+  "sources": {
+    "ordered": {
+      "checkpoint": "v2.2/verify/replica/checkpoints/branch192_retry1_ordered_p0.3048000.npz",
+      "p": 0.3048,
+      "sha256": "d15055d94d8a527a698a7967f468704d4c5cdaf1513c2388198170f0652ca1da",
+      "source_color_l2": 0.4791266806773358,
+      "accepted_source": true
+    },
+    "small": {
+      "checkpoint": "v2.2/verify/replica/checkpoints/branch192_upper_retry1_ordered_p0.3048500.npz",
+      "p": 0.30485,
+      "sha256": "decf371716b717cfd059c268b198a73449423c593ba34bb2272c7dee37c896f1",
+      "source_color_l2": 0.00030083577200990306,
+      "accepted_source": true
+    }
+  },
+  "external_tol": 1e-07,
+  "internal_goal": 5e-08,
+  "canonical_ceiling": 1e-09,
+  "period_contraction_ceiling": 1e-08,
+  "correlation_rmax": 240,
+  "maxiter": 10000,
+  "threads_per_worker": 1,
+  "max_heavy_workers": 1,
+  "setup_reserve_seconds_total": 240,
+  "validation_reserve_seconds_total": 1800,
+  "postreserve_safety_buffer_seconds": 600,
+  "forecast_iterations_per_prep": 205,
+  "source_optimizer_seconds_per_iteration": {
+    "ordered": 80.65220619892251,
+    "small": 94.50021276703801
+  },
+  "optimizer_budget_seconds": {
+    "ordered": 22000,
+    "small": 25000
+  },
+  "forecast_rule": "For each preparation: 205 iterations times the maximum of the fresh one-step benchmark, source-state accepted average, and prior accepted \u03c7192 p=.30480 ordered average; add 240 seconds setup, 1800 seconds two independent validations/report, and 600 seconds safety.",
+  "resource_rule": "One single-thread worker only; require 1.25 times projected peak RSS below 0.75 times MemAvailable after both benchmarks. Do not start production if memory gate fails.",
+  "gates": "For each state: eps and both compatibility residuals <1e-7; both canonical defects <1e-9; positive full-period trial contraction with relative defect <1e-8.",
+  "scope": "Exactly p=.30481 ordered p=.30480 source and small-order p=.30485 source; no other rate, scan, perturbation, gap, stability, or \u03c7256 run.",
+  "source_sha256": {
+    "v2.2/verify/replica/replica_vumps.py": "4830e638829e1df645e16442171a820baf7bd710c617f24c32f089f79c399247",
+    "v2.2/verify/replica/replica_halfrow.py": "b791a81675ebe697d36a82a2572753185b4b8c7d13164e12cb47feab3c85ed5d",
+    "v2.2/verify/replica/replica_tm.py": "43a5074315a61379aa70e5251111601ec41c26ff762a11dcde5b9c665e18ba20",
+    "v2.2/verify/replica/branch128_pilot_worker.py": "3dc06a84365e241a7b7c9d20b5007a4dfd7b744a35defc5e5fd88cb3c5be9aca",
+    "v2.2/verify/replica/branch192_p30481_pair_worker.py": "ef1181178d13b4dcee57a6a42e57418b77f3587e58795ab7334e18d43c64e606"
+  },
+  "benchmarks": {
+    "ordered": {
+      "kind": "disposable one-step \u03c7192 p=.30481 branch-retention feasibility benchmark; no scientific result",
+      "preparation": "ordered",
+      "p": 0.30481,
+      "chi": 192,
+      "initial_chi": 192,
+      "source_checkpoint": "v2.2/verify/replica/checkpoints/branch192_retry1_ordered_p0.3048000.npz",
+      "source_sha256": "d15055d94d8a527a698a7967f468704d4c5cdaf1513c2388198170f0652ca1da",
+      "iterations": 1,
+      "vumps_seconds": 101.90492057800293,
+      "seconds_per_iteration": 101.90492057800293,
+      "wall_seconds": 101.925295607,
+      "eps_after_one_step": 2.7623788321931306e-05,
+      "finite_output": true,
+      "peak_rss_kib": 168980,
+      "no_state_checkpoint_written": true,
+      "not_a_convergence_observation": true
+    },
+    "small": {
+      "kind": "disposable one-step \u03c7192 p=.30481 branch-retention feasibility benchmark; no scientific result",
+      "preparation": "small",
+      "p": 0.30481,
+      "chi": 192,
+      "initial_chi": 192,
+      "source_checkpoint": "v2.2/verify/replica/checkpoints/branch192_upper_retry1_ordered_p0.3048500.npz",
+      "source_sha256": "decf371716b717cfd059c268b198a73449423c593ba34bb2272c7dee37c896f1",
+      "iterations": 1,
+      "vumps_seconds": 99.2335696220398,
+      "seconds_per_iteration": 99.2335696220398,
+      "wall_seconds": 99.23463209999997,
+      "eps_after_one_step": 5.612967316732827e-05,
+      "finite_output": true,
+      "peak_rss_kib": 168548,
+      "no_state_checkpoint_written": true,
+      "not_a_convergence_observation": true
+    }
+  },
+  "feasibility_gate": {
+    "benchmarks": {
+      "ordered": {
+        "kind": "disposable one-step \u03c7192 p=.30481 branch-retention feasibility benchmark; no scientific result",
+        "preparation": "ordered",
+        "p": 0.30481,
+        "chi": 192,
+        "initial_chi": 192,
+        "source_checkpoint": "v2.2/verify/replica/checkpoints/branch192_retry1_ordered_p0.3048000.npz",
+        "source_sha256": "d15055d94d8a527a698a7967f468704d4c5cdaf1513c2388198170f0652ca1da",
+        "iterations": 1,
+        "vumps_seconds": 101.90492057800293,
+        "seconds_per_iteration": 101.90492057800293,
+        "wall_seconds": 101.925295607,
+        "eps_after_one_step": 2.7623788321931306e-05,
+        "finite_output": true,
+        "peak_rss_kib": 168980,
+        "no_state_checkpoint_written": true,
+        "not_a_convergence_observation": true
+      },
+      "small": {
+        "kind": "disposable one-step \u03c7192 p=.30481 branch-retention feasibility benchmark; no scientific result",
+        "preparation": "small",
+        "p": 0.30481,
+        "chi": 192,
+        "initial_chi": 192,
+        "source_checkpoint": "v2.2/verify/replica/checkpoints/branch192_upper_retry1_ordered_p0.3048500.npz",
+        "source_sha256": "decf371716b717cfd059c268b198a73449423c593ba34bb2272c7dee37c896f1",
+        "iterations": 1,
+        "vumps_seconds": 99.2335696220398,
+        "seconds_per_iteration": 99.2335696220398,
+        "wall_seconds": 99.23463209999997,
+        "eps_after_one_step": 5.612967316732827e-05,
+        "finite_output": true,
+        "peak_rss_kib": 168548,
+        "no_state_checkpoint_written": true,
+        "not_a_convergence_observation": true
+      }
+    },
+    "seconds_per_iteration": {
+      "ordered": 101.90492057800293,
+      "small": 99.2335696220398
+    },
+    "optimizer_forecast_seconds": {
+      "ordered": 20890.5087184906,
+      "small": 20342.881772518158
+    },
+    "setup_seconds": 240,
+    "validation_reserve_seconds": 1800,
+    "safety_reserve_seconds": 600,
+    "forecast_total_seconds": 43873.39049100876,
+    "fresh_12h_cap_seconds": 43200,
+    "would_fit_12h": false,
+    "user_authorized_old_cap_override": true,
+    "proposed_fresh_total_cap_seconds": 50400,
+    "headroom_vs_14h_cap_seconds": 6526.6095089912415,
+    "forecast_peak_rss_kib": 612820,
+    "memory_required_1_25x_kib": 766025.0,
+    "mem_available_kib": 1518936,
+    "memory_allowed_0_75x_kib": 1139202.0,
+    "memory_passed": true,
+    "time_passed_14h": true,
+    "production_authorized": true,
+    "decision": "PROCEED with exactly two sequential \u03c7192 p=.30481 warm continuations under fresh 14-hour cap; preserve 30-minute validation reserve and 10-minute safety reserve."
+  },
+  "user_cap_override": "The user authorized the selected one-rate \u03c7192 probe regardless of the prior cap. A fresh 14-hour campaign cap is retained for safe operation and validation.",
+  "output_directory": "research/transition-order/chi192-p30481"
+}
