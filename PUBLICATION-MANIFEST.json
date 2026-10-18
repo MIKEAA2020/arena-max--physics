@@ -336,8 +336,8 @@
     },
     {
       "path": "research/transition-order/BRANCH192-MID-PAIR-RESULTS.md",
-      "bytes": 9945,
-      "sha256": "d0410b3b186dfc5b7ba7aee966ddb3ede0404108fb9a9235d60249ec702e3926"
+      "bytes": 12103,
+      "sha256": "2957f751d90952e60440968f35f98832486d2b8c79c875585ae5263847e21b40"
     },
     {
       "path": "research/transition-order/BRANCH192-RESULTS.md",
@@ -666,8 +666,8 @@
     },
     {
       "path": "research/transition-order/branch192-mid-pair-report.docx",
-      "bytes": 41898,
-      "sha256": "a4b33aa6041f1fbda22002be96e18df30442aa4558e34b146ed147c0221f9f17"
+      "bytes": 42498,
+      "sha256": "fb1e49da26b5721e6676d40cd086e901e9196e6c3dcc751d6dd231c366b441ca"
     },
     {
       "path": "research/transition-order/branch192-mid-pair-small-restart-protocol.json",
@@ -791,8 +791,8 @@
     },
     {
       "path": "research/transition-order/branch192_mid_pair_report.py",
-      "bytes": 11384,
-      "sha256": "a23592d61649a4eb4a3c2bb9dd13002fafdc5d15d5b63ff56cf596fc9c52f761"
+      "bytes": 13588,
+      "sha256": "c672c347d06ee535779e3c12dd76a329ffd53590676f399427f798048dd1b3bc"
     },
     {
       "path": "research/transition-order/branch192_report.py",
