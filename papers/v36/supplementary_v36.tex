@@ -1,0 +1,37 @@
+\documentclass[aps,prx,onecolumn,nofootinbib]{revtex4-2}
+\usepackage{amsmath,amssymb}
+\usepackage{booktabs}
+\usepackage{hyperref}
+\begin{document}
+\title{Supplementary Material for: Exact Replica Mechanics and Born-Record Large Deviations in Monitored Quantum Circuits}
+\author{Amin Abaee}
+\date{\today}
+\maketitle
+
+\section*{S1. $\chi=192$ paired-history run details and incomplete continuation}
+\label{sec:supp-chi192}
+
+This section records the run-level details underlying the concise main-text characterization. These are finite-$\chi$ warm-history observations, not measurements of a thermodynamic coexistence interval, spinodal, physical transition bracket, or transition order.
+
+\paragraph{Reported $p=.304825$ pair.} A separately authorized author-review calculation tested two warm histories at the common rate $p=.304825$, using the same Hermitian half-row objective and the established convergence and gauge gates. The ordered preparation was continued from the accepted $\chi=192$, $p=.30480$ state; the small-order preparation was continued from the accepted $p=.30485$ source. Historical audit records report that both runs passed acceptance gates. The final $p=.304825$ MPS checkpoint blobs are unavailable for tensor-level reopening, so these remain historical audited observations rather than newly re-audited tensors.
+
+\begin{table}[h]
+\caption{Historical $\chi=192$ paired observations at $p=.304825$. The final checkpoint files are unavailable for reopening.}
+\begin{ruledtabular}
+\begin{tabular}{lrrrr}
+preparation & iterations & $\epsilon$ & color $L_2$ & $f_{\rm half}$\\
+\colrule
+ordered & 146 & $4.8394074016\times10^{-8}$ & 0.424511350240 & 0.992950567266133\\
+small-order & 199 & $4.9158883629\times10^{-8}$ & 0.000624328653 & 0.992950208166968\\
+\end{tabular}
+\end{ruledtabular}
+\end{table}
+
+The recorded same-rate color separation is 0.4238870216. The reported same-objective difference $\Delta f_{\rm half}$ (ordered minus small-order) is $+3.5909916507\times10^{-7}$. At $\chi=128$ and the same rate, the recorded ordered-minus-disordered $\Delta f_{\rm half}$ is $-4.359393\times10^{-7}$. The sign reversal is a finite-$\chi$ comparison; it is not an objective error bar, a calibrated crossing, or a controlled $\chi$-scaling result. Optimizer residuals are not free-energy error bars, and accepted MPS states are not global-minimum certificates.
+
+\paragraph{Sampled neighboring outcomes.} The low-order-start state was not retained as distinct at $p=.30480$. A distinct pair was reported at $p=.304825$. An ordered-start retry at $p=.30485$ ended in the small-order state. These path outcomes support the main-text description of a coarse sampled finite-$\chi$ warm-history change zone of approximately $.30480$--$.30485$; they do not map branch-stability boundaries.
+
+\paragraph{Incomplete $p=.30481$ continuation.} The lower-side ordered continuation was not accepted. Its latest saved checkpoint was cumulative iteration 19, with $\epsilon=1.308536380704902\times10^{-6}$, above the external $10^{-7}$ tolerance and internal $5\times10^{-8}$ goal. The recorded optimizer time was 3222.734782934189 seconds. The paired small-order history was not completed. The run manager and worker became unavailable; the termination source was not identified. The surviving finite-tensor checkpoint is archived at \texttt{research/transition-order/chi192-p30481/} with SHA-256 \texttt{a8097162c27ca104556edd5c789bcf36e5c9c89ef5af7eb92ad3811248319cee}. It is a partial, non-accepted state and does not refine the sampled zone.
+
+No $\chi=256$ calculation was run for this manuscript. The proposed controlled paired-history study and extrapolation are future work only.
+\end{document}

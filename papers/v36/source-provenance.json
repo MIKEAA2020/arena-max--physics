@@ -1,0 +1,17 @@
+{
+  "revision": "v36 author-review continuation",
+  "source_v35_sha256": "d1958065376d6e787002f820afb8f59c45d033d579581d51087c732ff0bed8bd",
+  "output_v36_sha256": "f64021d91b57c42d019f19d5ada8e60962fd49bf387c1b9fb320f204768d9590",
+  "supplementary_sha256": "debc37e2db8689c115247a4b45f5e448def1c057d134929ec02dd7ea3d1c69f9",
+  "unchanged_math_statement_and_proof_blocks": 65,
+  "unique_main_labels": 161,
+  "internal_main_references_resolve": true,
+  "main_citation_keys_resolve": true,
+  "chi192_run_details": "moved to supplementary_v36.tex, S1",
+  "p30481_status": "partial at cumulative iteration 19; not accepted; details supplementary only",
+  "main_text_window": "coarse sampled finite-chi warm-history change zone p=.30480--.30485",
+  "transition_order": "unresolved in main text",
+  "chi256": "future work only; not run",
+  "pdf_compile": "not run; no TeX engine available",
+  "submission_status": "author-review"
+}
