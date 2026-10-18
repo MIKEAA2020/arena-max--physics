@@ -1,0 +1,10 @@
+{
+  "attempt": 2,
+  "history": "ordered",
+  "rate": 0.30481,
+  "restart_started_unix": 1792336801.1643448,
+  "source_checkpoint": "v2.2/verify/replica/checkpoints/branch192_retry1_ordered_p0.3048000.npz",
+  "source_checkpoint_sha256": "d15055d94d8a527a698a7967f468704d4c5cdaf1513c2388198170f0652ca1da",
+  "prior_attempt": "attempt 1 ended before first atomic checkpoint; no iteration/residual/checkpoint was recorded",
+  "authorization": "User said run either rate regardless of cap; same rate/preparation restart, not an added independent history."
+}

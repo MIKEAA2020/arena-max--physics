@@ -2,7 +2,7 @@
   "campaign": "2026-10-18-chi192-paired-lower-edge-p304810-v1",
   "authorization": "User explicitly authorized either p=.30481 or p=.304815 regardless of the previous cap; select p=.30481 as the lower-side probe. Exactly one rate, two warm histories, sequentially with one single-thread worker. Benchmark first; retain validation time; no other rate or \u03c7256 work.",
   "started_unix": 1792292506.9236,
-  "deadline_unix": 1792342906.9236,
+  "deadline_unix": 1792387201.1643448,
   "total_wall_cap_seconds": 50400,
   "selected_rate_reason": "p=.30481 is closer to the lower sampled endpoint .30480 and therefore probes the lower side of the observed retention point.",
   "p": 0.30481,
@@ -164,5 +164,35 @@
     "decision": "PROCEED with exactly two sequential \u03c7192 p=.30481 warm continuations under fresh 14-hour cap; preserve 30-minute validation reserve and 10-minute safety reserve."
   },
   "user_cap_override": "The user authorized the selected one-rate \u03c7192 probe regardless of the prior cap. A fresh 14-hour campaign cap is retained for safe operation and validation.",
-  "output_directory": "research/transition-order/chi192-p30481"
+  "output_directory": "research/transition-order/chi192-p30481",
+  "interrupted_execution_attempts": [
+    {
+      "attempt": 1,
+      "history": "ordered",
+      "rate": 0.30481,
+      "status": "interrupted before first atomic checkpoint",
+      "record": "branch192_p30481_ordered_attempt1_interrupted.json",
+      "checkpoint_written": false,
+      "progress_row_had_iteration_or_residual": false,
+      "worker_process_id": "192-lower-edge-continuation-58b1723d",
+      "worker_process_state": "not found at continuation check; exact termination cause unknown",
+      "recovery": "Restart the same ordered preparation from its verified accepted p=.30480 source checkpoint. This is not a new rate or independent warm history."
+    }
+  ],
+  "current_execution_status": "attempt 2: ordered history restarting from the verified accepted p=.30480 source; small history follows sequentially after ordered result.",
+  "previous_attempt_deadline_unix": 1792342906.9236,
+  "restart_started_unix": 1792336801.1643448,
+  "cap_override_note": "User explicitly said to run either lower-edge rate regardless of cap. The first launch ended before any atomic checkpoint, and the same ordered preparation is restarted from its unchanged accepted source under a fresh 14-hour operational timer; one sequential worker and validation/memory gates remain in force.",
+  "execution_restarts": [
+    {
+      "attempt": 2,
+      "history": "ordered",
+      "rate": 0.30481,
+      "restart_started_unix": 1792336801.1643448,
+      "source_checkpoint": "v2.2/verify/replica/checkpoints/branch192_retry1_ordered_p0.3048000.npz",
+      "source_checkpoint_sha256": "d15055d94d8a527a698a7967f468704d4c5cdaf1513c2388198170f0652ca1da",
+      "prior_attempt": "attempt 1 ended before first atomic checkpoint; no iteration/residual/checkpoint was recorded",
+      "authorization": "User said run either rate regardless of cap; same rate/preparation restart, not an added independent history."
+    }
+  ]
 }

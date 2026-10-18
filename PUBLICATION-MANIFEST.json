@@ -115,6 +115,11 @@
       "sha256": "857979e6c53458e8d7c8939b84fe471ea54399fdde73cbcc30e841938c16b660"
     },
     {
+      "path": "papers/v33-review-package.zip.sha256",
+      "bytes": 89,
+      "sha256": "f0d33abb8d6e4256ea60200ec5aca76b3a66f3b401c9d39577edb128b2bc51d3"
+    },
+    {
       "path": "papers/v33/README.md",
       "bytes": 6436,
       "sha256": "33dea3caab2e84c054d43ac0d5493408468f2363ac02e421602cb7e3737f5944"
@@ -235,11 +240,6 @@
       "sha256": "c3c5673e7b3cc9fb117cd092817b84f9eca7022ac912542cc788f04f13057cf0"
     },
     {
-      "path": "papers/v33-review-package.zip.sha256",
-      "bytes": 89,
-      "sha256": "f0d33abb8d6e4256ea60200ec5aca76b3a66f3b401c9d39577edb128b2bc51d3"
-    },
-    {
       "path": "papers/v34/README.md",
       "bytes": 1982,
       "sha256": "cb0f043e06a516f575b2c6f352a0b48fa56ef77c5ea2fed417a8e33452ff6b8e"
@@ -336,8 +336,8 @@
     },
     {
       "path": "research/transition-order/BRANCH192-MID-PAIR-RESULTS.md",
-      "bytes": 5525,
-      "sha256": "fe1cd194269bd161c3c3b7d57f77152157219e3f1e4a8dc7e2b4d5db26ebd7f7"
+      "bytes": 8831,
+      "sha256": "001e9e49534470d7e372e7fa51459b2ed9c2c196491e0f3a45e08eac6842cf43"
     },
     {
       "path": "research/transition-order/BRANCH192-RESULTS.md",
@@ -465,36 +465,6 @@
       "sha256": "6c4811ea4c51d5144b99023135df35a0c47f6d28b188265b214e86e96bf89223"
     },
     {
-      "path": "research/transition-order/branch128/stage-1-disordered.json",
-      "bytes": 266,
-      "sha256": "ad6663a8ae7f131d54e7409b793336f645d34927446369aa29c5febbdaa31bf2"
-    },
-    {
-      "path": "research/transition-order/branch128/stage-1-master.json",
-      "bytes": 4142,
-      "sha256": "3777ac463825b71f6b7693e75848b109cfe9a70afe0cf058902c1a9fd74450e3"
-    },
-    {
-      "path": "research/transition-order/branch128/stage-1-ordered.json",
-      "bytes": 263,
-      "sha256": "bb3bce0779553322ad2dda6893a20a49e49af2ee3f3e1a0a5324bc939f446c68"
-    },
-    {
-      "path": "research/transition-order/branch128/stage-2-disordered.json",
-      "bytes": 264,
-      "sha256": "dce11d9e6f7336aca49ae20e6ec55052433f75437dcd0a38c717bba9238552e9"
-    },
-    {
-      "path": "research/transition-order/branch128/stage-2-master.json",
-      "bytes": 4191,
-      "sha256": "2782b56c903ea8276a1467bcffe77b68e00d19d69a3dc1ff67b4f465a0a14034"
-    },
-    {
-      "path": "research/transition-order/branch128/stage-2-ordered.json",
-      "bytes": 261,
-      "sha256": "730554866061c8dcd7331239e37df40e7ec7025e6955843c90423ecf1e73f6c5"
-    },
-    {
       "path": "research/transition-order/branch128-data-audit.json",
       "bytes": 1477,
       "sha256": "4055f3b57200a61c214df96a9cc42ecb374c6f7c5d81aaf4246e32f333dd41d3"
@@ -610,6 +580,36 @@
       "sha256": "9be0a80ff3b78694b1b538f4857c902e8755c4d10348379889f01304c6480c02"
     },
     {
+      "path": "research/transition-order/branch128/stage-1-disordered.json",
+      "bytes": 266,
+      "sha256": "ad6663a8ae7f131d54e7409b793336f645d34927446369aa29c5febbdaa31bf2"
+    },
+    {
+      "path": "research/transition-order/branch128/stage-1-master.json",
+      "bytes": 4142,
+      "sha256": "3777ac463825b71f6b7693e75848b109cfe9a70afe0cf058902c1a9fd74450e3"
+    },
+    {
+      "path": "research/transition-order/branch128/stage-1-ordered.json",
+      "bytes": 263,
+      "sha256": "bb3bce0779553322ad2dda6893a20a49e49af2ee3f3e1a0a5324bc939f446c68"
+    },
+    {
+      "path": "research/transition-order/branch128/stage-2-disordered.json",
+      "bytes": 264,
+      "sha256": "dce11d9e6f7336aca49ae20e6ec55052433f75437dcd0a38c717bba9238552e9"
+    },
+    {
+      "path": "research/transition-order/branch128/stage-2-master.json",
+      "bytes": 4191,
+      "sha256": "2782b56c903ea8276a1467bcffe77b68e00d19d69a3dc1ff67b4f465a0a14034"
+    },
+    {
+      "path": "research/transition-order/branch128/stage-2-ordered.json",
+      "bytes": 261,
+      "sha256": "730554866061c8dcd7331239e37df40e7ec7025e6955843c90423ecf1e73f6c5"
+    },
+    {
       "path": "research/transition-order/branch128_mid_campaign.py",
       "bytes": 4939,
       "sha256": "f053cbcb120b85b6c01872cd306822eb66cba740cae9c115fa6f4985c8cc6707"
@@ -666,8 +666,8 @@
     },
     {
       "path": "research/transition-order/branch192-mid-pair-report.docx",
-      "bytes": 39802,
-      "sha256": "08ffeda4ad84cd912e4b7ebe70907a3e3e1f268898be652b31301eb2db558697"
+      "bytes": 41446,
+      "sha256": "11412659c6537fb7d10637efa308b7aab53a79a4483ca8bc17aee66cee00a207"
     },
     {
       "path": "research/transition-order/branch192-mid-pair-small-restart-protocol.json",
@@ -791,8 +791,8 @@
     },
     {
       "path": "research/transition-order/branch192_mid_pair_report.py",
-      "bytes": 7073,
-      "sha256": "169f50d4bbea797bc6317816da60e890fcaf6383daeb37fc61d07c24b497c099"
+      "bytes": 10270,
+      "sha256": "eb701d0d04bcde529eefa173b2635124722aa0ca2767883a3803234e182e2eb1"
     },
     {
       "path": "research/transition-order/branch192_report.py",
@@ -920,6 +920,31 @@
       "sha256": "5af40878d58b6ec81db7b8b28b9ef3c1fd13811bdd333609f9813fe4aab88706"
     },
     {
+      "path": "research/transition-order/chi192-p30481/branch192_p30481_ordered.json",
+      "bytes": 1386,
+      "sha256": "dfb6f84c855bed75b82ba170e186ea8c448451b059d7ef13320ba071fea54574"
+    },
+    {
+      "path": "research/transition-order/chi192-p30481/ordered-attempt1-interrupted.json",
+      "bytes": 1386,
+      "sha256": "dfb6f84c855bed75b82ba170e186ea8c448451b059d7ef13320ba071fea54574"
+    },
+    {
+      "path": "research/transition-order/chi192-p30481/ordered-attempt1-interruption.json",
+      "bytes": 586,
+      "sha256": "5d287df7dea2fb81e312fc4453cb492152f1963be31d414b481f152c8c093114"
+    },
+    {
+      "path": "research/transition-order/chi192-p30481/ordered-attempt2-restart.json",
+      "bytes": 552,
+      "sha256": "fc239b6002af3e0c95a50dfad05d7cfeaa8419540d265ec0f9dd06736ff275bd"
+    },
+    {
+      "path": "research/transition-order/chi192-p30481/protocol.json",
+      "bytes": 9814,
+      "sha256": "20e1684ce852483d1313b76c04152d1e5b01c7ceb71a6e1dd615f780e933990b"
+    },
+    {
       "path": "research/transition-order/compact-package-101.log",
       "bytes": 8444,
       "sha256": "86f8f05e4a0267b9c34b0bf3299b6965f4b39b5877ef46e614b0c66b48e94e31"
@@ -1015,6 +1040,26 @@
       "sha256": "0305cc09bdc712a9e2e31161561f8941bec76bbbc03d9871705268e4d4f30445"
     },
     {
+      "path": "research/transition-order/scan128-data-audit.json",
+      "bytes": 5535,
+      "sha256": "7bff9f826f60bc20d22f258034bd24c0eba08c41fcc9c285ac0045ca886e4c13"
+    },
+    {
+      "path": "research/transition-order/scan128-document-qa.json",
+      "bytes": 480,
+      "sha256": "203fb32989feb0102990c71f9dfb390ad417f4d82beb37d4aefa5e15b04510c5"
+    },
+    {
+      "path": "research/transition-order/scan128-recovery-provenance.json",
+      "bytes": 745,
+      "sha256": "9531dce82531b94e970679e1d0073fb8d54a5541cae4861dd8b3dc42e38e0939"
+    },
+    {
+      "path": "research/transition-order/scan128-release-summary.json",
+      "bytes": 1142,
+      "sha256": "e84f5f1326b78ef3c723e3419b6f354ce6035e99fe638fa4e6b24276a3841c08"
+    },
+    {
       "path": "research/transition-order/scan128/point-0.3040000-recovery1.json",
       "bytes": 288,
       "sha256": "656992535ff08b321df2c1105b0d390aee8f91a662ce9873cfcdbf94d313c2f5"
@@ -1058,26 +1103,6 @@
       "path": "research/transition-order/scan128/segment-0.3047000-ordered-before-recovery1.json",
       "bytes": 2161,
       "sha256": "010a8840514a357840cb0ea3960bcfd2814fd0cb9584c1b1e259878fbe8ff2c2"
-    },
-    {
-      "path": "research/transition-order/scan128-data-audit.json",
-      "bytes": 5535,
-      "sha256": "7bff9f826f60bc20d22f258034bd24c0eba08c41fcc9c285ac0045ca886e4c13"
-    },
-    {
-      "path": "research/transition-order/scan128-document-qa.json",
-      "bytes": 480,
-      "sha256": "203fb32989feb0102990c71f9dfb390ad417f4d82beb37d4aefa5e15b04510c5"
-    },
-    {
-      "path": "research/transition-order/scan128-recovery-provenance.json",
-      "bytes": 745,
-      "sha256": "9531dce82531b94e970679e1d0073fb8d54a5541cae4861dd8b3dc42e38e0939"
-    },
-    {
-      "path": "research/transition-order/scan128-release-summary.json",
-      "bytes": 1142,
-      "sha256": "e84f5f1326b78ef3c723e3419b6f354ce6035e99fe638fa4e6b24276a3841c08"
     },
     {
       "path": "research/transition-order/scan128_report.py",

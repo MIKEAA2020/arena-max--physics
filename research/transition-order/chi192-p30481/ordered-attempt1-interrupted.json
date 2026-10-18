@@ -1,0 +1,43 @@
+{
+  "campaign": "2026-10-18-chi192-paired-lower-edge-p304810-v1",
+  "history": "ordered",
+  "p": 0.30481,
+  "n": 3,
+  "d": 2,
+  "chi": 192,
+  "external_tol": 1e-07,
+  "internal_goal": 5e-08,
+  "status": "running",
+  "converged": false,
+  "source": {
+    "checkpoint": "v2.2/verify/replica/checkpoints/branch192_retry1_ordered_p0.3048000.npz",
+    "p": 0.3048,
+    "sha256": "d15055d94d8a527a698a7967f468704d4c5cdaf1513c2388198170f0652ca1da",
+    "source_color_l2": 0.4791266806773358,
+    "accepted_source": true
+  },
+  "source_metadata": {
+    "n": 3,
+    "d": 2,
+    "p": 0.3048,
+    "operator": "hermitian-halfrow",
+    "tag": "chi192-ordered",
+    "checkpoint_schema": 1,
+    "tol": 5e-08,
+    "maxiter": 10000,
+    "stage_budget_seconds": 14476.19982099533,
+    "environment_cache_omitted": true,
+    "checkpoint_contents": "AL,AR,AC,C; recompute FL/FR on restart",
+    "acceptance_tol": 1e-07,
+    "optimizer_internal_goal": 5e-08,
+    "campaign": "2026-10-17-chi192-same-point-resource-gated-v1",
+    "eta": 0.6086968625326385,
+    "eps": 4.806925901917989e-08,
+    "chi": 192,
+    "iters": 116,
+    "seconds": 9355.655919075012
+  },
+  "source_is_accepted_observation": true,
+  "checkpoint": "checkpoints/branch192_p30481_ordered_p0.3048100.npz",
+  "qualification": "one of a paired single-rate finite-chi branch-retention test; not a global-minimum or transition certificate"
+}

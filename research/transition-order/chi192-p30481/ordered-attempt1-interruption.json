@@ -1,0 +1,12 @@
+{
+  "attempt": 1,
+  "history": "ordered",
+  "rate": 0.30481,
+  "status": "interrupted before first atomic checkpoint",
+  "record": "branch192_p30481_ordered_attempt1_interrupted.json",
+  "checkpoint_written": false,
+  "progress_row_had_iteration_or_residual": false,
+  "worker_process_id": "192-lower-edge-continuation-58b1723d",
+  "worker_process_state": "not found at continuation check; exact termination cause unknown",
+  "recovery": "Restart the same ordered preparation from its verified accepted p=.30480 source checkpoint. This is not a new rate or independent warm history."
+}
