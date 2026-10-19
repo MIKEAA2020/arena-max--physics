@@ -1,6 +1,6 @@
 {
   "scope": "generated work plus specifically identified A-1 reproduction inputs",
-  "credential_scan": "passed for v37 manuscript/supplement and Clue 12 update (new artifacts scanned; no secret values printed)",
+  "credential_scan": "passed for v37 manuscript/supplement and Clue 13 update (new artifacts scanned; no secret values printed)",
   "omitted": [
     "raw uploads directory",
     "bulk third-party search downloads",
@@ -111,13 +111,13 @@
     },
     {
       "path": "clues/clue-11-four-articles.md",
-      "bytes": 1994,
-      "sha256": "d98cd6a3228fe1de59215cce3babd460dd8c670d299af71aa4aa77ee6e500b3a"
+      "bytes": 1987,
+      "sha256": "857979e6c53458e8d7c8939b84fe471ea54399fdde73cbcc30e841938c16b660"
     },
     {
-      "path": "clues/clue-12-quantum-circuits-and-problem-of-time.md",
+      "path": "clues/clue-13-quantum-circuits-and-problem-of-time.md",
       "bytes": 12976,
-      "sha256": "79294c76fdc8749ab90bbd5e322be2995237407d9d1d3b02030f3b9d8710acf7"
+      "sha256": "903495cc64917b1d2ed3d9fbccf9e2a291f49677d91d83da6ce76ee789dac17a"
     },
     {
       "path": "papers/v33-review-package.zip.sha256",
@@ -1386,8 +1386,8 @@
     },
     {
       "path": "v2.2/Lighthouse-and-Plan-v2.2.md",
-      "bytes": 386624,
-      "sha256": "3b2c6240d95290baaef4209859ebec2fb91320abb0d0851baac93991d630a30b"
+      "bytes": 386529,
+      "sha256": "73d17115ced0f12fd50283645c095b29cf55afb4316babd13117cbfd789819c3"
     },
     {
       "path": "v2.2/assessments/adelic-bridge-review.md",
@@ -1420,14 +1420,14 @@
       "sha256": "910090aef9f12af7a06ded50b0661e3ef2a4cdfceb85df6af36214cb3b02c0ee"
     },
     {
-      "path": "v2.2/assessments/ciupa-thermodynamic-arrow-assessment.md",
-      "bytes": 7805,
-      "sha256": "dc788c7a944a1d14ad23c37a34f7233296d0cf6b72285a4cf7bc227607270d75"
+      "path": "v2.2/assessments/clue-12-arrow-illusion-bayesian-brain-review.md",
+      "bytes": 7698,
+      "sha256": "92ff2b29ee2a6ea08f325aa18a288727fe53673b37f2dfd08d51fb765988f395"
     },
     {
       "path": "v2.2/assessments/gap-audit-2026-10-15.md",
-      "bytes": 32256,
-      "sha256": "7ba22f049c8f24f7b1a669e92a8c9791959dd74ee3be5895866ee4994b1852b5"
+      "bytes": 32252,
+      "sha256": "65322916cc29e619178d5238bc89a6edf02117f8e1b4fcacacae97f4eb4604f1"
     },
     {
       "path": "v2.2/assessments/maturidi-point-circle-review.md",
@@ -1461,8 +1461,8 @@
     },
     {
       "path": "v2.2/parts/01-part-I.md",
-      "bytes": 76186,
-      "sha256": "a5dda48d445b49ea5fcc23d198ce21098a06ca2449713789af91d50fd2ef7648"
+      "bytes": 76188,
+      "sha256": "77330ae64c395f4937259cb4bf73233c14f7cb3101153d1bd095245ad594a963"
     },
     {
       "path": "v2.2/parts/02-part-II.md",
@@ -1491,8 +1491,8 @@
     },
     {
       "path": "v2.2/parts/07-part-III-e.md",
-      "bytes": 21919,
-      "sha256": "a63410027cff7f57ce90e6bca816e5997a67932cb0915fec6a7f7ee790c201fb"
+      "bytes": 21902,
+      "sha256": "b2750a0a8d272c3f618fce4d2c4596657661b4da2189269b15fcd446897dbc08"
     },
     {
       "path": "v2.2/parts/08-part-IV-a.md",
@@ -1501,8 +1501,8 @@
     },
     {
       "path": "v2.2/parts/09-part-IV-b.md",
-      "bytes": 111954,
-      "sha256": "7f7790cd23a0401be198fc4106b9fa16dd04eaab64e6b5276dc4a0e5ac78bb19"
+      "bytes": 111874,
+      "sha256": "ac9e716fc34bc92ad957181e66650c24c1e7c70b82d923d58debb35471a616b5"
     },
     {
       "path": "v2.2/verify/adelic_checks.log",

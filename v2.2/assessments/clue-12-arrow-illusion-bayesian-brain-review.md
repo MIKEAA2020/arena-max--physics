@@ -1,6 +1,4 @@
-# Stand-alone assessment — Ciupa, *Is the Thermodynamic Arrow of Time an Illusion? A Bayesian Brain Perspective* (LinkedIn, 8 Dec 2024; 1,474 words)
-
-**Document type:** Stand-alone assessment of a source article; not a problem-of-time clue.
+# Clue 12 — Ciupa, *Is the Thermodynamic Arrow of Time an Illusion? A Bayesian Brain Perspective* (LinkedIn, 8 Dec 2024; 1,474 words)
 
 **Asked (15 October 2026):** "any clues here, anything worth borrowing from, either as is or after modifications?" Text archived: `search/clue11/thermodynamic-arrow-time-illusion-bayesian-brain-martin-ciupa-lwyze.txt`.
 
