@@ -13,6 +13,6 @@ User: "any clues here, anything worth borrowing from, either as is or after modi
 
 ---
 
-# Clue 12 — Ciupa, *Is the Thermodynamic Arrow of Time an Illusion? A Bayesian Brain Perspective* (LinkedIn, 8 Dec 2024)
+# Stand-alone assessment — Ciupa, *Is the Thermodynamic Arrow of Time an Illusion? A Bayesian Brain Perspective* (LinkedIn, 8 Dec 2024)
 
 Text: `search/clue11/thermodynamic-arrow-time-illusion-bayesian-brain-martin-ciupa-lwyze.txt`. Graded in `v2.2/assessments/ciupa-thermodynamic-arrow-assessment.md`: thesis [F] (runs the explanation backwards); borrowed after inversion — the derivative status of the records/memory arrows at theorem grade (§17.1(a)) and an N-1 scope note. v2.2 ninth amendment; §23.2 items 94–96.
