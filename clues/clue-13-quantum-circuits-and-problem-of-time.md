@@ -1,4 +1,4 @@
-# Clue 12 — What monitored-circuit methods contribute to the problem of time
+# Clue 13 — What monitored-circuit methods contribute to the problem of time
 
 **Document type:** Research clue and scope assessment  
 **Source paper:** *Exact Replica Mechanics and Born-Record Large Deviations in Monitored Quantum Circuits*, V37 manuscript and Supplementary Material S1 (`papers/v37/`)  
