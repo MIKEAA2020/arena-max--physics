@@ -1,0 +1,27 @@
+{
+  "revision": "journal-style manuscript cleanup",
+  "source_v36_sha256": "f64021d91b57c42d019f19d5ada8e60962fd49bf387c1b9fb320f204768d9590",
+  "output_v37_sha256": "e76e3255632a482679e47151f8e9316613dd1eb843d6438ccc0dd9b897e368cd",
+  "supplementary_v37_sha256": "aa80466aabad0cd6c71ae6c2117544c82816e7419fd53008513f12313ad81a3c",
+  "unchanged_formal_environments": 58,
+  "restyled_formal_environments": [
+    "def:operator-contract",
+    "proof-after:prop:checks",
+    "proof-after:prop:ess",
+    "prop:ess",
+    "prop:z3closure",
+    "rem:clifford",
+    "rem:verification",
+    "rem:whyqn"
+  ],
+  "displayed_equations_unchanged": 103,
+  "unique_labels": 159,
+  "internal_references_resolve": true,
+  "citation_keys_resolve": true,
+  "project-specific metaphysical framework": "removed from formal physics article",
+  "version-history/change-log language": "removed or rewritten as current scientific statements",
+  "chi192 run details": "supplementary only",
+  "transition_order": "unresolved",
+  "chi256": "future work only; no results claimed",
+  "pdf_compile": "not run; no TeX engine available and fig_fss.pdf is not included"
+}

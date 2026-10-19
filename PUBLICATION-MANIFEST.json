@@ -1,6 +1,6 @@
 {
   "scope": "generated work plus specifically identified A-1 reproduction inputs",
-  "credential_scan": "passed for v36 main/supplement update (artifacts scanned; no secret values printed)",
+  "credential_scan": "passed for v37 manuscript/supplement update (new artifacts scanned; no secret values printed)",
   "omitted": [
     "raw uploads directory",
     "bulk third-party search downloads",
@@ -358,6 +358,36 @@
       "path": "papers/v36/v35-to-v36.diff",
       "bytes": 18985,
       "sha256": "825e5e3509a175e4a0923d4c915ada6f575e10a5fe41d487fc4c9676ecc80f80"
+    },
+    {
+      "path": "papers/v37/README.md",
+      "bytes": 1482,
+      "sha256": "c7bde5313c5983718ee105b634be62838db2bcad509c931005b639b150455ec2"
+    },
+    {
+      "path": "papers/v37/manuscript_revised_v37.tex",
+      "bytes": 226887,
+      "sha256": "e76e3255632a482679e47151f8e9316613dd1eb843d6438ccc0dd9b897e368cd"
+    },
+    {
+      "path": "papers/v37/revise_manuscript.py",
+      "bytes": 70584,
+      "sha256": "afe34deb7f3ddce45a58c698472110acbb30ddd355fd3bd6d3c5208e0806587e"
+    },
+    {
+      "path": "papers/v37/source-contract-check.log",
+      "bytes": 370,
+      "sha256": "4978ea3b367d85c7629096b4423aae803ce36b83e854de2f0f9b4c5d7ac71a20"
+    },
+    {
+      "path": "papers/v37/source-provenance.json",
+      "bytes": 1136,
+      "sha256": "08b264bd1b90a0fc37d78566a41a8d0374955c89015262e2e6f64889ea529454"
+    },
+    {
+      "path": "papers/v37/supplementary_v37.tex",
+      "bytes": 3173,
+      "sha256": "aa80466aabad0cd6c71ae6c2117544c82816e7419fd53008513f12313ad81a3c"
     },
     {
       "path": "quran/README.md",

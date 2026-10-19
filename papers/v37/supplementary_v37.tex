@@ -1,0 +1,38 @@
+\documentclass[aps,prx,onecolumn,nofootinbib]{revtex4-2}
+\usepackage{amsmath,amssymb}
+\usepackage{booktabs}
+\usepackage{hyperref}
+\begin{document}
+\title{Supplementary Material for Exact Replica Mechanics and Born-Record Large Deviations in Monitored Quantum Circuits}
+\author{Amin Abaee}
+\date{\today}
+\maketitle
+
+\section*{S1. Finite-$\chi$ paired-history calculations}
+\label{sec:supp-chi192}
+
+These results characterize finite-$\chi$ warm-history behavior. They do not measure a thermodynamic coexistence interval, spinodal, physical transition bracket, or transition order.
+
+\paragraph{Calculations at $p=.304825$.} Two calculations used the same Hermitian half-row objective and the specified convergence and gauge criteria. The ordered preparation continued from the accepted $\chi=192$, $p=.30480$ state; the small-order preparation continued from the accepted $p=.30485$ state. Both final states satisfied the acceptance criteria. The final checkpoint files are unavailable, so tensor-level checks of those states cannot be performed.
+
+\begin{table}[h]
+\caption{Finite-$\chi$ paired-history observations at $p=.304825$.}
+\begin{ruledtabular}
+\begin{tabular}{lrrrr}
+preparation & iterations & $\epsilon$ & color $L_2$ & $f_{\rm half}$\\
+\colrule
+ordered & 146 & $4.8394074016\times10^{-8}$ & 0.424511350240 & 0.992950567266133\\
+small-order & 199 & $4.9158883629\times10^{-8}$ & 0.000624328653 & 0.992950208166968\\
+\end{tabular}
+\end{ruledtabular}
+\end{table}
+
+The color separation is $0.4238870216$. The same-objective difference $\Delta f_{\rm half}$ (ordered minus small-order) is $+3.5909916507\times10^{-7}$. At $\chi=128$ and the same rate, the recorded ordered-minus-disordered difference is $-4.359393\times10^{-7}$. These finite-$\chi$ comparisons are not objective error bars, calibrated crossings, or controlled bond-dimension extrapolations. Optimizer residuals are not free-energy error bars, and accepted MPS states are not global-minimum certificates.
+
+\paragraph{Neighboring sampled rates.} At $p=.30480$, the low-order-start state was not retained as distinct. At $p=.304825$, the ordered and small-order states were distinct. At $p=.30485$, an ordered-start continuation ended in the small-order state. These outcomes define a coarse sampled finite-$\chi$ warm-history change zone near $.30480$--$.30485$; they do not determine branch-stability boundaries.
+
+\paragraph{Incomplete continuation at $p=.30481$.} The lower-side ordered continuation did not meet the acceptance criteria. Its saved state was at cumulative iteration 19, with $\epsilon=1.308536380704902\times10^{-6}$, above the external $10^{-7}$ tolerance and internal $5\times10^{-8}$ target. The recorded optimizer time was $3222.734782934189$ s. The paired small-order history was not completed. The run ended before a final status was recorded; the cause is unknown. The partial checkpoint is at \texttt{research/transition-order/chi192-p30481/} (SHA-256 \texttt{a8097162c27ca104556edd5c789bcf36e5c9c89ef5af7eb92ad3811248319cee}). It is not an accepted state and does not refine the sampled zone.
+
+A controlled $\chi=256$ paired-history study remains future work.
+
+\end{document}
