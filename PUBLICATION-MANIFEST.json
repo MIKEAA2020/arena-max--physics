@@ -111,8 +111,8 @@
     },
     {
       "path": "clues/clue-11-four-articles.md",
-      "bytes": 1987,
-      "sha256": "857979e6c53458e8d7c8939b84fe471ea54399fdde73cbcc30e841938c16b660"
+      "bytes": 1979,
+      "sha256": "ff4d1cd83e9d748950597aa390780db9321ea5c18c1489791d1d88efa8aadee3"
     },
     {
       "path": "clues/clue-12-quantum-circuits-and-problem-of-time.md",
@@ -1386,8 +1386,8 @@
     },
     {
       "path": "v2.2/Lighthouse-and-Plan-v2.2.md",
-      "bytes": 386529,
-      "sha256": "73d17115ced0f12fd50283645c095b29cf55afb4316babd13117cbfd789819c3"
+      "bytes": 386505,
+      "sha256": "f680b69f10e244162ae0313adf79fc84339fcbba076692e66ab8a42881aded41"
     },
     {
       "path": "v2.2/assessments/adelic-bridge-review.md",
@@ -1501,8 +1501,8 @@
     },
     {
       "path": "v2.2/parts/09-part-IV-b.md",
-      "bytes": 111874,
-      "sha256": "ac9e716fc34bc92ad957181e66650c24c1e7c70b82d923d58debb35471a616b5"
+      "bytes": 111850,
+      "sha256": "3e9afc5e3a93e6faea904a8f6fe19784c3e873bc868c57f94f50ffe89d8ff8f8"
     },
     {
       "path": "v2.2/verify/adelic_checks.log",
