@@ -1,6 +1,6 @@
 {
   "scope": "generated work plus specifically identified A-1 reproduction inputs",
-  "credential_scan": "passed for v37 manuscript/supplement and Clue 13 update (new artifacts scanned; no secret values printed)",
+  "credential_scan": "passed for v37 manuscript/supplement and Clue 12 update (new artifacts scanned; no secret values printed)",
   "omitted": [
     "raw uploads directory",
     "bulk third-party search downloads",
@@ -115,9 +115,9 @@
       "sha256": "857979e6c53458e8d7c8939b84fe471ea54399fdde73cbcc30e841938c16b660"
     },
     {
-      "path": "clues/clue-13-quantum-circuits-and-problem-of-time.md",
+      "path": "clues/clue-12-quantum-circuits-and-problem-of-time.md",
       "bytes": 12976,
-      "sha256": "903495cc64917b1d2ed3d9fbccf9e2a291f49677d91d83da6ce76ee789dac17a"
+      "sha256": "79294c76fdc8749ab90bbd5e322be2995237407d9d1d3b02030f3b9d8710acf7"
     },
     {
       "path": "papers/v33-review-package.zip.sha256",
@@ -1420,9 +1420,9 @@
       "sha256": "910090aef9f12af7a06ded50b0661e3ef2a4cdfceb85df6af36214cb3b02c0ee"
     },
     {
-      "path": "v2.2/assessments/clue-12-arrow-illusion-bayesian-brain-review.md",
-      "bytes": 7698,
-      "sha256": "92ff2b29ee2a6ea08f325aa18a288727fe53673b37f2dfd08d51fb765988f395"
+      "path": "v2.2/assessments/ciupa-thermodynamic-arrow-assessment.md",
+      "bytes": 7805,
+      "sha256": "dc788c7a944a1d14ad23c37a34f7233296d0cf6b72285a4cf7bc227607270d75"
     },
     {
       "path": "v2.2/assessments/gap-audit-2026-10-15.md",
